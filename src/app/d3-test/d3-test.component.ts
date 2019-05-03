@@ -84,7 +84,7 @@ export class D3TestComponent implements OnInit {
                 value: 2,
                 uom: 'Widget(s)'
             }, {
-                source: 2,
+                source: 0,
                 target: 3,
                 value: 2,
                 uom: 'Widget(s)'
@@ -106,9 +106,26 @@ export class D3TestComponent implements OnInit {
 
             link = link
                 .data(energy.links)
-                .enter().append("path")
+                .style("mix-blend-mode", "multiply");
+
+                 //const gradient = link.append("linearGradient")
+                 //    .attr("gradientUnits", "userSpaceOnUse")
+                 //    //.attr("id", d => d.uid)
+                 //    .attr("x1", d => d.source.x1)
+                 //    .attr("x2", d => d.target.x0);
+                 //
+                 //gradient.append("stop")
+                 //    .attr("offset", "0%")
+                 //    .attr("stop-color", d => color(d.source.name));
+                 //
+                 //gradient.append("stop")
+                 //    .attr("offset", "100%")
+                 //      .attr("stop-color", d => color(d.target.name));
+
+                link.enter().append("path")
                 .attr("d", d3Sankey.sankeyLinkHorizontal())
                 .attr("stroke-width", function (d: any) { return Math.max(1, d.width); })
+                .attr("stroke", d => color(d.source.name))
                 .on('click', function(d, i) {
                   console.log("clicked link", d);
                 })
