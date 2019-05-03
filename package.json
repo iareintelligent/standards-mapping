@@ -25,9 +25,12 @@
     "@angular/platform-browser-dynamic": "^7.1.0",
     "@angular/router": "^7.1.0",
     "@angular/upgrade": "^7.1.0",
+    "@types/d3-sankey": "^0.11.0",
     "angular-in-memory-web-api": "github:brandonroberts/in-memory-web-api-bazel#50a34d8",
     "core-js": "^2.5.4",
+    "d3": "^5.9.2",
     "d3-ng2-service": "^2.2.0",
+    "d3-sankey": "^0.12.1",
     "rxjs": "^6.5.1",
     "zone.js": "~0.8.26"
   },

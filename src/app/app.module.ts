@@ -16,7 +16,7 @@ import { HeroSearchComponent }  from './hero-search/hero-search.component';
 import { MessagesComponent }    from './messages/messages.component';
 import { D3TestComponent }      from './d3-test/d3-test.component';
  
-import { D3Service } from 'd3-ng2-service';
+//import { D3Service } from 'd3-ng2-service';
 
 @NgModule({
   imports: [
@@ -41,7 +41,7 @@ import { D3Service } from 'd3-ng2-service';
     HeroSearchComponent,
     D3TestComponent
   ],
-  providers: [D3Service],
+  //providers: [D3Service],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -1,39 +1,173 @@
-﻿import { Component, OnInit, Input, ElementRef } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-
-import { Hero }         from '../hero';
-import { HeroService }  from '../hero.service';
-import { D3Service, D3, Selection } from 'd3-ng2-service'; 
+﻿import { Component, OnInit } from '@angular/core';
+import * as d3 from 'd3';
+import * as d3Sankey from 'd3-sankey';
 
 @Component({
   selector: 'app-d3-test',
   templateUrl: './d3-test.component.html',
   styleUrls: [ './d3-test.component.css' ]
 })
-export class D3TestComponent implements OnInit {
+export class D3TestComponent implements OnInit {    
+    constructor() {
+    };
 
-  private d3: D3; // <-- Define the private member which will hold the d3 reference
-  private parentNativeElement: any;
- 
-  constructor(element: ElementRef, d3Service: D3Service) { // <-- pass the D3 Service into the constructor
-    this.d3 = d3Service.getD3(); // <-- obtain the d3 object from the D3 Service
-    this.parentNativeElement = element.nativeElement;
-  }
- 
-  ngOnInit() {
-    let d3 = this.d3; // <-- for convenience use a block scope variable
-    let d3ParentElement: Selection<any, any, any, any>; // <-- Use the Selection interface (very basic here for illustration only)
- 
-// ...
- 
-    if (this.parentNativeElement !== null) {
- 
-      d3ParentElement = d3.select(this.parentNativeElement); // <-- use the D3 select method 
- 
-      // Do more D3 things 
- 
+    ngOnInit(): void {
+        this.DrawChart();
     }
-  }
- 
+
+    private DrawChart() {
+
+        var svg = d3.select("#sankey"),
+            width = +svg.attr("width"),
+            height = +svg.attr("height");
+
+        var formatNumber = d3.format(",.0f"),
+            format = function (d: any) { return formatNumber(d) + " TWh"; },
+            color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        var sankey = d3Sankey.sankey()
+            .nodeWidth(15)
+            .nodePadding(10)
+            .extent([[1, 1], [width - 1, height - 6]]);
+
+        var link = svg.append("g")
+            .attr("class", "links")
+            .attr("fill", "none")
+            .attr("stroke", "#000")
+            .attr("stroke-opacity", 0.2)
+            .selectAll("path");
+
+        var node = svg.append("g")
+            .attr("class", "nodes")
+            .attr("font-family", "sans-serif")
+            .attr("font-size", 10)
+            .selectAll("g");
+
+        //d3.json("./energy.json", function (error, energy: any) {
+            //if (error) throw error;
+
+        const energy: DAG = {
+            nodes: [{
+                nodeId: 0,
+                name: "node0"
+            }, {
+                nodeId: 1,
+                name: "node1"
+            }, {
+                nodeId: 2,
+                name: "node2"
+            }, {
+                nodeId: 3,
+                name: "node3"
+            }, {
+                nodeId: 4,
+                name: "node4"
+            }],
+            links: [{
+                source: 0,
+                target: 2,
+                value: 2,
+                uom: 'Widget(s)'
+            }, {
+                source: 1,
+                target: 2,
+                value: 8,
+                uom: 'Widget(s)'
+            }, {
+                source: 1,
+                target: 3,
+                value: 2,
+                uom: 'Widget(s)'
+            }, {
+                source: 0,
+                target: 4,
+                value: 2,
+                uom: 'Widget(s)'
+            }, {
+                source: 2,
+                target: 3,
+                value: 2,
+                uom: 'Widget(s)'
+            }, {
+                source: 2,
+                target: 4,
+                value: 2,
+                uom: 'Widget(s)'
+            }, {
+                source: 3,
+                target: 4,
+                value: 4,
+                uom: 'Widget(s)'
+            }]
+        };
+
+
+            sankey(energy);
+
+            link = link
+                .data(energy.links)
+                .enter().append("path")
+                .attr("d", d3Sankey.sankeyLinkHorizontal())
+                .attr("stroke-width", function (d: any) { return Math.max(1, d.width); })
+                .on('click', function(d, i) {
+                  console.log("clicked link", d);
+                })
+                .on("mouseover", function(d) {
+                    d3.select(this).style("cursor", "pointer"); 
+                  });
+
+            link.append("title")
+                .text(function (d: any) { return d.source.name + " → " + d.target.name + "\n" + format(d.value) + "\n" + d.uom; });
+
+            node = node
+                .data(energy.nodes)
+                .enter().append("g");
+
+            node.append("rect")
+                .attr("x", function (d: any) { return d.x0; })
+                .attr("y", function (d: any) { return d.y0; })
+                .attr("height", function (d: any) { return d.y1 - d.y0; })
+                .attr("width", function (d: any) { return d.x1 - d.x0; })
+                .attr("fill", function (d: any) { return color(d.name.replace(/ .*/, "")); })
+                .attr("stroke", "#000")
+                .on('click', function(d, i) {
+                  console.log("clicked node", d);
+                })
+                .on("mouseover", function(d) {
+                    d3.select(this).style("cursor", "pointer"); 
+                  });
+
+            node.append("text")
+                .attr("x", function (d: any) { return d.x0 - 6; })
+                .attr("y", function (d: any) { return (d.y1 + d.y0) / 2; })
+                .attr("dy", "0.35em")
+                .attr("text-anchor", "end")
+                .text(function (d: any) { return d.name; })
+                .filter(function (d: any) { return d.x0 < width / 2; })
+                .attr("x", function (d: any) { return d.x1 + 6; })
+                .attr("text-anchor", "start");
+
+            node.append("title")
+                .text(function (d: any) { return d.name + "\n" + format(d.value); });
+        //});
+    }
+}
+
+interface SNodeExtra {
+    nodeId: number;
+    name: string;
+}
+
+interface SLinkExtra {
+    source: number;
+    target: number;
+    value: number;
+    uom: string;
+}
+type SNode = d3Sankey.SankeyNode<SNodeExtra, SLinkExtra>;
+type SLink = d3Sankey.SankeyLink<SNodeExtra, SLinkExtra>;
+
+interface DAG {
+    nodes: SNode[];
+    links: SLink[];
 }
