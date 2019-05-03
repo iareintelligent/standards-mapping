@@ -14,7 +14,7 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class StandardMapService {
 
-  private standardMapesUrl = 'api/standard-map';  // URL to web api
+  private standardMapsUrl = 'api/standard-map';  // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -22,7 +22,7 @@ export class StandardMapService {
 
   /** GET standard-map from the server */
   getStandardMaps (): Observable<StandardMap[]> {
-    return this.http.get<StandardMap[]>(this.standardMapesUrl)
+    return this.http.get<StandardMap[]>(this.standardMapsUrl)
       .pipe(
         tap(_ => this.log('fetched standard-map')),
         catchError(this.handleError<StandardMap[]>('getStandardMaps', []))
@@ -31,7 +31,7 @@ export class StandardMapService {
 
   /** GET standard-map by id. Return `undefined` when id not found */
   getStandardMapNo404<Data>(id: number): Observable<StandardMap> {
-    const url = `${this.standardMapesUrl}/?id=${id}`;
+    const url = `${this.standardMapsUrl}/?id=${id}`;
     return this.http.get<StandardMap[]>(url)
       .pipe(
         map(standardMap => standardMap[0]), // returns a {0|1} element array
@@ -45,7 +45,7 @@ export class StandardMapService {
 
   /** GET standard-map by id. Will 404 if id not found */
   getStandardMap(id: number): Observable<StandardMap> {
-    const url = `${this.standardMapesUrl}/${id}`;
+    const url = `${this.standardMapsUrl}/${id}`;
     return this.http.get<StandardMap>(url).pipe(
       tap(_ => this.log(`fetched standard-map id=${id}`)),
       catchError(this.handleError<StandardMap>(`getStandardMap id=${id}`))
@@ -58,7 +58,7 @@ export class StandardMapService {
       // if not search term, return empty standard-map array.
       return of([]);
     }
-    return this.http.get<StandardMap[]>(`${this.standardMapesUrl}/?name=${term}`).pipe(
+    return this.http.get<StandardMap[]>(`${this.standardMapsUrl}/?name=${term}`).pipe(
       tap(_ => this.log(`found standard-map matching "${term}"`)),
       catchError(this.handleError<StandardMap[]>('searchStandardMaps', []))
     );
@@ -68,7 +68,7 @@ export class StandardMapService {
 
   /** POST: add a new standard-map to the server */
   addStandardMap (standardMap: StandardMap): Observable<StandardMap> {
-    return this.http.post<StandardMap>(this.standardMapesUrl, standardMap, httpOptions).pipe(
+    return this.http.post<StandardMap>(this.standardMapsUrl, standardMap, httpOptions).pipe(
       tap((newStandardMap: StandardMap) => this.log(`added standard-map w/ id=${newStandardMap.id}`)),
       catchError(this.handleError<StandardMap>('addStandardMap'))
     );
@@ -77,7 +77,7 @@ export class StandardMapService {
   /** DELETE: delete the standard-map from the server */
   deleteStandardMap (standardMap: StandardMap | number): Observable<StandardMap> {
     const id = typeof standardMap === 'number' ? standardMap : standardMap.id;
-    const url = `${this.standardMapesUrl}/${id}`;
+    const url = `${this.standardMapsUrl}/${id}`;
 
     return this.http.delete<StandardMap>(url, httpOptions).pipe(
       tap(_ => this.log(`deleted standardMap id=${id}`)),
@@ -87,7 +87,7 @@ export class StandardMapService {
 
   /** PUT: update the standard-map on the server */
   updateStandardMap (standardMap: StandardMap): Observable<any> {
-    return this.http.put(this.standardMapesUrl, standardMap, httpOptions).pipe(
+    return this.http.put(this.standardMapsUrl, standardMap, httpOptions).pipe(
       tap(_ => this.log(`updated standard-map id=${standardMap.id}`)),
       catchError(this.handleError<any>('updateStandardMap'))
     );

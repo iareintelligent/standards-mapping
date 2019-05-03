@@ -8,7 +8,7 @@ import { StandardMapService } from '../standard-map.service';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-  standardMap: StandardMap[] = [];
+  standardMaps: StandardMap[] = [];
 
   constructor(private standardMapService: StandardMapService) { }
 
@@ -18,6 +18,6 @@ export class DashboardComponent implements OnInit {
 
   getStandardMaps(): void {
     this.standardMapService.getStandardMaps()
-      .subscribe(standardMap => this.standardMap = standardMap.slice(1, 5));
+      .subscribe(standardMaps => this.standardMaps = standardMaps.slice(1, 5));
   }
 }
