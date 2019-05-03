@@ -1,24 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { HeroSearchComponent } from './hero-search.component';
+import { StandardMapSearchComponent } from './standard-map-search.component';
 
 
-describe('HeroSearchComponent', () => {
-  let component: HeroSearchComponent;
-  let fixture: ComponentFixture<HeroSearchComponent>;
+describe('StandardMapSearchComponent', () => {
+  let component: StandardMapSearchComponent;
+  let fixture: ComponentFixture<StandardMapSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroSearchComponent ],
+      declarations: [ StandardMapSearchComponent ],
       imports: [RouterTestingModule.withRoutes([]), HttpClientTestingModule]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroSearchComponent);
+    fixture = TestBed.createComponent(StandardMapSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

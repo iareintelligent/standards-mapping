@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+﻿import { Component, OnInit } from '@angular/core';
+import { StandardMap } from '../standard-map';
+import { StandardMapService } from '../standard-map.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,16 +8,16 @@ import { HeroService } from '../hero.service';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+  standardMap: StandardMap[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private standardMapService: StandardMapService) { }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getStandardMaps();
   }
 
-  getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+  getStandardMaps(): void {
+    this.standardMapService.getStandardMaps()
+      .subscribe(standardMap => this.standardMap = standardMap.slice(1, 5));
   }
 }

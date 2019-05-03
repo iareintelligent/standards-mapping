@@ -1,4 +1,4 @@
-export class Hero {
+﻿export class StandardMap {
   id: number;
   name: string;
 }

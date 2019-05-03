@@ -10,9 +10,9 @@ import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
-import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
-import { HeroesComponent }      from './heroes/heroes.component';
-import { HeroSearchComponent }  from './hero-search/hero-search.component';
+import { StandardMapDetailComponent }  from './standard-map-detail/standard-map-detail.component';
+import { StandardMapsComponent }      from './standard-maps/standard-maps.component';
+import { StandardMapSearchComponent }  from './standard-map-search/standard-map-search.component';
 import { MessagesComponent }    from './messages/messages.component';
 import { D3TestComponent }      from './d3-test/d3-test.component';
  
@@ -35,10 +35,10 @@ import { D3TestComponent }      from './d3-test/d3-test.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroesComponent,
-    HeroDetailComponent,
+    StandardMapsComponent,
+    StandardMapDetailComponent,
     MessagesComponent,
-    HeroSearchComponent,
+    StandardMapSearchComponent,
     D3TestComponent
   ],
   //providers: [D3Service],
