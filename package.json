@@ -27,6 +27,7 @@
     "@angular/upgrade": "^7.1.0",
     "angular-in-memory-web-api": "github:brandonroberts/in-memory-web-api-bazel#50a34d8",
     "core-js": "^2.5.4",
+    "d3-ng2-service": "^2.2.0",
     "rxjs": "^6.5.1",
     "zone.js": "~0.8.26"
   },
