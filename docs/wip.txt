@@ -1,0 +1,37 @@
+
+
+maps:
+ + put 3 mock maps in the repository
+  + id
+  + name
+  + links
+
+links
+ + service enumerate links
+ - link component
+ - link route
+ 
+
+navigation
+ - graph controller
+  - component
+  - docs
+  - update plot
+  - click to navigate
+  - facets
+
+docs:
+ - readme
+
+Deploy:
+ - azure (Doug?)
+
+
+Graph:
+ - dynamic size
+ - table view
+ - connected graph
+ - ?
+
+
+

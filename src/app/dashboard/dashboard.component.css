@@ -1,6 +1,6 @@
-/* DashboardComponent's private CSS styles */
+﻿/* DashboardComponent's private CSS styles */
 [class*='col-'] {
-  float: left;
+  //float: left;
   padding-right: 20px;
   padding-bottom: 20px;
 }
@@ -60,4 +60,8 @@ h4 {
   .module {
     min-width: 60px;
   }
+}
+
+.standard-map {
+    display: inline-block;
 }

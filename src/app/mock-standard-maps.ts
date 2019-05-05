@@ -1,14 +1,60 @@
 ﻿import { StandardMap } from './standard-map';
 
-export const STANDARDMAPS: StandardMap[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
+export var STANDARDMAPS: StandardMap[] = [
+  { 
+    id: 11, 
+    name: 'GDPR', 
+    sections: [
+      { 
+        id: 1324, 
+        title: 'gdpr 1.1.a', 
+        links: [
+          { doc: 12, section: 41234 }
+        ]
+      },
+      { 
+        id: 431243, 
+        title: 'gdpr 1.2.a', 
+        links: [
+          { doc: 12, section: 143 }
+        ]
+      },
+      { 
+        id: 654, 
+        title: 'gdpr 1.2.b', 
+        links: [
+          { doc: 12, section: 143 },
+          { doc: 12, section: 41234 }
+        ]
+      }
+    ] 
+  },
+  { 
+    id: 12, 
+    name: 'Standard', 
+    sections: [
+      { id: 41234, title: 'std 1.1.a' },
+      { id: 143, title: 'std 1.2.a' }
+    ] 
+  },
+  { 
+    id: 13, 
+    name: 'Australia', 
+    sections: [
+      { 
+        id: 12343, 
+        title: 'aus 1.1.a', 
+        links: [
+          { doc: 12, section: 41234 }
+        ]
+      },
+      { 
+        id: 16343, 
+        title: 'aus 1.2.a', 
+        links: [
+          { doc: 12, section: 143 }
+        ]
+      }
+    ] 
+  },
 ];

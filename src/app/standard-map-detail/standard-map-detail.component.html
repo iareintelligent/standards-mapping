@@ -8,4 +8,15 @@
   </div>
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
+  <h2>Sections</h2>
+  <div *ngFor="let section of standardMap.sections">
+    <div class="section">
+      <h4>{{section.title}}</h4>
+        <div *ngFor="let link of section.links">
+          <div class="link">
+            <h4>{{link.section}}</h4>
+          </div>
+        </div>
+    </div>
+  </div>
 </div>

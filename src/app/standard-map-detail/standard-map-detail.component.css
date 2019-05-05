@@ -28,3 +28,7 @@ button:disabled {
   color: #ccc;
   cursor: auto;
 }
+
+.link {
+    padding-left: 20px;
+}

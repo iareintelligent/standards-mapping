@@ -1,6 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 import * as d3Sankey from 'd3-sankey';
+import { DAG, GraphService } from '../graph.service';
 
 @Component({
   selector: 'app-d3-test',
@@ -8,14 +9,19 @@ import * as d3Sankey from 'd3-sankey';
   styleUrls: [ './d3-test.component.css' ]
 })
 export class D3TestComponent implements OnInit {    
-    constructor() {
+    constructor(
+      private graphService: GraphService) {
     };
 
     ngOnInit(): void {
-        this.DrawChart();
+       // this.DrawChart();
+
+        
+      this.graphService.getGraphData(11, 12, 13)
+        .subscribe(gd => { console.log(JSON.stringify(gd)); this.DrawChart(gd); });
     }
 
-    private DrawChart() {
+    private DrawChart(energy) {
 
         var svg = d3.select("#sankey"),
             width = +svg.attr("width"),
@@ -46,61 +52,64 @@ export class D3TestComponent implements OnInit {
         //d3.json("./energy.json", function (error, energy: any) {
             //if (error) throw error;
 
-        const energy: DAG = {
-            nodes: [{
-                nodeId: 0,
-                name: "node0"
-            }, {
-                nodeId: 1,
-                name: "node1"
-            }, {
-                nodeId: 2,
-                name: "node2"
-            }, {
-                nodeId: 3,
-                name: "node3"
-            }, {
-                nodeId: 4,
-                name: "node4"
-            }],
-            links: [{
-                source: 0,
-                target: 2,
-                value: 2,
-                uom: 'Widget(s)'
-            }, {
-                source: 1,
-                target: 2,
-                value: 8,
-                uom: 'Widget(s)'
-            }, {
-                source: 1,
-                target: 3,
-                value: 2,
-                uom: 'Widget(s)'
-            }, {
-                source: 0,
-                target: 4,
-                value: 2,
-                uom: 'Widget(s)'
-            }, {
-                source: 0,
-                target: 3,
-                value: 2,
-                uom: 'Widget(s)'
-            }, {
-                source: 2,
-                target: 4,
-                value: 2,
-                uom: 'Widget(s)'
-            }, {
-                source: 3,
-                target: 4,
-                value: 4,
-                uom: 'Widget(s)'
-            }]
-        };
+        //const energy: DAG = {
+        //    nodes: [{
+        //        nodeId: 0,
+        //        name: "node0"
+        //    }, {
+        //        nodeId: 1,
+        //        name: "node1"
+        //    }, {
+        //        nodeId: 2,
+        //        name: "node2"
+        //    }, {
+        //        nodeId: 3,
+        //        name: "node3"
+        //    }, {
+        //        nodeId: 4,
+        //        name: "node4"
+        //    }],
+        //    links: [{
+        //        source: 0,
+        //        target: 2,
+        //        value: 2,
+        //        uom: 'Widget(s)'
+        //    }, {
+        //        source: 1,
+        //        target: 2,
+        //        value: 8,
+        //        uom: 'Widget(s)'
+        //    }, {
+        //        source: 1,
+        //        target: 3,
+        //        value: 2,
+        //        uom: 'Widget(s)'
+        //    }, {
+        //        source: 0,
+        //        target: 4,
+        //        value: 2,
+        //        uom: 'Widget(s)'
+        //    }, {
+        //        source: 0,
+        //        target: 3,
+        //        value: 2,
+        //        uom: 'Widget(s)'
+        //    }, {
+        //        source: 2,
+        //        target: 4,
+        //        value: 2,
+        //        uom: 'Widget(s)'
+        //    }, {
+        //        source: 3,
+        //        target: 4,
+        //        value: 4,
+        //        uom: 'Widget(s)'
+        //    }]
+        //};
 
+
+            sankey.nodeSort((a, b) => a.title < b.title);
+            sankey.nodeId(d => d.nodeId);
 
             sankey(energy);
 
@@ -168,23 +177,4 @@ export class D3TestComponent implements OnInit {
                 .text(function (d: any) { return d.name + "\n" + format(d.value); });
         //});
     }
-}
-
-interface SNodeExtra {
-    nodeId: number;
-    name: string;
-}
-
-interface SLinkExtra {
-    source: number;
-    target: number;
-    value: number;
-    uom: string;
-}
-type SNode = d3Sankey.SankeyNode<SNodeExtra, SLinkExtra>;
-type SLink = d3Sankey.SankeyLink<SNodeExtra, SLinkExtra>;
-
-interface DAG {
-    nodes: SNode[];
-    links: SLink[];
 }
