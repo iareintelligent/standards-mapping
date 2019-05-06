@@ -14,10 +14,10 @@ links
 
 navigation
  - graph controller
+  - click to navigate
   - component
   - docs
   - update plot
-  - click to navigate
   - facets
 
 docs:
@@ -29,8 +29,9 @@ Deploy:
 
 Graph:
  - dynamic size
- - table view
- - connected graph
+ + view mode
+ / table view
+ + connected graph
  - ?
 
 

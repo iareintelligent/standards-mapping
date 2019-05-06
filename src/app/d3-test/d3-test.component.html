@@ -1,4 +1,13 @@
 ﻿<div>
   <h2>D3</h2>
-  <svg id="sankey" width="960" height="500"></svg>
+  <div class="graph-type">
+    <input name="options" type="radio"  [(ngModel)]="graphType" [value]="0"
+           [checked]="graphType==0" (change)="RefreshGraph()" />
+    <input name="options" type="radio"  [(ngModel)]="graphType" [value]="1"
+           [checked]="graphType==1" (change)="RefreshGraph()"/>
+    <input name="options" type="radio"  [(ngModel)]="graphType" [value]="2"
+           [checked]="graphType==2" (change)="RefreshGraph()"/>
+  </div>
+  <div id="d3">
+  </div>
 </div>
