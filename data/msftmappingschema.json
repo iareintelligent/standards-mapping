@@ -1,0 +1,255 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://json-schema.org/draft-07/schema#",
+	"title": "Standards Document Section Mappings",
+	"description": "Document Sections",
+	"type": "object",
+	"properties": {
+		"document_nodes": {
+			"description": "sections of a document. All types of documents",
+			"type": "array",
+			"items": {
+				"required": [
+					"id",
+					"type",
+					"section",
+					"body",
+					"rev"
+				],
+				"properties": {
+					"id": {
+						"description": "document node id should be section id",
+						"type": "string"
+					},
+					"type": {
+						"description": "document type see document_types fields",
+						"type": "string"
+					},
+					"section": {
+						"description": "section number display text",
+						"type": "string"
+					},
+					"body": {
+						"description": "section body text",
+						"type": "string"
+					},
+					"country": {
+						"description": "optional country for document section",
+						"type": "string"
+					},
+					"region": {
+						"description": "optional region/state for document section",
+						"type": "string"
+					},
+					"compliance_level": {
+						"description": "compliance level id, see compliance fields for values",
+						"type": "integer"
+					},
+					"rev": {
+						"description": "document node file revision",
+						"type": "string"
+					},
+					"external_doc_node_references": {
+						"description": "references to external document sections, unique relationships are by type, id, rev fields",
+						"type": "array",
+						"items": {
+							"required": [
+								"type",
+								"id",
+								"rev"
+							],
+							"properties": {
+								"type": {
+									"description": "document type key, see document type fields",
+									"type": "string"
+								},
+								"id": {
+									"description": "document node id referenced",
+									"type": "string"
+								},
+								"rev": {
+									"description": "document node file revision",
+									"type": "string"
+								}
+
+							}
+						}
+					},
+					"internal_doc_node_references": {
+						"description": "references to internal document sections",
+						"type": "array",
+						"items": {
+							"required": [
+								"id",
+								"rev"
+							],
+							"properties": {
+								"id": {
+									"description": "document node id referenced",
+									"type": "string"
+								},
+								"rev": {
+									"description": "document node file revision",
+									"type": "string"
+								}
+							}
+						}
+					},
+					"parent_doc_node_references": {
+						"description": "references to internal parent document sections",
+						"type": "array",
+						"items": {
+							"required": [
+								"id",
+								"rev"
+							],
+							"properties": {
+								"id": {
+									"description": "document node id referenced",
+									"type": "string"
+								},
+								"rev": {
+									"description": "document node file revision",
+									"type": "string"
+								}
+							}
+						}
+					},
+					"foot_notes": {
+						"description": "references to global foot notes",
+						"type": "array",
+						"items": {
+							"required": [
+								"number",
+								"rev"
+							],
+							"properties": {
+								"number": {
+									"description": "footnote number",
+									"type": "integer"
+								},
+								"rev": {
+									"description": "footnote revision",
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"countries": {
+			"description": "document origin counties",
+			"type": "array",
+			"items": {
+				"required": [
+					"country"
+				],
+				"properties": {
+					"country": {
+						"description": "country name",
+						"type": "string"
+					},
+					"region": {
+						"description": "sub region/state of country ex. california",
+						"type": "string"
+					},
+					"foot_notes": {
+						"description": "references to global foot notes",
+						"type": "array",
+						"items": {
+							"required": [
+								"number",
+								"rev"
+							],
+							"properties": {
+								"number": {
+									"description": "footnote number",
+									"type": "integer"
+								},
+								"rev": {
+									"description": "footnote revision",
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"compliance_levels": {
+			"description": "compliance levels",
+			"type": "array",
+			"items": {
+				"required": [
+					"level",
+					"body"
+				],
+				"properties": {
+					"level": {
+						"description": "compliance level id",
+						"type": "integer"
+					},
+					"body": {
+						"description": "display text",
+						"type": "string"
+					}
+				}
+			}
+		},
+		"document_types": {
+			"description": "standards document types and titles reference",
+			"type": "array",
+			"items": {
+				"required": [
+					"id",
+					"title"
+				],
+				"properties": {
+					"id": {
+						"description": "recognized standards document type abbreviation",
+						"type": "string"
+					},
+					"title": {
+						"description": "full standards document title",
+						"type": "string"
+					},
+					"country": {
+						"description": "standards document country of origin",
+						"type": "string"
+					},
+					"region": {
+						"description": "standards document country region/state of origin",
+						"type": "string"
+					}
+				}
+			}
+		},
+		"foot_notes": {
+			"description": "global footnotes for data in this document",
+			"type": "array",
+			"items": {
+				"required": [
+					"number",
+					"rev",
+					"body"
+				],
+				"properties": {
+					"number": {
+						"description": "foot note number",
+						"type": "integer"
+					},
+					"rev": {
+						"description": "foot note revision",
+						"type": "string"
+					},
+					"body": {
+						"description": "foot note display text",
+						"type": "string"
+					}
+				}
+			}
+		}
+
+	}
+}

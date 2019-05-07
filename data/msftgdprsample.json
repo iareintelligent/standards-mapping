@@ -4,10 +4,10 @@
 		"type": "ISO",
 		"section": "5.2.3 a)",
 		"body": "The orgnization shall.....",
-		"country": "", //optional field
-		"region": "", //optional field,
+		"country": "", 
+		"region": "",
 		"compliance_level": 1,
-		"external_doc_node_references": [{ //ISO node types will have the most references? Could link all nodes through this node
+		"external_doc_node_references": [{ 
 			"type": "APP",
 			"id": "1_2",
 			"rev": "1",
@@ -23,18 +23,14 @@
 			"type": "PDPA",
 			"id": "s_11",
 			"rev": "1",
-		}, {
-			"type": "LDDP",
-			"id": "a_12_3",
-			"rev": "1",
 		}],
-		"parent_node_references": [ //parent section number in herachy of document with document revisions
+		"parent_node_references": [
 			{
 				"rev": "1",
 				"id": "5"
 			}
 		],
-		"internal_doc_node_references": [ //references to internal sections of this nodes document other then parent
+		"internal_doc_node_references": [
 			{
 				"rev": "1",
 				"id": "5_2"
@@ -43,10 +39,10 @@
 		"rev": "1",
 		"foot_notes": [{
 			"number": 10,
-			"rev": 1
+			"rev": "1"
 		}, {
 			"number": 11,
-			"rev": 1
+			"rev": "1"
 		}]
 	}, {
 
@@ -54,14 +50,14 @@
 		"type": "APP",
 		"section": "APP 1.2",
 		"body": "Must take responsiblity.....",
-		"country": "Australia", //optional field
+		"country": "Australia",
 		"compliance_level": 2,
-		"external_doc_node_references": [{ // could potentially put references to all other external documents here for faster lookup (if automated data generation I would do this)
+		"external_doc_node_references": [{ 
 			"type": "ISO",
 			"id": "5_2_3_a",
-			"rev": "1", //with document revision
+			"rev": "1", 
 		}],
-		"parent_node_references": [ //parent section number in herachy of document with document revisions
+		"parent_node_references": [ 
 			{
 				"rev": "1",
 				"id": "1_2"
@@ -75,7 +71,7 @@
 		"type": "PIPEDA",
 		"section": "4.1",
 		"body": "Responsible for personal information under.....",
-		"country": "Canada", //optional field
+		"country": "Canada", 
 		"compliance_level": 1,
 		"external_doc_node_references": [{
 			"type": "ISO",
@@ -88,7 +84,7 @@
 		}],
 		"internal_doc_node_references": [],
 		"rev": "1"
-	}, {
+	},{
 
 		"id": "a_12_3",
 		"type": "LPPD",
@@ -105,28 +101,33 @@
 			"id": "5_2_4",
 			"rev": "1",
 		}],
-		"parent_node_references": [{
-			"rev": "1",
-			"id": "A_12"
-		}],
+		"parent_node_references": [
+			{
+				"rev": "1",
+				"id": "A_12"
+			}
+		],
 		"internal_doc_node_references": [],
 		"rev": "1"
-	}, {
+	},{
+
 		"id": "5_2_4",
 		"type": "ISO",
 		"section": "5.2.4",
 		"body": "The organization shall establish, implement,....",
 		"country": "Turkey",
 		"compliance_level": 1,
-		"external_doc_node_references": [{
+		"external_doc_node_references": [{ 
 			"type": "LDDP",
 			"id": "a_12_3",
 			"rev": "1",
 		}],
-		"parent_node_references": [{
-			"rev": "1",
-			"id": "A_12"
-		}],
+		"parent_node_references": [ 
+			{
+				"rev": "1",
+				"id": "A_12"
+			}
+		],
 		"internal_doc_node_references": [],
 		"rev": "1"
 	}, {
@@ -196,57 +197,57 @@
 			"rev": "1"
 		}]
 	}],
-	"countries": [{ //countries or top level groupings with foot notes
+	"countries": [{ 
 		"country": "Australia",
 		"foot_notes": [{
 			"number": 1,
-			"rev": 1
+			"rev": "1"
 		}]
 	}, {
 		"country": "USA",
-		"region": "California", //optional region
+		"region": "California", 
 		"foot_notes": [{
 			"number": 13,
-			"rev": 1
+			"rev": "1"
 		}, {
 			"number": 11,
-			"rev": 1
+			"rev": "1"
 		}]
 	}, {
 		"country": "Canada",
 		"foot_notes": [{
 			"number": 2,
-			"rev": 1
+			"rev": "1"
 		}]
 	}, {
 		"country": "Hong Kong",
 		"foot_notes": [{
 			"number": 3,
-			"rev": 1
+			"rev": "1"
 		}]
 	}, {
 		"country": "Singapore",
 		"foot_notes": [{
 			"number": 4,
-			"rev": 1
+			"rev": "1"
 		}]
 	}, {
 		"country": "South Korea",
 		"foot_notes": [{
 			"number": 5,
-			"rev": 1
+			"rev": "1"
 		}]
 	}, {
 		"country": "Turkey",
 		"foot_notes": [{
 			"number": 6,
-			"rev": 1
+			"rev": "1"
 		}]
 	}, {
 		"country": "Brazil",
 		"foot_notes": [{
 			"number": 17,
-			"rev": 1
+			"rev": "1"
 		}]
 	}],
 	"compliance_levels": [{
