@@ -27,12 +27,6 @@ export class D3TestComponent implements OnInit {
         .subscribe(dt => { 
           this.graphCategories = dt; 
 
-          // move ISO to second slot as a hack
-          var i0 = this.graphCategories[0];
-          var i1 = this.graphCategories[1];
-          this.graphCategories[0] = i1;
-          this.graphCategories[1] = i0;
-
           // activate first 3
           for (var i = 0; i< 3; ++i)
             this.graphCategories[i].active = true;
@@ -49,27 +43,41 @@ export class D3TestComponent implements OnInit {
 
       this.graphCriteria.categoryOrder = limitedDocs;
 
+      if (this.graphType == 0)
+      {
+          // move ISO to second slot so it draws in the middle
+          var i0 = this.graphCriteria.categoryOrder[0];
+          var i1 = this.graphCriteria.categoryOrder[1];
+          this.graphCriteria.categoryOrder[0] = i1;
+          this.graphCriteria.categoryOrder[1] = i0;
+      }
+
       this.graphService.getGraphData2(this.graphCriteria)
         .subscribe(gd => { 
           console.log(JSON.stringify(gd)); 
           this.graphData = gd;
-        });
 
-        switch (this.graphType)
-        {
-            case 0:
-              this.DrawChart(this.graphData);
-              break;
-            case 1:
-              this.DrawTable(this.graphData);
-              break;
-            case 2:
-              this.DrawGraph(this.graphData);
-              break;
+          switch (this.graphType)
+          {
+              case 0:
+                this.DrawChart(this.graphData);
+                break;
+              case 1:
+                this.DrawTable(this.graphData);
+                break;
+              case 2:
+                this.DrawGraph(this.graphData);
+                break;
         }
+        });
     }
 
     private DrawTable(data: DAG) {
+        var rowType = this.graphCriteria.categoryOrder ? this.graphCriteria.categoryOrder[0] : (data.nodes[0] as SNode).data.type;
+        var headerTypes = this.graphCriteria.categoryOrder.filter(v => v != rowType);
+
+        var rowNodes = data.nodes.filter(v => v.data.type == rowType);
+
         var width = 960;
         var height = 500;
 
@@ -81,9 +89,7 @@ export class D3TestComponent implements OnInit {
 
         header
             .selectAll("th")
-            .data(["Vendor", "Market Share 2015", "Market Share 2016",
-                "Difference", "Units sold in 2015 (000's)", "Units Sold in 2016 (000's)",
-                "Difference"])
+            .data([rowType].concat(headerTypes))
             .enter()
             .append("th")
             .text(function (d) {
@@ -93,19 +99,39 @@ export class D3TestComponent implements OnInit {
         var tBody = table.append("tbody");
 
         var rows = tBody.selectAll("tr")
-            .data(data.nodes)
+            .data(rowNodes)
             .enter()
             .append("tr");
             
+        var complianceColors = ["white", "green", "yellow", "red", "black"]
         var cells = rows
             .selectAll("td")
             .data(function (d) {
-                return [d.name, 2, 3, 4, 5, 6, 7];
+                var links = headerTypes.map(h => {
+                  for (var l of data.links)
+                  {
+                     var node = null;
+
+                     if (l.source == d.nodeId && l.targetNode.data.type == h)
+                        node = l.targetNode;
+
+                     if (l.target == d.nodeId && l.sourceNode.data.type == h)
+                        node = l.sourceNode;
+
+                     if (node)
+                        return [node.data.section, node.data.compliance_level];
+                  }
+
+                  return ["-", 0];
+                });
+
+                return [[d.name, d.data.compliance_level]].concat(links);
             })
             .enter()
             .append("td")
+            .attr("bgcolor", d => complianceColors[d[1]])
             .text(function (d) {
-                return d;
+                return d[0];
             });
 
     }

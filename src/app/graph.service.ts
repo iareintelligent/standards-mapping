@@ -33,6 +33,7 @@ export class FilterCriteria {
 export interface SNodeExtra {
     nodeId: number;
     name: string;
+    data?: any;
 }
 
 export interface SLinkExtra {
@@ -40,7 +41,10 @@ export interface SLinkExtra {
     target: number;
     value: number;
     uom: string;
+    sourceNode: any;
+    targetNode: any;
 }
+
 export type SNode = d3Sankey.SankeyNode<SNodeExtra, SLinkExtra>;
 export type SLink = d3Sankey.SankeyLink<SNodeExtra, SLinkExtra>;
 
@@ -117,20 +121,21 @@ export class GraphService {
         var targetNode = nodeMap[targetId];
         targetNode.connections++;
         n.connections++;
-
-        var source = n.nodeId, 
-        var target = targetId, 
+        
+        var sourceNode = n;
 
        if (filter && filter.categoryOrder && filter.categoryOrder.indexOf(targetNode.data.type) < filter.categoryOrder.indexOf(n.data.type))
        {
-           source = targetId;
-           target = n.nodeId;
+           sourceNode = targetNode;
+           targetNode = n; 
        }
 
         var result = { 
-            source: source, 
-            target: target, 
-            value: n.data.compliance_level 
+            source: sourceNode.nodeId, 
+            target: targetNode.nodeId,
+            sourceNode: sourceNode, 
+            targetNode: targetNode,
+            value: n.data.compliance_level
          };
 
          return result;
