@@ -6,5 +6,5 @@
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Tour of Standard Maps';
+  title = 'Standards Mapping';
 }

@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
 import * as d3Sankey from 'd3-sankey';
-import { DAG, SNode, GraphService } from '../graph.service';
+import { DAG, SNode, GraphService, CategoryList, FilterCriteria } from '../graph.service';
 
 import selection_attrs from 'd3-selection-multi/src/selection/attrs';
 d3.selection.prototype.attrs = selection_attrs;
@@ -13,16 +13,19 @@ d3.selection.prototype.attrs = selection_attrs;
   encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
 })
 export class D3TestComponent implements OnInit {    
-    private graphType: number;
+    private graphType: number = 0;
     private graphData: DAG;
+    private graphCategories: CategoryList = [];
 
     constructor(
       private graphService: GraphService) {
-      this.graphType = 0;
     };
 
-    ngOnInit(): void {        
-      this.graphService.getGraphData(11, 12, 13)
+    ngOnInit(): void {     
+      this.graphService.getDocTypes()
+        .subscribe(dt => { this.graphCategories = dt; });
+
+      this.graphService.getGraphData2(new FilterCriteria())
         .subscribe(gd => { 
           console.log(JSON.stringify(gd)); 
           this.graphData = gd;

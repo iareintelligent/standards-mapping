@@ -5,6 +5,7 @@ maps:
   + id
   + name
   + links
+ - import from url
 
 links
  + service enumerate links
@@ -21,7 +22,7 @@ navigation
   - facets
 
 docs:
- - readme
+ + readme
 
 Deploy:
  - azure (Doug?)
@@ -29,10 +30,21 @@ Deploy:
 
 Graph:
  - dynamic size
+ - sankey
+  - sort order
  + view mode
  / table view
  + connected graph
  - ?
 
 
+ drop down for doc type
+  - 
+
+ facets:
+  - terms
+  - compiance
+  - country
+  - principles
+  - iso doc sections (top level sections)
 

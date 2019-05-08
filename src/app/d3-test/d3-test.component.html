@@ -1,5 +1,4 @@
 ﻿<div>
-  <h2>D3</h2>
   <div class="graph-type">
     <input name="options" type="radio"  [(ngModel)]="graphType" [value]="0"
            [checked]="graphType==0" (change)="RefreshGraph()" />
@@ -8,6 +7,14 @@
     <input name="options" type="radio"  [(ngModel)]="graphType" [value]="2"
            [checked]="graphType==2" (change)="RefreshGraph()"/>
   </div>
-  <div id="d3">
+  <div class="graph-container">
+    <div class="graph-categories">
+      <div class="graph-category" *ngFor="let c of graphCategories">
+        <input type="checkbox" [(ngModel)]="c.active" [checked]="c.active" (change)="RefreshGraph()"/>
+        <span class="category-text">{{c.title}}</span>
+      </div>
+    </div>
+    <div id="d3" class="d3">
+    </div>
   </div>
 </div>

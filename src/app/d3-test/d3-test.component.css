@@ -7,3 +7,16 @@
   stroke-opacity: .6; 
   stroke-width: 1px; 
 }
+
+.graph-categories {
+    vertical-align: top;
+    display: inline-block;
+    width: 25%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.d3 {
+    display: inline-block;
+    width: 75%;
+}
