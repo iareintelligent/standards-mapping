@@ -16,6 +16,7 @@ export class D3TestComponent implements OnInit {
     private graphType: number = 0;
     private graphData: DAG;
     private graphCategories: CategoryList = [];
+    private graphCriteria = new FilterCriteria();
 
     constructor(
       private graphService: GraphService) {
@@ -23,17 +24,37 @@ export class D3TestComponent implements OnInit {
 
     ngOnInit(): void {     
       this.graphService.getDocTypes()
-        .subscribe(dt => { this.graphCategories = dt; });
+        .subscribe(dt => { 
+          this.graphCategories = dt; 
 
-      this.graphService.getGraphData2(new FilterCriteria())
-        .subscribe(gd => { 
-          console.log(JSON.stringify(gd)); 
-          this.graphData = gd;
+          // move ISO to second slot as a hack
+          var i0 = this.graphCategories[0];
+          var i1 = this.graphCategories[1];
+          this.graphCategories[0] = i1;
+          this.graphCategories[1] = i0;
+
+          // activate first 3
+          for (var i = 0; i< 3; ++i)
+            this.graphCategories[i].active = true;
+            
           this.RefreshGraph(); 
         });
     }
 
     private RefreshGraph() {
+
+      var limitedDocs = this.graphCategories.filter(v => v.active).map(v => v.id);
+      if (limitedDocs.length > 0)
+        this.graphCriteria.categoryIds = limitedDocs;
+
+      this.graphCriteria.categoryOrder = limitedDocs;
+
+      this.graphService.getGraphData2(this.graphCriteria)
+        .subscribe(gd => { 
+          console.log(JSON.stringify(gd)); 
+          this.graphData = gd;
+        });
+
         switch (this.graphType)
         {
             case 0:
@@ -122,7 +143,10 @@ export class D3TestComponent implements OnInit {
             .attr("font-size", 10)
             .selectAll("g");
 
-
+            sankey.nodeAlign(d3Sankey.sankeyLeft);
+            //sankey.nodeAlign((n, d) => {
+            //  return this.graphCriteria.categoryOrder.indexOf(n.data.type);
+            //});
             sankey.nodeSort((a: SNode, b: SNode) => a.name < b.name ? -1 : 1);
             sankey.nodeId((d: SNode) => d.nodeId);
 

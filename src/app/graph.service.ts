@@ -22,7 +22,8 @@ export type CategoryList = ICategory[];
 
 export class FilterCriteria {
     constructor(
-        public categoryIds: string[] = null) {
+        public categoryIds: string[] = null,
+        public categoryOrder: string[] = null) {
         
         }
 }
@@ -113,19 +114,30 @@ export class GraphService {
         if (!targetId)
           return null;
 
-        nodeMap[targetId].connections++;
+        var targetNode = nodeMap[targetId];
+        targetNode.connections++;
         n.connections++;
 
+        var source = n.nodeId, 
+        var target = targetId, 
+
+       if (filter && filter.categoryOrder && filter.categoryOrder.indexOf(targetNode.data.type) < filter.categoryOrder.indexOf(n.data.type))
+       {
+           source = targetId;
+           target = n.nodeId;
+       }
+
         var result = { 
-            source: n.nodeId, 
-            target: targetId, 
+            source: source, 
+            target: target, 
             value: n.data.compliance_level 
          };
+
          return result;
        });
 
       var filteredLinks = mappedLinks.filter(v => v);
-      var filteredNodes = mappedNodes.filter(v => v.connections > 0);
+      var filteredNodes = mappedNodes.filter(v => v.connections > 0 || (filter.categoryIds && filter.categoryIds.includes(v.data.type)));
 
       var result = { nodes: filteredNodes, links: filteredLinks };
       return of(result);
