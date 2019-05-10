@@ -7,7 +7,7 @@
     "lint": "tslint ./src/**/*.ts -t verbose",
     "start": "ng serve",
     "test": "ng test",
-    "build": "ng build --aot=true --prod=true --baseHref=/docs/ --deployUrl=/docs/ --outputPath=docs",
+    "build": "ng build --aot=true --prod=true --baseHref=/standards-mapping/ --deployUrl=/standards-mapping/ --outputPath=docs",
     "e2e": "ng e2e",
     "ng": "ng"
   },
