@@ -6,7 +6,7 @@
            [checked]="graphType==1" (change)="RefreshGraph()"/>
     <input name="options" type="radio"  [(ngModel)]="graphType" [value]="2"
            [checked]="graphType==2" (change)="RefreshGraph()"/>
-  </div>
+  </div> 
   <div class="graph-container">
     <div class="graph-categories">
       <div class="graph-category" *ngFor="let c of graphCategories">
