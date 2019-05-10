@@ -15,7 +15,7 @@
       <span>{{section.body}}</span>
       <div *ngFor="let link of section.external_doc_node_references">
         <div class="link">
-          <h4><a href="/doctypes/{{link.type}}">Related: {{link.type}} Id: {{link.id}} Rev{{link.rev}}</a></h4>
+          <h4><a routerLink="/doctypes/{{link.type}}" routerLinkActive="active">Related: {{link.type}} Id: {{link.id}} Rev{{link.rev}}</a></h4>
         </div>
       </div>
     </div>
