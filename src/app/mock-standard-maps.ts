@@ -1,7 +1,11 @@
 ﻿import { StandardMap } from './standard-map';
 import * as mockMapDb from './data/msftgdprsample.json'
 
-export var mapDb: any = mockMapDb.default;
+interface SampleModule {
+    default: StandardMap
+};
+
+export var mapDb: StandardMap = (mockMapDb as any as SampleModule).default;
 
 
 export var STANDARDMAPS: StandardMap[] = [];
