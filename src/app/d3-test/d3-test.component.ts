@@ -6,6 +6,14 @@ import { DAG, SNode, GraphService, CategoryList, FilterCriteria } from '../graph
 import selection_attrs from 'd3-selection-multi/src/selection/attrs';
 d3.selection.prototype.attrs = selection_attrs;
 
+class TableData
+{
+    constructor(
+      public headers: string[],
+      public rows: SNode[][]) {
+    }
+}
+
 @Component({
   selector: 'app-d3-test',
   templateUrl: './d3-test.component.html',
@@ -17,6 +25,7 @@ export class D3TestComponent implements OnInit {
     private graphData: DAG;
     private graphCategories: CategoryList = [];
     private graphCriteria = new FilterCriteria();
+    private tableData: TableData = null;
     
     private complianceColors = ["white", "green", "yellow", "red", "black"];
 
@@ -45,7 +54,7 @@ export class D3TestComponent implements OnInit {
 
       this.graphCriteria.categoryOrder = limitedDocs;
 
-      if (this.graphType == 0)
+      if (this.graphType == 1)
       {
           // move ISO to second slot so it draws in the middle
           var i0 = this.graphCriteria.categoryOrder[0];
@@ -62,10 +71,10 @@ export class D3TestComponent implements OnInit {
           switch (this.graphType)
           {
               case 0:
-                this.DrawChart(this.graphData);
+                this.DrawTable(this.graphData);
                 break;
               case 1:
-                this.DrawTable(this.graphData);
+                this.DrawChart(this.graphData);
                 break;
               case 2:
                 this.DrawGraph(this.graphData);
@@ -92,13 +101,13 @@ export class D3TestComponent implements OnInit {
                         node = l.sourceNode;
 
                      if (node)
-                        return [node.data.section, node.data.compliance_level];
+                        return node;
                   }
 
-                  return ["-", 0];
+                  return null;
                 });
 
-                return [[d.name, d.data.compliance_level]].concat(links);
+                return [d].concat(links);
             });
 
         var width = 960;
@@ -107,35 +116,7 @@ export class D3TestComponent implements OnInit {
         // clear
         d3.selectAll("#d3").selectAll("*").remove();
 
-        var table = d3.selectAll("#d3").append("table");
-        var header = table.append("thead").append("tr");
-
-        header
-            .selectAll("th")
-            .data(headerNodes)
-            .enter()
-            .append("th")
-            .text(function (d) {
-                return d;
-            });
-
-        var tBody = table.append("tbody");
-
-        var rows = tBody.selectAll("tr")
-            .data(rowNodes)
-            .enter()
-            .append("tr");
-            
-        var cells = rows
-            .selectAll("td")
-            .data(function (d) { return d })
-            .enter()
-            .append("td")
-            .attr("bgcolor", d => this.complianceColors[d[1]])
-            .text(function (d) {
-                return d[0];
-            });
-
+        this.tableData = new TableData(headerNodes, rowNodes);
     }
 
     private DrawChart(energy: DAG) {
@@ -144,6 +125,7 @@ export class D3TestComponent implements OnInit {
 
         // clear
         d3.selectAll("#d3").selectAll("*").remove();
+        this.tableData = null;
 
         var svg = d3.selectAll("#d3").append("svg");
             svg.attr("width", width);
@@ -236,6 +218,7 @@ export class D3TestComponent implements OnInit {
 
         // clear
         d3.selectAll("#d3").selectAll("*").remove();
+        this.tableData = null;
 
         var svg = d3.selectAll("#d3").append("svg");
             svg.attr("width", width);
