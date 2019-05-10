@@ -21,13 +21,13 @@ class TableData
   encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
 })
 export class D3TestComponent implements OnInit {    
-    private graphType: number = 0;
-    private graphData: DAG;
-    private graphCategories: CategoryList = [];
-    private graphCriteria = new FilterCriteria();
-    private tableData: TableData = null;
+    public graphType: number = 0;
+    public graphData: DAG;
+    public graphCategories: CategoryList = [];
+    public graphCriteria = new FilterCriteria();
+    public tableData: TableData = null;
     
-    private complianceColors = ["white", "green", "yellow", "red", "black"];
+    public complianceColors = ["white", "green", "yellow", "red", "black"];
 
     constructor(
       private graphService: GraphService) {
@@ -46,7 +46,7 @@ export class D3TestComponent implements OnInit {
         });
     }
 
-    private RefreshGraph() {
+    public RefreshGraph() {
 
       var limitedDocs = this.graphCategories.filter(v => v.active).map(v => v.id);
       if (limitedDocs.length > 0)
