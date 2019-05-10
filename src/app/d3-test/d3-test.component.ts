@@ -17,6 +17,8 @@ export class D3TestComponent implements OnInit {
     private graphData: DAG;
     private graphCategories: CategoryList = [];
     private graphCriteria = new FilterCriteria();
+    
+    private complianceColors = ["white", "green", "yellow", "red", "black"];
 
     constructor(
       private graphService: GraphService) {
@@ -76,37 +78,8 @@ export class D3TestComponent implements OnInit {
         var rowType = this.graphCriteria.categoryOrder ? this.graphCriteria.categoryOrder[0] : (data.nodes[0] as SNode).data.type;
         var headerTypes = this.graphCriteria.categoryOrder.filter(v => v != rowType);
 
-        var rowNodes = data.nodes.filter(v => v.data.type == rowType);
-
-        var width = 960;
-        var height = 500;
-
-        // clear
-        d3.selectAll("#d3").selectAll("*").remove();
-
-        var table = d3.selectAll("#d3").append("table");
-        var header = table.append("thead").append("tr");
-
-        header
-            .selectAll("th")
-            .data([rowType].concat(headerTypes))
-            .enter()
-            .append("th")
-            .text(function (d) {
-                return d;
-            });
-
-        var tBody = table.append("tbody");
-
-        var rows = tBody.selectAll("tr")
-            .data(rowNodes)
-            .enter()
-            .append("tr");
-            
-        var complianceColors = ["white", "green", "yellow", "red", "black"]
-        var cells = rows
-            .selectAll("td")
-            .data(function (d) {
+        var headerNodes = [rowType].concat(headerTypes);
+        var rowNodes = data.nodes.filter(v => v.data.type == rowType).map(d => {
                 var links = headerTypes.map(h => {
                   for (var l of data.links)
                   {
@@ -126,10 +99,39 @@ export class D3TestComponent implements OnInit {
                 });
 
                 return [[d.name, d.data.compliance_level]].concat(links);
-            })
+            });
+
+        var width = 960;
+        var height = 500;
+
+        // clear
+        d3.selectAll("#d3").selectAll("*").remove();
+
+        var table = d3.selectAll("#d3").append("table");
+        var header = table.append("thead").append("tr");
+
+        header
+            .selectAll("th")
+            .data(headerNodes)
+            .enter()
+            .append("th")
+            .text(function (d) {
+                return d;
+            });
+
+        var tBody = table.append("tbody");
+
+        var rows = tBody.selectAll("tr")
+            .data(rowNodes)
+            .enter()
+            .append("tr");
+            
+        var cells = rows
+            .selectAll("td")
+            .data(function (d) { return d })
             .enter()
             .append("td")
-            .attr("bgcolor", d => complianceColors[d[1]])
+            .attr("bgcolor", d => this.complianceColors[d[1]])
             .text(function (d) {
                 return d[0];
             });
@@ -175,6 +177,7 @@ export class D3TestComponent implements OnInit {
             //});
             sankey.nodeSort((a: SNode, b: SNode) => a.name < b.name ? -1 : 1);
             sankey.nodeId((d: SNode) => d.nodeId);
+            sankey.nodeWidth(250);
 
             sankey(energy);
 
@@ -183,8 +186,8 @@ export class D3TestComponent implements OnInit {
 
             link.enter().append("path")
                 .attr("d", d3Sankey.sankeyLinkHorizontal())
-                .attr("stroke-width", function (d: any) { return Math.max(1, d.width); })
-                .attr("stroke", d => color(d.source.name))
+                .attr("stroke-width", function (d: any) { return 10; }) //Math.max(1, d.width) * 0.; })
+                .attr("stroke", d => "black") //color(d.source.name))
                 .on('click', function(d, i) {
                   console.log("clicked link", d);
                 })
@@ -204,7 +207,7 @@ export class D3TestComponent implements OnInit {
                 .attr("y", function (d: any) { return d.y0; })
                 .attr("height", function (d: any) { return d.y1 - d.y0; })
                 .attr("width", function (d: any) { return d.x1 - d.x0; })
-                .attr("fill", function (d: any) { return color(d.name.replace(/ .*/, "")); })
+                .attr("fill", d => { return this.complianceColors[energy.nodes[d.index].data.compliance_level]; } ) //color(d.name.replace(/ .*/, "")); })
                 .attr("stroke", "#000")
                 .on('click', function(d, i) {
                   console.log("clicked node", d);
@@ -214,17 +217,17 @@ export class D3TestComponent implements OnInit {
                   });
 
             node.append("text")
-                .attr("x", function (d: any) { return d.x0 - 6; })
+                .attr("x", function (d: any) { return d.x0 + 6; }) //{ return d.x0 - 6; })
                 .attr("y", function (d: any) { return (d.y1 + d.y0) / 2; })
                 .attr("dy", "0.35em")
-                .attr("text-anchor", "end")
-                .text(function (d: any) { return d.name; })
-                .filter(function (d: any) { return d.x0 < width / 2; })
-                .attr("x", function (d: any) { return d.x1 + 6; })
-                .attr("text-anchor", "start");
+                .attr("text-anchor", "start")
+                .text(function (d: any) { return d.name + "\n" + d.data.body; });
+                //.filter(function (d: any) { return d.x0 < width / 2; })
+                //.attr("x", function (d: any) { return d.x1 + 6; })
+                //.attr("text-anchor", "start");
 
             node.append("title")
-                .text(function (d: any) { return d.name + "\n" + format(d.value); });
+                .text(function (d: any) { return d.name + "\n" + d.data.body; });
     }
 
     private DrawGraph(data: DAG) {
