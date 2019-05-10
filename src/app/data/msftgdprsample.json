@@ -1,9 +1,9 @@
-{
+﻿{
 	"document_nodes": [{
 		"id": "5_2_3_a",
 		"type": "ISO",
 		"section": "5.2.3 a)",
-		"body": "The orgnization shall.....",
+		"body": "The orgnization shall 2.....",
 		"country": "", 
 		"region": "",
 		"compliance_level": 1,
@@ -15,11 +15,11 @@
 			"type": "PIPEDA",
 			"id": "4_1",
 			"rev": "1",
-		}, , {
+		}, {
 			"type": "PDPD",
 			"id": "S_4",
 			"rev": "1",
-		}, , {
+		}, {
 			"type": "PDPA",
 			"id": "s_11",
 			"rev": "1",
