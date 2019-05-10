@@ -1,18 +1,21 @@
 ﻿
 export class Link {
-  doc: number;
-  section: number;
+  id: string;
+  type: string;
+  ref: string;
 }
 
-export class Section {
-  id: number;
-  title: string;
-  links?: Link[];
+export class DocNode {
+  id: string;
+  type: string;
+  ref: string;
+  section: string;
+  body: string;
+  compliance_level: number;
+  external_doc_node_references: Link[];
 }
 
 export class StandardMap {
-  id: number;
-  name: string;
-  sections: Section[];
+  document_nodes: DocNode[];
 }
 

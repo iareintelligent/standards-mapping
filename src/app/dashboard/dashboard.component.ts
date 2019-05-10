@@ -1,6 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { StandardMap } from '../standard-map';
-import { StandardMapService } from '../standard-map.service';
 import { GraphService } from '../graph.service';
 
 @Component({
@@ -11,15 +10,14 @@ import { GraphService } from '../graph.service';
 export class DashboardComponent implements OnInit {
   standardMaps: StandardMap[] = [];
 
-  constructor(
-    private standardMapService: StandardMapService) { }
+  constructor() { }
 
   ngOnInit() {
     this.getStandardMaps();
   }
 
   getStandardMaps(): void {
-    this.standardMapService.getStandardMaps()
-      .subscribe(standardMaps => this.standardMaps = standardMaps);
+    //this.standardMapService.getStandardMaps()
+    //  .subscribe(standardMaps => this.standardMaps = standardMaps);
   }
 }

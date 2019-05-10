@@ -23,7 +23,7 @@
           <tr *ngFor="let r of tableData.rows">
             <td *ngFor="let c of r" [ngStyle]="{'background-color': complianceColors[c ? c.data.compliance_level : 0]}">
               <div *ngIf="c">
-                <div><a href="/sections/{{c.data.id}}">{{c.data.section}}</a></div>
+                <div><a href="/doctypes/{{c.data.type}}">{{c.data.section}}</a></div>
                 <div>{{c.data.body}}</div>
               </div>
               <div *ngIf="!c">

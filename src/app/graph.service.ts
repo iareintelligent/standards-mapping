@@ -5,7 +5,6 @@ import { Observable, of, forkJoin } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { StandardMap } from './standard-map';
-import { StandardMapService } from './standard-map.service';
 import { MessageService } from './message.service';
 import * as d3Sankey from 'd3-sankey';
 
@@ -64,27 +63,26 @@ export class GraphService {
   private nextDocGuid = 0;
 
   constructor(
-    private standardMapService: StandardMapService,
     private messageService: MessageService) { }
 
-  getGraphData(docA: number, docB: number, docC: number): Observable<DAG> {
-    var a = this.standardMapService.getStandardMap(docA);
-    var b = this.standardMapService.getStandardMap(docB);
-    var c = this.standardMapService.getStandardMap(docC);
-
-    return forkJoin(a, b, c)
-        .pipe(
-          map(ab => {
-                  var sections = ab[0].sections.concat(ab[1].sections).concat(ab[2].sections);
-                  var nodes = sections.map((v,i,x)=>{ return {nodeId:v.id, name:v.title}; });
-                  
-                  var allLinks = flatten(sections.map(s=>{ return s.links ? s.links.map(l=>{return [s,l];}) : []; }));
-                  var links = allLinks.map(sl=>{ return {source:sl[0].id, target:sl[1].section, value:1}; });
-                  return { nodes: nodes, links: links };
-            }),
-          catchError(this.handleError<DAG>('getGraphData', null))
-        );
-  }
+  //getGraphData(docA: number, docB: number, docC: number): Observable<DAG> {
+  //  var a = this.standardMapService.getStandardMap(docA);
+  //  var b = this.standardMapService.getStandardMap(docB);
+  //  var c = this.standardMapService.getStandardMap(docC);
+  //
+  //  return forkJoin(a, b, c)
+  //      .pipe(
+  //        map(ab => {
+  //                var sections = ab[0].sections.concat(ab[1].sections).concat(ab[2].sections);
+  //                var nodes = sections.map((v,i,x)=>{ return {nodeId:v.id, name:v.title}; });
+  //                
+  //                var allLinks = flatten(sections.map(s=>{ return s.links ? s.links.map(l=>{return [s,l];}) : []; }));
+  //                var links = allLinks.map(sl=>{ return {source:sl[0].id, target:sl[1].section, value:1}; });
+  //                return { nodes: nodes, links: links };
+  //          }),
+  //        catchError(this.handleError<DAG>('getGraphData', null))
+  //      );
+  //}
 
   getGuid(id: string, type: string, rev: string, createMissing: boolean = true): number {
       var key = `${type}-${id}-${rev}`;
@@ -154,6 +152,15 @@ export class GraphService {
       return of(result);
   }
 
+  getDocByType(docType: string) : Observable<StandardMap> {
+      var result = {
+        type: docType,
+        document_nodes: mapDb.document_nodes.filter(n => n.type == docType)
+      };
+
+      return of(result);
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.
@@ -174,8 +181,8 @@ export class GraphService {
     };
   }
 
-  /** Log a StandardMapService message with the MessageService */
+  /** Log a GraphService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`StandardMapService: ${message}`);
+    this.messageService.add(`GraphService: ${message}`);
   }
 }

@@ -1,22 +1,23 @@
 ﻿<div *ngIf="standardMap">
-  <h2>{{standardMap.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{standardMap.id}}</div>
-  <div>
+  <button (click)="goBack()">go back</button>
+  <h2>{{standardMap.type | uppercase}} Details</h2>
+<!--    <div><span>type: </span>{{standardMap.type}}</div>
+<div>
     <label>name:
       <input [(ngModel)]="standardMap.name" placeholder="name"/>
     </label>
   </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+  <button (click)="save()">save</button>-->
   <h2>Sections</h2>
-  <div *ngFor="let section of standardMap.sections">
+  <div *ngFor="let section of standardMap.document_nodes">
     <div class="section">
-      <h4>{{section.title}}</h4>
-        <div *ngFor="let link of section.links">
-          <div class="link">
-            <h4>{{link.section}}</h4>
-          </div>
+      <h4 class="section">{{section.section}} ({{section.type}}.{{section.id}}.{{section.rev}})</h4>
+      <span>{{section.body}}</span>
+      <div *ngFor="let link of section.external_doc_node_references">
+        <div class="link">
+          <h4><a href="/doctypes/{{link.type}}">Related: {{link.type}} Id: {{link.id}} Rev{{link.rev}}</a></h4>
         </div>
+      </div>
     </div>
   </div>
 </div>

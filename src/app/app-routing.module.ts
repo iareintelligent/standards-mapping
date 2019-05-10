@@ -8,7 +8,7 @@ import { StandardMapDetailComponent }  from './standard-map-detail/standard-map-
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: StandardMapDetailComponent },
+  { path: 'doctypes/:id', component: StandardMapDetailComponent },
   { path: 'standard-map', component: StandardMapsComponent }
 ];
 

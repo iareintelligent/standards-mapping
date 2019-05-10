@@ -7,7 +7,6 @@ import {
  } from 'rxjs/operators';
 
 import { StandardMap } from '../standard-map';
-import { StandardMapService } from '../standard-map.service';
 
 @Component({
   selector: 'app-standard-map-search',
@@ -18,7 +17,7 @@ export class StandardMapSearchComponent implements OnInit {
   standardMap$: Observable<StandardMap[]>;
   private searchTerms = new Subject<string>();
 
-  constructor(private standardMapService: StandardMapService) {}
+  constructor() {}
 
   // Push a search term into the observable stream.
   search(term: string): void {
@@ -34,7 +33,7 @@ export class StandardMapSearchComponent implements OnInit {
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((term: string) => this.standardMapService.searchStandardMaps(term)),
+      //switchMap((term: string) => this.standardMapService.searchStandardMaps(term)),
     );
   }
 }

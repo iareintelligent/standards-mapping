@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { StandardMap }         from '../standard-map';
-import { StandardMapService }  from '../standard-map.service';
+import { GraphService }  from '../graph.service';
 
 @Component({
   selector: 'app-standard-map-detail',
@@ -15,7 +15,7 @@ export class StandardMapDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private standardMapService: StandardMapService,
+    private graphService: GraphService,
     private location: Location
   ) {}
 
@@ -24,8 +24,8 @@ export class StandardMapDetailComponent implements OnInit {
   }
 
   getStandardMap(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.standardMapService.getStandardMap(id)
+    const id = this.route.snapshot.paramMap.get('id');
+    this.graphService.getDocByType(id)
       .subscribe(standardMap => this.standardMap = standardMap);
   }
 
@@ -33,8 +33,8 @@ export class StandardMapDetailComponent implements OnInit {
     this.location.back();
   }
 
- save(): void {
-    this.standardMapService.updateStandardMap(this.standardMap)
-      .subscribe(() => this.goBack());
-  }
+ //save(): void {
+ //   this.standardMapService.updateStandardMap(this.standardMap)
+ //     .subscribe(() => this.goBack());
+ // }
 }
