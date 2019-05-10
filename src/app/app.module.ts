@@ -15,8 +15,8 @@ import { StandardMapsComponent }      from './standard-maps/standard-maps.compon
 import { StandardMapSearchComponent }  from './standard-map-search/standard-map-search.component';
 import { MessagesComponent }    from './messages/messages.component';
 import { D3TestComponent }      from './d3-test/d3-test.component';
- 
-//import { D3Service } from 'd3-ng2-service';
+import { TreeModule } from 'angular-tree-component';
+
 
 @NgModule({
   imports: [
@@ -30,7 +30,8 @@ import { D3TestComponent }      from './d3-test/d3-test.component';
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    TreeModule.forRoot()
   ],
   declarations: [
     AppComponent,
