@@ -8,6 +8,10 @@
   stroke-width: 1px; 
 }
 
+.graph-container {
+    position: relative;
+}
+
 .graph-categories {
     vertical-align: top;
     display: inline-block;
@@ -18,5 +22,18 @@
 
 .d3 {
     display: inline-block;
-    width: 75%;
+    width: 74%;
+}
+
+.table-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 74%;
+}
+
+table, th, td {
+  table-layout: fixed;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
 }
