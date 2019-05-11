@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, forkJoin } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { StandardMap } from './standard-map';
+import { StandardMap, FullDocNode, DocNode } from './standard-map';
 import { MessageService } from './message.service';
 import * as d3Sankey from 'd3-sankey';
 
@@ -157,6 +157,37 @@ export class GraphService {
         type: docType,
         document_nodes: mapDb.document_nodes.filter(n => n.type == docType)
       };
+
+      return of(result);
+  }
+
+  private addToDoc(node: FullDocNode, children: DocNode[], root: StandardMap) {
+    node.children = children.map(v => {
+        var child = new FullDocNode(v);
+
+        if (v.internal_doc_node_references)
+        {
+          var childNodes = v.internal_doc_node_references.map(l => {
+            // find first matching doc
+            var found = root.document_nodes.find(n => n.type == v.type && n.id == l.id && n.rev == l.rev);
+            return found;
+          }).filter(cn => cn);
+
+          // Recurse
+          this.addToDoc(child, childNodes, root);
+        }
+
+        return child;
+    });
+  }
+
+  getFullDocByType(docType: string) : Observable<FullDocNode> {
+      var result = new FullDocNode({ type: docType });
+
+      this.addToDoc(
+        result, 
+        mapDb.document_nodes.filter(n => n.type == docType),
+        mapDb);
 
       return of(result);
   }

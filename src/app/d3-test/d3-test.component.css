@@ -37,3 +37,28 @@ table, th, td {
   border-collapse: collapse;
   width: 100%;
 }
+
+.graph-tab-buttons {
+
+}
+
+.graph-tab-button {
+    display: inline-block;
+    margin: 2px;
+}
+
+.button-active {
+    border: 1px solid green;
+}
+
+.graph-tabs {
+
+}
+
+.graph-tab {
+    height: 400px;
+}
+
+.graph-inactive {
+    display: none;
+}

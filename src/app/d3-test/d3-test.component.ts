@@ -3,6 +3,8 @@ import * as d3 from 'd3';
 import * as d3Sankey from 'd3-sankey';
 import { DAG, SNode, GraphService, CategoryList, FilterCriteria } from '../graph.service';
 
+import { TreeModel, TreeNode } from 'angular-tree-component';
+
 import selection_attrs from 'd3-selection-multi/src/selection/attrs';
 d3.selection.prototype.attrs = selection_attrs;
 
@@ -14,24 +16,11 @@ class TableData
     }
 }
 
-@Component({
-  selector: 'app-d3-test',
-  templateUrl: './d3-test.component.html',
-  styleUrls: [ './d3-test.component.css' ],
-  encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
-})
-export class D3TestComponent implements OnInit {    
-    public graphType: number = 0;
-    public graphData: DAG;
-    public graphCategories: CategoryList = [];
-    public graphCriteria = new FilterCriteria();
-    public tableData: TableData = null;
-    
-    public complianceColors = ["white", "green", "yellow", "red", "black"];
-    
+class GraphTab {
     public options = {
       useCheckbox: true
     };
+    public state: any;
     public nodes = [
       {
         name: 'North America',
@@ -63,42 +52,38 @@ export class D3TestComponent implements OnInit {
       }
     ];
 
-    public filterFn(value: string, treeModel: TreeModel) {
-      treeModel.filterNodes((node: TreeNode) => this.fuzzysearch(value, node.data.name));
+    constructor(
+      public title: string,
+      public active: boolean = false) {
     }
+}
 
-
-    public fuzzysearch(needle: string, haystack: string) {
-      const haystackLC = haystack.toLowerCase();
-      const needleLC = needle.toLowerCase();
-
-      const hlen = haystack.length;
-      const nlen = needleLC.length;
-
-      if (nlen > hlen) {
-        return false;
-      }
-      if (nlen === hlen) {
-        return needleLC === haystackLC;
-      }
-      outer: for (let i = 0, j = 0; i < nlen; i++) {
-        const nch = needleLC.charCodeAt(i);
-
-        while (j < hlen) {
-          if (haystackLC.charCodeAt(j++) === nch) {
-            continue outer;
-          }
-        }
-        return false;
-      }
-      return true;
-    }
+@Component({
+  selector: 'app-d3-test',
+  templateUrl: './d3-test.component.html',
+  styleUrls: [ './d3-test.component.css' ],
+  encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
+})
+export class D3TestComponent implements OnInit {    
+    public graphType: number = 0;
+    public graphData: DAG;
+    public graphCategories: CategoryList = [];
+    public graphCriteria = new FilterCriteria();
+    public graphTabs: GraphTab[] = [ new GraphTab("PIPEDA", true), new GraphTab("ISO", false), new GraphTab("APP") ];
+    public tableData: TableData = null;
+    
+    public complianceColors = ["white", "green", "yellow", "red", "black"];
 
     constructor(
       private graphService: GraphService) {
     };
 
     ngOnInit(): void {     
+      for (var t of this.graphTabs) {
+        this.graphService.getFullDocByType(t.title)
+          .subscribe(doc => t.nodes = doc.children);
+      }
+
       this.graphService.getDocTypes()
         .subscribe(dt => { 
           this.graphCategories = dt; 
@@ -423,5 +408,42 @@ export class D3TestComponent implements OnInit {
           d.fx = d3.event.x;
           d.fy = d3.event.y;
       }
+    }
+
+    public filterFn(value: string, treeModel: TreeModel) {
+      treeModel.filterNodes((node: TreeNode) => this.fuzzysearch(value, node.data.name));
+    }
+
+    public activateTab(tab: GraphTab) {
+        for (var t of this.graphTabs)
+        {
+            t.active = t == tab;
+        }
+    }
+
+    public fuzzysearch(needle: string, haystack: string) {
+      const haystackLC = haystack.toLowerCase();
+      const needleLC = needle.toLowerCase();
+
+      const hlen = haystack.length;
+      const nlen = needleLC.length;
+
+      if (nlen > hlen) {
+        return false;
+      }
+      if (nlen === hlen) {
+        return needleLC === haystackLC;
+      }
+      outer: for (let i = 0, j = 0; i < nlen; i++) {
+        const nch = needleLC.charCodeAt(i);
+
+        while (j < hlen) {
+          if (haystackLC.charCodeAt(j++) === nch) {
+            continue outer;
+          }
+        }
+        return false;
+      }
+      return true;
     }
 }

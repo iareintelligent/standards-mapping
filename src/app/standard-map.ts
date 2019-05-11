@@ -6,13 +6,14 @@ export class Link {
 }
 
 export class DocNode {
-  id: string;
+  id?: string;
   type: string;
-  rev: string;
-  section: string;
-  body: string;
-  compliance_level: number;
-  external_doc_node_references: Link[];
+  rev?: string;
+  section?: string;
+  body?: string;
+  compliance_level?: number;
+  external_doc_node_references?: Link[];
+  internal_doc_node_references?: Link[];
 }
 
 export class DocType {
@@ -23,5 +24,17 @@ export class DocType {
 export class StandardMap {
   document_nodes: DocNode[];
   document_types?: DocType[];
+}
+
+export class FullDocNode {
+
+  public constructor(
+    public node: DocNode,
+    public children: FullDocNode[] = []) {
+  }
+
+  get name():string {
+    return this.node.section ? this.node.section : this.node.type;
+  }
 }
 
