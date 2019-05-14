@@ -62,3 +62,9 @@ table, th, td {
 .graph-inactive {
     display: none;
 }
+
+.graph-column {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}

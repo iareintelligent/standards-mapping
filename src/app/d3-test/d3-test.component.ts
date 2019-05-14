@@ -20,7 +20,10 @@ class GraphTab {
     public options = {
       useCheckbox: true
     };
-    public state: ITreeState;
+
+    public state: ITreeState = { };
+    public treeModel: TreeModel;
+
     public nodes = [
       {
         name: 'North America',
@@ -52,9 +55,16 @@ class GraphTab {
       }
     ];
 
+    public column: GraphTab;
+
     constructor(
       public title: string,
-      public active: boolean = false) {
+      public active: boolean = false,
+      public isParent: boolean = false) {
+        if (isParent)
+        {
+          this.column = new GraphTab(title);
+        }
     }
 }
 
@@ -69,7 +79,7 @@ export class D3TestComponent implements OnInit {
     public graphData: DAG;
     public graphCategories: CategoryList = [];
     public graphCriteria = new FilterCriteria();
-    public graphTabs: GraphTab[] = [ new GraphTab("PIPEDA", true), new GraphTab("ISO", false), new GraphTab("APP") ];
+    public graphTabs: GraphTab[] = [ new GraphTab("PIPEDA", true, true), new GraphTab("ISO", false, true), new GraphTab("APP", false, true) ];
     public tableData: TableData = null;
     
     public complianceColors = ["white", "green", "yellow", "red", "black"];
@@ -81,7 +91,10 @@ export class D3TestComponent implements OnInit {
     ngOnInit(): void {     
       for (var t of this.graphTabs) {
         this.graphService.getFullDocByType(t.title)
-          .subscribe(doc => t.nodes = doc.children);
+          .subscribe(doc => {
+            t.nodes = doc.children;
+            t.column.nodes = doc.children;
+          });
       }
 
       this.graphService.getDocTypes()
@@ -421,7 +434,23 @@ export class D3TestComponent implements OnInit {
         }
     }
 
-    public tabTreeChanged(tab: GraphTab, state: ITreeState, model: TreeModel) {
+    public tabTreeChanged(tab: GraphTab) {
+        if (tab.column.treeModel) {
+
+            // Due to a bug https://github.com/500tech/angular-tree-component/issues/521
+            //  must manually clear nodes that are no longer selected
+            for (var n of Object.keys(tab.treeModel.selectedLeafNodeIds))
+            {
+                var node = tab.treeModel.getNodeById(n);
+                if (!node.isSelected)
+                  delete tab.treeModel.selectedLeafNodeIds[n];
+            }
+            
+            // filter child tree
+            tab.column.treeModel.clearFilter();
+            var anySelection = Object.keys(tab.treeModel.selectedLeafNodeIds).length > 0;
+            tab.column.treeModel.filterNodes((node: TreeNode) => !(anySelection && !(node.data.id in tab.treeModel.selectedLeafNodeIds)), false);
+        }
     }
 
     public fuzzysearch(needle: string, haystack: string) {
