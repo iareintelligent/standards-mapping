@@ -24,10 +24,10 @@ export class StandardMapDetailComponent implements OnInit {
   }
 
   getStandardMap(): void {
-    this.route.params.subscribe(params => {
-       this.graphService.getDocByType(params['id'])
-        .subscribe(standardMap => this.standardMap = standardMap);
-    });
+    //this.route.params.subscribe(params => {
+    //   this.graphService.getDocByType(params['id'])
+    //    .subscribe(standardMap => this.standardMap = standardMap);
+    //});
   }
 
   goBack(): void {

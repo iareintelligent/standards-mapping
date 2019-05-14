@@ -4,11 +4,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, forkJoin } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { StandardMap, FullDocNode, DocNode } from './standard-map';
+import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2 } from './standard-map';
 import { MessageService } from './message.service';
 import * as d3Sankey from 'd3-sankey';
 
-import { mapDb } from './mock-standard-maps';
+import { mapDb2 } from './mock-standard-maps';
 
 
 export interface ICategory {
@@ -98,97 +98,91 @@ export class GraphService {
   }
 
   getGraphData2(filter: FilterCriteria): Observable<DAG> {
-      var nodes = mapDb.document_nodes;
-      var mappedNodes = nodes.map(v => { return { nodeId: this.getGuid(v.id, v.type, v.rev), name: v.section, data: v, connections: 0}; });
-      
-      var nodeMap = mappedNodes.reduce((m, o) => {
-          m[o.nodeId] = o;
-          return m;
-      }, {});
-      
-      var limitedNodes = mappedNodes.filter(v => filter.categoryIds == null || filter.categoryIds.includes(v.data.type));
+      //var nodes = mapDb2.document_nodes;
+      //var mappedNodes = nodes.map(v => { return { nodeId: this.getGuid(v.id, v.type, v.rev), name: v.section, data: v, connections: 0}; });
+      //
+      //var nodeMap = mappedNodes.reduce((m, o) => {
+      //    m[o.nodeId] = o;
+      //    return m;
+      //}, {});
+      //
+      //var limitedNodes = mappedNodes.filter(v => filter.categoryIds == null || filter.categoryIds.includes(v.data.type));
+      //
+      //var allLinks = flatten(limitedNodes.map(n => { return n.data.external_doc_node_references ? n.data.external_doc_node_references.map(l => { return [n, l]; }) : []; }));
+      //var mappedLinks = allLinks.map(nl => { 
+      //  var n = nl[0]; 
+      //  var t = nl[1];
+      //  var targetId = this.getGuid(t.id, t.type, t.rev, false);
+      //  if (!targetId)
+      //    return null;
+      //
+      //  var targetNode = nodeMap[targetId];
+      //  targetNode.connections++;
+      //  n.connections++;
+      //  
+      //  var sourceNode = n;
+      //
+      // if (filter && filter.categoryOrder && filter.categoryOrder.indexOf(targetNode.data.type) < filter.categoryOrder.indexOf(n.data.type))
+      // {
+      //     sourceNode = targetNode;
+      //     targetNode = n; 
+      // }
+      //
+      //  var result = { 
+      //      source: sourceNode.nodeId, 
+      //      target: targetNode.nodeId,
+      //      sourceNode: sourceNode, 
+      //      targetNode: targetNode,
+      //      value: n.data.compliance_level
+      //   };
+      //
+      //   return result;
+      // });
+      //
+      //var filteredLinks = mappedLinks.filter(v => v);
+      //var filteredNodes = mappedNodes.filter(v => v.connections > 0 || (filter.categoryIds && filter.categoryIds.includes(v.data.type)));
 
-      var allLinks = flatten(limitedNodes.map(n => { return n.data.external_doc_node_references ? n.data.external_doc_node_references.map(l => { return [n, l]; }) : []; }));
-      var mappedLinks = allLinks.map(nl => { 
-        var n = nl[0]; 
-        var t = nl[1];
-        var targetId = this.getGuid(t.id, t.type, t.rev, false);
-        if (!targetId)
-          return null;
-
-        var targetNode = nodeMap[targetId];
-        targetNode.connections++;
-        n.connections++;
-        
-        var sourceNode = n;
-
-       if (filter && filter.categoryOrder && filter.categoryOrder.indexOf(targetNode.data.type) < filter.categoryOrder.indexOf(n.data.type))
-       {
-           sourceNode = targetNode;
-           targetNode = n; 
-       }
-
-        var result = { 
-            source: sourceNode.nodeId, 
-            target: targetNode.nodeId,
-            sourceNode: sourceNode, 
-            targetNode: targetNode,
-            value: n.data.compliance_level
-         };
-
-         return result;
-       });
-
-      var filteredLinks = mappedLinks.filter(v => v);
-      var filteredNodes = mappedNodes.filter(v => v.connections > 0 || (filter.categoryIds && filter.categoryIds.includes(v.data.type)));
+      var filteredLinks = [];
+      var filteredNodes = [];
 
       var result = { nodes: filteredNodes, links: filteredLinks };
       return of(result);
   }
 
   getDocTypes() : Observable<CategoryList> {
-      var data = mapDb.document_types;
-      var result = data.map(v => { return { id: v.id, title: v.title }; });
+      var result = mapDb2.map(v => { return { id: v.type, title: v.type }; });
       return of(result);
   }
 
-  getDocByType(docType: string) : Observable<StandardMap> {
-      var result = {
-        type: docType,
-        document_nodes: mapDb.document_nodes.filter(n => n.type == docType)
-      };
+  //getDocByType(docType: string) : Observable<StandardMap> {
+  //    var result = {
+  //      type: docType,
+  //      document_nodes: mapDb2.document_nodes.filter(n => n.type == docType)
+  //    };
+  //
+  //    return of(result);
+  //}
 
-      return of(result);
-  }
+  private addToDoc(parent: FullDocNode, input: DocNode2) {
+      var child = new FullDocNode(input);
 
-  private addToDoc(node: FullDocNode, children: DocNode[], root: StandardMap) {
-    node.children = children.map(v => {
-        var child = new FullDocNode(v);
+      if (parent)
+      {
+        parent.children.push(child);
+      }
 
-        if (v.internal_doc_node_references)
-        {
-          var childNodes = v.internal_doc_node_references.map(l => {
-            // find first matching doc
-            var found = root.document_nodes.find(n => n.type == v.type && n.id == l.id && n.rev == l.rev);
-            return found;
-          }).filter(cn => cn);
+      // Recurse
+      for (var c of input.children)
+      {
+        this.addToDoc(child, c);
+      }
 
-          // Recurse
-          this.addToDoc(child, childNodes, root);
-        }
-
-        return child;
-    });
+      return child;
   }
 
   getFullDocByType(docType: string) : Observable<FullDocNode> {
-      var result = new FullDocNode({ type: docType });
-
-      this.addToDoc(
-        result, 
-        mapDb.document_nodes.filter(n => n.type == docType),
-        mapDb);
-
+      var doc = mapDb2.find(n => n.type == docType);
+      var result = this.addToDoc(null, doc);
       return of(result);
   }
 

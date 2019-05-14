@@ -19,7 +19,7 @@
           <div class="graph-tab" [class]="!t.active ? 'graph-inactive' : ''">
             <input id="filter3" #filter3 (keyup)="filterFn(filter3.value, tree.treeModel)" placeholder="filter by fuzzy search"/>
             <button (click)="tree.treeModel.clearFilter(); filter3.value = ''">Clear Filter</button>
-            <tree-root #tree [focused]="true" [(state)]="t.state" [options]="t.options" [nodes]="t.nodes"></tree-root>
+            <tree-root #tree [focused]="true" [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (stateChange)="tabTreeChanged(t, $event, tree.treeModel)">></tree-root>
           </div>
         </div>
       </div>

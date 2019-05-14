@@ -26,15 +26,31 @@ export class StandardMap {
   document_types?: DocType[];
 }
 
+export class DocNode2 {
+  id?: string;
+  section?: string;
+  body?: string;
+  compliance_level?: number;
+  children: DocNode2[];
+}
+
+
+export class Doc2 extends DocNode2 {
+  type: string;
+  rev?: string;
+}
+
 export class FullDocNode {
 
   public constructor(
-    public node: DocNode,
+    public node: Doc2 | DocNode2,
     public children: FullDocNode[] = []) {
   }
 
   get name():string {
-    return this.node.section ? this.node.section : this.node.type;
+    var name = this.node.section ? this.node.section : (this.node as Doc2).type;
+    if (this.node.body)
+      name += " - " + this.node.body;
+    return name;
   }
 }
-

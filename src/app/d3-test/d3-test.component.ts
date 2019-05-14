@@ -3,7 +3,7 @@ import * as d3 from 'd3';
 import * as d3Sankey from 'd3-sankey';
 import { DAG, SNode, GraphService, CategoryList, FilterCriteria } from '../graph.service';
 
-import { TreeModel, TreeNode } from 'angular-tree-component';
+import { TreeModel, TreeNode, ITreeState } from 'angular-tree-component';
 
 import selection_attrs from 'd3-selection-multi/src/selection/attrs';
 d3.selection.prototype.attrs = selection_attrs;
@@ -20,7 +20,7 @@ class GraphTab {
     public options = {
       useCheckbox: true
     };
-    public state: any;
+    public state: ITreeState;
     public nodes = [
       {
         name: 'North America',
@@ -411,7 +411,7 @@ export class D3TestComponent implements OnInit {
     }
 
     public filterFn(value: string, treeModel: TreeModel) {
-      treeModel.filterNodes((node: TreeNode) => this.fuzzysearch(value, node.data.name));
+      treeModel.filterNodes((node: TreeNode) => this.fuzzysearch(value, node.data.name) || (node.data.node.body && this.fuzzysearch(value, node.data.node.body)));
     }
 
     public activateTab(tab: GraphTab) {
@@ -419,6 +419,9 @@ export class D3TestComponent implements OnInit {
         {
             t.active = t == tab;
         }
+    }
+
+    public tabTreeChanged(tab: GraphTab, state: ITreeState, model: TreeModel) {
     }
 
     public fuzzysearch(needle: string, haystack: string) {
