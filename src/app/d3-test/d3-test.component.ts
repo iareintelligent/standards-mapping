@@ -64,6 +64,7 @@ class GraphTab {
         if (isParent)
         {
           this.column = new GraphTab(title);
+          this.column.options.useCheckbox = false;
         }
     }
 }
