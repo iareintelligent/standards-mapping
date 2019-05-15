@@ -23,6 +23,8 @@ class GraphTab {
 
     public state: ITreeState = { };
     public treeModel: TreeModel;
+    public visibleNodes: TreeNode[] = [];
+    public displayLinks: any[] = [];
 
     public nodes = [
       {
@@ -84,6 +86,7 @@ export class D3TestComponent implements OnInit {
     public tableData: TableData = null;
     
     public complianceColors = ["white", "green", "yellow", "red", "black"];
+    public svgbgElement: any;
 
     constructor(
       private graphService: GraphService) {
@@ -450,8 +453,87 @@ export class D3TestComponent implements OnInit {
             // filter child tree
             tab.column.treeModel.clearFilter();
             var anySelection = Object.keys(tab.treeModel.selectedLeafNodeIds).length > 0;
-            tab.column.treeModel.filterNodes((node: TreeNode) => !(anySelection && !(node.data.id in tab.treeModel.selectedLeafNodeIds)), false);
+            var visibleNodes = [];
+
+            tab.column.treeModel.filterNodes((node: TreeNode) => {
+                var show = !anySelection  || (node.data.id in tab.treeModel.selectedLeafNodeIds);
+                if (show)
+                    visibleNodes.push(node);
+                return show;
+              }, false);
+
+            tab.visibleNodes = visibleNodes;
+
+            this.updateGraph();
         }
+    }
+
+    public columnTabTreeChanged(tab: GraphTab) {
+        if (tab.column.treeModel) {
+            this.updateGraph();
+        }
+    }
+
+    public updateGraph() {
+        // delay the rendering so dom can settle.
+        setTimeout(a => {
+            var links = this.graphService.flatten(this.graphTabs[0].visibleNodes.map(v => v.data.node.links.map(l => [v, l])));
+            var rollup = links.reduce((a, b) => {
+                var owner = b[0];
+                while (owner.realParent && owner.realParent.isCollapsed)
+                  owner = owner.realParent;
+
+                if (!(owner.id in a))
+                    a[owner.id] = [];
+                a[owner.id].push(b);
+                return a;
+            }, { });
+
+            var rollup2 = Object.keys(rollup).map(k => {
+                var collapsed = rollup[k].reduce((a, b) => {
+                    var link = b[1];
+                    var owner = this.graphTabs[1].column.treeModel.getNodeById(link.id);
+                    while (owner.realParent && owner.realParent.isCollapsed)
+                      owner = owner.realParent;
+
+                    if (!(owner.id in a))
+                        a[owner.id] = [];
+                    a[owner.id].push(link);
+                    return a;
+                }, { });
+
+                return [k, collapsed];
+            });
+        
+            var svgBounds = this.svgbgElement.getBoundingClientRect();
+            var flatten = rollup2.reduce((a, b) => {
+                for (var l in b[1])
+                {
+                  var fromNode = this.graphTabs[0].column.treeModel.getNodeById(b[0]);
+                  var toNode = this.graphTabs[1].column.treeModel.getNodeById(l);
+
+                  var fromBounds = fromNode.elementRef2.getBoundingClientRect();
+                  var toBounds = toNode.elementRef2.getBoundingClientRect();
+              
+                  a.push({
+                      from: b[0], 
+                      to: l,
+                      x1: fromBounds.right - svgBounds.left - 60,
+                      x2: toBounds.left - svgBounds.left - 20,
+                      y1: fromBounds.top - svgBounds.top + fromBounds.height * 0.5,
+                      y2: toBounds.top - svgBounds.top + toBounds.height * 0.5,
+                  });
+                }
+                return a;
+            }, []);
+
+            this.graphTabs[0].displayLinks = flatten;
+        }, 100);
+    }
+
+    public bindTogether(node, element, svgbg) {
+        node.elementRef2 = element;
+        this.svgbgElement = svgbg;
     }
 
     public fuzzysearch(needle: string, haystack: string) {

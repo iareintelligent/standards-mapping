@@ -32,6 +32,7 @@ export class DocNode2 {
   body?: string;
   compliance_level?: number;
   children: DocNode2[];
+  links: Link[];
 }
 
 

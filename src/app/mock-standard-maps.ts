@@ -13,7 +13,7 @@ function getRandomInt(max) {
 var mockText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel velit magna. Ut ex est, consequat ultricies aliquam in, rutrum quis tortor. Etiam ex turpis, lacinia ac blandit eget, ultrices ac urna. Morbi pulvinar, leo vel gravida lacinia, velit dolor iaculis est, at porta arcu leo tempus lacus. Proin tincidunt, urna non varius mollis, turpis nisl hendrerit felis, nec scelerisque dui velit a tellus. Praesent consequat ante lacus, ac euismod libero elementum lacinia. Ut libero turpis, interdum id quam quis, malesuada dapibus tortor. Nulla ut orci eu odio pretium gravida et et nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur lorem magna, malesuada in placerat scelerisque, lacinia sit amet dui. Vestibulum non elementum dui. Proin et pellentesque nisl, efficitur congue tortor. Cras dapibus vel libero vel efficitur. Duis vitae diam quam. Vivamus ornare ullamcorper dolor, at facilisis est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
 
 
-function GenerateStandardMapRecursive(result: DocNode2, sections: number, depth: number): void {
+function GenerateStandardMapRecursive(doc: Doc2, result: DocNode2, sections: number, depth: number): void {
   if (depth > 0)
   {
       for (var i = 1; i <= sections; ++i)
@@ -37,11 +37,23 @@ function GenerateStandardMapRecursive(result: DocNode2, sections: number, depth:
               section: newId,
               body: body,
               compliance_level: 1,
-              children: []
+              children: [],
+              links: []
           };
 
+          if (body && doc.type != "ISO")
+          {
+              // Link to iso doc
+              child.links.push({
+                  id: newId,
+                  type: "ISO",
+                  rev: "1"
+              });
+          }
+
           result.children.push(child);
-          GenerateStandardMapRecursive(child, sections / 2, depth - 1);
+
+          GenerateStandardMapRecursive(doc, child, sections / 2, depth - 1);
       }
   }
 }
@@ -50,10 +62,11 @@ function GenerateStandardMap(type: string, rev: string, sections: number, depth:
     var result = {
         type: type,
         rev: rev,
-        children: []
+        children: [],
+        links: []
     };
 
-    GenerateStandardMapRecursive(result, sections, depth);
+    GenerateStandardMapRecursive(result, result, sections, depth);
 
     return result;
 }

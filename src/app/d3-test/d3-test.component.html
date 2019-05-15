@@ -31,8 +31,36 @@
     </div>
     <div class="table-wrapper" *ngIf="tableData">
         <div class="graph-column" *ngFor="let t of graphTabs">
-            <tree-root #tree [focused]="true" [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="t.column.treeModel = tree.treeModel"></tree-root>
+            <tree-root #tree [focused]="true" [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="t.column.treeModel = tree.treeModel; tabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t)">
+              <ng-template #treeNodeWrapperTemplate let-node let-index="index">
+                <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
+                  <tree-node-expander [node]="node"></tree-node-expander>
+                  <div class="node-content-wrapper"
+                    [class.dummystyle]="bindTogether(node, wrapper, svgbg)"
+                    [class.node-content-wrapper-active]="node.isActive"
+                    [class.node-content-wrapper-focused]="node.isFocused"
+                    (click)="node.mouseAction('click', $event)"
+                    (dblclick)="node.mouseAction('dblClick', $event)"
+                    (contextmenu)="node.mouseAction('contextMenu', $event)"
+                    (treeDrop)="node.onDrop($event)"
+                    [treeAllowDrop]="node.allowDrop"
+                    [treeDrag]="node"
+                    [treeDragEnabled]="node.allowDrag()">
+
+                    <tree-node-content [node]="node" [index]="index"></tree-node-content>
+                  </div>
+                </div>
+              </ng-template>
+            </tree-root>
         </div>
+        <svg #svgbg class="svg-background">
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+            </marker>
+          </defs>
+          <line *ngFor="let l of graphTabs[0].displayLinks" [attr.x1]="l.x1" [attr.x2]="l.x2" [attr.y1]="l.y1" [attr.y2]="l.y2" stroke="black" marker-end="url(#arrow)"></line>
+        </svg>
 <!--      <table>
         <thead>
             <td *ngFor="let h of tableData.headers">{{h}}</td>

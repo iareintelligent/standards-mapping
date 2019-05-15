@@ -53,10 +53,6 @@ export interface DAG {
 }
 // -- Dag Node --
 
-function flatten(array) {
-    return array.reduce((a,b)=>a.concat(b));
-}
-
 @Injectable({ providedIn: 'root' })
 export class GraphService {
   private docGuids = {};
@@ -83,6 +79,10 @@ export class GraphService {
   //        catchError(this.handleError<DAG>('getGraphData', null))
   //      );
   //}
+
+  flatten(array) {
+      return array.reduce((a,b)=>a.concat(b));
+  }
 
   getGuid(id: string, type: string, rev: string, createMissing: boolean = true): number {
       var key = `${type}-${id}-${rev}`;
