@@ -507,22 +507,27 @@ export class D3TestComponent implements OnInit {
         
             var svgBounds = this.svgbgElement.getBoundingClientRect();
             var flatten = rollup2.reduce((a, b) => {
+                var fromTree = this.graphTabs[0].column.treeModel;
+                var toTree = this.graphTabs[1].column.treeModel;
                 for (var l in b[1])
                 {
-                  var fromNode = this.graphTabs[0].column.treeModel.getNodeById(b[0]);
-                  var toNode = this.graphTabs[1].column.treeModel.getNodeById(l);
-
-                  var fromBounds = fromNode.elementRef2.getBoundingClientRect();
-                  var toBounds = toNode.elementRef2.getBoundingClientRect();
+                  var fromNode = fromTree.getNodeById(b[0]);
+                  var toNode = toTree.getNodeById(l);
+                  
+                  if (!(fromNode.id in fromTree.hiddenNodeIds || toNode.id in toTree.hiddenNodeIds))
+                  {
+                    var fromBounds = fromNode.elementRef2.getBoundingClientRect();
+                    var toBounds = toNode.elementRef2.getBoundingClientRect();
               
-                  a.push({
-                      from: b[0], 
-                      to: l,
-                      x1: fromBounds.right - svgBounds.left - 60,
-                      x2: toBounds.left - svgBounds.left - 20,
-                      y1: fromBounds.top - svgBounds.top + fromBounds.height * 0.5,
-                      y2: toBounds.top - svgBounds.top + toBounds.height * 0.5,
-                  });
+                    a.push({
+                        from: b[0], 
+                        to: l,
+                        x1: fromBounds.right - svgBounds.left - 60,
+                        x2: toBounds.left - svgBounds.left - 20,
+                        y1: fromBounds.top - svgBounds.top + fromBounds.height * 0.5,
+                        y2: toBounds.top - svgBounds.top + toBounds.height * 0.5,
+                    });
+                  }
                 }
                 return a;
             }, []);
