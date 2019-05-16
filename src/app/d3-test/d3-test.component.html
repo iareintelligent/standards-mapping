@@ -9,6 +9,7 @@
   </div>
   <div class="graph-container">
     <div class="graph-categories">
+      <h1>Filter</h1>
       <div class="graph-tab-buttons">
         <div class="graph-tab-button" *ngFor="let t of graphTabs">
           <button [class]="t.active ? 'button-active' : ''" (click)="activateTab(t)">{{t.title}}</button>
@@ -19,7 +20,6 @@
           <div class="graph-tab" [class]="!t.active ? 'graph-inactive' : ''">
             <input id="filter3" #filter3 (keyup)="filterFn(filter3.value, tree.treeModel)" placeholder="fuzzy search..."/>
             <button (click)="tree.treeModel.clearFilter(); filter3.value = ''">Clear Search</button>
-            <div><span>Filter</span></div>
             <tree-root #tree [focused]="true" [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="tabTreeChanged(t)">></tree-root>
           </div>
         </div>
