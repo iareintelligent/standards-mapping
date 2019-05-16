@@ -1,12 +1,12 @@
 ﻿<div>
-  <div class="graph-type">
+<!--  <div class="graph-type">
     <input name="options" type="radio"  [(ngModel)]="graphType" [value]="0"
            [checked]="graphType==0" (change)="RefreshGraph()" />
     <input name="options" type="radio"  [(ngModel)]="graphType" [value]="1"
            [checked]="graphType==1" (change)="RefreshGraph()"/>
     <input name="options" type="radio"  [(ngModel)]="graphType" [value]="2"
            [checked]="graphType==2" (change)="RefreshGraph()"/>
-  </div>
+  </div>-->
   <div class="graph-container">
     <div class="graph-categories">
       <h1>Filter</h1>
@@ -31,6 +31,7 @@
       </div>-->
     </div>
     <div class="table-wrapper" (window:resize)="onResize($event)" *ngIf="tableData">
+      <mat-card>
         <div class="graph-column" *ngFor="let t of graphTabs">
             <h3>{{t.title}}</h3>
             <tree-root #tree [focused]="true" [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="t.column.treeModel = tree.treeModel; tabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t)">
@@ -66,25 +67,26 @@
             <line *ngFor="let l of t.displayLinks" [attr.x1]="l.x2 - 2 * l.scale" [attr.x2]="l.x2 + 0.1 * l.scale" [attr.y1]="l.y2" [attr.y2]="l.y2" stroke="black" marker-end="url(#arrow)"></line>
           </g>
         </svg>
-<!--      <table>
-        <thead>
-            <td *ngFor="let h of tableData.headers">{{h}}</td>
-        </thead>
-        <tbody>
-          <tr *ngFor="let r of tableData.rows">
-            <td *ngFor="let c of r" [ngStyle]="{'background-color': complianceColors[c ? c.data.compliance_level : 0]}">
-              <div *ngIf="c">
-                <div><a routerLink="/doctypes/{{c.data.type}}" routerLinkActive="active">{{c.data.section}}</a></div>
-                <div>{{c.data.body}}</div>
-              </div>
-              <div *ngIf="!c">
-                <div>-</div>
-                <div></div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>-->
+<!--    <table>
+          <thead>
+              <td *ngFor="let h of tableData.headers">{{h}}</td>
+          </thead>
+          <tbody>
+            <tr *ngFor="let r of tableData.rows">
+              <td *ngFor="let c of r" [ngStyle]="{'background-color': complianceColors[c ? c.data.compliance_level : 0]}">
+                <div *ngIf="c">
+                  <div><a routerLink="/doctypes/{{c.data.type}}" routerLinkActive="active">{{c.data.section}}</a></div>
+                  <div>{{c.data.body}}</div>
+                </div>
+                <div *ngIf="!c">
+                  <div>-</div>
+                  <div></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>-->
+      </mat-card>
     </div>
     <div id="d3" class="d3">
     </div>
