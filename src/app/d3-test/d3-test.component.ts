@@ -480,8 +480,15 @@ export class D3TestComponent implements OnInit {
             var links = this.graphService.flatten(this.graphTabs[0].visibleNodes.map(v => v.data.node.links.map(l => [v, l])));
             var rollup = links.reduce((a, b) => {
                 var owner = b[0];
-                while (owner.realParent && owner.realParent.isCollapsed)
-                  owner = owner.realParent;
+
+                // Iterate to root, keep track of highest collapsed node.
+                var iterator = owner;
+                while (iterator.realParent)
+                {
+                  iterator = iterator.realParent;
+                  if (iterator.isCollapsed)
+                    owner = iterator;
+                }
 
                 if (!(owner.id in a))
                     a[owner.id] = [];
@@ -493,8 +500,15 @@ export class D3TestComponent implements OnInit {
                 var collapsed = rollup[k].reduce((a, b) => {
                     var link = b[1];
                     var owner = this.graphTabs[1].column.treeModel.getNodeById(link.id);
-                    while (owner.realParent && owner.realParent.isCollapsed)
-                      owner = owner.realParent;
+
+                    // Iterate to root, keep track of highest collapsed node.
+                    var iterator = owner;
+                    while (iterator.realParent)
+                    {
+                      iterator = iterator.realParent;
+                      if (iterator.isCollapsed)
+                        owner = iterator;
+                    }
 
                     if (!(owner.id in a))
                         a[owner.id] = [];
