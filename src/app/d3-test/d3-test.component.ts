@@ -474,6 +474,11 @@ export class D3TestComponent implements OnInit {
         }
     }
 
+    public onResize(event) {
+        //event.target.innerWidth;
+        this.updateGraph();
+    }
+
     public updateGraph() {
         // delay the rendering so dom can settle.
         setTimeout(a => {
