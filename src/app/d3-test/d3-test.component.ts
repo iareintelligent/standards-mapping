@@ -479,12 +479,31 @@ export class D3TestComponent implements OnInit {
         this.updateGraph();
     }
 
-    public updateGraph() {
-        // delay the rendering so dom can settle.
-        setTimeout(a => {
-            var links = this.graphService.flatten(this.graphTabs[0].visibleNodes.map(v => v.data.node.links.map(l => [v, l])));
-            var rollup = links.reduce((a, b) => {
-                var owner = b[0];
+    private buildLinkSet(fromTab: GraphTab, toTab: GraphTab, rtl: boolean): void {
+        
+        var links = this.graphService.flatten(fromTab.visibleNodes.map(v => v.data.node.links.map(l => [v, l])));
+        var rollup = links.reduce((a, b) => {
+            var owner = b[0];
+
+            // Iterate to root, keep track of highest collapsed node.
+            var iterator = owner;
+            while (iterator.realParent)
+            {
+              iterator = iterator.realParent;
+              if (iterator.isCollapsed)
+                owner = iterator;
+            }
+
+            if (!(owner.id in a))
+                a[owner.id] = [];
+            a[owner.id].push(b);
+            return a;
+        }, { });
+
+        var rollup2 = Object.keys(rollup).map(k => {
+            var collapsed = rollup[k].reduce((a, b) => {
+                var link = b[1];
+                var owner = toTab.column.treeModel.getNodeById(link.id);
 
                 // Iterate to root, keep track of highest collapsed node.
                 var iterator = owner;
@@ -497,61 +516,52 @@ export class D3TestComponent implements OnInit {
 
                 if (!(owner.id in a))
                     a[owner.id] = [];
-                a[owner.id].push(b);
+                a[owner.id].push(link);
                 return a;
             }, { });
 
-            var rollup2 = Object.keys(rollup).map(k => {
-                var collapsed = rollup[k].reduce((a, b) => {
-                    var link = b[1];
-                    var owner = this.graphTabs[1].column.treeModel.getNodeById(link.id);
-
-                    // Iterate to root, keep track of highest collapsed node.
-                    var iterator = owner;
-                    while (iterator.realParent)
-                    {
-                      iterator = iterator.realParent;
-                      if (iterator.isCollapsed)
-                        owner = iterator;
-                    }
-
-                    if (!(owner.id in a))
-                        a[owner.id] = [];
-                    a[owner.id].push(link);
-                    return a;
-                }, { });
-
-                return [k, collapsed];
-            });
+            return [k, collapsed];
+        });
         
-            var svgBounds = this.svgbgElement.getBoundingClientRect();
-            var flatten = rollup2.reduce((a, b) => {
-                var fromTree = this.graphTabs[0].column.treeModel;
-                var toTree = this.graphTabs[1].column.treeModel;
-                for (var l in b[1])
-                {
-                  var fromNode = fromTree.getNodeById(b[0]);
-                  var toNode = toTree.getNodeById(l);
-                  
-                  if (!(fromNode.id in fromTree.hiddenNodeIds || toNode.id in toTree.hiddenNodeIds))
-                  {
-                    var fromBounds = fromNode.elementRef2.getBoundingClientRect();
-                    var toBounds = toNode.elementRef2.getBoundingClientRect();
-              
-                    a.push({
-                        from: b[0], 
-                        to: l,
-                        x1: fromBounds.right - svgBounds.left - 60,
-                        x2: toBounds.left - svgBounds.left - 20,
-                        y1: fromBounds.top - svgBounds.top + fromBounds.height * 0.5,
-                        y2: toBounds.top - svgBounds.top + toBounds.height * 0.5,
-                    });
-                  }
-                }
-                return a;
-            }, []);
+        var inset = 60;
+        var outset = 20;
 
-            this.graphTabs[0].displayLinks = flatten;
+        var svgBounds = this.svgbgElement.getBoundingClientRect();
+        var flatten = rollup2.reduce((a, b) => {
+            var fromTree = fromTab.column.treeModel;
+            var toTree = toTab.column.treeModel;
+            for (var l in b[1])
+            {
+              var fromNode = fromTree.getNodeById(b[0]);
+              var toNode = toTree.getNodeById(l);
+                  
+              if (!(fromNode.id in fromTree.hiddenNodeIds || toNode.id in toTree.hiddenNodeIds))
+              {
+                var fromBounds = fromNode.elementRef2.getBoundingClientRect();
+                var toBounds = toNode.elementRef2.getBoundingClientRect();
+              
+                a.push({
+                    from: b[0], 
+                    to: l,
+                    x1: (rtl ? (fromBounds.left - outset) : (fromBounds.right - inset)) - svgBounds.left,
+                    x2: (rtl ? (toBounds.right - inset) : (toBounds.left - outset)) - svgBounds.left,
+                    y1: fromBounds.top - svgBounds.top + fromBounds.height * 0.5,
+                    y2: toBounds.top - svgBounds.top + toBounds.height * 0.5,
+                    scale: rtl ? -1 : 1
+                });
+              }
+            }
+            return a;
+        }, []);
+
+        fromTab.displayLinks = flatten;
+    }
+
+    public updateGraph() {
+        // delay the rendering so dom can settle.
+        setTimeout(a => {
+            this.buildLinkSet(this.graphTabs[0], this.graphTabs[1], false);
+            this.buildLinkSet(this.graphTabs[2], this.graphTabs[1], true);
         }, 100);
     }
 
