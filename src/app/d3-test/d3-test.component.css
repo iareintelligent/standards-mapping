@@ -82,3 +82,24 @@ table, th, td {
     left: 0px;
     pointer-events: none;
 }
+
+.mat-tab-label {
+    min-width: 50px !important;
+}
+
+mat-card {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.mat-tab-body-content {
+    overflow: hidden !important;
+}
+
+mat-checkbox {
+    margin-left: 10px !important;
+}
+
+.filter-field {
+    width: 100%;
+}
