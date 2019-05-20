@@ -7,8 +7,8 @@
     <input name="options" type="radio"  [(ngModel)]="graphType" [value]="2"
            [checked]="graphType==2" (change)="RefreshGraph()"/>
   </div>-->
- <mat-grid-list cols="10" rowHeight="1500px">
-  <mat-grid-tile colspan="2">
+ <div fxLayout="row" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+  <div fxFlex="0 0 300px">
       <mat-card class="graph-categories">
         <mat-card-title>Filter</mat-card-title>
         <div class="graph-tabs">
@@ -29,8 +29,8 @@
           </mat-tab-group>
         </div>
         </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="8">
+  </div>
+  <div fxFlex="1 0 auto">
       <mat-card>
         <div class="graph-column" *ngFor="let t of graphTabs">
             <h3>{{t.title}}</h3>
@@ -91,6 +91,6 @@
         <div id="d3" class="d3">
         </div>
       </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>
 </div>

@@ -55,7 +55,8 @@ import {
   MatTreeModule,
 } from '@angular/material';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -108,8 +109,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    BrowserAnimationsModule
-  
+    BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   declarations: [
     AppComponent,
