@@ -1,5 +1,6 @@
 ﻿import { StandardMap, DocNode2, Doc2 } from './standard-map';
-import * as mockMapDb from './data/msftgdprsample.json'
+//import * as mockMapDb from './data/msftgdprsample.json'
+import * as mockMapDb from './data/sampledb.json'
 
 interface SampleModule {
     default: StandardMap
@@ -74,10 +75,10 @@ function GenerateStandardMap(type: string, rev: string, sections: number, depth:
 
 export var mapDb: StandardMap = (mockMapDb as any as SampleModule).default;
 
-export var mapDb2: Doc2[] = [
-    GenerateStandardMap('ISO', "1", 8, 3),
-    GenerateStandardMap('PIPEDA', "1", 8, 3),
-    GenerateStandardMap('APP', "1", 8, 3)
-];
+//export var mapDb2: Doc2[] = [
+//    GenerateStandardMap('ISO', "1", 8, 3),
+//    GenerateStandardMap('PIPEDA', "1", 8, 3),
+//    GenerateStandardMap('APP', "1", 8, 3)
+//];
 
-export var STANDARDMAPS: StandardMap[] = []
+//export var STANDARDMAPS: StandardMap[] = []

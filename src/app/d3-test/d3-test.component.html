@@ -33,7 +33,7 @@
   <div fxFlex="1 0 auto">
       <mat-card>
         <div class="graph-column" *ngFor="let t of graphTabs">
-            <h3>{{t.title}}</h3>
+          <a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a>
             <tree-root #tree [focused]="true" [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="t.column.treeModel = tree.treeModel; tabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t)">
               <ng-template #treeNodeWrapperTemplate let-node let-index="index">
                 <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">

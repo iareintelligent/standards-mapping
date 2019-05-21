@@ -2,7 +2,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { StandardMap }         from '../standard-map';
+import { FullDocNode }         from '../standard-map';
 import { GraphService }  from '../graph.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { GraphService }  from '../graph.service';
   styleUrls: [ './standard-map-detail.component.css' ]
 })
 export class StandardMapDetailComponent implements OnInit {
-  @Input() standardMap: StandardMap;
+  @Input() standardMap: FullDocNode;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,14 +20,14 @@ export class StandardMapDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getStandardMap();
-  }
-
-  getStandardMap(): void {
-    //this.route.params.subscribe(params => {
-    //   this.graphService.getDocByType(params['id'])
-    //    .subscribe(standardMap => this.standardMap = standardMap);
-    //});
+    if (this.standardMap == null)
+    {
+      // if it's not already injected, then get it from the url query
+      this.route.params.subscribe(params => {
+         this.graphService.getFullDocByType(params['id'])
+          .subscribe(standardMap => this.standardMap = standardMap);
+      });
+    }
   }
 
   goBack(): void {

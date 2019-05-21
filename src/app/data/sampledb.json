@@ -1,0 +1,3389 @@
+[
+    {
+        "type": "ISO",
+        "rev": "1",
+        "children": [
+            {
+                "id": "1",
+                "section": "1",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "1.1",
+                        "section": "1.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.1.1",
+                                "section": "1.1.1",
+                                "body": "leo vel gravida lacinia, velit dolor ia",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "1.1.2",
+                                "section": "1.1.2",
+                                "body": "est. Orci varius ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.2",
+                        "section": "1.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.2.1",
+                                "section": "1.2.1",
+                                "body": "te",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "1.2.2",
+                                "section": "1.2.2",
+                                "body": "n tincid",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.3",
+                        "section": "1.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.3.1",
+                                "section": "1.3.1",
+                                "body": "s posuere cubilia Curae; Curabitu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "1.3.2",
+                                "section": "1.3.2",
+                                "body": "na. Ut ex es",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.4",
+                        "section": "1.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.4.1",
+                                "section": "1.4.1",
+                                "body": "icitur. Duis vitae diam quam. Vivamus o",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "1.4.2",
+                                "section": "1.4.2",
+                                "body": " ac euismod libero elementum lacini",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "2",
+                "section": "2",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "2.1",
+                        "section": "2.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.1.1",
+                                "section": "2.1.1",
+                                "body": "e",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "2.1.2",
+                                "section": "2.1.2",
+                                "body": "ntes, nascetur ridiculus mu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.2",
+                        "section": "2.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.2.1",
+                                "section": "2.2.1",
+                                "body": "is in faucibus o",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "2.2.2",
+                                "section": "2.2.2",
+                                "body": "nia. Ut liber",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.3",
+                        "section": "2.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.3.1",
+                                "section": "2.3.1",
+                                "body": "is est. Orci varius",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "2.3.2",
+                                "section": "2.3.2",
+                                "body": "el libero vel efficitur. Duis vita",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.4",
+                        "section": "2.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.4.1",
+                                "section": "2.4.1",
+                                "body": "cetur ridiculus",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "2.4.2",
+                                "section": "2.4.2",
+                                "body": "vel gravida lacinia",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "3",
+                "section": "3",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "3.1",
+                        "section": "3.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.1.1",
+                                "section": "3.1.1",
+                                "body": "erisque, lacinia sit ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "3.1.2",
+                                "section": "3.1.2",
+                                "body": ". Pra",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.2",
+                        "section": "3.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.2.1",
+                                "section": "3.2.1",
+                                "body": "acinia. Ut libero turpis, interdum id q",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "3.2.2",
+                                "section": "3.2.2",
+                                "body": "et magnis dis parturie",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.3",
+                        "section": "3.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.3.1",
+                                "section": "3.3.1",
+                                "body": "ismod libero elementum lac",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "3.3.2",
+                                "section": "3.3.2",
+                                "body": "malesuada in placerat scelerisque, ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.4",
+                        "section": "3.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.4.1",
+                                "section": "3.4.1",
+                                "body": "felis, nec scelerisqu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "3.4.2",
+                                "section": "3.4.2",
+                                "body": "enatibus et",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "4",
+                "section": "4",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "4.1",
+                        "section": "4.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.1.1",
+                                "section": "4.1.1",
+                                "body": "culis est, at porta arcu leo temp",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "4.1.2",
+                                "section": "4.1.2",
+                                "body": "lerisque, lacinia sit amet",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.2",
+                        "section": "4.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.2.1",
+                                "section": "4.2.1",
+                                "body": "uat ultricies al",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "4.2.2",
+                                "section": "4.2.2",
+                                "body": "on elementum dui. Proin et pellent",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.3",
+                        "section": "4.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.3.1",
+                                "section": "4.3.1",
+                                "body": "stibulum a",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "4.3.2",
+                                "section": "4.3.2",
+                                "body": " lorem m",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.4",
+                        "section": "4.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.4.1",
+                                "section": "4.4.1",
+                                "body": "ae; Curab",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "4.4.2",
+                                "section": "4.4.2",
+                                "body": " dolor, at facilisis est. Orci var",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "5",
+                "section": "5",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "5.1",
+                        "section": "5.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.1.1",
+                                "section": "5.1.1",
+                                "body": "onsequat ultricies aliquam in, rut",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "5.1.2",
+                                "section": "5.1.2",
+                                "body": "Vestibul",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.2",
+                        "section": "5.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.2.1",
+                                "section": "5.2.1",
+                                "body": "ur adipisci",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "5.2.2",
+                                "section": "5.2.2",
+                                "body": "s est, at po",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.3",
+                        "section": "5.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.3.1",
+                                "section": "5.3.1",
+                                "body": "r, leo vel gravida la",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "5.3.2",
+                                "section": "5.3.2",
+                                "body": " magni",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.4",
+                        "section": "5.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.4.1",
+                                "section": "5.4.1",
+                                "body": "inia, velit dolor iaculis es",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "5.4.2",
+                                "section": "5.4.2",
+                                "body": "ntum lacinia. Ut libero turpi",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "6",
+                "section": "6",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "6.1",
+                        "section": "6.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.1.1",
+                                "section": "6.1.1",
+                                "body": "tesque nisl, efficitu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "6.1.2",
+                                "section": "6.1.2",
+                                "body": " hen",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.2",
+                        "section": "6.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.2.1",
+                                "section": "6.2.1",
+                                "body": " hendrerit felis, n",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "6.2.2",
+                                "section": "6.2.2",
+                                "body": "us. Praesent consequat ante lacus, ac e",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.3",
+                        "section": "6.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.3.1",
+                                "section": "6.3.1",
+                                "body": " ac urna. Morbi pulvinar, leo vel grav",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "6.3.2",
+                                "section": "6.3.2",
+                                "body": "e ullamcorper d",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.4",
+                        "section": "6.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.4.1",
+                                "section": "6.4.1",
+                                "body": "rae; Curabitur lorem mag",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "6.4.2",
+                                "section": "6.4.2",
+                                "body": "ci eu odio pretium gravida et et nun",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "7",
+                "section": "7",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "7.1",
+                        "section": "7.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.1.1",
+                                "section": "7.1.1",
+                                "body": " adipiscing",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "7.1.2",
+                                "section": "7.1.2",
+                                "body": "consectetur adipiscing",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.2",
+                        "section": "7.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.2.1",
+                                "section": "7.2.1",
+                                "body": "a ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "7.2.2",
+                                "section": "7.2.2",
+                                "body": "efficitur. Du",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.3",
+                        "section": "7.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.3.1",
+                                "section": "7.3.1",
+                                "body": " sit am",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "7.3.2",
+                                "section": "7.3.2",
+                                "body": "atoque pe",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.4",
+                        "section": "7.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.4.1",
+                                "section": "7.4.1",
+                                "body": "or. Cras dapibus vel libero vel ef",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "7.4.2",
+                                "section": "7.4.2",
+                                "body": "da ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "8",
+                "section": "8",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "8.1",
+                        "section": "8.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.1.1",
+                                "section": "8.1.1",
+                                "body": "s natoque penatibus et mag",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "8.1.2",
+                                "section": "8.1.2",
+                                "body": "ilisis est. Orci varius natoque penati",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.2",
+                        "section": "8.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.2.1",
+                                "section": "8.2.1",
+                                "body": "t. Orci varius natoque p",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "8.2.2",
+                                "section": "8.2.2",
+                                "body": ", lacinia ac blandit eget, ult",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.3",
+                        "section": "8.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.3.1",
+                                "section": "8.3.1",
+                                "body": "i eu odio pretium gravi",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "8.3.2",
+                                "section": "8.3.2",
+                                "body": "vin",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.4",
+                        "section": "8.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.4.1",
+                                "section": "8.4.1",
+                                "body": "i",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "8.4.2",
+                                "section": "8.4.2",
+                                "body": "a ut orci eu odio pretium gravida ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            }
+        ],
+        "links": []
+    },
+    {
+        "type": "PIPEDA",
+        "rev": "1",
+        "children": [
+            {
+                "id": "1",
+                "section": "1",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "1.1",
+                        "section": "1.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.1.1",
+                                "section": "1.1.1",
+                                "body": "r adipiscing elit. Donec ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1.1.2",
+                                "section": "1.1.2",
+                                "body": "e cubilia",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.2",
+                        "section": "1.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.2.1",
+                                "section": "1.2.1",
+                                "body": "ia, v",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1.2.2",
+                                "section": "1.2.2",
+                                "body": "rci luctus et u",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.3",
+                        "section": "1.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.3.1",
+                                "section": "1.3.1",
+                                "body": "t dolor ia",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1.3.2",
+                                "section": "1.3.2",
+                                "body": "varius moll",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.4",
+                        "section": "1.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.4.1",
+                                "section": "1.4.1",
+                                "body": ". Ut ex est, consequat ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1.4.2",
+                                "section": "1.4.2",
+                                "body": "n et pellentesque ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "2",
+                "section": "2",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "2.1",
+                        "section": "2.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.1.1",
+                                "section": "2.1.1",
+                                "body": "a Curae; Curabitur lorem magna",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2.1.2",
+                                "section": "2.1.2",
+                                "body": " elementum lacinia. Ut libero tu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.2",
+                        "section": "2.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.2.1",
+                                "section": "2.2.1",
+                                "body": "t ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2.2.2",
+                                "section": "2.2.2",
+                                "body": "magna. Ut ex est, consequat ultricies",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.3",
+                        "section": "2.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.3.1",
+                                "section": "2.3.1",
+                                "body": "que penatibus et magni",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2.3.2",
+                                "section": "2.3.2",
+                                "body": " et pellentesque nisl, efficitu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.4",
+                        "section": "2.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.4.1",
+                                "section": "2.4.1",
+                                "body": ", malesua",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2.4.2",
+                                "section": "2.4.2",
+                                "body": "o vel gravida lacinia, v",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "3",
+                "section": "3",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "3.1",
+                        "section": "3.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.1.1",
+                                "section": "3.1.1",
+                                "body": " ac euismod libero elementum lacin",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "3.1.2",
+                                "section": "3.1.2",
+                                "body": "t",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.2",
+                        "section": "3.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.2.1",
+                                "section": "3.2.1",
+                                "body": "mod libero elementum lacinia. Ut li",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "3.2.2",
+                                "section": "3.2.2",
+                                "body": "s orci luctus et ultrices pos",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.3",
+                        "section": "3.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.3.1",
+                                "section": "3.3.1",
+                                "body": "s, nec scelerisque dui vel",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "3.3.2",
+                                "section": "3.3.2",
+                                "body": "nia. Ut libero turpis, interdum id quam",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.4",
+                        "section": "3.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.4.1",
+                                "section": "3.4.1",
+                                "body": "bero vel efficitur. D",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "3.4.2",
+                                "section": "3.4.2",
+                                "body": "cubilia C",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "4",
+                "section": "4",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "4.1",
+                        "section": "4.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.1.1",
+                                "section": "4.1.1",
+                                "body": "rpis nisl hendrerit felis, ne",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "4.1.2",
+                                "section": "4.1.2",
+                                "body": "pulvinar, leo vel gravida lacinia, ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.2",
+                        "section": "4.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.2.1",
+                                "section": "4.2.1",
+                                "body": "esent consequat ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "4.2.2",
+                                "section": "4.2.2",
+                                "body": "unc. Vestibulum ante ipsum primis in f",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.3",
+                        "section": "4.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.3.1",
+                                "section": "4.3.1",
+                                "body": " in faucibus orci luct",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "4.3.2",
+                                "section": "4.3.2",
+                                "body": "it magna.",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.4",
+                        "section": "4.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.4.1",
+                                "section": "4.4.1",
+                                "body": "",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "4.4.2",
+                                "section": "4.4.2",
+                                "body": "s orci luctus",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "5",
+                "section": "5",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "5.1",
+                        "section": "5.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.1.1",
+                                "section": "5.1.1",
+                                "body": "aesent consequat ante lacus, ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "5.1.2",
+                                "section": "5.1.2",
+                                "body": ", con",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.2",
+                        "section": "5.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.2.1",
+                                "section": "5.2.1",
+                                "body": " orci l",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "5.2.2",
+                                "section": "5.2.2",
+                                "body": "lor, at facilisis est",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.3",
+                        "section": "5.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.3.1",
+                                "section": "5.3.1",
+                                "body": "uis, malesuada dapibus tortor. Null",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "5.3.2",
+                                "section": "5.3.2",
+                                "body": "iaculis est, at",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.4",
+                        "section": "5.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.4.1",
+                                "section": "5.4.1",
+                                "body": ", at facilisis est. Orci varius natoque",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "5.4.2",
+                                "section": "5.4.2",
+                                "body": " placerat scel",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "6",
+                "section": "6",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "6.1",
+                        "section": "6.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.1.1",
+                                "section": "6.1.1",
+                                "body": "ur",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6.1.2",
+                                "section": "6.1.2",
+                                "body": "arius natoque penatibus et ma",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.2",
+                        "section": "6.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.2.1",
+                                "section": "6.2.1",
+                                "body": "Nulla ut orci eu odio pr",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6.2.2",
+                                "section": "6.2.2",
+                                "body": "us vel libero vel ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.3",
+                        "section": "6.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.3.1",
+                                "section": "6.3.1",
+                                "body": ", at p",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6.3.2",
+                                "section": "6.3.2",
+                                "body": "ida lacinia, velit dolor iaculis est,",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.4",
+                        "section": "6.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.4.1",
+                                "section": "6.4.1",
+                                "body": "t ante lacus, ac euismod libe",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6.4.2",
+                                "section": "6.4.2",
+                                "body": "ultrices ac urna. Morbi pulvinar, leo v",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "7",
+                "section": "7",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "7.1",
+                        "section": "7.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.1.1",
+                                "section": "7.1.1",
+                                "body": "ante ipsum",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "7.1.2",
+                                "section": "7.1.2",
+                                "body": "Ut libero ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.2",
+                        "section": "7.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.2.1",
+                                "section": "7.2.1",
+                                "body": "r adipiscing elit. Donec vel velit ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "7.2.2",
+                                "section": "7.2.2",
+                                "body": "landit eget",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.3",
+                        "section": "7.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.3.1",
+                                "section": "7.3.1",
+                                "body": "",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "7.3.2",
+                                "section": "7.3.2",
+                                "body": "roin et pellente",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.4",
+                        "section": "7.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.4.1",
+                                "section": "7.4.1",
+                                "body": "pibus tortor. Nulla ut orci",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "7.4.2",
+                                "section": "7.4.2",
+                                "body": "s vitae diam quam. Viv",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "8",
+                "section": "8",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "8.1",
+                        "section": "8.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.1.1",
+                                "section": "8.1.1",
+                                "body": "rat scelerisque, lacinia sit amet dui.",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "8.1.2",
+                                "section": "8.1.2",
+                                "body": "vel gravida lacinia, velit",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.2",
+                        "section": "8.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.2.1",
+                                "section": "8.2.1",
+                                "body": "r dolor, at facilisis est. Or",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "8.2.2",
+                                "section": "8.2.2",
+                                "body": "toque penatib",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.3",
+                        "section": "8.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.3.1",
+                                "section": "8.3.1",
+                                "body": "lus. P",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "8.3.2",
+                                "section": "8.3.2",
+                                "body": "lerisque, lacinia sit amet dui. Ve",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.4",
+                        "section": "8.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.4.1",
+                                "section": "8.4.1",
+                                "body": "ilia Curae; Curabitur lorem magna, mal",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "8.4.2",
+                                "section": "8.4.2",
+                                "body": ". Proin tincidunt, urna non varius ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            }
+        ],
+        "links": []
+    },
+    {
+        "type": "APP",
+        "rev": "1",
+        "children": [
+            {
+                "id": "1",
+                "section": "1",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "1.1",
+                        "section": "1.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.1.1",
+                                "section": "1.1.1",
+                                "body": "sque d",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1.1.2",
+                                "section": "1.1.2",
+                                "body": "r congue to",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.2",
+                        "section": "1.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.2.1",
+                                "section": "1.2.1",
+                                "body": " dui. Vestibulum non e",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1.2.2",
+                                "section": "1.2.2",
+                                "body": "entum dui. Proin et pellentes",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.3",
+                        "section": "1.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.3.1",
+                                "section": "1.3.1",
+                                "body": "acin",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1.3.2",
+                                "section": "1.3.2",
+                                "body": "uis,",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "1.4",
+                        "section": "1.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "1.4.1",
+                                "section": "1.4.1",
+                                "body": "es aliquam in, rutrum qu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1.4.2",
+                                "section": "1.4.2",
+                                "body": "s ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "1.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "2",
+                "section": "2",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "2.1",
+                        "section": "2.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.1.1",
+                                "section": "2.1.1",
+                                "body": "g elit. Donec vel velit ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2.1.2",
+                                "section": "2.1.2",
+                                "body": "ibulum non elementum dui. Proin et p",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.2",
+                        "section": "2.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.2.1",
+                                "section": "2.2.1",
+                                "body": " blandit eget, ultrice",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2.2.2",
+                                "section": "2.2.2",
+                                "body": "libero elementum lacini",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.3",
+                        "section": "2.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.3.1",
+                                "section": "2.3.1",
+                                "body": "o",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2.3.2",
+                                "section": "2.3.2",
+                                "body": "elit a tellus. Praesent consequ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "2.4",
+                        "section": "2.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "2.4.1",
+                                "section": "2.4.1",
+                                "body": "a, velit d",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "2.4.2",
+                                "section": "2.4.2",
+                                "body": "ro elementum lacin",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "2.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "3",
+                "section": "3",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "3.1",
+                        "section": "3.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.1.1",
+                                "section": "3.1.1",
+                                "body": "is, lacinia ac",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "3.1.2",
+                                "section": "3.1.2",
+                                "body": "ce",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.2",
+                        "section": "3.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.2.1",
+                                "section": "3.2.1",
+                                "body": "gravida lacinia, velit dolor iaculis e",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "3.2.2",
+                                "section": "3.2.2",
+                                "body": "gn",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.3",
+                        "section": "3.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.3.1",
+                                "section": "3.3.1",
+                                "body": "r",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "3.3.2",
+                                "section": "3.3.2",
+                                "body": "isis est.",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "3.4",
+                        "section": "3.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "3.4.1",
+                                "section": "3.4.1",
+                                "body": "",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": []
+                            },
+                            {
+                                "id": "3.4.2",
+                                "section": "3.4.2",
+                                "body": "ficitur congue tortor. Cras d",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "3.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "4",
+                "section": "4",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "4.1",
+                        "section": "4.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.1.1",
+                                "section": "4.1.1",
+                                "body": "tortor. Cras",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "4.1.2",
+                                "section": "4.1.2",
+                                "body": "us orci luctus et ultrices posu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.2",
+                        "section": "4.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.2.1",
+                                "section": "4.2.1",
+                                "body": "enatibus et magnis dis parturie",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "4.2.2",
+                                "section": "4.2.2",
+                                "body": " gravida et et nunc. Ve",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.3",
+                        "section": "4.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.3.1",
+                                "section": "4.3.1",
+                                "body": "t felis, nec scelerisqu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "4.3.2",
+                                "section": "4.3.2",
+                                "body": "orta arc",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "4.4",
+                        "section": "4.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "4.4.1",
+                                "section": "4.4.1",
+                                "body": "vida et et nunc. Vestibulum ante",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "4.4.2",
+                                "section": "4.4.2",
+                                "body": " Cras dapib",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "4.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "5",
+                "section": "5",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "5.1",
+                        "section": "5.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.1.1",
+                                "section": "5.1.1",
+                                "body": "t amet dui. Vestibulu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "5.1.2",
+                                "section": "5.1.2",
+                                "body": "inia sit ame",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.2",
+                        "section": "5.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.2.1",
+                                "section": "5.2.1",
+                                "body": "is, lacinia ac blandit ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "5.2.2",
+                                "section": "5.2.2",
+                                "body": "nar, leo vel gravida lacinia,",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.3",
+                        "section": "5.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.3.1",
+                                "section": "5.3.1",
+                                "body": "l efficitur. Duis vitae di",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "5.3.2",
+                                "section": "5.3.2",
+                                "body": " primis in faucibus orci luctu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "5.4",
+                        "section": "5.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "5.4.1",
+                                "section": "5.4.1",
+                                "body": "llamcorper dolor, at ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "5.4.2",
+                                "section": "5.4.2",
+                                "body": "agna. Ut ex est, c",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "5.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "6",
+                "section": "6",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "6.1",
+                        "section": "6.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.1.1",
+                                "section": "6.1.1",
+                                "body": "tur congue tortor. Cras dapibus",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6.1.2",
+                                "section": "6.1.2",
+                                "body": " in, ru",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.2",
+                        "section": "6.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.2.1",
+                                "section": "6.2.1",
+                                "body": "libero vel ef",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6.2.2",
+                                "section": "6.2.2",
+                                "body": "is est. Orci vari",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.3",
+                        "section": "6.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.3.1",
+                                "section": "6.3.1",
+                                "body": "unt, urna non varius mollis, turpis",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6.3.2",
+                                "section": "6.3.2",
+                                "body": ", turpis nisl he",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "6.4",
+                        "section": "6.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "6.4.1",
+                                "section": "6.4.1",
+                                "body": "i. Vestibulum non elementum",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6.4.2",
+                                "section": "6.4.2",
+                                "body": "in tincidunt, urna non varius mollis,",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "6.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "7",
+                "section": "7",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "7.1",
+                        "section": "7.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.1.1",
+                                "section": "7.1.1",
+                                "body": "at ultricies aliquam in, rutrum qu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "7.1.2",
+                                "section": "7.1.2",
+                                "body": "e diam q",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.2",
+                        "section": "7.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.2.1",
+                                "section": "7.2.1",
+                                "body": " place",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "7.2.2",
+                                "section": "7.2.2",
+                                "body": "it felis,",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.3",
+                        "section": "7.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.3.1",
+                                "section": "7.3.1",
+                                "body": "malesuada dapibus tortor. Nulla",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "7.3.2",
+                                "section": "7.3.2",
+                                "body": "tric",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "7.4",
+                        "section": "7.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "7.4.1",
+                                "section": "7.4.1",
+                                "body": "auci",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "7.4.2",
+                                "section": "7.4.2",
+                                "body": "em ipsum dolor sit amet, consectetu",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "7.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            },
+            {
+                "id": "8",
+                "section": "8",
+                "body": null,
+                "compliance_level": 1,
+                "children": [
+                    {
+                        "id": "8.1",
+                        "section": "8.1",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.1.1",
+                                "section": "8.1.1",
+                                "body": "s, turpis nisl hendrer",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.1.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "8.1.2",
+                                "section": "8.1.2",
+                                "body": "st. Orci varius natoque p",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.1.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.2",
+                        "section": "8.2",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.2.1",
+                                "section": "8.2.1",
+                                "body": "n faucibus o",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.2.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "8.2.2",
+                                "section": "8.2.2",
+                                "body": " orci ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.2.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.3",
+                        "section": "8.3",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.3.1",
+                                "section": "8.3.1",
+                                "body": "tum dui.",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.3.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "8.3.2",
+                                "section": "8.3.2",
+                                "body": "ices posuere cubilia Curae; Curabitur",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.3.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "8.4",
+                        "section": "8.4",
+                        "body": null,
+                        "compliance_level": 1,
+                        "children": [
+                            {
+                                "id": "8.4.1",
+                                "section": "8.4.1",
+                                "body": "na, malesuada in placerat",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.4.1",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "8.4.2",
+                                "section": "8.4.2",
+                                "body": "aesent consequat ante lacus, ac ",
+                                "compliance_level": 1,
+                                "children": [],
+                                "links": [
+                                    {
+                                        "id": "8.4.2",
+                                        "type": "ISO",
+                                        "rev": "1"
+                                    }
+                                ]
+                            }
+                        ],
+                        "links": []
+                    }
+                ],
+                "links": []
+            }
+        ],
+        "links": []
+    }
+]

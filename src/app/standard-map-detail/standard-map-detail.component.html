@@ -1,6 +1,6 @@
-﻿<div *ngIf="standardMap">
-  <button (click)="goBack()">go back</button>
-  <h2>{{standardMap.type | uppercase}} Details</h2>
+﻿<div *ngIf="standardMap" class="container">
+<!--  <button (click)="goBack()">go back</button>-->
+  <h2>{{standardMap.name | uppercase}}</h2>
 <!--    <div><span>type: </span>{{standardMap.type}}</div>
 <div>
     <label>name:
@@ -8,16 +8,34 @@
     </label>
   </div>
   <button (click)="save()">save</button>-->
-  <h2>Sections</h2>
-  <div *ngFor="let section of standardMap.document_nodes">
-    <div class="section">
-      <h4 class="section">{{section.section}} ({{section.type}}.{{section.id}}.{{section.rev}})</h4>
-      <span>{{section.body}}</span>
-      <div *ngFor="let link of section.external_doc_node_references">
-        <div class="link">
-          <h4><a routerLink="/doctypes/{{link.type}}" routerLinkActive="active">Related: {{link.type}} Id: {{link.id}} Rev{{link.rev}}</a></h4>
-        </div>
-      </div>
+  <mat-form-field class="input-field">
+    <input matInput type="text" placeholder="id" [(ngModel)]="standardMap.node.id" >
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <input matInput type="text" placeholder="section" [(ngModel)]="standardMap.node.section" >
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <input matInput type="text" placeholder="body" [(ngModel)]="standardMap.node.body" >
+  </mat-form-field>
+
+  <h4>Links</h4>
+  <div *ngFor="let link of standardMap.node.links">
+    <div class="link">
+      <mat-form-field class="input-field">
+        <input matInput type="text" placeholder="type" [(ngModel)]="link.type" >
+      </mat-form-field>
+      <mat-form-field class="input-field">
+        <input matInput type="text" placeholder="id" [(ngModel)]="link.id" >
+      </mat-form-field>
+      <mat-form-field class="input-field">
+        <input matInput type="text" placeholder="rev" [(ngModel)]="link.rev" >
+      </mat-form-field>
+      <!--<h4><a routerLink="/doctypes/{{link.type}}" routerLinkActive="active">Related: {{link.type}} Id: {{link.id}} Rev{{link.rev}}</a></h4>-->
     </div>
+  </div>
+
+  <h2>Children</h2>
+  <div *ngFor="let c of standardMap.children">
+    <app-standard-map-detail [standardMap]="c"></app-standard-map-detail>
   </div>
 </div>

@@ -8,7 +8,7 @@ import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2 } from './standard-ma
 import { MessageService } from './message.service';
 import * as d3Sankey from 'd3-sankey';
 
-import { mapDb2 } from './mock-standard-maps';
+import { mapDb } from './mock-standard-maps';
 
 
 export interface ICategory {
@@ -150,18 +150,9 @@ export class GraphService {
   }
 
   getDocTypes() : Observable<CategoryList> {
-      var result = mapDb2.map(v => { return { id: v.type, title: v.type }; });
+      var result = mapDb.map(v => { return { id: v.type, title: v.type }; });
       return of(result);
   }
-
-  //getDocByType(docType: string) : Observable<StandardMap> {
-  //    var result = {
-  //      type: docType,
-  //      document_nodes: mapDb2.document_nodes.filter(n => n.type == docType)
-  //    };
-  //
-  //    return of(result);
-  //}
 
   private addToDoc(parent: FullDocNode, input: DocNode2) {
       var child = new FullDocNode(input);
@@ -181,7 +172,8 @@ export class GraphService {
   }
 
   getFullDocByType(docType: string) : Observable<FullDocNode> {
-      var doc = mapDb2.find(n => n.type == docType);
+      //var dump = JSON.stringify(mapDb2, null, 4);
+      var doc = mapDb.find(n => n.type == docType);
       var result = this.addToDoc(null, doc);
       return of(result);
   }
