@@ -7,6 +7,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2 } from './standard-map';
 import { MessageService } from './message.service';
 import * as d3Sankey from 'd3-sankey';
+import { TreeModel, TreeNode, ITreeState } from 'angular-tree-component';
 
 import { mapDb } from './mock-standard-maps';
 
@@ -52,6 +53,61 @@ export interface DAG {
     links: SLink[];
 }
 // -- Dag Node --
+
+export class GraphTab {
+    public options = {
+      useCheckbox: true
+    };
+
+    public state: ITreeState = { };
+    public treeModel: TreeModel;
+    public visibleNodes: TreeNode[] = [];
+    public displayLinks: any[] = [];
+
+    public nodes = [
+      {
+        name: 'North America',
+        children: [
+          { name: 'United States', children: [
+            {name: 'New York'},
+            {name: 'California'},
+            {name: 'Florida'}
+          ] },
+          { name: 'Canada' }
+        ]
+      },
+      {
+        name: 'South America',
+        children: [
+          { name: 'Argentina', children: [] },
+          { name: 'Brazil' }
+        ]
+      },
+      {
+        name: 'Europe',
+        children: [
+          { name: 'England' },
+          { name: 'Germany' },
+          { name: 'France' },
+          { name: 'Italy' },
+          { name: 'Spain' }
+        ]
+      }
+    ];
+
+    public column: GraphTab;
+
+    constructor(
+      public title: string,
+      public active: boolean = false,
+      public isParent: boolean = false) {
+        if (isParent)
+        {
+          this.column = new GraphTab(title);
+          this.column.options.useCheckbox = false;
+        }
+    }
+}
 
 @Injectable({ providedIn: 'root' })
 export class GraphService {

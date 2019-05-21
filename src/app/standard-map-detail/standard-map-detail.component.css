@@ -42,3 +42,16 @@ button:disabled {
     display: block;
     width: 100%;
 }
+
+.link-field {
+    display: inline-block;
+}
+
+mat-icon {
+    height: 5px;
+    font-size: 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

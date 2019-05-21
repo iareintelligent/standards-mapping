@@ -3,7 +3,7 @@
 import * as mockMapDb from './data/sampledb.json'
 
 interface SampleModule {
-    default: StandardMap
+    default: Doc2[]
 };
 
 
@@ -73,7 +73,7 @@ function GenerateStandardMap(type: string, rev: string, sections: number, depth:
 }
 
 
-export var mapDb: StandardMap = (mockMapDb as any as SampleModule).default;
+export var mapDb: Doc2[] = (mockMapDb as any as SampleModule).default;
 
 //export var mapDb2: Doc2[] = [
 //    GenerateStandardMap('ISO', "1", 8, 3),

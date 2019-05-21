@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
 import * as d3Sankey from 'd3-sankey';
-import { DAG, SNode, GraphService, CategoryList, FilterCriteria } from '../graph.service';
+import { DAG, SNode, GraphService, CategoryList, FilterCriteria, GraphTab } from '../graph.service';
 
 import { TreeModel, TreeNode, ITreeState } from 'angular-tree-component';
 
@@ -13,61 +13,6 @@ class TableData
     constructor(
       public headers: string[],
       public rows: SNode[][]) {
-    }
-}
-
-class GraphTab {
-    public options = {
-      useCheckbox: true
-    };
-
-    public state: ITreeState = { };
-    public treeModel: TreeModel;
-    public visibleNodes: TreeNode[] = [];
-    public displayLinks: any[] = [];
-
-    public nodes = [
-      {
-        name: 'North America',
-        children: [
-          { name: 'United States', children: [
-            {name: 'New York'},
-            {name: 'California'},
-            {name: 'Florida'}
-          ] },
-          { name: 'Canada' }
-        ]
-      },
-      {
-        name: 'South America',
-        children: [
-          { name: 'Argentina', children: [] },
-          { name: 'Brazil' }
-        ]
-      },
-      {
-        name: 'Europe',
-        children: [
-          { name: 'England' },
-          { name: 'Germany' },
-          { name: 'France' },
-          { name: 'Italy' },
-          { name: 'Spain' }
-        ]
-      }
-    ];
-
-    public column: GraphTab;
-
-    constructor(
-      public title: string,
-      public active: boolean = false,
-      public isParent: boolean = false) {
-        if (isParent)
-        {
-          this.column = new GraphTab(title);
-          this.column.options.useCheckbox = false;
-        }
     }
 }
 

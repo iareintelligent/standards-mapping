@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { FullDocNode }         from '../standard-map';
-import { GraphService }  from '../graph.service';
+import { GraphService, GraphTab }  from '../graph.service';
 
 @Component({
   selector: 'app-standard-map-detail',
@@ -12,6 +12,7 @@ import { GraphService }  from '../graph.service';
 })
 export class StandardMapDetailComponent implements OnInit {
   @Input() standardMap: FullDocNode;
+  public treeData: GraphTab;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,12 +21,17 @@ export class StandardMapDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (this.standardMap == null)
+    if (this.treeData == null)
     {
       // if it's not already injected, then get it from the url query
+      this.treeData = new GraphTab("test", true, false);
+
       this.route.params.subscribe(params => {
          this.graphService.getFullDocByType(params['id'])
-          .subscribe(standardMap => this.standardMap = standardMap);
+          .subscribe(standardMap => {
+            this.standardMap = standardMap;
+            this.treeData.nodes = standardMap.children;
+          });
       });
     }
   }

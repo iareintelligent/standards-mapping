@@ -1,14 +1,14 @@
 ﻿import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { StandardMap } from './standard-map';
 import { Injectable } from '@angular/core';
-import { STANDARDMAPS } from './mock-standard-maps'
+import { mapDb } from './mock-standard-maps'
 
 @Injectable({
   providedIn: 'root',
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const standardMaps = STANDARDMAPS.slice();
+    const standardMaps = mapDb.slice();
     return {'standard-map':standardMaps};
   }
 
