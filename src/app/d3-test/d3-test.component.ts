@@ -20,7 +20,7 @@ class TableData
   selector: 'app-d3-test',
   templateUrl: './d3-test.component.html',
   styleUrls: [ './d3-test.component.css' ],
-  encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
+  //encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
 })
 export class D3TestComponent implements OnInit {    
     public graphType: number = 0;
@@ -468,8 +468,8 @@ export class D3TestComponent implements OnInit {
             return [k, collapsed];
         });
         
-        var inset = 60;
-        var outset = 20;
+        var inset = -5;
+        var outset = 10;
 
         var svgBounds = this.svgbgElement.getBoundingClientRect();
         var flatten = rollup2.reduce((a, b) => {
