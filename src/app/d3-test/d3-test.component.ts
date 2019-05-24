@@ -455,10 +455,12 @@ export class D3TestComponent implements OnInit {
         var flatten = rollup2.reduce((a, b) => {
             var fromTree = fromTab.treeModel;
             var toTree = toTab.treeModel;
-            for (var l in b[1])
+            var destinationMap = b[1];
+            for (var destinationKey in destinationMap)
             {
+              var destinationData = destinationMap[destinationKey];
               var fromNode = fromTree.getNodeById(b[0]);
-              var toNode = toTree.getNodeById(l);
+              var toNode = toTree.getNodeById(destinationKey);
                   
               if (!(fromNode.id in fromTree.hiddenNodeIds || toNode.id in toTree.hiddenNodeIds))
               {
@@ -467,12 +469,15 @@ export class D3TestComponent implements OnInit {
               
                 a.push({
                     from: b[0], 
-                    to: l,
+                    to: destinationKey,
+                    fromTree: fromTree,
+                    toTree: toTree,
                     x1: (rtl ? (fromBounds.left - outset) : (fromBounds.right - inset)) - svgBounds.left,
                     x2: (rtl ? (toBounds.right - inset) : (toBounds.left - outset)) - svgBounds.left,
                     y1: fromBounds.top - svgBounds.top + fromBounds.height * 0.5,
                     y2: toBounds.top - svgBounds.top + toBounds.height * 0.5,
-                    scale: rtl ? -1 : 1
+                    scale: rtl ? -1 : 1,
+                    count: destinationData.length
                 });
               }
             }
@@ -503,6 +508,11 @@ export class D3TestComponent implements OnInit {
                   this.buildLinkSet(tab.column, isoTab.column, t > isoIndex);
             }
         }, 100);
+    }
+
+    public clickedLink(link: any) {
+        link.fromTree.getNodeById(link.from).expandAll();
+        link.toTree.getNodeById(link.to).expandAll();
     }
 
     public bindTogether(node, element, svgbg) {
