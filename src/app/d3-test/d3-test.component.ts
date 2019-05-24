@@ -1,4 +1,4 @@
-﻿import { Component, OnInit, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
+﻿import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
 import * as d3Sankey from 'd3-sankey';
 import { DAG, SNode, GraphService, CategoryList, FilterCriteria, GraphTab } from '../graph.service';
@@ -33,8 +33,7 @@ export class D3TestComponent implements OnInit {
     public svgbgElement: any;
 
     constructor(
-      private graphService: GraphService,
-      private cdr: ChangeDetectorRef) {
+      public graphService: GraphService) {
         //this.graphTabs[1].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[0].column.visibleLinks, n);
         ////this.graphTabs[2].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[1].column.visibleLinks, n);
     };

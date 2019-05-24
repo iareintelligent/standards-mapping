@@ -400,6 +400,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+@angular/animations
+MIT
+
 @angular/material
 MIT
 The MIT License
@@ -425,8 +428,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-@angular/animations
-MIT
+@angular/material/menu
 
 @angular/material/button
 
@@ -438,6 +440,8 @@ MIT
 
 @angular/forms
 MIT
+
+@angular/material/checkbox
 
 mobx
 MIT

@@ -24,7 +24,7 @@ export class StandardMapDetailComponent implements OnInit {
     if (this.treeData == null)
     {
       // if it's not already injected, then get it from the url query
-      this.treeData = new GraphTab("test", true, false);
+      this.treeData = new GraphTab("test", false);
 
       this.route.params.subscribe(params => {
          this.graphService.getFullDocByType(params['id'])
