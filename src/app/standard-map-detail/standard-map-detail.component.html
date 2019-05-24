@@ -1,6 +1,9 @@
 ﻿<div *ngIf="standardMap" class="container">
   <button (click)="goBack()">Go back</button>
   <h2>{{standardMap.name | uppercase}}</h2>
+  
+  <div><mat-checkbox (change)="treeData.expandAll()" [checked]="treeData.anyExpanded">Expand All</mat-checkbox></div>
+
   <tree-root #tree [focused]="true" [(state)]="treeData.state" [options]="treeData.options" [nodes]="treeData.nodes" (initialized)="treeData.treeModel = tree.treeModel;" >
     <ng-template #treeNodeWrapperTemplate let-node let-index="index">
       <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">

@@ -22,8 +22,6 @@
         <div class="graph-tabs">
           <mat-tab-group [(selectedIndex)]="graphService.selectedTab">
             <mat-tab label="{{t.title}}" *ngFor="let t of graphService.graphTabs">
-<!--              <div><mat-checkbox>Expand All</mat-checkbox><mat-checkbox>Select All</mat-checkbox></div>-->
-              
               <div>
                 <mat-form-field class="filter-field">
                   <input matInput type="text" placeholder="fuzzy search..." [(ngModel)]="t.searchValue"  #filter3 (keyup)="filterFn(filter3.value, tree.treeModel)">
@@ -32,6 +30,9 @@
                   </button>
                 </mat-form-field>
               </div>
+              
+              <div><mat-checkbox (change)="t.expandAll()" [checked]="t.anyExpanded">Expand All</mat-checkbox><mat-checkbox (change)="t.selectAll()" [checked]="t.anySelected">Select All</mat-checkbox></div>
+              
               <tree-root #tree [focused]="true" [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="tabTreeChanged(t)">></tree-root>
             </mat-tab>
           </mat-tab-group>
@@ -43,6 +44,9 @@
 <!--        <div fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="flex-start">-->
           <div class="graph-column" *ngFor="let t of graphService.graphTabs" >
             <a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a>
+              
+              <div><mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">Expand All</mat-checkbox></div>
+              
               <tree-root #tree [focused]="true" [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="t.column.treeModel = tree.treeModel; tabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t)">
                 <ng-template #treeNodeWrapperTemplate let-node let-index="index">
                   <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">

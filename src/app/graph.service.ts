@@ -89,6 +89,14 @@ export class GraphTab {
     public isIso: boolean = false;
     public searchValue: string = null;
 
+    public get anyExpanded():boolean {
+      return this.treeModel && this.treeModel.expandedNodes.length > 0; 
+    }
+
+    public get anySelected():boolean {
+      return this.treeModel && this.treeModel.selectedLeafNodeIds && Object.keys(this.treeModel.selectedLeafNodeIds).length > 0; 
+    }
+
     public nodes = [
       {
         name: 'North America',
@@ -161,6 +169,41 @@ export class GraphTab {
           this.treeModel.filterNodes((node: TreeNode) => this.filter(this.visibleNodes, node), false);
 
           this.visibleLinks = GraphService.flatten(this.visibleNodes.map(v => v.data.node.links.map(l => new VisibleLink(v, l))));
+        }
+    }
+
+    public expandAll() {
+        if (this.anyExpanded)
+        {
+            this.treeModel.collapseAll();
+        }
+        else
+        {
+            this.treeModel.expandAll();
+        }
+    }
+
+    public selectAll() {
+        if (this.anySelected)
+        {
+            var selectedNodes = { };
+            this.treeModel.selectedLeafNodeIds = selectedNodes;
+        }
+        else
+        {
+            var selectedNodes = { };
+            this.treeModel.selectedLeafNodeIds = selectedNodes;
+
+            var processNode = n => {
+                if (n.level > 0)
+                    n.setIsSelected(true);
+                    //selectedNodes[n.id] = true;
+
+                for (var c of n.children)
+                    processNode(c);
+            };
+
+            processNode(this.treeModel.virtualRoot);
         }
     }
 }
