@@ -80,6 +80,25 @@ table, th, td {
     margin-right: 60px;
 }
 
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.filter-title {
+    display: inline-block !important;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-button {
+    min-width: unset !important;
+    line-height:  unset !important;
+    padding: unset !important;
+}
+
 .svg-background {
     position: absolute;
     width: 100%;
@@ -91,6 +110,7 @@ table, th, td {
 
 .mat-tab-label {
     min-width: 50px !important;
+    max-width: 50px !important;
 }
 
 mat-card {

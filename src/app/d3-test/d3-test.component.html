@@ -10,16 +10,24 @@
  <div fxLayout="row" fxLayoutGap="32px" fxLayoutAlign="flex-start" class="container">
   <div fxFlex="0 0 300px">
       <mat-card class="graph-categories">
-        <mat-card-title>Filter</mat-card-title>
+        <div class="title-container">
+          <mat-card-title class="filter-title">Filter</mat-card-title>
+            <span class="example-spacer"></span>
+            <button mat-button [matMenuTriggerFor]="menu" class="add-button"><mat-icon>add_box</mat-icon></button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item *ngFor="let d of getMenuOptions()" (click)="graphService.addTab(d.id)">{{d.id}}</button>
+            </mat-menu>
+        </div>
+
         <div class="graph-tabs">
-          <mat-tab-group>
-            <mat-tab label="{{t.title}}" *ngFor="let t of graphTabs">
+          <mat-tab-group [(selectedIndex)]="graphService.selectedTab">
+            <mat-tab label="{{t.title}}" *ngFor="let t of graphService.graphTabs">
 <!--              <div><mat-checkbox>Expand All</mat-checkbox><mat-checkbox>Select All</mat-checkbox></div>-->
               
               <div>
                 <mat-form-field class="filter-field">
-                  <input matInput type="text" placeholder="fuzzy search..." [(ngModel)]="searchValue"  #filter3 (keyup)="filterFn(filter3.value, tree.treeModel)">
-                  <button mat-button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="tree.treeModel.clearFilter(); searchValue=''">
+                  <input matInput type="text" placeholder="fuzzy search..." [(ngModel)]="t.searchValue"  #filter3 (keyup)="filterFn(filter3.value, tree.treeModel)">
+                  <button mat-button *ngIf="t.searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="tree.treeModel.clearFilter(); t.searchValue=''">
                     <mat-icon>close</mat-icon>
                   </button>
                 </mat-form-field>
@@ -33,7 +41,7 @@
   <div fxFlex="1 0 auto">
       <mat-card>
 <!--        <div fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="flex-start">-->
-          <div class="graph-column" *ngFor="let t of graphTabs" >
+          <div class="graph-column" *ngFor="let t of graphService.graphTabs" >
             <a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a>
               <tree-root #tree [focused]="true" [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="t.column.treeModel = tree.treeModel; tabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t)">
                 <ng-template #treeNodeWrapperTemplate let-node let-index="index">
@@ -64,9 +72,9 @@
               <path d="M0,0 L0,6 L9,3 z" fill="#000" />
             </marker>
           </defs>
-          <g *ngFor="let t of graphTabs">
-            <line *ngFor="let l of t.displayLinks" [attr.x1]="l.x1" [attr.x2]="l.x2 - 2 * l.scale" [attr.y1]="l.y1" [attr.y2]="l.y2" stroke="black"></line>
-            <line *ngFor="let l of t.displayLinks" [attr.x1]="l.x2 - 2 * l.scale" [attr.x2]="l.x2 + 0.1 * l.scale" [attr.y1]="l.y2" [attr.y2]="l.y2" stroke="black" marker-end="url(#arrow)"></line>
+          <g *ngFor="let t of graphService.graphTabs">
+            <line *ngFor="let l of t.column.displayLinks" [attr.x1]="l.x1" [attr.x2]="l.x2 - 2 * l.scale" [attr.y1]="l.y1" [attr.y2]="l.y2" stroke="black"></line>
+            <line *ngFor="let l of t.column.displayLinks" [attr.x1]="l.x2 - 2 * l.scale" [attr.x2]="l.x2 + 0.1 * l.scale" [attr.y1]="l.y2" [attr.y2]="l.y2" stroke="black" marker-end="url(#arrow)"></line>
           </g>
         </svg>
 <!--    <table>

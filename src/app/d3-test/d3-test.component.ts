@@ -20,14 +20,13 @@ class TableData
   selector: 'app-d3-test',
   templateUrl: './d3-test.component.html',
   styleUrls: [ './d3-test.component.css' ],
-  //encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
+  encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
 })
 export class D3TestComponent implements OnInit {    
     public graphType: number = 0;
     public graphData: DAG;
     public graphCategories: CategoryList = [];
     public graphCriteria = new FilterCriteria();
-    public graphTabs: GraphTab[] = [ new GraphTab("PIPEDA", true, true), new GraphTab("ISO", false, true), new GraphTab("APP", false, true) ];
     public tableData: TableData = null;
     
     public complianceColors = ["white", "green", "yellow", "red", "black"];
@@ -35,17 +34,11 @@ export class D3TestComponent implements OnInit {
 
     constructor(
       private graphService: GraphService) {
+        //this.graphTabs[1].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[0].column.visibleLinks, n);
+        ////this.graphTabs[2].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[1].column.visibleLinks, n);
     };
 
     ngOnInit(): void {     
-      for (var t of this.graphTabs) {
-        this.graphService.getFullDocByType(t.title)
-          .subscribe(doc => {
-            t.nodes = doc.children;
-            t.column.nodes = doc.children;
-          });
-      }
-
       this.graphService.getDocTypes()
         .subscribe(dt => { 
           this.graphCategories = dt; 
@@ -56,6 +49,14 @@ export class D3TestComponent implements OnInit {
             
           this.RefreshGraph(); 
         });
+    }
+
+    public getMenuOptions(): any[] {
+        var result = [];
+        for (var t of this.graphCategories)
+            if (!this.graphService.graphTabs.find(g => g.title == t.id))
+                result.push(t);
+        return result;
     }
 
     public RefreshGraph() {
@@ -376,13 +377,6 @@ export class D3TestComponent implements OnInit {
       treeModel.filterNodes((node: TreeNode) => this.fuzzysearch(value, node.data.name) || (node.data.node.body && this.fuzzysearch(value, node.data.node.body)));
     }
 
-    public activateTab(tab: GraphTab) {
-        for (var t of this.graphTabs)
-        {
-            t.active = t == tab;
-        }
-    }
-
     public tabTreeChanged(tab: GraphTab) {
         if (tab.column.treeModel) {
 
@@ -394,20 +388,6 @@ export class D3TestComponent implements OnInit {
                 if (!node.isSelected)
                   delete tab.treeModel.selectedLeafNodeIds[n];
             }
-            
-            // filter child tree
-            tab.column.treeModel.clearFilter();
-            var anySelection = Object.keys(tab.treeModel.selectedLeafNodeIds).length > 0;
-            var visibleNodes = [];
-
-            tab.column.treeModel.filterNodes((node: TreeNode) => {
-                var show = !anySelection  || (node.data.id in tab.treeModel.selectedLeafNodeIds);
-                if (show)
-                    visibleNodes.push(node);
-                return show;
-              }, false);
-
-            tab.visibleNodes = visibleNodes;
 
             this.updateGraph();
         }
@@ -426,9 +406,9 @@ export class D3TestComponent implements OnInit {
 
     private buildLinkSet(fromTab: GraphTab, toTab: GraphTab, rtl: boolean): void {
         
-        var links = this.graphService.flatten(fromTab.visibleNodes.map(v => v.data.node.links.map(l => [v, l])));
+        var links = fromTab.visibleLinks;
         var rollup = links.reduce((a, b) => {
-            var owner = b[0];
+            var owner = b.fromNode;
 
             // Iterate to root, keep track of highest collapsed node.
             var iterator = owner;
@@ -447,8 +427,8 @@ export class D3TestComponent implements OnInit {
 
         var rollup2 = Object.keys(rollup).map(k => {
             var collapsed = rollup[k].reduce((a, b) => {
-                var link = b[1];
-                var owner = toTab.column.treeModel.getNodeById(link.id);
+                var link = b.link;
+                var owner = toTab.treeModel.getNodeById(link.id);
 
                 // Iterate to root, keep track of highest collapsed node.
                 var iterator = owner;
@@ -473,8 +453,8 @@ export class D3TestComponent implements OnInit {
 
         var svgBounds = this.svgbgElement.getBoundingClientRect();
         var flatten = rollup2.reduce((a, b) => {
-            var fromTree = fromTab.column.treeModel;
-            var toTree = toTab.column.treeModel;
+            var fromTree = fromTab.treeModel;
+            var toTree = toTab.treeModel;
             for (var l in b[1])
             {
               var fromNode = fromTree.getNodeById(b[0]);
@@ -503,10 +483,25 @@ export class D3TestComponent implements OnInit {
     }
 
     public updateGraph() {
+        var tabs = this.graphService.graphTabs;
+
+        for (var tab of tabs)
+        {
+            // filter child tree
+            tab.column.runFilter();
+        }
+
         // delay the rendering so dom can settle.
         setTimeout(a => {
-            this.buildLinkSet(this.graphTabs[0], this.graphTabs[1], false);
-            this.buildLinkSet(this.graphTabs[2], this.graphTabs[1], true);
+            var isoTab = tabs.find(t => t.isIso);
+            var isoIndex = tabs.indexOf(isoTab);
+
+            for (var t = 0; t < tabs.length; ++t)
+            {
+                var tab = tabs[t];
+                if (tab != isoTab)
+                  this.buildLinkSet(tab.column, isoTab.column, t > isoIndex);
+            }
         }, 100);
     }
 

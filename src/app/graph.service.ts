@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, forkJoin } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2 } from './standard-map';
+import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2, Link } from './standard-map';
 import { MessageService } from './message.service';
 import * as d3Sankey from 'd3-sankey';
 import { TreeModel, TreeNode, ITreeState } from 'angular-tree-component';
@@ -54,7 +54,28 @@ export interface DAG {
 }
 // -- Dag Node --
 
+export class VisibleLink {
+    constructor(
+         public fromNode: TreeNode,
+         public link: Link) {
+         
+         }
+}
+
 export class GraphTab {
+    constructor(
+      public title: string,
+      public isParent: boolean = false) {
+        this.isIso = title == "ISO";
+
+        if (isParent)
+        {
+          this.column = new GraphTab(title);
+          this.column.options.useCheckbox = false;
+          this.column.filter = (vs, n) => GraphTab.filterBySelectedLeafs(vs, this.treeModel, n);
+        }
+    }
+
     public options = {
       useCheckbox: true
     };
@@ -62,7 +83,11 @@ export class GraphTab {
     public state: ITreeState = { };
     public treeModel: TreeModel;
     public visibleNodes: TreeNode[] = [];
+    public visibleLinks: VisibleLink[] = [];
     public displayLinks: any[] = [];
+    public filter: (vs: TreeNode[], n: TreeNode)=>boolean; 
+    public isIso: boolean = false;
+    public searchValue: string = null;
 
     public nodes = [
       {
@@ -97,14 +122,45 @@ export class GraphTab {
 
     public column: GraphTab;
 
-    constructor(
-      public title: string,
-      public active: boolean = false,
-      public isParent: boolean = false) {
-        if (isParent)
+    public static filterBySelectedLeafs(visibleNodes: TreeNode[], parentTree: TreeModel, node: TreeNode): boolean
+    {
+        var show = (node.data.id in parentTree.selectedLeafNodeIds) || Object.keys(parentTree.selectedLeafNodeIds).length == 0;
+        if (show)
+            visibleNodes.push(node);
+        return show;
+    }
+
+    public static filterByVisibleLeafs(visibleNodes: TreeNode[], parentTree: TreeNode[], node: TreeNode): boolean
+    {
+        var show = parentTree.find(n => {
+            return n.id == node.data.id;
+        }) != null;
+        if (show)
+            visibleNodes.push(node);
+        return show;
+    }
+
+    public static filterByVisibleLinks(visibleNodes: TreeNode[], parentTree: VisibleLink[], node: TreeNode): boolean
+    {
+        var show = parentTree.find(n => {
+            return n.link.id == node.data.id;
+        }) != null;
+        if (show)
+            visibleNodes.push(node);
+        return show;
+    }
+    
+    public runFilter()
+    {
+        this.visibleNodes = [];
+        this.visibleLinks = [];
+
+        if (this.treeModel)
         {
-          this.column = new GraphTab(title);
-          this.column.options.useCheckbox = false;
+          this.treeModel.clearFilter();
+          this.treeModel.filterNodes((node: TreeNode) => this.filter(this.visibleNodes, node), false);
+
+          this.visibleLinks = GraphService.flatten(this.visibleNodes.map(v => v.data.node.links.map(l => new VisibleLink(v, l))));
         }
     }
 }
@@ -115,7 +171,9 @@ export class GraphService {
   private nextDocGuid = 0;
 
   constructor(
-    private messageService: MessageService) { }
+    private messageService: MessageService) {
+      this.addTab("ISO");
+    }
 
   //getGraphData(docA: number, docB: number, docC: number): Observable<DAG> {
   //  var a = this.standardMapService.getStandardMap(docA);
@@ -136,8 +194,8 @@ export class GraphService {
   //      );
   //}
 
-  flatten(array) {
-      return array.reduce((a,b)=>a.concat(b));
+  public static flatten(array) {
+      return array.reduce((a,b)=>a.concat(b), []);
   }
 
   getGuid(id: string, type: string, rev: string, createMissing: boolean = true): number {
@@ -232,6 +290,39 @@ export class GraphService {
       var doc = mapDb.find(n => n.type == docType);
       var result = this.addToDoc(null, doc);
       return of(result);
+  }
+
+
+
+  // Live state management: maybe move this to a different service.  
+  public graphTabs: GraphTab[] = [ ];
+  public selectedTab: number = 0;
+
+  public addTab(id: string) {
+      this.getFullDocByType(id)
+        .subscribe(doc => {
+          var newTab = new GraphTab(id, true);
+
+          newTab.nodes = doc.children;
+          newTab.column.nodes = doc.children;
+
+          if (this.graphTabs.length == 1) 
+            this.graphTabs.splice(0, 0, newTab); // empty except iso, insert before iso only the first time.
+          else
+            this.graphTabs.push(newTab); // else append
+
+          this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
+          setTimeout(() => this.activateTab(newTab), 1); // need to let dom regenerate
+        });
+  }
+
+  public activateTab(tab: GraphTab) {
+      //for (var t of this.graphTabs)
+      //{
+      //    t.active = t == tab;
+      //}
+
+      this.selectedTab = this.graphTabs.indexOf(tab);
   }
 
   /**
