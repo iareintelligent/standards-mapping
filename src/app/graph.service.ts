@@ -168,7 +168,10 @@ export class GraphTab {
           this.treeModel.clearFilter();
           this.treeModel.filterNodes((node: TreeNode) => this.filter(this.visibleNodes, node), false);
 
-          this.visibleLinks = GraphService.flatten(this.visibleNodes.map(v => v.data.node.links.map(l => new VisibleLink(v, l))));
+          this.visibleLinks = GraphService.flatten(this.visibleNodes.map(v => {
+              var links = v.data.node.links;
+              return links ? links.map(l => new VisibleLink(v, l)) : [];
+          }));
         }
     }
 

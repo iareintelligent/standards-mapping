@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "angular-io-example",
   "version": "1.0.0",
   "private": true,
@@ -9,7 +9,8 @@
     "test": "ng test",
     "build": "ng build --aot=true --prod=true --baseHref=/standards-mapping/ --deployUrl=/standards-mapping/ --outputPath=docs",
     "e2e": "ng e2e",
-    "ng": "ng"
+    "ng": "ng",
+    "import": "node utils/parsexlsx.js"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +37,7 @@
     "d3-ng2-service": "^2.2.0",
     "d3-sankey": "^0.12.1",
     "d3-selection-multi": "^1.0.1",
+    "exceljs": "^1.11.0",
     "rxjs": "^6.5.1",
     "zone.js": "~0.8.26"
   },

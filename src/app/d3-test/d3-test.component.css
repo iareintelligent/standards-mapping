@@ -78,6 +78,7 @@ table, th, td {
     display: inline-block;
     vertical-align: top;
     margin-right: 60px;
+    max-width: 500px;
 }
 
 .example-spacer {
