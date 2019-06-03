@@ -64,6 +64,12 @@ var breakPath = function (path) {
     return frags;
 }
 
+var normalizePath = function (path) {
+    var frags = breakPath(path);
+    var assembled = frags.join(".");
+    return assembled;
+}
+
 var findOrCreateSection = function (root, section) {
   var frags = breakPath(section);
   var assembled = "";
@@ -155,7 +161,7 @@ workbook.xlsx.readFile(inputFile)
           var section = cell.text.match(/(\d.*)/); // must start with a number
           if (section)
           {
-            sectionsByRow[rowNumber] = section[1]
+            sectionsByRow[rowNumber] = normalizePath(section[1])
           }
         });
 
@@ -192,10 +198,11 @@ workbook.xlsx.readFile(inputFile)
             var section = cell.text.match(/.*\((.*)\).*/);
             if (section)
             {
+              var normalized = normalizePath(section[1]);
               var isoSection = sectionsByRow[rowNumber];
               newDoc.push({
-                  id: section[1],
-                  section: section[1],
+                  id: normalized,
+                  section: normalized,
                   body: cell.text,
                   links: [ {
                       "id": isoSection,

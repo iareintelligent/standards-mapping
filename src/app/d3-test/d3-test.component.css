@@ -26,8 +26,13 @@ h1 {
     vertical-align: top;
     display: inline-block;
     width: 25%;
-    white-space: nowrap;
     overflow: hidden;
+}
+
+.node-content-wrapper {
+    border: 1px solid #d6d6d6;
+    width: 100%;
+    padding: 0px 5px;
 }
 
 .d3 {
@@ -117,12 +122,17 @@ table, th, td {
 }
 
 .svg-line-visible {
+    stroke: #b7b5b5;
+}
+
+.svg-line-active {
     stroke: black;
+    stroke-width: 2;
 }
 
 .mat-tab-label {
     min-width: 50px !important;
-    max-width: 50px !important;
+    padding: 0px !important;
 }
 
 mat-card {

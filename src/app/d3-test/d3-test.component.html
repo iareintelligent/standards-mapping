@@ -47,7 +47,7 @@
               
               <div><mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">Expand All</mat-checkbox></div>
               
-              <tree-root #tree [focused]="true" [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="t.column.treeModel = tree.treeModel; tabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t)">
+              <tree-root #tree [focused]="true" [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="t.column.treeModel = tree.treeModel; tabTreeChanged(t)" (activate)="columnTabTreeChanged(t)" (deactivate)="columnTabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t)">
                 <ng-template #treeNodeWrapperTemplate let-node let-index="index">
                   <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
                     <tree-node-expander [node]="node"></tree-node-expander>
@@ -80,8 +80,8 @@
             <g *ngFor="let l of t.column.displayLinks">
               <line class="svg-line-click" (click)="clickedLink(l)" [attr.x1]="l.x2 - 2 * l.scale" [attr.x2]="l.x2 + 0.1 * l.scale" [attr.y1]="l.y2" [attr.y2]="l.y2" marker-end="url(#arrow)"></line>
               <line class="svg-line-click" (click)="clickedLink(l)" [attr.x1]="l.x1" [attr.x2]="l.x2 - 2 * l.scale" [attr.y1]="l.y1" [attr.y2]="l.y2"></line>
-              <line class="svg-line-visible" [attr.x1]="l.x2 - 2 * l.scale" [attr.x2]="l.x2 + 0.1 * l.scale" [attr.y1]="l.y2" [attr.y2]="l.y2" marker-end="url(#arrow)"></line>
-              <line class="svg-line-visible" [attr.x1]="l.x1" [attr.x2]="l.x2 - 2 * l.scale" [attr.y1]="l.y1" [attr.y2]="l.y2"></line>
+              <line class="svg-line-visible" [class.svg-line-active]="l.weight > 1" [attr.x1]="l.x2 - 2 * l.scale" [attr.x2]="l.x2 + 0.1 * l.scale" [attr.y1]="l.y2" [attr.y2]="l.y2" marker-end="url(#arrow)"></line>
+              <line class="svg-line-visible" [class.svg-line-active]="l.weight > 1" [attr.x1]="l.x1" [attr.x2]="l.x2 - 2 * l.scale" [attr.y1]="l.y1" [attr.y2]="l.y2"></line>
             </g>
           </g>
         </svg>

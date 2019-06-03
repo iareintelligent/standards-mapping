@@ -448,8 +448,9 @@ export class D3TestComponent implements OnInit {
             return [k, collapsed];
         });
         
-        var inset = -5;
-        var outset = 10;
+        var startingGapLeft = 0;
+        var startingGapRight = 10;
+        var arrowLength = 10;
 
         var svgBounds = this.svgbgElement.getBoundingClientRect();
         var flatten = rollup2.reduce((a, b) => {
@@ -472,12 +473,13 @@ export class D3TestComponent implements OnInit {
                     to: destinationKey,
                     fromTree: fromTree,
                     toTree: toTree,
-                    x1: (rtl ? (fromBounds.left - outset) : (fromBounds.right - inset)) - svgBounds.left,
-                    x2: (rtl ? (toBounds.right - inset) : (toBounds.left - outset)) - svgBounds.left,
+                    x1: (rtl ? (fromBounds.left - startingGapRight) : (fromBounds.right + startingGapLeft)) - svgBounds.left,
+                    x2: (rtl ? (toBounds.right + arrowLength) : (toBounds.left - arrowLength)) - svgBounds.left,
                     y1: fromBounds.top - svgBounds.top + fromBounds.height * 0.5,
                     y2: toBounds.top - svgBounds.top + toBounds.height * 0.5,
                     scale: rtl ? -1 : 1,
-                    count: destinationData.length
+                    count: destinationData.length,
+                    weight: (fromNode.isActive || toNode.isActive) ? 2 : 1
                 });
               }
             }

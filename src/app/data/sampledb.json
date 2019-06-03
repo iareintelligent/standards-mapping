@@ -17,18 +17,18 @@
                                 "section": "5.2.1",
                                 "children": [
                                     {
-                                        "id": "5.2.1 a)",
+                                        "id": "5.2.1.a",
                                         "frag": "a",
-                                        "section": "5.2.1 a)",
+                                        "section": "5.2.1.a",
                                         "children": [],
                                         "body": "The organization shall determine its role as either a PII controller or a PII processor"
                                     }
                                 ]
                             },
                             {
-                                "id": "5.2.2 ",
+                                "id": "5.2.2",
                                 "frag": "2",
-                                "section": "5.2.2 ",
+                                "section": "5.2.2",
                                 "children": [],
                                 "body": "The organization shall include amongst its interested parties (see ISO/IEC 27001:2013 4.2), those parties having interests or responsibilities associated with PII processing"
                             },
@@ -38,9 +38,9 @@
                                 "section": "5.2.3",
                                 "children": [
                                     {
-                                        "id": "5.2.3 a)",
+                                        "id": "5.2.3.a",
                                         "frag": "a",
-                                        "section": "5.2.3 a)",
+                                        "section": "5.2.3.a",
                                         "children": [],
                                         "body": "When determining the scope of the information security management system, the organization shall consider the explicit inclusion of the processing of PII"
                                     }
@@ -61,9 +61,9 @@
                         "section": "5.3",
                         "children": [
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "frag": "a",
-                                "section": "5.3 a)",
+                                "section": "5.3.a",
                                 "children": [],
                                 "body": "Compare the controls determined in 6.1.3 b) of ISO/IEC 27001:2013 with those in ISO/IEC 27001:2013, Annex A and with Annex A and B of this document to verify that no necessary controls have been omitted \nProduce a Statement of Applicability that contains:  − the necessary controls (see ISO/IEC 27001:2013, 6.1.3 b) and c));  − justification for their inclusion;  − whether the necessary controls are implemented or not; and  − the justification for excluding any of the controls in ISO/IEC 27001:2013, Annex A or Annex A and B of this document according to the organization's determination of its role (see 5.2.1)"
                             }
@@ -364,9 +364,9 @@
                                 "body": "The organization should determine, document and comply with the lawful basis for the processing of PII for the identified purposes"
                             },
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "frag": "3",
-                                "section": "7.2.3 ",
+                                "section": "7.2.3",
                                 "children": [],
                                 "body": "The organization should determine and document a process for the demonstration of when and how consent is to be obtained from PII principals"
                             },
@@ -434,16 +434,16 @@
                                 "body": "The organization should provide a mechanism for PII principals to modify or withdraw their consent."
                             },
                             {
-                                "id": "7.3.5 ",
+                                "id": "7.3.5",
                                 "frag": "5",
-                                "section": "7.3.5 ",
+                                "section": "7.3.5",
                                 "children": [],
                                 "body": "The organization should provide a mechanism for PII principals to object to the processing of their PII"
                             },
                             {
-                                "id": "7.3.6 ",
+                                "id": "7.3.6",
                                 "frag": "6",
-                                "section": "7.3.6 ",
+                                "section": "7.3.6",
                                 "children": [],
                                 "body": "The organization should implement mechanisms to inform third parties with whom the PII has been shared of any modification, withdrawal or objections resulting from the exercising of PII principals' rights"
                             },
@@ -462,9 +462,9 @@
                                 "body": "The organization should be able to provide a copy of the PII that is being processed, subject to the retention and deletion policy, when requested by the PII principal."
                             },
                             {
-                                "id": "7.3.9 ",
+                                "id": "7.3.9",
                                 "frag": "9",
-                                "section": "7.3.9 ",
+                                "section": "7.3.9",
                                 "children": [],
                                 "body": "The organization should have the means to handle the legitimate requests of PII principals."
                             },
@@ -518,9 +518,9 @@
                                 "body": "The organization should either delete PII or render it in a form which does not permit identification of PII principals, as soon as the original PII is no longer necessary for the identified purpose(s)"
                             },
                             {
-                                "id": "7.4.6 ",
+                                "id": "7.4.6",
                                 "frag": "6",
-                                "section": "7.4.6 ",
+                                "section": "7.4.6",
                                 "children": [],
                                 "body": "The organization should ensure that temporary files and documents created as a result of PII processing are disposed of (e.g., erased or destroyed) following documented procedures within a specified, documented period"
                             },
@@ -680,9 +680,9 @@
                                 "body": "The organization should ensure that temporary files and documents created as a result of PII processing are disposed of (e.g., erased or destroyed) following documented procedures within a specified, documented period"
                             },
                             {
-                                "id": "8.4.2 ",
+                                "id": "8.4.2",
                                 "frag": "2",
-                                "section": "8.4.2 ",
+                                "section": "8.4.2",
                                 "children": [],
                                 "body": "The organization should provide a capability for the return, transfer and/or disposal of PII and should make its policy for the exercise of this capability available to the customer before entering into a PII processing contract"
                             },
@@ -708,9 +708,9 @@
                                 "body": "The organization should inform the customer in a timely manner of the basis for relevant PII transfers and of any intended changes in this regard so that the customer has the ability to object to such changes or to terminate the contract"
                             },
                             {
-                                "id": "8.5.2 ",
+                                "id": "8.5.2",
                                 "frag": "2",
-                                "section": "8.5.2 ",
+                                "section": "8.5.2",
                                 "children": [],
                                 "body": "The organization should specify and document the countries and international organizations to which PII might possibly be transferred"
                             },
@@ -722,9 +722,9 @@
                                 "body": "The organization should record disclosures of PII to third parties, including what PII has been disclosed, to whom and when"
                             },
                             {
-                                "id": "8.5.4 ",
+                                "id": "8.5.4",
                                 "frag": "4",
-                                "section": "8.5.4 ",
+                                "section": "8.5.4",
                                 "children": [],
                                 "body": "The organization should notify the customer of any legally binding requests for disclosure of PII, unless otherwise prohibited by law"
                             },
@@ -762,37 +762,37 @@
                 "body": "Guidance for PII Processors ⑦⑧⑩⑭"
             },
             {
-                "id": "9)",
+                "id": "9",
                 "frag": "9",
-                "section": "9)",
+                "section": "9",
                 "children": [],
                 "body": "Adoption, use or disclosure of government related identifiers: A private entity must not adopt or use a government related identifier of an individual as its own"
             },
             {
-                "id": "10)",
+                "id": "10",
                 "frag": "10",
-                "section": "10)",
+                "section": "10",
                 "children": [],
                 "body": "Must, on request, give access to personal information in an alternative format (if reasonable) to individuals with a sensory disability where they have a right to access their personal information "
             },
             {
-                "id": "13)",
+                "id": "13",
                 "frag": "13",
-                "section": "13)",
+                "section": "13",
                 "children": [],
                 "body": "When carrying out public health sutides and research using personal data such must be processed exclusively within that entity, kept in a secure environment, anonymised or pseudonymised whenever possible and follow ethical standards for such studies. Disclosure of the results of the study mus…"
             },
             {
-                "id": "16)",
+                "id": "16",
                 "frag": "16",
-                "section": "16)",
+                "section": "16",
                 "children": [],
                 "body": "Must be registered with the Registry of Data Controllers before processing data. The Registry is a publicly accessible register under the supervision of Data Protection Board"
             },
             {
-                "id": "21)",
+                "id": "21",
                 "frag": "21",
-                "section": "21)",
+                "section": "21",
                 "children": [],
                 "body": "Data concerning the exercise of a data subject's rights must not be used in a manner detrimental to that data subject"
             },
@@ -802,25 +802,25 @@
                 "section": "24",
                 "children": [
                     {
-                        "id": "24-2)",
+                        "id": "24.2",
                         "frag": "2",
-                        "section": "24-2)",
+                        "section": "24.2",
                         "children": [],
                         "body": "Must not process the resident registration number of a data subject"
                     }
                 ]
             },
             {
-                "id": "25)",
+                "id": "25",
                 "frag": "25",
-                "section": "25)",
+                "section": "25",
                 "children": [],
                 "body": "With only limited law enforcement/safety exceptions, no one must install and operate visual data processing devices so as to 'look into' usually private places (e.g. change rooms)"
             },
             {
-                "id": "30)",
+                "id": "30",
                 "frag": "30",
-                "section": "30)",
+                "section": "30",
                 "children": [],
                 "body": "Any procedure whereby personal data collected for one or more purposes for 10 or more data subjects is compared with personal data collected for any other purpose and which may be used for taking any adverse action against any data subjects must only done with the consent of all relevant data subjects or the Commissioner"
             },
@@ -830,16 +830,16 @@
                 "section": "1798",
                 "children": [
                     {
-                        "id": "1798.115)",
+                        "id": "1798.115",
                         "frag": "115",
-                        "section": "1798.115)",
+                        "section": "1798.115",
                         "children": [],
                         "body": "Third parties must not sell personal information sold to them without giving explicit notice to consumer and an opportunity to opt out"
                     },
                     {
-                        "id": "1798.125)",
+                        "id": "1798.125",
                         "frag": "125",
-                        "section": "1798.125)",
+                        "section": "1798.125",
                         "children": [],
                         "body": "Businesses must not discriminate against consumers who exercise any of their privacy rights"
                     }
@@ -862,14 +862,14 @@
                         "section": "APP.1",
                         "children": [
                             {
-                                "id": "APP 1.2",
+                                "id": "APP.1.2",
                                 "frag": "2",
-                                "section": "APP 1.2",
+                                "section": "APP.1.2",
                                 "children": [],
                                 "body": "Must take reasonable steps to implement practices, procedures and systems to ensure compliance with the APPs (APP 1.2)",
                                 "links": [
                                     {
-                                        "id": "5.2.3 a)",
+                                        "id": "5.2.3.a",
                                         "type": "ISO"
                                     },
                                     {
@@ -877,7 +877,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "5.3 a)",
+                                        "id": "5.3.a",
                                         "type": "ISO"
                                     },
                                     {
@@ -923,9 +923,9 @@
                                 ]
                             },
                             {
-                                "id": "APP 1.4",
+                                "id": "APP.1.4",
                                 "frag": "4",
-                                "section": "APP 1.4",
+                                "section": "APP.1.4",
                                 "children": [],
                                 "body": "A privacy policy must contain the kinds of personal information collected and held, how and for what purposes it is collected, held, used and disclosed (APP 1.4)",
                                 "links": [
@@ -938,9 +938,9 @@
                         ]
                     },
                     {
-                        "id": "APP 2",
+                        "id": "APP.2",
                         "frag": "2",
-                        "section": "APP 2",
+                        "section": "APP.2",
                         "children": [],
                         "body": "Where practicable individuals must have the option of not identifying themselves or using a pseudonym (APP 2)",
                         "links": [
@@ -960,9 +960,9 @@
                         "section": "APP.3",
                         "children": [
                             {
-                                "id": "APP 3.2",
+                                "id": "APP.3.2",
                                 "frag": "2",
-                                "section": "APP 3.2",
+                                "section": "APP.3.2",
                                 "children": [],
                                 "body": "Must not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless it is reasonably necessary for the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities                 (APP 3.2)",
                                 "links": [
@@ -981,9 +981,9 @@
                                 ]
                             },
                             {
-                                "id": "APP 3.3",
+                                "id": "APP.3.3",
                                 "frag": "3",
-                                "section": "APP 3.3",
+                                "section": "APP.3.3",
                                 "children": [],
                                 "body": "Must not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities                                                             (APP 3.3) \nMust not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP 3.3) \nMust not collect sensitive information unless consent is given\r\n (APP 3.3)",
                                 "links": [
@@ -992,7 +992,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "7.2.3 ",
+                                        "id": "7.2.3",
                                         "type": "ISO"
                                     },
                                     {
@@ -1008,9 +1008,9 @@
                         ]
                     },
                     {
-                        "id": "APP 4",
+                        "id": "APP.4",
                         "frag": "4",
-                        "section": "APP 4",
+                        "section": "APP.4",
                         "children": [],
                         "body": "Must determine if the  unsolicited personal information could have been solicited and, if not, delete or de-identify it\r\n(APP 4) \nMust determine if the  unsolicited personal information could have been solicited and, if not, delete or de-identify it\r\n (APP 4)",
                         "links": [
@@ -1025,9 +1025,9 @@
                         ]
                     },
                     {
-                        "id": "APP 5",
+                        "id": "APP.5",
                         "frag": "5",
-                        "section": "APP 5",
+                        "section": "APP.5",
                         "children": [],
                         "body": "Must notify certain matters on the collection of personal information\r\n(APP 5) \nMust notify certain matters on the collection of personal information       (APP 5) \r\n\r\nThis notification must be provided to the PII principals at or prior to the time of collecting the personal information or as soon as practicable thereafter",
                         "links": [
@@ -1051,9 +1051,9 @@
                         "section": "APP.6",
                         "children": [
                             {
-                                "id": "APP 6.1",
+                                "id": "APP.6.1",
                                 "frag": "1",
-                                "section": "APP 6.1",
+                                "section": "APP.6.1",
                                 "children": [],
                                 "body": "Personal information collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1)\r\n\r\nIf testing is not an approved purpose, consent must be obtained \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1) \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained\r\n(APP 6.1)",
                                 "links": [
@@ -1066,7 +1066,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "7.2.3 ",
+                                        "id": "7.2.3",
                                         "type": "ISO"
                                     },
                                     {
@@ -1092,9 +1092,9 @@
                                 ]
                             },
                             {
-                                "id": "APP 6.5",
+                                "id": "APP.6.5",
                                 "frag": "5",
-                                "section": "APP 6.5",
+                                "section": "APP.6.5",
                                 "children": [],
                                 "body": "If personal information is used or disclosed in accordance with APP 6.2(e) a written record of the use or disclosure must be kept (APP 6.5)",
                                 "links": [
@@ -1104,13 +1104,7 @@
                                     }
                                 ]
                             }
-                        ]
-                    },
-                    {
-                        "id": "APP 6",
-                        "frag": "6",
-                        "section": "APP 6",
-                        "children": [],
+                        ],
                         "body": "Must only use or disclose personal information as permitted under the APPs (e.g. as notified to individual at time of collection)                      (APP 6)",
                         "links": [
                             {
@@ -1120,9 +1114,9 @@
                         ]
                     },
                     {
-                        "id": "APP 7",
+                        "id": "APP.7",
                         "frag": "7",
-                        "section": "APP 7",
+                        "section": "APP.7",
                         "children": [],
                         "body": "Unless an exception (e.g. consent) applies, must not use or disclose personal information for direct marketing (APP 7)",
                         "links": [
@@ -1138,9 +1132,9 @@
                         "section": "APP.8",
                         "children": [
                             {
-                                "id": "APP 8.1",
+                                "id": "APP.8.1",
                                 "frag": "1",
-                                "section": "APP 8.1",
+                                "section": "APP.8.1",
                                 "children": [],
                                 "body": "Before disclosing personal information to an overseas recipient, must take reasonable steps to ensure the overseas recipient does not breach the APPs (APP 8.1)",
                                 "links": [
@@ -1157,10 +1151,24 @@
                         ]
                     },
                     {
-                        "id": "APP 10",
+                        "id": "APP.10",
                         "frag": "10",
-                        "section": "APP 10",
-                        "children": [],
+                        "section": "APP.10",
+                        "children": [
+                            {
+                                "id": "APP.10.2",
+                                "frag": "2",
+                                "section": "APP.10.2",
+                                "children": [],
+                                "body": "Must take reasonable steps to ensure personal information used or disclosed is up-to-date, complete and relevant (APP 10.2)",
+                                "links": [
+                                    {
+                                        "id": "7.3.6",
+                                        "type": "ISO"
+                                    }
+                                ]
+                            }
+                        ],
                         "body": "Must take steps to ensure personal information held is accurate, up-to-date and complete (APP 10) \nMust take steps to ensure personal information held is accurate, up-to-date and accurate (APP 10)",
                         "links": [
                             {
@@ -1174,39 +1182,19 @@
                         ]
                     },
                     {
-                        "id": "APP.10",
-                        "frag": "10",
-                        "section": "APP.10",
-                        "children": [
-                            {
-                                "id": "APP 10.2",
-                                "frag": "2",
-                                "section": "APP 10.2",
-                                "children": [],
-                                "body": "Must take reasonable steps to ensure personal information used or disclosed is up-to-date, complete and relevant (APP 10.2)",
-                                "links": [
-                                    {
-                                        "id": "7.3.6 ",
-                                        "type": "ISO"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
                         "id": "APP.11",
                         "frag": "11",
                         "section": "APP.11",
                         "children": [
                             {
-                                "id": "APP 11.1",
+                                "id": "APP.11.1",
                                 "frag": "1",
-                                "section": "APP 11.1",
+                                "section": "APP.11.1",
                                 "children": [],
                                 "body": "Must take reasonable steps to protect personal information held from misuse, interference and loss, unauthorised access, modification or disclosure (APP 11.1)",
                                 "links": [
                                     {
-                                        "id": "5.2.3 a)",
+                                        "id": "5.2.3.a",
                                         "type": "ISO"
                                     },
                                     {
@@ -1214,7 +1202,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "5.3 a)",
+                                        "id": "5.3.a",
                                         "type": "ISO"
                                     },
                                     {
@@ -1304,9 +1292,9 @@
                                 ]
                             },
                             {
-                                "id": "APP 11.2",
+                                "id": "APP.11.2",
                                 "frag": "2",
-                                "section": "APP 11.2",
+                                "section": "APP.11.2",
                                 "children": [],
                                 "body": "Must take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or disclosed under the APPs and if not required to be retained by law (APP 11.2) \nMust take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or disclosed under the APPs and if not required to be retained by law (APP 11.2)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form \nMust take reasonable steps to destroy or ensure personal information is de-identified if the information is no longer needed for any purpose for which the information may be used or disclosed under the APPs and if it is not required to be retained by law\r\n(APP 11.2) \nMust take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or disclosed under the APPs and if not required to be retained by law\r\n(APP 11.2)\r\nSubject to any legal requirement to keep the information in an identifiable form",
                                 "links": [
@@ -1319,7 +1307,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "7.4.6 ",
+                                        "id": "7.4.6",
                                         "type": "ISO"
                                     },
                                     {
@@ -1335,7 +1323,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "8.4.2 ",
+                                        "id": "8.4.2",
                                         "type": "ISO"
                                     }
                                 ]
@@ -1348,9 +1336,9 @@
                         "section": "APP.12",
                         "children": [
                             {
-                                "id": "APP 12.1",
+                                "id": "APP.12.1",
                                 "frag": "1",
-                                "section": "APP 12.1",
+                                "section": "APP.12.1",
                                 "children": [],
                                 "body": "On request, an individual must be given access to their personal information\r\n (APP 12.1) \nOn request, an individual must be given access to their personal information\r\n(APP 12.1)",
                                 "links": [
@@ -1364,13 +1352,7 @@
                                     }
                                 ]
                             }
-                        ]
-                    },
-                    {
-                        "id": "APP 12",
-                        "frag": "12",
-                        "section": "APP 12",
-                        "children": [],
+                        ],
                         "body": "Must, on request, give access to the individual's personal information\r\n(APP 12)",
                         "links": [
                             {
@@ -1385,9 +1367,9 @@
                         "section": "APP.13",
                         "children": [
                             {
-                                "id": "APP 13.1",
+                                "id": "APP.13.1",
                                 "frag": "1",
-                                "section": "APP 13.1",
+                                "section": "APP.13.1",
                                 "children": [],
                                 "body": "Must take reasonable steps to correct personal information of an individual if it is out-of-date, incomplete, irrelevant or misleading or if the individual requests it to be corrected\r\n(APP 13.1)",
                                 "links": [
@@ -1398,25 +1380,19 @@
                                 ]
                             },
                             {
-                                "id": "APP 13.2",
+                                "id": "APP.13.2",
                                 "frag": "2",
-                                "section": "APP 13.2",
+                                "section": "APP.13.2",
                                 "children": [],
                                 "body": "Where personal information is disclosed and that information is subsequently corrected, if requested, reasonable steps must be taken to notify the recipient of the correction\r\n(APP 13.2)",
                                 "links": [
                                     {
-                                        "id": "7.3.6 ",
+                                        "id": "7.3.6",
                                         "type": "ISO"
                                     }
                                 ]
                             }
-                        ]
-                    },
-                    {
-                        "id": "APP 13",
-                        "frag": "13",
-                        "section": "APP 13",
-                        "children": [],
+                        ],
                         "body": "Must take steps to correct personal information and, if requested, notify third parties of the correction  (APP 13)",
                         "links": [
                             {
@@ -1499,9 +1475,9 @@
                 ]
             },
             {
-                "id": "c)",
+                "id": "c",
                 "frag": "c",
-                "section": "c)",
+                "section": "c",
                 "children": [],
                 "body": "Privacy policy must include purposes for which the entity collects, holds and uses personal information (APP 1.4(c))",
                 "links": [
@@ -1512,35 +1488,35 @@
                 ]
             },
             {
-                "id": "d)",
+                "id": "d",
                 "frag": "d",
-                "section": "d)",
+                "section": "d",
                 "children": [],
                 "body": "The privacy policy must set out how an individual may access their personal information and seek the correction of such\r\n (APP 1.4(d))",
                 "links": [
                     {
-                        "id": "7.3.9 ",
+                        "id": "7.3.9",
                         "type": "ISO"
                     }
                 ]
             },
             {
-                "id": "e)",
+                "id": "e",
                 "frag": "e",
-                "section": "e)",
+                "section": "e",
                 "children": [],
                 "body": "The privacy policy must include how an individual may complain about a breach of the APPs\r\n(APP 1.4(e))",
                 "links": [
                     {
-                        "id": "7.3.5 ",
+                        "id": "7.3.5",
                         "type": "ISO"
                     }
                 ]
             },
             {
-                "id": "f)",
+                "id": "f",
                 "frag": "f",
-                "section": "f)",
+                "section": "f",
                 "children": [],
                 "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information (APP 5.2(f))\r\n\r\nThis notification must be provided to the PII principals at or prior to the time of collecting the personal information or as soon as practicable thereafter \nMust notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information (APP 5.2(f))                                                                                                                  \r\n\r\n",
                 "links": [
@@ -1555,9 +1531,9 @@
                 ]
             },
             {
-                "id": "j)",
+                "id": "j",
                 "frag": "j",
-                "section": "j)",
+                "section": "j",
                 "children": [],
                 "body": "Must take reasonable steps to notify if personal information is to be disclosed to overseas recipients and the countries in which such recipients are likely to be located (APP 5.2(j))",
                 "links": [
@@ -1566,7 +1542,7 @@
                         "type": "ISO"
                     },
                     {
-                        "id": "8.5.2 ",
+                        "id": "8.5.2",
                         "type": "ISO"
                     }
                 ]
@@ -1587,9 +1563,9 @@
                                 "section": "or.types.of",
                                 "children": [
                                     {
-                                        "id": "or types of persons",
+                                        "id": "or.types.of.persons",
                                         "frag": "persons",
-                                        "section": "or types of persons",
+                                        "section": "or.types.of.persons",
                                         "children": [],
                                         "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information\r\n(APP 5.2(f))\r\n\r\nThis notification must be provided to the PII principals at or prior to the time of collecting the personal information or as soon as practicable thereafter",
                                         "links": [
@@ -1612,9 +1588,9 @@
     {
         "children": [
             {
-                "id": "1)",
+                "id": "1",
                 "frag": "1",
-                "section": "1)",
+                "section": "1",
                 "children": [],
                 "body": "Every organisation must comply with the obligations (i.e. principles) in Schedule 1 (S.5(1))",
                 "links": [
@@ -1683,7 +1659,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "7.3.9 ",
+                                        "id": "7.3.9",
                                         "type": "ISO"
                                     }
                                 ]
@@ -1692,7 +1668,7 @@
                         "body": "Responsible for personal information under its control and must designate an individual(s) who are accountable for compliance (4.1)",
                         "links": [
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -1700,7 +1676,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -1795,7 +1771,7 @@
                                 "body": "The form of consent sought may vary depending on the type of information and circumstances (4.3.6)",
                                 "links": [
                                     {
-                                        "id": "7.2.3 ",
+                                        "id": "7.2.3",
                                         "type": "ISO"
                                     }
                                 ]
@@ -1808,7 +1784,7 @@
                                 "body": "Individuals can give consent in a manner of ways (4.3.7)",
                                 "links": [
                                     {
-                                        "id": "7.2.3 ",
+                                        "id": "7.2.3",
                                         "type": "ISO"
                                     },
                                     {
@@ -1891,7 +1867,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "7.4.6 ",
+                                        "id": "7.4.6",
                                         "type": "ISO"
                                     },
                                     {
@@ -2002,7 +1978,7 @@
                         "body": "Personal information must be protected by appropriate security safeguards (4.7)",
                         "links": [
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -2010,7 +1986,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -2074,7 +2050,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.4.2 ",
+                                "id": "8.4.2",
                                 "type": "ISO"
                             }
                         ]
@@ -2121,7 +2097,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "7.3.6 ",
+                                        "id": "7.3.6",
                                         "type": "ISO"
                                     },
                                     {
@@ -2159,7 +2135,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.5 ",
+                                "id": "7.3.5",
                                 "type": "ISO"
                             }
                         ]
@@ -2213,9 +2189,9 @@
                 "section": "DDP",
                 "children": [
                     {
-                        "id": "DDP 4",
+                        "id": "DDP.4",
                         "frag": "4",
-                        "section": "DDP 4",
+                        "section": "DDP.4",
                         "children": [],
                         "body": "The data user must adopt contractual or other means to ensure data processors take appropriate security measures (DDP 4)",
                         "links": [
@@ -2233,9 +2209,9 @@
                 "section": "DPP",
                 "children": [
                     {
-                        "id": "DPP 1",
+                        "id": "DPP.1",
                         "frag": "1",
-                        "section": "DPP 1",
+                        "section": "DPP.1",
                         "children": [],
                         "body": "Must take all practical steps to inform a number of matters including the purpose of collection, the classes of persons who will have access to the information and rights to access and correct information and the contact information to whom such a request should be made (DPP 1) \nMust take all practical steps to inform a number of matters including the purpose of collection, the classes of persons who will have access to the information and rights to access and correct information and the contact information to whom such a request should be made (DPP 1)\r\n\r\nNotification must be done on or before collection. \nPersonal data must only be collected for a lawful purpose directly related to a function or activity of the data user, if adequate, not excessive and necessary for or directly related to the purposes for collection (DPP 1)",
                         "links": [
@@ -2252,7 +2228,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -2268,7 +2244,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.5 ",
+                                "id": "7.3.5",
                                 "type": "ISO"
                             },
                             {
@@ -2294,9 +2270,9 @@
                         ]
                     },
                     {
-                        "id": "DPP 2",
+                        "id": "DPP.2",
                         "frag": "2",
-                        "section": "DPP 2",
+                        "section": "DPP.2",
                         "children": [],
                         "body": "The data user must adopt contractual or other means to prevent data from being kept by data processors longer than necessary (DPP 2) \nMust take all practical steps to ensure personal data is not kept longer than necessary to fulfil the purpose for which it was collected (DPP 2) \nMust take all practical steps to ensure personal data is accurate having regard to the purposes for which it is or is to be used (DPP 2) \nData user must adopt contractual provisions to prevent personal data being kept longer by data processor than necessary to fulfil the processing (DPP 2)",
                         "links": [
@@ -2313,7 +2289,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.4.6 ",
+                                "id": "7.4.6",
                                 "type": "ISO"
                             },
                             {
@@ -2337,15 +2313,15 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.4.2 ",
+                                "id": "8.4.2",
                                 "type": "ISO"
                             }
                         ]
                     },
                     {
-                        "id": "DPP 3",
+                        "id": "DPP.3",
                         "frag": "3",
-                        "section": "DPP 3",
+                        "section": "DPP.3",
                         "children": [],
                         "body": "Personal data must not be used for a new purpose (i.e. not previously identified) unless the  consent of the data subject is obtained (DPP 3)\r\n\r\nIf testing is not an approved purpose, consent must be obtained",
                         "links": [
@@ -2358,7 +2334,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -2368,14 +2344,14 @@
                         ]
                     },
                     {
-                        "id": "DPP 4",
+                        "id": "DPP.4",
                         "frag": "4",
-                        "section": "DPP 4",
+                        "section": "DPP.4",
                         "children": [],
                         "body": "Must take all practical steps to ensure personal data is protected against unauthorised or accidental access, processing, erasure, loss or use (DPP 4)",
                         "links": [
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -2383,7 +2359,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -2497,9 +2473,9 @@
                         ]
                     },
                     {
-                        "id": "DPP 5",
+                        "id": "DPP.5",
                         "frag": "5",
-                        "section": "DPP 5",
+                        "section": "DPP.5",
                         "children": [],
                         "body": "Must take all practical steps to ensure that person can ascertain a data user's policies and practices in relation to personal data (DPP 5)",
                         "links": [
@@ -2514,9 +2490,9 @@
                         ]
                     },
                     {
-                        "id": "DPP 6",
+                        "id": "DPP.6",
                         "frag": "6",
-                        "section": "DPP 6",
+                        "section": "DPP.6",
                         "children": [],
                         "body": "A data subject is entitled to ascertain whether personal data is held about them, request access to and correction of it (DPP 6)",
                         "links": [
@@ -2529,7 +2505,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.9 ",
+                                "id": "7.3.9",
                                 "type": "ISO"
                             }
                         ]
@@ -2575,7 +2551,7 @@
                         "body": "Must take all practicable steps to supply the third party with a copy of the corrected data (disclosed within prior 12 months) and a notice in writing stating the reasons for the correction (S.23)",
                         "links": [
                             {
-                                "id": "7.3.6 ",
+                                "id": "7.3.6",
                                 "type": "ISO"
                             },
                             {
@@ -2605,7 +2581,7 @@
                         "body": "Matching procedures cannot be undertaken without the consent of all relevant data subjects or the Commissioner (S.30)",
                         "links": [
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             }
                         ]
@@ -2644,7 +2620,7 @@
                         "body": "A data user must not act or engage in practice that contravenes the data protection principles (S.4)",
                         "links": [
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -2652,7 +2628,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -2682,14 +2658,14 @@
     {
         "children": [
             {
-                "id": "2)",
+                "id": "2",
                 "frag": "2",
-                "section": "2)",
+                "section": "2",
                 "children": [],
                 "body": "Except for Ss.24-25, no obligations apply to a 'data intermediary' in respect of its processing of personal data on behalf of and for the purposes of another organisation pursuant to a written contract (S.4(2)) ⑫ \nThe personal data protection obligations do not apply to a data intermediary in respect of its processing of personal data on behalf of and for the purposes of another organisation pursuant to a written contract (S.4(2))",
                 "links": [
                     {
-                        "id": "5.2.1 a)",
+                        "id": "5.2.1.a",
                         "type": "ISO"
                     },
                     {
@@ -2711,14 +2687,14 @@
                 ]
             },
             {
-                "id": "3)",
+                "id": "3",
                 "frag": "3",
-                "section": "3)",
+                "section": "3",
                 "children": [],
                 "body": "Organisations have the same obligations in respect of personal data processed for them by a 'data intermediary' as if it was processed by them (S.4(3))",
                 "links": [
                     {
-                        "id": "5.2.2 ",
+                        "id": "5.2.2",
                         "type": "ISO"
                     },
                     {
@@ -2758,7 +2734,7 @@
                         "type": "ISO"
                     },
                     {
-                        "id": "8.5.4 ",
+                        "id": "8.5.4",
                         "type": "ISO"
                     },
                     {
@@ -2784,7 +2760,7 @@
                         "body": "Organisations are  responsible for the protection of personal data in their possession or under their control (S.11)",
                         "links": [
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -2817,7 +2793,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -2857,11 +2833,11 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.5 ",
+                                "id": "7.3.5",
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.9 ",
+                                "id": "7.3.9",
                                 "type": "ISO"
                             }
                         ]
@@ -2912,7 +2888,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -2973,7 +2949,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -3027,7 +3003,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.6 ",
+                                "id": "7.3.6",
                                 "type": "ISO"
                             },
                             {
@@ -3061,7 +3037,7 @@
                         "body": "Must make reasonable security arrangements to prevent unauthorised access, collection, use, disclosure, copying, modification, disposal or similar risks for personal data held or under their control (S.24)",
                         "links": [
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -3069,7 +3045,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -3162,7 +3138,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.4.6 ",
+                                "id": "7.4.6",
                                 "type": "ISO"
                             },
                             {
@@ -3174,7 +3150,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.4.2 ",
+                                "id": "8.4.2",
                                 "type": "ISO"
                             },
                             {
@@ -3191,7 +3167,7 @@
                         "body": "May only transfer personal data outside Singapore in accordance with the requirements of the Act (S.26)",
                         "links": [
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -3203,7 +3179,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.5.2 ",
+                                "id": "8.5.2",
                                 "type": "ISO"
                             }
                         ]
@@ -3229,11 +3205,11 @@
                         "body": "Must comply with the Personal Information Protection Principles (A.3)",
                         "links": [
                             {
-                                "id": "5.2.1 a)",
+                                "id": "5.2.1.a",
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -3241,7 +3217,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -3286,7 +3262,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.6 ",
+                                "id": "7.3.6",
                                 "type": "ISO"
                             },
                             {
@@ -3311,7 +3287,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -3424,7 +3400,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.4.6 ",
+                                "id": "7.4.6",
                                 "type": "ISO"
                             },
                             {
@@ -3440,7 +3416,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.4.2 ",
+                                "id": "8.4.2",
                                 "type": "ISO"
                             }
                         ]
@@ -3453,7 +3429,7 @@
                         "body": "When obtaining consent, must present the request in a clear manner, including setting out each matter requiring consent separately and getting consent for each of those matters (A.22)",
                         "links": [
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -3470,7 +3446,7 @@
                         "body": "Must not process sensitive information except where individual consents to processing or where the law permits it (A.23)",
                         "links": [
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -3569,11 +3545,11 @@
                         "body": "Must take such technical, managerial, and physical measures (e.g. management plans and access logs) to ensure the protection of personal information (A.29)",
                         "links": [
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -3686,7 +3662,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.9 ",
+                                "id": "7.3.9",
                                 "type": "ISO"
                             },
                             {
@@ -3694,7 +3670,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.5.2 ",
+                                "id": "8.5.2",
                                 "type": "ISO"
                             }
                         ]
@@ -3758,11 +3734,11 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.5 ",
+                                "id": "7.3.5",
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.6 ",
+                                "id": "7.3.6",
                                 "type": "ISO"
                             },
                             {
@@ -3888,7 +3864,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "7.2.3 ",
+                                        "id": "7.2.3",
                                         "type": "ISO"
                                     },
                                     {
@@ -3943,7 +3919,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.4.6 ",
+                                "id": "7.4.6",
                                 "type": "ISO"
                             },
                             {
@@ -3955,7 +3931,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.4.2 ",
+                                "id": "8.4.2",
                                 "type": "ISO"
                             }
                         ]
@@ -4036,7 +4012,7 @@
                                 "body": "Must take reasonable steps to notify to whom personal data might be transferred and the purposes for same (A.10.1)",
                                 "links": [
                                     {
-                                        "id": "8.5.2 ",
+                                        "id": "8.5.2",
                                         "type": "ISO"
                                     }
                                 ]
@@ -4099,7 +4075,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.6 ",
+                                "id": "7.3.6",
                                 "type": "ISO"
                             },
                             {
@@ -4129,7 +4105,7 @@
                                 "body": "Must take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful processing of personal data, (ii) prevent unlawful access to personal data, and (iii) ensure the retention of personal data (A.12.1) \nMust take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful processing of personal data, (ii) prevent unlawful access to personal data, and (iii) ensure the retention of personal data (A.12.1) ",
                                 "links": [
                                     {
-                                        "id": "5.2.3 a)",
+                                        "id": "5.2.3.a",
                                         "type": "ISO"
                                     },
                                     {
@@ -4137,7 +4113,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "5.3 a)",
+                                        "id": "5.3.a",
                                         "type": "ISO"
                                     },
                                     {
@@ -4259,7 +4235,7 @@
                                 "body": "Must conduct necessary inspections in order to ensure compliance (A.12.3)",
                                 "links": [
                                     {
-                                        "id": "5.2.3 a)",
+                                        "id": "5.2.3.a",
                                         "type": "ISO"
                                     },
                                     {
@@ -4267,7 +4243,7 @@
                                         "type": "ISO"
                                     },
                                     {
-                                        "id": "5.3 a)",
+                                        "id": "5.3.a",
                                         "type": "ISO"
                                     },
                                     {
@@ -4315,11 +4291,11 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.5 ",
+                                "id": "7.3.5",
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.9 ",
+                                "id": "7.3.9",
                                 "type": "ISO"
                             }
                         ]
@@ -4345,14 +4321,14 @@
                 ]
             },
             {
-                "id": "a)",
+                "id": "a",
                 "frag": "a",
-                "section": "a)",
+                "section": "a",
                 "children": [],
-                "body": "Implied by S.1798.150 – civil action possible in respect of unauthorised access to personal information as a result of violation of the duty to implement and maintain reasonable security procedures and practices (S.1798.150(a)) ⑮ \nMust document the consumer’s rights and how to exercise them/make a request (S.1798.130(a)) \nEnsure all those responsible for handling consumer privacy inquiries and compliance are informed of all requirements under Ss.1798.120 and 1798.135 (S.1798.135(a)) \nMust provide a clear and conspicuous link on the business’ Internet homepage titled “Do Not Sell My Personal Information” to allow consumers to opt-out of the sale of personal information (S.1798.135 (a))",
+                "body": "Implied by S.1798.150 – civil action possible in respect of unauthorised access to personal information as a result of violation of the duty to implement and maintain reasonable security procedures and practices (S.1798.150(a)) ⑮ \nMust document the consumer’s rights and how to exercise them/make a request (S.1798.130(a)) \nEnsure all those responsible for handling consumer privacy inquiries and compliance are informed of all requirements under Ss.1798.120 and 1798.135 (S.1798.135(a)) \nImplied by S.1798.150 – civil action possible in respect of unauthorised access to personal information as a result of violation of the duty to implement and maintain reasonable security procedures and practices (S.1798.150(a) ⑯ \nMust provide a clear and conspicuous link on the business’ Internet homepage titled “Do Not Sell My Personal Information” to allow consumers to opt-out of the sale of personal information (S.1798.135 (a))",
                 "links": [
                     {
-                        "id": "5.2.3 a)",
+                        "id": "5.2.3.a",
                         "type": "ISO"
                     },
                     {
@@ -4360,7 +4336,7 @@
                         "type": "ISO"
                     },
                     {
-                        "id": "5.3 a)",
+                        "id": "5.3.a",
                         "type": "ISO"
                     },
                     {
@@ -4444,6 +4420,10 @@
                         "type": "ISO"
                     },
                     {
+                        "id": "6.13.1",
+                        "type": "ISO"
+                    },
+                    {
                         "id": "6.15.2",
                         "type": "ISO"
                     },
@@ -4460,15 +4440,15 @@
                         "type": "ISO"
                     },
                     {
-                        "id": "7.3.5 ",
+                        "id": "7.3.5",
                         "type": "ISO"
                     },
                     {
-                        "id": "7.3.9 ",
+                        "id": "7.3.9",
                         "type": "ISO"
                     },
                     {
-                        "id": "7.4.6 ",
+                        "id": "7.4.6",
                         "type": "ISO"
                     },
                     {
@@ -4494,9 +4474,9 @@
                 ]
             },
             {
-                "id": "b)",
+                "id": "b",
                 "frag": "b",
-                "section": "b)",
+                "section": "b",
                 "children": [],
                 "body": "Must not use personal information for additional purposes beyond those notified (S.1798.100(b)) \nMust not use personal information for additional purposes beyond those notified (S.1798.100(b))\r\n\r\nIf testing is not a notified purpose, consent must be obtained \nMust inform at or prior to collection as to the categories of personal information collected and purposes for which such will be used (S.1798.100(a) and (b)) \nMust disclose categories of personal information the business sells and the categories of third parties to whom sold (S.1798.115(a) and (b)) \nMust not collect additional categories of personal information beyond those notified (S.1798.100(b)) \nMust disclose details of the categories of third parties to whom the personal information is sold (S.1798.115(a) and (b))",
                 "links": [
@@ -4539,9 +4519,9 @@
                 ]
             },
             {
-                "id": "c)",
+                "id": "c",
                 "frag": "c",
-                "section": "c)",
+                "section": "c",
                 "children": [],
                 "body": "Must not sell (a) a consumer’s personal information after a request not to sell and (b) a minor’s personal information unless an appropriate consent is obtained (S.1798.120(c)) \nMust delete personal information on request of consumer and direct service providers (to whom such was provided) to delete such personal information (S.1798.105(c)) \nMust disclose details of the categories of third parties with whom the personal information is shared (S.1798.110(b) and (c))",
                 "links": [
@@ -4554,7 +4534,7 @@
                         "type": "ISO"
                     },
                     {
-                        "id": "7.3.6 ",
+                        "id": "7.3.6",
                         "type": "ISO"
                     },
                     {
@@ -4572,9 +4552,9 @@
                 ]
             },
             {
-                "id": "d)",
+                "id": "d",
                 "frag": "d",
-                "section": "d)",
+                "section": "d",
                 "children": [],
                 "body": "Use of personal information must be reasonably necessary and proportionate to achieve the purpose for which it was collected (S.1798.140(d)) \nMust not sell the personal information of consumers less than 16 years of age unless appropriate consent/authorisation is obtained (S.1798.120(c) and (d)) \nMust, on request, give access to the consumer’s personal information (S.1798.100(d))",
                 "links": [
@@ -4583,7 +4563,7 @@
                         "type": "ISO"
                     },
                     {
-                        "id": "7.2.3 ",
+                        "id": "7.2.3",
                         "type": "ISO"
                     },
                     {
@@ -4625,14 +4605,14 @@
                 ]
             },
             {
-                "id": "h)",
+                "id": "h",
                 "frag": "h",
-                "section": "h)",
+                "section": "h",
                 "children": [],
                 "body": "A business is not liable for the personal information disclosed to a service provider who uses it in violation of the CCPA, provided the business follows the requirements of the CCPA and has no knowledge or reasonable belief of any intention to commit such a violation. A service provider is likewise not liable for the compliance of a business with the CCPA (S.1798.145(h)) ⑭ \nBusinesses disclosing personal information to service providers, with knowledge or a reason to believe the service provider intends to violate the restrictions imposed by the provisions, will be liable for such violations (S.1798.145(h))",
                 "links": [
                     {
-                        "id": "5.2.1 a)",
+                        "id": "5.2.1.a",
                         "type": "ISO"
                     },
                     {
@@ -4654,9 +4634,9 @@
                 ]
             },
             {
-                "id": "w)",
+                "id": "w",
                 "frag": "w",
-                "section": "w)",
+                "section": "w",
                 "children": [],
                 "body": "Must only disclose personal information to a service provider pursuant to a written contract that prohibits processing of the personal information for any purpose other than performing the specified services (S.1798.140 (v) and (w))",
                 "links": [
@@ -4681,7 +4661,7 @@
                         "type": "ISO"
                     },
                     {
-                        "id": "8.4.2 ",
+                        "id": "8.4.2",
                         "type": "ISO"
                     },
                     {
@@ -4714,14 +4694,14 @@
                 "section": "Art",
                 "children": [
                     {
-                        "id": "Art 6",
+                        "id": "Art.6",
                         "frag": "6",
-                        "section": "Art 6",
+                        "section": "Art.6",
                         "children": [],
                         "body": "Processing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6) \nProcessing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6)\r\n\r\nIf testing is not an approved purpose, consent must be obtained",
                         "links": [
                             {
-                                "id": "5.2.2 ",
+                                "id": "5.2.2",
                                 "type": "ISO"
                             },
                             {
@@ -4763,9 +4743,9 @@
                         ]
                     },
                     {
-                        "id": "Art 7",
+                        "id": "Art.7",
                         "frag": "7",
-                        "section": "Art 7",
+                        "section": "Art.7",
                         "children": [],
                         "body": "Processing of personal data must only be carried out, among others, with the consent of the data subject, for compliance with a legal obligation, when necessary for execution of a contract, for protection of life, physical security or to protect health, protection of credit or when necessary to fulfil the controller's legitimate interests (Art 7)",
                         "links": [
@@ -4778,7 +4758,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -4788,9 +4768,9 @@
                         ]
                     },
                     {
-                        "id": "Art 8",
+                        "id": "Art.8",
                         "frag": "8",
-                        "section": "Art 8",
+                        "section": "Art.8",
                         "children": [],
                         "body": "The consent required in Art 7 must be given in writing or other means that shows the consent of the data subject (Art 8) \nConsent may be revoked at any time by express request via a free of charge procedure (Art 8)",
                         "links": [
@@ -4805,9 +4785,9 @@
                         ]
                     },
                     {
-                        "id": "Art 9",
+                        "id": "Art.9",
                         "frag": "9",
-                        "section": "Art 9",
+                        "section": "Art.9",
                         "children": [],
                         "body": "Specified information concerning the processing of the data subject's personal data must be made available in a clear transparent manner to the data subject (Art 9)",
                         "links": [
@@ -4828,7 +4808,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.5 ",
+                                "id": "7.3.5",
                                 "type": "ISO"
                             },
                             {
@@ -4844,15 +4824,15 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.5.2 ",
+                                "id": "8.5.2",
                                 "type": "ISO"
                             }
                         ]
                     },
                     {
-                        "id": "Art 10",
+                        "id": "Art.10",
                         "frag": "10",
-                        "section": "Art 10",
+                        "section": "Art.10",
                         "children": [],
                         "body": "The controller's legitimate interest can, among other things, only justify processing of personal data strictly necessary for the intended and transparent purpose of the controller (Art 10)",
                         "links": [
@@ -4863,14 +4843,14 @@
                         ]
                     },
                     {
-                        "id": "Art 11",
+                        "id": "Art.11",
                         "frag": "11",
-                        "section": "Art 11",
+                        "section": "Art.11",
                         "children": [],
                         "body": "Processing of sensitive personal data must only occur with consent or if indispensable for, among others, compliance with a legal obligation or protecting life or physical safety or protection health (Art 11)",
                         "links": [
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             },
                             {
@@ -4880,22 +4860,22 @@
                         ]
                     },
                     {
-                        "id": "Art 14",
+                        "id": "Art.14",
                         "frag": "14",
-                        "section": "Art 14",
+                        "section": "Art.14",
                         "children": [],
                         "body": "Processing of childrens' personal data must be with consent of at least one parent or the legal representative (Art 14)",
                         "links": [
                             {
-                                "id": "7.2.3 ",
+                                "id": "7.2.3",
                                 "type": "ISO"
                             }
                         ]
                     },
                     {
-                        "id": "Art 16",
+                        "id": "Art.16",
                         "frag": "16",
-                        "section": "Art 16",
+                        "section": "Art.16",
                         "children": [],
                         "body": "Personal data must be deleted once processing complete or terminated, except in compliance with legal obligations or in anonymised form for exclusive use of controller (Art 16)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form",
                         "links": [
@@ -4904,7 +4884,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.4.6 ",
+                                "id": "7.4.6",
                                 "type": "ISO"
                             },
                             {
@@ -4920,15 +4900,15 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "8.4.2 ",
+                                "id": "8.4.2",
                                 "type": "ISO"
                             }
                         ]
                     },
                     {
-                        "id": "Art 18",
+                        "id": "Art.18",
                         "frag": "18",
-                        "section": "Art 18",
+                        "section": "Art.18",
                         "children": [],
                         "body": "Data subjects have rights to obtain, among others, confirmation of the processing, access to data, correction of data, anonymisation, portability of data, deletion, withdrawal revocation of consent (Art 18)",
                         "links": [
@@ -4939,9 +4919,9 @@
                         ]
                     },
                     {
-                        "id": "Art 19",
+                        "id": "Art.19",
                         "frag": "19",
-                        "section": "Art 19",
+                        "section": "Art.19",
                         "children": [],
                         "body": "Confirmation of existence of and access to personal data must be provided in a simple format immediately and by means of a clear and complete notice of processing within 15 days of request (Art 19) \nConfirmation of existence of and access to personal data must be provided in a simple format immediately and by means of a clear and complete notice of processing with 15 days of request (Art 19)",
                         "links": [
@@ -4958,15 +4938,15 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.9 ",
+                                "id": "7.3.9",
                                 "type": "ISO"
                             }
                         ]
                     },
                     {
-                        "id": "Art 20",
+                        "id": "Art.20",
                         "frag": "20",
-                        "section": "Art 20",
+                        "section": "Art.20",
                         "children": [],
                         "body": "Data subject has the right to request review of decisions taken solely by automated processing of personal data (Art 20)",
                         "links": [
@@ -4977,9 +4957,9 @@
                         ]
                     },
                     {
-                        "id": "Art 33",
+                        "id": "Art.33",
                         "frag": "33",
-                        "section": "Art 33",
+                        "section": "Art.33",
                         "children": [],
                         "body": "International transfer of personal data is only allowed, among others, to countries with a similar level of protection, when the controller offers (and proves) guarantees of compliance with principles and protections in the law (Art 33)",
                         "links": [
@@ -4990,9 +4970,9 @@
                         ]
                     },
                     {
-                        "id": "Art 37",
+                        "id": "Art.37",
                         "frag": "37",
-                        "section": "Art 37",
+                        "section": "Art.37",
                         "children": [],
                         "body": "Controllers and processors must keep records of personal data processing operations (Art 37)",
                         "links": [
@@ -5023,9 +5003,9 @@
                         ]
                     },
                     {
-                        "id": "Art 38",
+                        "id": "Art.38",
                         "frag": "38",
-                        "section": "Art 38",
+                        "section": "Art.38",
                         "children": [],
                         "body": "The regulator may require a controller to prepare an impact report on their processing of personal data (Art 38)",
                         "links": [
@@ -5036,14 +5016,14 @@
                         ]
                     },
                     {
-                        "id": "Art 39",
+                        "id": "Art.39",
                         "frag": "39",
-                        "section": "Art 39",
+                        "section": "Art.39",
                         "children": [],
                         "body": "The processor must carry out processing according to the controller's instructions (Art 39)",
                         "links": [
                             {
-                                "id": "7.3.6 ",
+                                "id": "7.3.6",
                                 "type": "ISO"
                             },
                             {
@@ -5065,9 +5045,9 @@
                         ]
                     },
                     {
-                        "id": "Art 41",
+                        "id": "Art.41",
                         "frag": "41",
-                        "section": "Art 41",
+                        "section": "Art.41",
                         "children": [],
                         "body": "Must appoint a DPO to be in charge of processing personal data and a point of contact and must publicly disclose DPO's identity and contact details (Art 41)",
                         "links": [
@@ -5078,18 +5058,18 @@
                         ]
                     },
                     {
-                        "id": "Art 46",
+                        "id": "Art.46",
                         "frag": "46",
-                        "section": "Art 46",
+                        "section": "Art.46",
                         "children": [],
                         "body": "Must adopt security, technical and administrative measures to protect personal data from unauthorised access and accidental or unlawful destruction, loss, alteration, communication or processing (Art 46)",
                         "links": [
                             {
-                                "id": "5.2.1 a)",
+                                "id": "5.2.1.a",
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -5097,7 +5077,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -5181,7 +5161,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "7.3.6 ",
+                                "id": "7.3.6",
                                 "type": "ISO"
                             },
                             {
@@ -5219,9 +5199,9 @@
                         ]
                     },
                     {
-                        "id": "Art 48",
+                        "id": "Art.48",
                         "frag": "48",
-                        "section": "Art 48",
+                        "section": "Art.48",
                         "children": [],
                         "body": "Must communicate to regulator and data subjects the occurrence of a security incident and include certain minimum information (Art 48)",
                         "links": [
@@ -5236,14 +5216,14 @@
                         ]
                     },
                     {
-                        "id": "Art 49",
+                        "id": "Art.49",
                         "frag": "49",
-                        "section": "Art 49",
+                        "section": "Art.49",
                         "children": [],
                         "body": "The systems used for processing personal data must be structured to meet security requirements, standards of good practice and governance and general principles under the law (Art 49)",
                         "links": [
                             {
-                                "id": "5.2.3 a)",
+                                "id": "5.2.3.a",
                                 "type": "ISO"
                             },
                             {
@@ -5251,7 +5231,7 @@
                                 "type": "ISO"
                             },
                             {
-                                "id": "5.3 a)",
+                                "id": "5.3.a",
                                 "type": "ISO"
                             },
                             {
