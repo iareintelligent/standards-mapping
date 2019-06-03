@@ -58,37 +58,63 @@ var reduceDoc = function(doc) {
     return objs;
 }
 
-var nestDocRecursive = function (doc, prefix, result, index) {
+var breakPath = function (path) {
+    var frags = path.split(/\W+/);
+    frags = frags.filter(f => f);
+    return frags;
+}
 
-    if (result.children == null)
-      result.children = [];
+var findOrCreateSection = function (root, section) {
+  var frags = breakPath(section);
+  var assembled = "";
 
-    for (; index < doc.length; ++index)
-    {
-      var node = doc[index];
+  for (var f of frags)
+  {
+      if (assembled.length)
+        assembled += '.';
+      assembled += f;
 
-      if (prefix == null || node.section.startsWith(prefix))
-      {
-          //console.log("Push: " + node.section);
-          result.children.push(node);
-          index = nestDocRecursive(doc, node.section, node, index + 1);
-      }
+      var child = root.children ? root.children.find(c => c.id == assembled) : null;
+      if (child)
+        root = child;
       else
       {
-          //console.log("Break: " + node.section);
-          return index - 1;
-      }
-    }
+          var node = { 
+            "id": assembled,
+            "frag": f, // sortable fragment
+            "section": assembled,
+            "children": []
+          };
 
-    return index;
+          root.children.push(node);
+          root = node;
+      }
+  }
+
+  return root;
+}
+
+var recursiveSort = function (doc) {
+    doc.children.sort((a,b) => {
+      if (!isNaN(a.frag) && !isNaN(b.frag))
+        return parseInt(a.frag) - parseInt(b.frag);
+
+      return a.frag - b.frag;
+    });
+
+    for (var c of doc.children)
+      recursiveSort(c);
 }
 
 var nestDoc = function (doc) {
-    var result = {};
-    var prefix = null;
-    var index = 0;
+    var result = { "children" : [] };
 
-    nestDocRecursive(doc, prefix, result, index);
+    for (var d of doc)
+    {
+        var node = findOrCreateSection(result, d.section);
+        Object.assign(node, d);
+    }
+    recursiveSort(result);
 
     return result;
 }
