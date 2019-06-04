@@ -388,6 +388,9 @@ export class D3TestComponent implements OnInit {
                 if (!node.isSelected)
                   delete tab.treeModel.selectedLeafNodeIds[n];
             }
+            
+            if (tab.title != "ISO") 
+              tab.coverage = JSON.stringify(this.graphService.compareDocs(tab.column, this.graphService.graphTabs[1])); // compare with iso.
 
             this.updateGraph();
         }

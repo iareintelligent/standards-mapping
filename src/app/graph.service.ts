@@ -88,6 +88,7 @@ export class GraphTab {
     public filter: (vs: TreeNode[], n: TreeNode)=>boolean; 
     public isIso: boolean = false;
     public searchValue: string = null;
+    public coverage: string = " - ";
 
     public get anyExpanded():boolean {
       return this.treeModel && this.treeModel.expandedNodes.length > 0; 
@@ -97,36 +98,7 @@ export class GraphTab {
       return this.treeModel && this.treeModel.selectedLeafNodeIds && Object.keys(this.treeModel.selectedLeafNodeIds).length > 0; 
     }
 
-    public nodes = [
-      {
-        name: 'North America',
-        children: [
-          { name: 'United States', children: [
-            {name: 'New York'},
-            {name: 'California'},
-            {name: 'Florida'}
-          ] },
-          { name: 'Canada' }
-        ]
-      },
-      {
-        name: 'South America',
-        children: [
-          { name: 'Argentina', children: [] },
-          { name: 'Brazil' }
-        ]
-      },
-      {
-        name: 'Europe',
-        children: [
-          { name: 'England' },
-          { name: 'Germany' },
-          { name: 'France' },
-          { name: 'Italy' },
-          { name: 'Spain' }
-        ]
-      }
-    ];
+    public nodes = [];
 
     public column: GraphTab;
 
@@ -360,7 +332,8 @@ export class GraphService {
             this.graphTabs.splice(0, 0, newTab); // empty except iso, insert before iso only the first time.
           else
             this.graphTabs.push(newTab); // else append
-
+            
+          this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
           setTimeout(() => this.activateTab(newTab), 1); // need to let dom regenerate
         });
   }
@@ -376,8 +349,55 @@ export class GraphService {
       //    t.active = t == tab;
       //}
       
-      this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
       this.selectedTab = this.graphTabs.indexOf(tab);
+  }
+
+  public flattenSections(children: FullDocNode[], result: string[])
+  {
+      for (var c of children)
+      {
+          if (c.node.body)
+            result.push(c.id);
+          this.flattenSections(c.children, result);
+      }
+  }
+
+  public flattenLinks(children: FullDocNode[], result: string[])
+  {
+      for (var c of children)
+      {
+          if (c.node.body && c.node.links)
+              result = result.concat(c.node.links);
+          result = this.flattenLinks(c.children, result);
+      }
+
+      return result;
+  }
+
+  public compareDocs(aTab: GraphTab, bTab: GraphTab): any {
+    var bSections = [];
+    this.flattenSections(bTab.nodes, bSections);
+    var aLinks = this.flattenLinks(aTab.nodes, []);
+
+    var bCopy = bSections.slice();
+
+    var found = 0;
+    var checked = 0;
+    for (var a of aLinks)
+    {
+      ++checked;
+      var b = bCopy.find(x => x == a.id)
+      if (b)
+      {
+          bCopy = bCopy.filter(x => x != b);
+          ++found;
+      }
+    }
+
+    return {
+        "coverage": (found / bSections.length).toFixed(2) + "% (" + found + "/" + bSections.length + ")",
+        "mapped": (found / checked).toFixed(2) + "% (" + found + "/" + checked + ")"
+    };
   }
 
   /**

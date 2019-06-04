@@ -51,7 +51,7 @@
       <mat-card class="graph-columns" >
 <!--        <div fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="flex-start">-->
           <div class="graph-column" *ngFor="let t of graphService.graphTabs" >
-            <a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a>
+            <div><a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a> {{t.coverage}}</div>
               
               <div><mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">Expand All</mat-checkbox></div>
               
