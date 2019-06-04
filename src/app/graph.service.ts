@@ -209,6 +209,10 @@ export class GraphTab {
             processNode(this.treeModel.virtualRoot);
         }
     }
+
+    public mergedOptions(opts) { 
+        return Object.assign(this.options, opts);
+    }
 }
 
 @Injectable({ providedIn: 'root' })
@@ -357,9 +361,13 @@ export class GraphService {
           else
             this.graphTabs.push(newTab); // else append
 
-          this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
           setTimeout(() => this.activateTab(newTab), 1); // need to let dom regenerate
         });
+  }
+
+  public removeTab(tab) {
+      this.graphTabs = this.graphTabs.filter(t => t!=tab);
+      this.activateTab(this.graphTabs[0]);
   }
 
   public activateTab(tab: GraphTab) {
@@ -367,7 +375,8 @@ export class GraphService {
       //{
       //    t.active = t == tab;
       //}
-
+      
+      this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
       this.selectedTab = this.graphTabs.indexOf(tab);
   }
 

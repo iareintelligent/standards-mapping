@@ -512,6 +512,11 @@ export class D3TestComponent implements OnInit {
         }, 100);
     }
 
+    public setup(data, treeElement) {
+        data.treeModel = treeElement.treeModel;
+        treeElement.viewportComponent.elementRef.nativeElement.addEventListener('scroll', t => this.updateGraph()); 
+    }
+
     public clickedLink(link: any) {
         link.fromTree.getNodeById(link.from).expandAll();
         link.toTree.getNodeById(link.to).expandAll();
