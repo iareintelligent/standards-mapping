@@ -395,8 +395,8 @@ export class GraphService {
     }
 
     return {
-        "coverage": (found / bSections.length).toFixed(2) + "% (" + found + "/" + bSections.length + ")",
-        "mapped": (found / checked).toFixed(2) + "% (" + found + "/" + checked + ")"
+        "coverage": (found / bSections.length * 100).toFixed(1) + "% (" + found + "/" + bSections.length + ")",
+        "mapped": (found / checked * 100).toFixed(1) + "% (" + found + "/" + checked + ")"
     };
   }
 
