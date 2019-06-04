@@ -390,7 +390,11 @@ export class D3TestComponent implements OnInit {
             }
             
             if (tab.title != "ISO") 
-              tab.coverage = JSON.stringify(this.graphService.compareDocs(tab.column, this.graphService.graphTabs[1])); // compare with iso.
+            {
+                // compare with iso.
+                var stats = this.graphService.compareDocs(tab.column, this.graphService.graphTabs[1]);
+                tab.coverage = "ISO Coverage: " + stats.coverage + ", Mapped: " + stats.mapped;
+            }
 
             this.updateGraph();
         }

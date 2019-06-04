@@ -6,7 +6,12 @@ var inputFile = "./src/app/data/notcheckedin/MSFT ISO 27552 Country Mapping.xlsx
 var outputFile = "./src/app/data/sampledb.json";
 
 var keepNWords = function (input, n) {
-    return input.replace(new RegExp("(([^\s]+\s\s*){" + n + "})(.*)"),"$1…");
+    var frags = input.split(" ");
+    var result = frags.slice(0, n).join(" ");
+    if (frags.length > n)
+      result += "...";
+    return result;
+    //return input.replace(new RegExp("(([^\s]+\s\s*){" + n + "})(.*)"),"$1…");
 }
 
 var reduceDoc = function(doc) {

@@ -362,7 +362,7 @@ export class GraphService {
       }
   }
 
-  public flattenLinks(children: FullDocNode[], result: string[])
+  public flattenLinks(children: FullDocNode[], result: Link[])
   {
       for (var c of children)
       {

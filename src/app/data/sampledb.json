@@ -51,7 +51,7 @@
                                 "frag": "4",
                                 "section": "5.2.4",
                                 "children": [],
-                                "body": "The organization shall establish, implement, maintain and continually improve a PII Management System (PIMS) in accordance with the requirements of ISO/IEC 27001 clauses 4 to 10, augmented by the requirements in clause 5 of this document"
+                                "body": "The organization shall establish, implement, maintain and continually improve a PII Management System (PIMS) in accordance with the requirements of ISO/IEC 27001 clauses 4 to..."
                             }
                         ]
                     },
@@ -65,7 +65,7 @@
                                 "frag": "a",
                                 "section": "5.3.a",
                                 "children": [],
-                                "body": "Compare the controls determined in 6.1.3 b) of ISO/IEC 27001:2013 with those in ISO/IEC 27001:2013, Annex A and with Annex A and B of this document to verify that no necessary controls have been omitted \nProduce a Statement of Applicability that contains:  − the necessary controls (see ISO/IEC 27001:2013, 6.1.3 b) and c));  − justification for their inclusion;  − whether the necessary controls are implemented or not; and  − the justification for excluding any of the controls in ISO/IEC 27001:2013, Annex A or Annex A and B of this document according to the organization's determination of its role (see 5.2.1)"
+                                "body": "Compare the controls determined in 6.1.3 b) of ISO/IEC 27001:2013 with those in ISO/IEC 27001:2013, Annex A and with Annex A and B of this... \nProduce a Statement of Applicability that contains:  − the necessary controls (see ISO/IEC 27001:2013, 6.1.3 b) and c));  − justification for their inclusion;..."
                             }
                         ]
                     }
@@ -410,14 +410,14 @@
                                 "frag": "1",
                                 "section": "7.3.1",
                                 "children": [],
-                                "body": "The organization should ensure that the PII principals’ rights related to the processing of their PII are complied with, and provide the means to enable them to exercise their rights"
+                                "body": "The organization should ensure that the PII principals’ rights related to the processing of their PII are complied with, and provide the means to enable..."
                             },
                             {
                                 "id": "7.3.2",
                                 "frag": "2",
                                 "section": "7.3.2",
                                 "children": [],
-                                "body": "The organization should determine and document the information which is to be provided to PII principals regarding the processing of their PII and the timing of such a provision"
+                                "body": "The organization should determine and document the information which is to be provided to PII principals regarding the processing of their PII and the timing..."
                             },
                             {
                                 "id": "7.3.3",
@@ -445,7 +445,7 @@
                                 "frag": "6",
                                 "section": "7.3.6",
                                 "children": [],
-                                "body": "The organization should implement mechanisms to inform third parties with whom the PII has been shared of any modification, withdrawal or objections resulting from the exercising of PII principals' rights"
+                                "body": "The organization should implement mechanisms to inform third parties with whom the PII has been shared of any modification, withdrawal or objections resulting from the..."
                             },
                             {
                                 "id": "7.3.7",
@@ -459,7 +459,7 @@
                                 "frag": "8",
                                 "section": "7.3.8",
                                 "children": [],
-                                "body": "The organization should be able to provide a copy of the PII that is being processed, subject to the retention and deletion policy, when requested by the PII principal."
+                                "body": "The organization should be able to provide a copy of the PII that is being processed, subject to the retention and deletion policy, when requested..."
                             },
                             {
                                 "id": "7.3.9",
@@ -501,28 +501,28 @@
                                 "frag": "3",
                                 "section": "7.4.3",
                                 "children": [],
-                                "body": "The organization should define and document the need for the processing of PII without prior de-identification to achieve the identified purpose, or the extent to which the PII de-identification objectives are set, in such a way that the processing of the resulting de-identified PII is sufficient for the identified purpose. "
+                                "body": "The organization should define and document the need for the processing of PII without prior de-identification to achieve the identified purpose, or the extent to..."
                             },
                             {
                                 "id": "7.4.4",
                                 "frag": "4",
                                 "section": "7.4.4",
                                 "children": [],
-                                "body": "The organization should identify and document the mechanisms by which data is processed in a timely manner in such a way that the extent to which the data can identify or be associated with PII principals meets the data minimization and de-identification objectives"
+                                "body": "The organization should identify and document the mechanisms by which data is processed in a timely manner in such a way that the extent to..."
                             },
                             {
                                 "id": "7.4.5",
                                 "frag": "5",
                                 "section": "7.4.5",
                                 "children": [],
-                                "body": "The organization should either delete PII or render it in a form which does not permit identification of PII principals, as soon as the original PII is no longer necessary for the identified purpose(s)"
+                                "body": "The organization should either delete PII or render it in a form which does not permit identification of PII principals, as soon as the original..."
                             },
                             {
                                 "id": "7.4.6",
                                 "frag": "6",
                                 "section": "7.4.6",
                                 "children": [],
-                                "body": "The organization should ensure that temporary files and documents created as a result of PII processing are disposed of (e.g., erased or destroyed) following documented procedures within a specified, documented period"
+                                "body": "The organization should ensure that temporary files and documents created as a result of PII processing are disposed of (e.g., erased or destroyed) following documented..."
                             },
                             {
                                 "id": "7.4.7",
@@ -543,7 +543,7 @@
                                 "frag": "9",
                                 "section": "7.4.9",
                                 "children": [],
-                                "body": "The organization should ensure that PII is as accurate, complete and up-to-date as is necessary for the purposes for which it is to be processed, throughout the life-cycle of the PII"
+                                "body": "The organization should ensure that PII is as accurate, complete and up-to-date as is necessary for the purposes for which it is to be processed,..."
                             },
                             {
                                 "id": "7.4.10",
@@ -578,7 +578,7 @@
                                 "frag": "3",
                                 "section": "7.5.3",
                                 "children": [],
-                                "body": "The organization should record transfers of PII to or from third parties and ensure cooperation with those parties to support exercise of future access rights to the PII principals"
+                                "body": "The organization should record transfers of PII to or from third parties and ensure cooperation with those parties to support exercise of future access rights..."
                             },
                             {
                                 "id": "7.5.4",
@@ -614,21 +614,21 @@
                                 "frag": "1",
                                 "section": "8.2.1",
                                 "children": [],
-                                "body": "The organization should ensure that the contract to process PII addresses (wherever relevant and taking into account the nature of processing and the information available to the organization) the organization’s role in providing assistance with the customer’s obligations as a PII controller"
+                                "body": "The organization should ensure that the contract to process PII addresses (wherever relevant and taking into account the nature of processing and the information available..."
                             },
                             {
                                 "id": "8.2.2",
                                 "frag": "2",
                                 "section": "8.2.2",
                                 "children": [],
-                                "body": "The organization should ensure that PII processed on behalf of a customer is not processed for any purpose independent of the documented instructions of the customer"
+                                "body": "The organization should ensure that PII processed on behalf of a customer is not processed for any purpose independent of the documented instructions of the..."
                             },
                             {
                                 "id": "8.2.3",
                                 "frag": "3",
                                 "section": "8.2.3",
                                 "children": [],
-                                "body": "The organization should not use PII processed under a contract for the purposes of marketing and advertising without express consent and not make providing such consent a condition for receiving the service"
+                                "body": "The organization should not use PII processed under a contract for the purposes of marketing and advertising without express consent and not make providing such..."
                             },
                             {
                                 "id": "8.2.4",
@@ -649,7 +649,7 @@
                                 "frag": "6",
                                 "section": "8.2.6",
                                 "children": [],
-                                "body": "The organization should determine and maintain the necessary records in support of demonstrating compliance with its obligations for the processing of PII carried out on behalf of a customer who is a PII controller"
+                                "body": "The organization should determine and maintain the necessary records in support of demonstrating compliance with its obligations for the processing of PII carried out on..."
                             }
                         ]
                     },
@@ -677,14 +677,14 @@
                                 "frag": "1",
                                 "section": "8.4.1",
                                 "children": [],
-                                "body": "The organization should ensure that temporary files and documents created as a result of PII processing are disposed of (e.g., erased or destroyed) following documented procedures within a specified, documented period"
+                                "body": "The organization should ensure that temporary files and documents created as a result of PII processing are disposed of (e.g., erased or destroyed) following documented..."
                             },
                             {
                                 "id": "8.4.2",
                                 "frag": "2",
                                 "section": "8.4.2",
                                 "children": [],
-                                "body": "The organization should provide a capability for the return, transfer and/or disposal of PII and should make its policy for the exercise of this capability available to the customer before entering into a PII processing contract"
+                                "body": "The organization should provide a capability for the return, transfer and/or disposal of PII and should make its policy for the exercise of this capability..."
                             },
                             {
                                 "id": "8.4.3",
@@ -705,7 +705,7 @@
                                 "frag": "1",
                                 "section": "8.5.1",
                                 "children": [],
-                                "body": "The organization should inform the customer in a timely manner of the basis for relevant PII transfers and of any intended changes in this regard so that the customer has the ability to object to such changes or to terminate the contract"
+                                "body": "The organization should inform the customer in a timely manner of the basis for relevant PII transfers and of any intended changes in this regard..."
                             },
                             {
                                 "id": "8.5.2",
@@ -733,7 +733,7 @@
                                 "frag": "5",
                                 "section": "8.5.5",
                                 "children": [],
-                                "body": "The organization should reject any requests for PII disclosures that are not legally binding, consult the corresponding customer where legally permissible before making any PII disclosure and accept any contractually agreed requests for PII disclosures that are authorized by the corresponding customer"
+                                "body": "The organization should reject any requests for PII disclosures that are not legally binding, consult the corresponding customer where legally permissible before making any PII..."
                             },
                             {
                                 "id": "8.5.6",
@@ -754,7 +754,7 @@
                                 "frag": "8",
                                 "section": "8.5.8",
                                 "children": [],
-                                "body": "The organization should, in the case of having general written authorization, inform the customer of any intended changes concerning the addition or replacement of subcontractors to process PII, thereby giving the customer the opportunity to object to such changes"
+                                "body": "The organization should, in the case of having general written authorization, inform the customer of any intended changes concerning the addition or replacement of subcontractors..."
                             }
                         ]
                     }
@@ -766,28 +766,28 @@
                 "frag": "9",
                 "section": "9",
                 "children": [],
-                "body": "Adoption, use or disclosure of government related identifiers: A private entity must not adopt or use a government related identifier of an individual as its own"
+                "body": "Adoption, use or disclosure of government related identifiers: A private entity must not adopt or use a government related identifier of an individual as its..."
             },
             {
                 "id": "10",
                 "frag": "10",
                 "section": "10",
                 "children": [],
-                "body": "Must, on request, give access to personal information in an alternative format (if reasonable) to individuals with a sensory disability where they have a right to access their personal information "
+                "body": "Must, on request, give access to personal information in an alternative format (if reasonable) to individuals with a sensory disability where they have a right..."
             },
             {
                 "id": "13",
                 "frag": "13",
                 "section": "13",
                 "children": [],
-                "body": "When carrying out public health sutides and research using personal data such must be processed exclusively within that entity, kept in a secure environment, anonymised or pseudonymised whenever possible and follow ethical standards for such studies. Disclosure of the results of the study mus…"
+                "body": "When carrying out public health sutides and research using personal data such must be processed exclusively within that entity, kept in a secure environment, anonymised..."
             },
             {
                 "id": "16",
                 "frag": "16",
                 "section": "16",
                 "children": [],
-                "body": "Must be registered with the Registry of Data Controllers before processing data. The Registry is a publicly accessible register under the supervision of Data Protection Board"
+                "body": "Must be registered with the Registry of Data Controllers before processing data. The Registry is a publicly accessible register under the supervision of Data Protection..."
             },
             {
                 "id": "21",
@@ -815,14 +815,14 @@
                 "frag": "25",
                 "section": "25",
                 "children": [],
-                "body": "With only limited law enforcement/safety exceptions, no one must install and operate visual data processing devices so as to 'look into' usually private places (e.g. change rooms)"
+                "body": "With only limited law enforcement/safety exceptions, no one must install and operate visual data processing devices so as to 'look into' usually private places (e.g...."
             },
             {
                 "id": "30",
                 "frag": "30",
                 "section": "30",
                 "children": [],
-                "body": "Any procedure whereby personal data collected for one or more purposes for 10 or more data subjects is compared with personal data collected for any other purpose and which may be used for taking any adverse action against any data subjects must only done with the consent of all relevant data subjects or the Commissioner"
+                "body": "Any procedure whereby personal data collected for one or more purposes for 10 or more data subjects is compared with personal data collected for any..."
             },
             {
                 "id": "1798",
@@ -927,7 +927,7 @@
                                 "frag": "4",
                                 "section": "APP.1.4",
                                 "children": [],
-                                "body": "A privacy policy must contain the kinds of personal information collected and held, how and for what purposes it is collected, held, used and disclosed (APP 1.4)",
+                                "body": "A privacy policy must contain the kinds of personal information collected and held, how and for what purposes it is collected, held, used and disclosed...",
                                 "links": [
                                     {
                                         "id": "6.3",
@@ -964,7 +964,7 @@
                                 "frag": "2",
                                 "section": "APP.3.2",
                                 "children": [],
-                                "body": "Must not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless it is reasonably necessary for the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities                 (APP 3.2)",
+                                "body": "Must not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless it is reasonably necessary for the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities    ...",
                                 "links": [
                                     {
                                         "id": "7.2.2",
@@ -985,7 +985,7 @@
                                 "frag": "3",
                                 "section": "APP.3.3",
                                 "children": [],
-                                "body": "Must not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities                                                             (APP 3.3) \nMust not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP 3.3) \nMust not collect sensitive information unless consent is given\r\n (APP 3.3)",
+                                "body": "Must not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities... \nMust not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP... \nMust not collect sensitive information unless consent is given\r\n (APP 3.3)",
                                 "links": [
                                     {
                                         "id": "7.2.2",
@@ -1029,7 +1029,7 @@
                         "frag": "5",
                         "section": "APP.5",
                         "children": [],
-                        "body": "Must notify certain matters on the collection of personal information\r\n(APP 5) \nMust notify certain matters on the collection of personal information       (APP 5) \r\n\r\nThis notification must be provided to the PII principals at or prior to the time of collecting the personal information or as soon as practicable thereafter",
+                        "body": "Must notify certain matters on the collection of personal information\r\n(APP 5) \nMust notify certain matters on the collection of personal information       (APP 5) \r\n\r\nThis notification must be provided to the...",
                         "links": [
                             {
                                 "id": "7.2.1",
@@ -1055,7 +1055,7 @@
                                 "frag": "1",
                                 "section": "APP.6.1",
                                 "children": [],
-                                "body": "Personal information collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1)\r\n\r\nIf testing is not an approved purpose, consent must be obtained \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1) \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained\r\n(APP 6.1)",
+                                "body": "Personal information collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1)\r\n\r\nIf testing is not... \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1) \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained\r\n(APP 6.1)",
                                 "links": [
                                     {
                                         "id": "6.9.1",
@@ -1105,7 +1105,7 @@
                                 ]
                             }
                         ],
-                        "body": "Must only use or disclose personal information as permitted under the APPs (e.g. as notified to individual at time of collection)                      (APP 6)",
+                        "body": "Must only use or disclose personal information as permitted under the APPs (e.g. as notified to individual at time of collection)    ...",
                         "links": [
                             {
                                 "id": "8.5.5",
@@ -1296,7 +1296,7 @@
                                 "frag": "2",
                                 "section": "APP.11.2",
                                 "children": [],
-                                "body": "Must take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or disclosed under the APPs and if not required to be retained by law (APP 11.2) \nMust take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or disclosed under the APPs and if not required to be retained by law (APP 11.2)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form \nMust take reasonable steps to destroy or ensure personal information is de-identified if the information is no longer needed for any purpose for which the information may be used or disclosed under the APPs and if it is not required to be retained by law\r\n(APP 11.2) \nMust take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or disclosed under the APPs and if not required to be retained by law\r\n(APP 11.2)\r\nSubject to any legal requirement to keep the information in an identifiable form",
+                                "body": "Must take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or... \nMust take reasonable steps to destroy or ensure personal information is de-identified if the information is no longer needed for any purpose for which the...",
                                 "links": [
                                     {
                                         "id": "7.4.4",
@@ -1371,7 +1371,7 @@
                                 "frag": "1",
                                 "section": "APP.13.1",
                                 "children": [],
-                                "body": "Must take reasonable steps to correct personal information of an individual if it is out-of-date, incomplete, irrelevant or misleading or if the individual requests it to be corrected\r\n(APP 13.1)",
+                                "body": "Must take reasonable steps to correct personal information of an individual if it is out-of-date, incomplete, irrelevant or misleading or if the individual requests it...",
                                 "links": [
                                     {
                                         "id": "7.3.7",
@@ -1384,7 +1384,7 @@
                                 "frag": "2",
                                 "section": "APP.13.2",
                                 "children": [],
-                                "body": "Where personal information is disclosed and that information is subsequently corrected, if requested, reasonable steps must be taken to notify the recipient of the correction\r\n(APP 13.2)",
+                                "body": "Where personal information is disclosed and that information is subsequently corrected, if requested, reasonable steps must be taken to notify the recipient of the correction\r\n(APP...",
                                 "links": [
                                     {
                                         "id": "7.3.6",
@@ -1413,7 +1413,7 @@
                         "frag": "15",
                         "section": "S.15",
                         "children": [],
-                        "body": "Must not do an act, or engage in a practice, that breaches an APP (S.15) \nMust not do an act, or engage in a practice, that breaches an APP (S.15)     \r\n\r\nNo processing of personal information contrary to the Privacy Act/APPs is permitted",
+                        "body": "Must not do an act, or engage in a practice, that breaches an APP (S.15) \nMust not do an act, or engage in a practice, that breaches an APP (S.15)     \r\n\r\nNo processing of personal information contrary...",
                         "links": [
                             {
                                 "id": "7.3.1",
@@ -1518,7 +1518,7 @@
                 "frag": "f",
                 "section": "f",
                 "children": [],
-                "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information (APP 5.2(f))\r\n\r\nThis notification must be provided to the PII principals at or prior to the time of collecting the personal information or as soon as practicable thereafter \nMust notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information (APP 5.2(f))                                                                                                                  \r\n\r\n",
+                "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information (APP...",
                 "links": [
                     {
                         "id": "7.3.3",
@@ -1535,7 +1535,7 @@
                 "frag": "j",
                 "section": "j",
                 "children": [],
-                "body": "Must take reasonable steps to notify if personal information is to be disclosed to overseas recipients and the countries in which such recipients are likely to be located (APP 5.2(j))",
+                "body": "Must take reasonable steps to notify if personal information is to be disclosed to overseas recipients and the countries in which such recipients are likely...",
                 "links": [
                     {
                         "id": "7.5.2",
@@ -1567,7 +1567,7 @@
                                         "frag": "persons",
                                         "section": "or.types.of.persons",
                                         "children": [],
-                                        "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information\r\n(APP 5.2(f))\r\n\r\nThis notification must be provided to the PII principals at or prior to the time of collecting the personal information or as soon as practicable thereafter",
+                                        "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information\r\n(APP 5.2(f))\r\n\r\nThis...",
                                         "links": [
                                             {
                                                 "id": "8.5.6",
@@ -1724,7 +1724,7 @@
                                 "frag": "4",
                                 "section": "4.2.4",
                                 "children": [],
-                                "body": "Unless required by law, any use of personal information for a new purpose (i.e. not previously identified) must be consented to by the individual (4.2.4)\r\n\r\nIf testing is not an approved purpose, consent must be obtained",
+                                "body": "Unless required by law, any use of personal information for a new purpose (i.e. not previously identified) must be consented to by the individual (4.2.4)\r\n\r\nIf...",
                                 "links": [
                                     {
                                         "id": "6.9.1",
@@ -1856,7 +1856,7 @@
                                 "frag": "3",
                                 "section": "4.5.3",
                                 "children": [],
-                                "body": "Personal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3) \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nThe nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2) \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form",
+                                "body": "Personal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3) \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nThe nature of safeguards will vary depending on the... \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nSubject to any legal requirement to keep the information...",
                                 "links": [
                                     {
                                         "id": "7.4.4",
@@ -1885,7 +1885,7 @@
                                 ]
                             }
                         ],
-                        "body": "Personal information must not be used or disclosed for other than the purposes for which it was collected, except with the consent of the individual or as required by law (4.5)",
+                        "body": "Personal information must not be used or disclosed for other than the purposes for which it was collected, except with the consent of the individual...",
                         "links": [
                             {
                                 "id": "7.5.2",
@@ -1928,7 +1928,7 @@
                                 "frag": "2",
                                 "section": "4.7.2",
                                 "children": [],
-                                "body": "The nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2) \nThe nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form",
+                                "body": "The nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2) \nThe nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2)\r\n\r\nSubject to...",
                                 "links": [
                                     {
                                         "id": "7.5.1",
@@ -2213,7 +2213,7 @@
                         "frag": "1",
                         "section": "DPP.1",
                         "children": [],
-                        "body": "Must take all practical steps to inform a number of matters including the purpose of collection, the classes of persons who will have access to the information and rights to access and correct information and the contact information to whom such a request should be made (DPP 1) \nMust take all practical steps to inform a number of matters including the purpose of collection, the classes of persons who will have access to the information and rights to access and correct information and the contact information to whom such a request should be made (DPP 1)\r\n\r\nNotification must be done on or before collection. \nPersonal data must only be collected for a lawful purpose directly related to a function or activity of the data user, if adequate, not excessive and necessary for or directly related to the purposes for collection (DPP 1)",
+                        "body": "Must take all practical steps to inform a number of matters including the purpose of collection, the classes of persons who will have access to... \nPersonal data must only be collected for a lawful purpose directly related to a function or activity of the data user, if adequate, not excessive...",
                         "links": [
                             {
                                 "id": "6.3",
@@ -2274,7 +2274,7 @@
                         "frag": "2",
                         "section": "DPP.2",
                         "children": [],
-                        "body": "The data user must adopt contractual or other means to prevent data from being kept by data processors longer than necessary (DPP 2) \nMust take all practical steps to ensure personal data is not kept longer than necessary to fulfil the purpose for which it was collected (DPP 2) \nMust take all practical steps to ensure personal data is accurate having regard to the purposes for which it is or is to be used (DPP 2) \nData user must adopt contractual provisions to prevent personal data being kept longer by data processor than necessary to fulfil the processing (DPP 2)",
+                        "body": "The data user must adopt contractual or other means to prevent data from being kept by data processors longer than necessary (DPP 2) \nMust take all practical steps to ensure personal data is not kept longer than necessary to fulfil the purpose for which it was collected (DPP... \nMust take all practical steps to ensure personal data is accurate having regard to the purposes for which it is or is to be used... \nData user must adopt contractual provisions to prevent personal data being kept longer by data processor than necessary to fulfil the processing (DPP 2)",
                         "links": [
                             {
                                 "id": "7.2.6",
@@ -2323,7 +2323,7 @@
                         "frag": "3",
                         "section": "DPP.3",
                         "children": [],
-                        "body": "Personal data must not be used for a new purpose (i.e. not previously identified) unless the  consent of the data subject is obtained (DPP 3)\r\n\r\nIf testing is not an approved purpose, consent must be obtained",
+                        "body": "Personal data must not be used for a new purpose (i.e. not previously identified) unless the  consent of the data subject is obtained (DPP...",
                         "links": [
                             {
                                 "id": "6.9.1",
@@ -2522,7 +2522,7 @@
                         "frag": "18",
                         "section": "S.18",
                         "children": [],
-                        "body": "An individual may make a request to be informed whether personal data is held in relation to the individual and to be supplied with a copy of such data (S.18)",
+                        "body": "An individual may make a request to be informed whether personal data is held in relation to the individual and to be supplied with a...",
                         "links": [
                             {
                                 "id": "7.3.1",
@@ -2548,7 +2548,7 @@
                         "frag": "23",
                         "section": "S.23",
                         "children": [],
-                        "body": "Must take all practicable steps to supply the third party with a copy of the corrected data (disclosed within prior 12 months) and a notice in writing stating the reasons for the correction (S.23)",
+                        "body": "Must take all practicable steps to supply the third party with a copy of the corrected data (disclosed within prior 12 months) and a notice...",
                         "links": [
                             {
                                 "id": "7.3.6",
@@ -2565,7 +2565,7 @@
                         "frag": "26",
                         "section": "S.26",
                         "children": [],
-                        "body": "Must take all practicable steps to erase data held where the data is no longer required for the purpose for which the data was used (S.26)",
+                        "body": "Must take all practicable steps to erase data held where the data is no longer required for the purpose for which the data was used...",
                         "links": [
                             {
                                 "id": "7.3.1",
@@ -2662,7 +2662,7 @@
                 "frag": "2",
                 "section": "2",
                 "children": [],
-                "body": "Except for Ss.24-25, no obligations apply to a 'data intermediary' in respect of its processing of personal data on behalf of and for the purposes of another organisation pursuant to a written contract (S.4(2)) ⑫ \nThe personal data protection obligations do not apply to a data intermediary in respect of its processing of personal data on behalf of and for the purposes of another organisation pursuant to a written contract (S.4(2))",
+                "body": "Except for Ss.24-25, no obligations apply to a 'data intermediary' in respect of its processing of personal data on behalf of and for the purposes... \nThe personal data protection obligations do not apply to a data intermediary in respect of its processing of personal data on behalf of and for...",
                 "links": [
                     {
                         "id": "5.2.1.a",
@@ -2873,7 +2873,7 @@
                         "frag": "18",
                         "section": "S.18",
                         "children": [],
-                        "body": "Collection, use and/or disclosure of personal data must be reasonable in the circumstances and the individual must be informed of the purposes for collection, use and disclosure (S.18)\r\n\r\nIf testing is not an approved purpose, consent must be obtained",
+                        "body": "Collection, use and/or disclosure of personal data must be reasonable in the circumstances and the individual must be informed of the purposes for collection, use...",
                         "links": [
                             {
                                 "id": "6.9.1",
@@ -2996,7 +2996,7 @@
                         "frag": "22",
                         "section": "S.22",
                         "children": [],
-                        "body": "On request must, as soon as practical, correct an error or omission in the personal data (in possession or under your control) unless satisfied on reasonable grounds that the correction should not be made and send the correct information to every other organisation to which the personal data was disclosed in the past year  (S.22)",
+                        "body": "On request must, as soon as practical, correct an error or omission in the personal data (in possession or under your control) unless satisfied on...",
                         "links": [
                             {
                                 "id": "7.3.1",
@@ -3017,7 +3017,7 @@
                         "frag": "23",
                         "section": "S.23",
                         "children": [],
-                        "body": "If personal data is likely to be used to make decisions affecting the individual, must make reasonable efforts to ensure that the personal data is accurate and complete (S.23)",
+                        "body": "If personal data is likely to be used to make decisions affecting the individual, must make reasonable efforts to ensure that the personal data is...",
                         "links": [
                             {
                                 "id": "7.3.1",
@@ -3034,7 +3034,7 @@
                         "frag": "24",
                         "section": "S.24",
                         "children": [],
-                        "body": "Must make reasonable security arrangements to prevent unauthorised access, collection, use, disclosure, copying, modification, disposal or similar risks for personal data held or under their control (S.24)",
+                        "body": "Must make reasonable security arrangements to prevent unauthorised access, collection, use, disclosure, copying, modification, disposal or similar risks for personal data held or under their...",
                         "links": [
                             {
                                 "id": "5.2.3.a",
@@ -3131,7 +3131,7 @@
                         "frag": "25",
                         "section": "S.25",
                         "children": [],
-                        "body": "Must delete or de-identify documents containing personal data as soon as it is reasonable to assume that the purpose for which the personal data was collected is no longer being served and retention is no longer necessary for legal or business purposes (S.25)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form",
+                        "body": "Must delete or de-identify documents containing personal data as soon as it is reasonable to assume that the purpose for which the personal data was...",
                         "links": [
                             {
                                 "id": "7.4.5",
@@ -3276,7 +3276,7 @@
                         "frag": "15",
                         "section": "A.15",
                         "children": [],
-                        "body": "Must inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15) \nMust inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15)\r\n\r\nNotification must be done on or before collection.",
+                        "body": "Must inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15) \nMust inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15)\r\n\r\nNotification must be done on or...",
                         "links": [
                             {
                                 "id": "7.2.1",
@@ -3309,7 +3309,7 @@
                         "frag": "16",
                         "section": "A.16",
                         "children": [],
-                        "body": "Must collect only the minimum personal information necessary for the purposes. Where more personal information than this is collected you must expressly inform the individual so that they can deny consent (A.16)",
+                        "body": "Must collect only the minimum personal information necessary for the purposes. Where more personal information than this is collected you must expressly inform the individual...",
                         "links": [
                             {
                                 "id": "7.2.2",
@@ -3351,7 +3351,7 @@
                         "frag": "18",
                         "section": "A.18",
                         "children": [],
-                        "body": "Must not use personal information or disclose it to another entity for purposes other than those consented to/otherwise permitted with  additional consent provided by the individual (A.18)\r\n\r\nIf testing is not an approved purpose, consent must be obtained",
+                        "body": "Must not use personal information or disclose it to another entity for purposes other than those consented to/otherwise permitted with  additional consent provided by...",
                         "links": [
                             {
                                 "id": "6.9.1",
@@ -3364,7 +3364,7 @@
                         "frag": "19",
                         "section": "A.19",
                         "children": [],
-                        "body": "A recipient of personal information cannot use it or disclose it for any other purpose, except as permitted for by law or where additional consent is provided by the individual (A.19) \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or additional consent is provided by the individual (A.19) \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or where additional consent is provided by the individual (A.19)",
+                        "body": "A recipient of personal information cannot use it or disclose it for any other purpose, except as permitted for by law or where additional consent... \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or additional consent is provided... \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or where additional consent is...",
                         "links": [
                             {
                                 "id": "8.2.2",
@@ -3389,7 +3389,7 @@
                         "frag": "21",
                         "section": "A.21",
                         "children": [],
-                        "body": "Once the retention period has expired or the purpose has been fulfilled, must destroy the personal information without delay (unless retention is required by law)  (A.21) \nOnce the retention period has expired or the purpose has been fulfilled, must destroy the personal information without delay (unless retention is required by law)  (A.21)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form \nOnce the retention period has expired or the purpose has been fulfilled, must destroy the personal information without delay (unless retention is required by law) (A.21)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form",
+                        "body": "Once the retention period has expired or the purpose has been fulfilled, must destroy the personal information without delay (unless retention is required by law)...",
                         "links": [
                             {
                                 "id": "7.4.4",
@@ -3426,7 +3426,7 @@
                         "frag": "22",
                         "section": "A.22",
                         "children": [],
-                        "body": "When obtaining consent, must present the request in a clear manner, including setting out each matter requiring consent separately and getting consent for each of those matters (A.22)",
+                        "body": "When obtaining consent, must present the request in a clear manner, including setting out each matter requiring consent separately and getting consent for each of...",
                         "links": [
                             {
                                 "id": "7.2.3",
@@ -3464,7 +3464,7 @@
                         "frag": "26",
                         "section": "A.26",
                         "children": [],
-                        "body": "On outsourcing the processing of personal information to a third party, must satisfy certain formalities in writing and prevent processing for purposes other than the purposes for which the processing was outsourced and ensure technical and managerial safeguards (A.26)",
+                        "body": "On outsourcing the processing of personal information to a third party, must satisfy certain formalities in writing and prevent processing for purposes other than the...",
                         "links": [
                             {
                                 "id": "7.2.6",
@@ -3639,7 +3639,7 @@
                         "frag": "30",
                         "section": "A.30",
                         "children": [],
-                        "body": "Must have a privacy policy that sets out specified matters including the purposes for which personal information is processed, any disclosures of personal information, rights and obligations of data subjects and how to exercise those rights (A.30)",
+                        "body": "Must have a privacy policy that sets out specified matters including the purposes for which personal information is processed, any disclosures of personal information, rights...",
                         "links": [
                             {
                                 "id": "6.3",
@@ -3693,7 +3693,7 @@
                         "frag": "34",
                         "section": "A.34",
                         "children": [],
-                        "body": "Must notify individuals affected by a data breach of the personal information divulged, when and how it was divulged, how to minimise the risk of harm, remedial action being taken and contact details for a helpdesk for the reporting of damage (A.34)",
+                        "body": "Must notify individuals affected by a data breach of the personal information divulged, when and how it was divulged, how to minimise the risk of...",
                         "links": [
                             {
                                 "id": "6.13.1",
@@ -3804,7 +3804,7 @@
                                         "frag": "c",
                                         "section": "A.4.2.c",
                                         "children": [],
-                                        "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for which they are processed (A.4.2.c)\r\n\r\nIf testing is not an approved purpose, consent must be obtained \nPersonal data may only be processed for specific, explicit and legitimate purposes (A.4.2.c) ",
+                                        "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \nPersonal data may only be processed for specific, explicit and legitimate purposes (A.4.2.c) ",
                                         "links": [
                                             {
                                                 "id": "6.9.1",
@@ -3825,7 +3825,7 @@
                                         ]
                                     }
                                 ],
-                                "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for which they are processed. (A.4.2)  \nPersonal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for which they are processed (A.4.2)  \nData processing must be relevant, limited and proportionate to the purposes for which data is to be processed (A.4.2) \nPersonal data processed must be accurate and if necessary, up to date (A.4.2)",
+                                "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \nData processing must be relevant, limited and proportionate to the purposes for which data is to be processed (A.4.2) \nPersonal data processed must be accurate and if necessary, up to date (A.4.2)",
                                 "links": [
                                     {
                                         "id": "7.2.2",
@@ -3904,7 +3904,7 @@
                         "frag": "7",
                         "section": "A.7",
                         "children": [],
-                        "body": "Personal data must be deleted, destroyed or anonymised on request by the data subject or when  the reasons necessitating its processing cease to exist (A.7) \nPersonal data must be deleted, destroyed or anonymised upon request by the data subject or when  the reasons necessitating its processing cease to exist (A.7)",
+                        "body": "Personal data must be deleted, destroyed or anonymised on request by the data subject or when  the reasons necessitating its processing cease to exist... \nPersonal data must be deleted, destroyed or anonymised upon request by the data subject or when  the reasons necessitating its processing cease to exist...",
                         "links": [
                             {
                                 "id": "7.4.3",
@@ -3963,7 +3963,7 @@
                                 "frag": "2",
                                 "section": "A.9.2",
                                 "children": [],
-                                "body": "Personal data may only be transferred abroad without explicit consent if (i) sufficient protection is provided in the foreign country where the data is to be transferred, or (ii) the data controller in Turkey and in the related foreign country guarantee a sufficient protection in writing and the Data Protection Board has authorized such transfer, where sufficient protection is not provided. (A.9.2) \nPersonal data may only be transferred abroad without explicit consent if (i) sufficient protection is provided in the foreign country where the data is to be transferred, or (ii) the data controller in Turkey and in the related foreign country must guarantee a sufficient protection in writing and the Data Protection Board has authorized such transfer, where sufficient protection is not provided (A.9.2)",
+                                "body": "Personal data may only be transferred abroad without explicit consent if (i) sufficient protection is provided in the foreign country where the data is to...",
                                 "links": [
                                     {
                                         "id": "7.2.6",
@@ -4018,7 +4018,7 @@
                                 ]
                             }
                         ],
-                        "body": "Must notify certain matters on the collection of personal information (A.10) \nMust inform data subjects of a number of matters including purposes of processing (A.10) \nMust notify certain matters on the collection of personal information (A.10)\r\n\r\nThis notification must be provided at or prior to the time of collecting the personal information or as soon as practicable thereafter. ",
+                        "body": "Must notify certain matters on the collection of personal information (A.10) \nMust inform data subjects of a number of matters including purposes of processing (A.10) \nMust notify certain matters on the collection of personal information (A.10)\r\n\r\nThis notification must be provided at or prior to the time of collecting the personal...",
                         "links": [
                             {
                                 "id": "6.3",
@@ -4068,7 +4068,7 @@
                                 ]
                             }
                         ],
-                        "body": "Upon request must notify third parties of (i) rectification in cases of  incomplete or inaccurate data and/or (ii) deletion or destruction of personal data (A.11) \nMust take actions, if requested regarding (i) rectification in case personal data are processed incompletely or inaccurately; (ii) deletion or destruction of personal data (iii) notification of the operations made  to third parties to whom personal data have been transferred (A.11)",
+                        "body": "Upon request must notify third parties of (i) rectification in cases of  incomplete or inaccurate data and/or (ii) deletion or destruction of personal data... \nMust take actions, if requested regarding (i) rectification in case personal data are processed incompletely or inaccurately; (ii) deletion or destruction of personal data (iii)...",
                         "links": [
                             {
                                 "id": "7.3.1",
@@ -4102,7 +4102,7 @@
                                 "frag": "1",
                                 "section": "A.12.1",
                                 "children": [],
-                                "body": "Must take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful processing of personal data, (ii) prevent unlawful access to personal data, and (iii) ensure the retention of personal data (A.12.1) \nMust take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful processing of personal data, (ii) prevent unlawful access to personal data, and (iii) ensure the retention of personal data (A.12.1) ",
+                                "body": "Must take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful processing of personal data,...",
                                 "links": [
                                     {
                                         "id": "5.2.3.a",
@@ -4211,7 +4211,7 @@
                                 "frag": "2",
                                 "section": "A.12.2",
                                 "children": [],
-                                "body": "Jointly responsible with processor to take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful processing of personal data, (ii) prevent unlawful access to personal data, and (iii) ensure the retention of personal data (A.12.2)",
+                                "body": "Jointly responsible with processor to take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful...",
                                 "links": [
                                     {
                                         "id": "7.5.5",
@@ -4284,7 +4284,7 @@
                         "frag": "13",
                         "section": "A.13",
                         "children": [],
-                        "body": "The data subject may lodge his/her demands under and object regarding implementation of the law with the controller who must act on them in the shortest time possible (A.13) \nThe data subject may lodge his/her demands under and objects regarding implementation of the law with the controller who must act on them in the shortest time possible (A.13)",
+                        "body": "The data subject may lodge his/her demands under and object regarding implementation of the law with the controller who must act on them in the... \nThe data subject may lodge his/her demands under and objects regarding implementation of the law with the controller who must act on them in the...",
                         "links": [
                             {
                                 "id": "7.3.4",
@@ -4325,7 +4325,7 @@
                 "frag": "a",
                 "section": "a",
                 "children": [],
-                "body": "Implied by S.1798.150 – civil action possible in respect of unauthorised access to personal information as a result of violation of the duty to implement and maintain reasonable security procedures and practices (S.1798.150(a)) ⑮ \nMust document the consumer’s rights and how to exercise them/make a request (S.1798.130(a)) \nEnsure all those responsible for handling consumer privacy inquiries and compliance are informed of all requirements under Ss.1798.120 and 1798.135 (S.1798.135(a)) \nImplied by S.1798.150 – civil action possible in respect of unauthorised access to personal information as a result of violation of the duty to implement and maintain reasonable security procedures and practices (S.1798.150(a) ⑯ \nMust provide a clear and conspicuous link on the business’ Internet homepage titled “Do Not Sell My Personal Information” to allow consumers to opt-out of the sale of personal information (S.1798.135 (a))",
+                "body": "Implied by S.1798.150 – civil action possible in respect of unauthorised access to personal information as a result of violation of the duty to implement... \nMust document the consumer’s rights and how to exercise them/make a request (S.1798.130(a)) \nEnsure all those responsible for handling consumer privacy inquiries and compliance are informed of all requirements under Ss.1798.120 and 1798.135 (S.1798.135(a)) \nMust provide a clear and conspicuous link on the business’ Internet homepage titled “Do Not Sell My Personal Information” to allow consumers to opt-out of...",
                 "links": [
                     {
                         "id": "5.2.3.a",
@@ -4478,7 +4478,7 @@
                 "frag": "b",
                 "section": "b",
                 "children": [],
-                "body": "Must not use personal information for additional purposes beyond those notified (S.1798.100(b)) \nMust not use personal information for additional purposes beyond those notified (S.1798.100(b))\r\n\r\nIf testing is not a notified purpose, consent must be obtained \nMust inform at or prior to collection as to the categories of personal information collected and purposes for which such will be used (S.1798.100(a) and (b)) \nMust disclose categories of personal information the business sells and the categories of third parties to whom sold (S.1798.115(a) and (b)) \nMust not collect additional categories of personal information beyond those notified (S.1798.100(b)) \nMust disclose details of the categories of third parties to whom the personal information is sold (S.1798.115(a) and (b))",
+                "body": "Must not use personal information for additional purposes beyond those notified (S.1798.100(b)) \nMust not use personal information for additional purposes beyond those notified (S.1798.100(b))\r\n\r\nIf testing is not a notified purpose, consent must be obtained \nMust inform at or prior to collection as to the categories of personal information collected and purposes for which such will be used (S.1798.100(a) and... \nMust disclose categories of personal information the business sells and the categories of third parties to whom sold (S.1798.115(a) and (b)) \nMust not collect additional categories of personal information beyond those notified (S.1798.100(b)) \nMust disclose details of the categories of third parties to whom the personal information is sold (S.1798.115(a) and (b))",
                 "links": [
                     {
                         "id": "6.5.1",
@@ -4523,7 +4523,7 @@
                 "frag": "c",
                 "section": "c",
                 "children": [],
-                "body": "Must not sell (a) a consumer’s personal information after a request not to sell and (b) a minor’s personal information unless an appropriate consent is obtained (S.1798.120(c)) \nMust delete personal information on request of consumer and direct service providers (to whom such was provided) to delete such personal information (S.1798.105(c)) \nMust disclose details of the categories of third parties with whom the personal information is shared (S.1798.110(b) and (c))",
+                "body": "Must not sell (a) a consumer’s personal information after a request not to sell and (b) a minor’s personal information unless an appropriate consent is... \nMust delete personal information on request of consumer and direct service providers (to whom such was provided) to delete such personal information (S.1798.105(c)) \nMust disclose details of the categories of third parties with whom the personal information is shared (S.1798.110(b) and (c))",
                 "links": [
                     {
                         "id": "7.2.2",
@@ -4609,7 +4609,7 @@
                 "frag": "h",
                 "section": "h",
                 "children": [],
-                "body": "A business is not liable for the personal information disclosed to a service provider who uses it in violation of the CCPA, provided the business follows the requirements of the CCPA and has no knowledge or reasonable belief of any intention to commit such a violation. A service provider is likewise not liable for the compliance of a business with the CCPA (S.1798.145(h)) ⑭ \nBusinesses disclosing personal information to service providers, with knowledge or a reason to believe the service provider intends to violate the restrictions imposed by the provisions, will be liable for such violations (S.1798.145(h))",
+                "body": "A business is not liable for the personal information disclosed to a service provider who uses it in violation of the CCPA, provided the business... \nBusinesses disclosing personal information to service providers, with knowledge or a reason to believe the service provider intends to violate the restrictions imposed by the...",
                 "links": [
                     {
                         "id": "5.2.1.a",
@@ -4638,7 +4638,7 @@
                 "frag": "w",
                 "section": "w",
                 "children": [],
-                "body": "Must only disclose personal information to a service provider pursuant to a written contract that prohibits processing of the personal information for any purpose other than performing the specified services (S.1798.140 (v) and (w))",
+                "body": "Must only disclose personal information to a service provider pursuant to a written contract that prohibits processing of the personal information for any purpose other...",
                 "links": [
                     {
                         "id": "6.12",
@@ -4698,7 +4698,7 @@
                         "frag": "6",
                         "section": "Art.6",
                         "children": [],
-                        "body": "Processing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6) \nProcessing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6)\r\n\r\nIf testing is not an approved purpose, consent must be obtained",
+                        "body": "Processing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6) \nProcessing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6)\r\n\r\nIf testing is not...",
                         "links": [
                             {
                                 "id": "5.2.2",
@@ -4747,7 +4747,7 @@
                         "frag": "7",
                         "section": "Art.7",
                         "children": [],
-                        "body": "Processing of personal data must only be carried out, among others, with the consent of the data subject, for compliance with a legal obligation, when necessary for execution of a contract, for protection of life, physical security or to protect health, protection of credit or when necessary to fulfil the controller's legitimate interests (Art 7)",
+                        "body": "Processing of personal data must only be carried out, among others, with the consent of the data subject, for compliance with a legal obligation, when...",
                         "links": [
                             {
                                 "id": "7.2.1",
@@ -4789,7 +4789,7 @@
                         "frag": "9",
                         "section": "Art.9",
                         "children": [],
-                        "body": "Specified information concerning the processing of the data subject's personal data must be made available in a clear transparent manner to the data subject (Art 9)",
+                        "body": "Specified information concerning the processing of the data subject's personal data must be made available in a clear transparent manner to the data subject (Art...",
                         "links": [
                             {
                                 "id": "7.2.1",
@@ -4834,7 +4834,7 @@
                         "frag": "10",
                         "section": "Art.10",
                         "children": [],
-                        "body": "The controller's legitimate interest can, among other things, only justify processing of personal data strictly necessary for the intended and transparent purpose of the controller (Art 10)",
+                        "body": "The controller's legitimate interest can, among other things, only justify processing of personal data strictly necessary for the intended and transparent purpose of the controller...",
                         "links": [
                             {
                                 "id": "7.4.4",
@@ -4847,7 +4847,7 @@
                         "frag": "11",
                         "section": "Art.11",
                         "children": [],
-                        "body": "Processing of sensitive personal data must only occur with consent or if indispensable for, among others, compliance with a legal obligation or protecting life or physical safety or protection health (Art 11)",
+                        "body": "Processing of sensitive personal data must only occur with consent or if indispensable for, among others, compliance with a legal obligation or protecting life or...",
                         "links": [
                             {
                                 "id": "7.2.3",
@@ -4877,7 +4877,7 @@
                         "frag": "16",
                         "section": "Art.16",
                         "children": [],
-                        "body": "Personal data must be deleted once processing complete or terminated, except in compliance with legal obligations or in anonymised form for exclusive use of controller (Art 16)\r\n\r\nSubject to any legal requirement to keep the information in an identifiable form",
+                        "body": "Personal data must be deleted once processing complete or terminated, except in compliance with legal obligations or in anonymised form for exclusive use of controller...",
                         "links": [
                             {
                                 "id": "7.4.5",
@@ -4910,7 +4910,7 @@
                         "frag": "18",
                         "section": "Art.18",
                         "children": [],
-                        "body": "Data subjects have rights to obtain, among others, confirmation of the processing, access to data, correction of data, anonymisation, portability of data, deletion, withdrawal revocation of consent (Art 18)",
+                        "body": "Data subjects have rights to obtain, among others, confirmation of the processing, access to data, correction of data, anonymisation, portability of data, deletion, withdrawal revocation...",
                         "links": [
                             {
                                 "id": "7.3.7",
@@ -4923,7 +4923,7 @@
                         "frag": "19",
                         "section": "Art.19",
                         "children": [],
-                        "body": "Confirmation of existence of and access to personal data must be provided in a simple format immediately and by means of a clear and complete notice of processing within 15 days of request (Art 19) \nConfirmation of existence of and access to personal data must be provided in a simple format immediately and by means of a clear and complete notice of processing with 15 days of request (Art 19)",
+                        "body": "Confirmation of existence of and access to personal data must be provided in a simple format immediately and by means of a clear and complete...",
                         "links": [
                             {
                                 "id": "7.3.1",
@@ -4961,7 +4961,7 @@
                         "frag": "33",
                         "section": "Art.33",
                         "children": [],
-                        "body": "International transfer of personal data is only allowed, among others, to countries with a similar level of protection, when the controller offers (and proves) guarantees of compliance with principles and protections in the law (Art 33)",
+                        "body": "International transfer of personal data is only allowed, among others, to countries with a similar level of protection, when the controller offers (and proves) guarantees...",
                         "links": [
                             {
                                 "id": "7.2.6",
@@ -5049,7 +5049,7 @@
                         "frag": "41",
                         "section": "Art.41",
                         "children": [],
-                        "body": "Must appoint a DPO to be in charge of processing personal data and a point of contact and must publicly disclose DPO's identity and contact details (Art 41)",
+                        "body": "Must appoint a DPO to be in charge of processing personal data and a point of contact and must publicly disclose DPO's identity and contact...",
                         "links": [
                             {
                                 "id": "6.3",
@@ -5062,7 +5062,7 @@
                         "frag": "46",
                         "section": "Art.46",
                         "children": [],
-                        "body": "Must adopt security, technical and administrative measures to protect personal data from unauthorised access and accidental or unlawful destruction, loss, alteration, communication or processing (Art 46)",
+                        "body": "Must adopt security, technical and administrative measures to protect personal data from unauthorised access and accidental or unlawful destruction, loss, alteration, communication or processing (Art...",
                         "links": [
                             {
                                 "id": "5.2.1.a",
@@ -5220,7 +5220,7 @@
                         "frag": "49",
                         "section": "Art.49",
                         "children": [],
-                        "body": "The systems used for processing personal data must be structured to meet security requirements, standards of good practice and governance and general principles under the law (Art 49)",
+                        "body": "The systems used for processing personal data must be structured to meet security requirements, standards of good practice and governance and general principles under the...",
                         "links": [
                             {
                                 "id": "5.2.3.a",
