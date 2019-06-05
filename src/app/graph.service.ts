@@ -77,7 +77,8 @@ export class GraphTab {
     }
 
     public options = {
-      useCheckbox: true
+      useCheckbox: true,
+      scrollOnActivate: false,
     };
 
     public state: ITreeState = { };

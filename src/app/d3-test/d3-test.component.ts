@@ -406,6 +406,15 @@ export class D3TestComponent implements OnInit {
         }
     }
 
+    public activateNode(tab: GraphTab, event: any) {
+        if (tab.column.treeModel) {
+            var newSelection = {};
+            newSelection[tab.column.state.focusedNodeId] = true; // single select
+            tab.column.state.activeNodeIds = newSelection; 
+            this.columnTabTreeChanged(tab);
+        }
+    }
+
     public onResize(event) {
         //event.target.innerWidth;
         this.updateGraph();
