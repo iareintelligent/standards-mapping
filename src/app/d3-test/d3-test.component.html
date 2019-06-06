@@ -31,7 +31,7 @@
               <div>
                 <mat-form-field class="filter-field">
                   <input matInput type="text" placeholder="fuzzy search..." [(ngModel)]="t.searchValue"  #filter3 (keyup)="filterFn(filter3.value, tree.treeModel)">
-                  <button mat-button *ngIf="t.searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="tree.treeModel.clearFilter(); t.searchValue=''">
+                  <button mat-button *ngIf="t.searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="filterFn('', tree.treeModel); t.searchValue=''">
                     <mat-icon>close</mat-icon>
                   </button>
                 </mat-form-field>
@@ -40,7 +40,11 @@
               <div><mat-checkbox (change)="t.expandAll()" [checked]="t.anyExpanded">Expand All</mat-checkbox><mat-checkbox (change)="t.selectAll()" [checked]="t.anySelected">Select All</mat-checkbox></div>
               
               <div class="tree-container">
-                <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="tabTreeChanged(t)">></tree-root>
+                <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="tabTreeChanged(t)">
+                  <ng-template #treeNodeTemplate let-node let-index="index">
+                    <span [innerHTML]="injectHighlight(node.data)"></span>
+                  </ng-template>
+                </tree-root>
               </div>
             </mat-tab>
           </mat-tab-group>

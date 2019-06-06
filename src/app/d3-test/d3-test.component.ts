@@ -2,8 +2,11 @@
 import * as d3 from 'd3';
 import * as d3Sankey from 'd3-sankey';
 import { DAG, SNode, GraphService, CategoryList, FilterCriteria, GraphTab } from '../graph.service';
+import { FullDocNode } from '../standard-map';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import { TreeModel, TreeNode, ITreeState } from 'angular-tree-component';
+import Fuse from 'fuse.js';
 
 import selection_attrs from 'd3-selection-multi/src/selection/attrs';
 d3.selection.prototype.attrs = selection_attrs;
@@ -33,7 +36,8 @@ export class D3TestComponent implements OnInit {
     public svgbgElement: any;
 
     constructor(
-      public graphService: GraphService) {
+      public graphService: GraphService,
+      private sanitizer: DomSanitizer) {
         //this.graphTabs[1].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[0].column.visibleLinks, n);
         ////this.graphTabs[2].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[1].column.visibleLinks, n);
     };
@@ -374,7 +378,10 @@ export class D3TestComponent implements OnInit {
     }
 
     public filterFn(value: string, treeModel: TreeModel) {
-      treeModel.filterNodes((node: TreeNode) => this.fuzzysearch(value, node.data.name) || (node.data.node.body && this.fuzzysearch(value, node.data.node.body)));
+      if (value != "")
+        treeModel.filterNodes((node: TreeNode) => this.fuzzysearch(value, node));
+      else
+        treeModel.filterNodes((node: TreeNode) => this.clearSearch(node));
     }
 
     public tabTreeChanged(tab: GraphTab) {
@@ -543,29 +550,96 @@ export class D3TestComponent implements OnInit {
         this.svgbgElement = svgbg;
     }
 
-    public fuzzysearch(needle: string, haystack: string) {
-      const haystackLC = haystack.toLowerCase();
-      const needleLC = needle.toLowerCase();
+    public clearSearch(node: TreeNode): boolean {
+        node.data.highlight = undefined;
+        return true;
+    }
 
-      const hlen = haystack.length;
-      const nlen = needleLC.length;
+    public fuzzysearch(searchTerm: string, node: TreeNode): boolean {
+      var options = {
+         includeMatches: true,
+         includeScore: true,
+         shouldSort: false,
+         tokenize: false,
+         threshold: 0.3,
+         location: 0,
+         distance: 800,
+         maxPatternLength: 32,
+         minMatchCharLength: 3,
+      };
 
-      if (nlen > hlen) {
-        return false;
+      var result = [];
+      var scoreThresh = 0;
+      var inName = false;
+      
+      // Test body first
+      if (node.data.node.body)
+      {
+          var fuse = new Fuse([node.data.node.body], options);
+          result = fuse.search(searchTerm);
+          result = result.filter(a => a.score > scoreThresh);
       }
-      if (nlen === hlen) {
-        return needleLC === haystackLC;
-      }
-      outer: for (let i = 0, j = 0; i < nlen; i++) {
-        const nch = needleLC.charCodeAt(i);
 
-        while (j < hlen) {
-          if (haystackLC.charCodeAt(j++) === nch) {
-            continue outer;
+      if (result.length == 0)
+      {
+          // test title
+          var fuse = new Fuse([node.data.name], options);
+          result = fuse.search(node.data.name);
+          result = result.filter(a => a.score > scoreThresh);
+          inName = true;
+      }
+
+      if (result.length > 0)
+      {
+          // record the longest matching span for highlight
+          var length = -1;
+          var longest = undefined;
+          var match = result[0].matches[0];
+          if (match)
+          {
+              for (var span of match.indices)
+              {
+                  var newLength = span[1] - span[0];
+                  if (newLength > length)
+                  {
+                      length = newLength;
+                      longest = span;
+                      span[1] += 1; // convert ending index to js substring convention of end + 1
+                  }
+              }
           }
-        }
-        return false;
+
+          node.data.highlight = longest;
+          node.data.highlightName = inName;
+          return true;
       }
-      return true;
+
+      node.data.highlight = undefined;
+      return false;
+    }
+
+    private highlightText(text: string, highlight: number[]): string
+    {
+        return text.substring(0, highlight[0]) + "<mark>" + text.substring(highlight[0], highlight[1]) + "</mark>" + text.substring(highlight[1], text.length);
+    }
+
+    public injectHighlight(data: FullDocNode) 
+    {
+        var section = data.node.section;
+        var body = data.node.body;
+
+        if (data.highlight)
+        {
+            if (data.highlightName)
+                section = this.highlightText(section, data.highlight);
+            else
+                body = this.highlightText(body, data.highlight);
+        }
+
+        var result = section;
+        if (body)
+            result += " - " + body;
+
+        return this.sanitizer.bypassSecurityTrustHtml(result);
     }
 }

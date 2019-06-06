@@ -38,6 +38,7 @@
     "d3-sankey": "^0.12.1",
     "d3-selection-multi": "^1.0.1",
     "exceljs": "^1.11.0",
+    "fuse.js": "^3.4.5",
     "rxjs": "^6.5.1",
     "zone.js": "~0.8.26"
   },
