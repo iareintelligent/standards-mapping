@@ -583,8 +583,8 @@ export class D3TestComponent implements OnInit {
       if (result.length == 0)
       {
           // test title
-          var fuse = new Fuse([node.data.name], options);
-          result = fuse.search(node.data.name);
+          var fuse = new Fuse([node.data.node.section], options);
+          result = fuse.search(searchTerm);
           result = result.filter(a => a.score > scoreThresh);
           inName = true;
       }
