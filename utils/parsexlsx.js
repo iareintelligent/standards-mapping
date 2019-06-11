@@ -3,6 +3,7 @@ var Excel = require('exceljs');
 
 
 var inputFile = "./src/app/data/notcheckedin/MSFT ISO 27552 Country Mapping.xlsx";
+var inputFileGdpr = "./src/app/data/notcheckedin/27552 to GDPR.xlsx";
 var outputFile = "./src/app/data/sampledb.json";
 
 var keepNWords = function (input, n) {
@@ -23,12 +24,12 @@ var reduceDoc = function(doc) {
       var copywriteWordLimit = 25;
       newCell.body = keepNWords(newCell.body, copywriteWordLimit);
 
-      if (newCell.section in result)
+      if (newCell.id in result)
       {
-        var lastCell = result[newCell.section];
+        var lastCell = result[newCell.id];
 
-        //console.log("merge: " + newCell.section);
-        //console.log("with: " + lastCell.section);
+        //console.log("merge: " + newCell.id);
+        //console.log("with: " + lastCell.id);
         // merge
         if (!lastCell.body.includes(newCell.body))
         {
@@ -53,7 +54,7 @@ var reduceDoc = function(doc) {
       }
       else
       {
-          result[newCell.section] = newCell;
+          result[newCell.id] = newCell;
       }
     }
 
@@ -64,6 +65,9 @@ var reduceDoc = function(doc) {
 }
 
 var breakPath = function (path) {
+    if (!path)
+      return [];
+
     var frags = path.split(/\W+/);
     frags = frags.filter(f => f);
     return frags;
@@ -75,8 +79,8 @@ var normalizePath = function (path) {
     return assembled;
 }
 
-var findOrCreateSection = function (root, section) {
-  var frags = breakPath(section);
+var findOrCreateSection = function (root, id) {
+  var frags = breakPath(id);
   var assembled = "";
 
   for (var f of frags)
@@ -122,7 +126,7 @@ var nestDoc = function (doc) {
 
     for (var d of doc)
     {
-        var node = findOrCreateSection(result, d.section);
+        var node = findOrCreateSection(result, d.id);
         Object.assign(node, d);
     }
     recursiveSort(result);
@@ -136,27 +140,14 @@ var makeDoc = function (doc, type) {
     return doc;
 }
 
-// read from a file
-var workbook = new Excel.Workbook();
-workbook.xlsx.readFile(inputFile)
+var mainMapping = function() {
+  // read from a file
+  var workbook = new Excel.Workbook();
+  return workbook.xlsx.readFile(inputFile)
     .then(function() {
         // use workbook
         var sheetName = 'ISO 27552 Country Mapping';
         var worksheet = workbook.getWorksheet(sheetName);
-        
-        //var sectionColumn = worksheet.getColumn(1);
-        //console.log(JSON.stringify(sectionColumn.values)); //.header
-        //console.log(JSON.stringify(worksheet.columns.map(v=>v.values[1]))); //.header
-        
-        //// iterate over all current cells in this column including empty cells
-        //dobCol.eachCell({ includeEmpty: true }, function(cell, rowNumber) { cell.value
-        //  // ...
-        //  type: 'pattern',
-        //  pattern:'darkTrellis',
-        //  fgColor:{argb:'FFFFFF00'},
-        //  bgColor:{argb:'FF0000FF'}
-        //};
-        //});
 
         // build iso doc
         var sectionColumn = worksheet.getColumn(1);
@@ -188,6 +179,10 @@ workbook.xlsx.readFile(inputFile)
         isoDoc = makeDoc(nestDoc(reduceDoc(isoDoc)), "ISO");
         //console.log(JSON.stringify(isoDoc, null, 4));
         allDocs.push(isoDoc);
+
+
+
+
 
         var headerRow = worksheet.getRow(1);
         headerRow.eachCell(function(cell, colNumber) {
@@ -230,3 +225,77 @@ workbook.xlsx.readFile(inputFile)
         let data = JSON.stringify(allDocs, null, 4);  
         fs.writeFileSync(outputFile, data);  
     });
+}
+
+
+var gdprMapping = function() {
+  // read from a file
+  var workbook = new Excel.Workbook();
+  return workbook.xlsx.readFile(inputFileGdpr)
+    .then(function() {
+        // use workbook
+        var sheetName = 'Sheet1';
+        var worksheet = workbook.getWorksheet(sheetName);
+
+        // build iso doc
+        var sectionColumn = worksheet.getColumn(1);
+        var sectionsByRow = { };
+
+        var allDocs = [];
+        var isoDoc = [];
+        var gdprDoc = [];
+
+        var gdprArticlesColIndex = 2;
+        var gdprTextColIndex = 3;
+        var titleColIndex = 4;
+        var descriptionColIndex = 5;
+
+        sectionColumn.eachCell({ includeEmpty: true }, function(cell, rowNumber) {
+          var section = cell.text.match(/(\d.*)/); // must start with a number
+          if (section)
+          {
+            var sectionId = normalizePath(section[1]);
+            sectionsByRow[rowNumber] = sectionId;
+
+            var row = worksheet.getRow(rowNumber);
+            var gdprIds = row.getCell(gdprArticlesColIndex).text.split(",").map(v => v.match(/(\w+)*/g).filter(m => m).join("."));
+            var gdprText = row.getCell(gdprTextColIndex).text.split("\r\n\r\n");
+
+            var gdprZipped = gdprIds.map((v, i, a) => {
+                return {
+                    id: v,
+                    section: v,
+                    body: gdprText[i],
+                    links: [ {
+                        "id": sectionId,
+                        "type": "ISO"
+                      }
+                    ]
+                }
+            });
+
+            gdprDoc = gdprDoc.concat(gdprZipped);
+
+            isoDoc.push({
+                id: sectionId,
+                section: sectionId + " - " + row.getCell(titleColIndex).text,
+                body: row.getCell(descriptionColIndex).text
+            });
+          }
+        });
+
+        isoDoc = makeDoc(nestDoc(reduceDoc(isoDoc)), "ISO");
+        gdprDoc = makeDoc(nestDoc(reduceDoc(gdprDoc)), "GDPR");
+        allDocs.push(isoDoc);
+        allDocs.push(gdprDoc);
+        console.log(JSON.stringify(allDocs, null, 4));
+
+        const fs = require('fs');
+        let data = JSON.stringify(allDocs, null, 4);  
+        fs.writeFileSync(outputFile, data);  
+    });
+}
+
+//mainMapping()
+gdprMapping()
+  .then(a => {  });

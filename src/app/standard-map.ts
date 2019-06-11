@@ -58,6 +58,6 @@ export class FullDocNode {
   }
 
   get id(): string {
-    return this.node.section;
+    return this.node.id;
   }
 }
