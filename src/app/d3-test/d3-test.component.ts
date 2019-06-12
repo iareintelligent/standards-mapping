@@ -606,16 +606,24 @@ export class D3TestComponent implements OnInit {
       // Test body first
       if (node.data.node.body)
       {
-          var fuse = new Fuse([node.data.node.body], options);
-          result = fuse.search(searchTerm);
+          if (!node.data.bodyFuse)
+          {
+              node.data.bodyFuse = new Fuse([node.data.node.body], options);
+          }
+
+          result = node.data.bodyFuse.search(searchTerm);
           result = result.filter(a => a.score > scoreThresh);
       }
 
       if (result.length == 0)
       {
           // test title
-          var fuse = new Fuse([node.data.node.section], options);
-          result = fuse.search(searchTerm);
+          if (!node.data.sectionFuse)
+          {
+              node.data.sectionFuse = new Fuse([node.data.node.section], options);
+          }
+
+          result = node.data.sectionFuse.search(searchTerm);
           result = result.filter(a => a.score > scoreThresh);
           inName = true;
       }
