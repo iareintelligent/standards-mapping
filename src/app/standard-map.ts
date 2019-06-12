@@ -1,6 +1,4 @@
 ﻿
-import Fuse from 'fuse.js';
-
 export class Link {
   id: string;
   type: string;
@@ -46,8 +44,8 @@ export class Doc2 extends DocNode2 {
 export class FullDocNode {
   public highlight: number[];
   public highlightName: boolean;
-  public bodyFuse: Fuse;
-  public sectionFuse: Fuse;
+  public bodyFuse: any;
+  public sectionFuse: any;
 
   public constructor(
     public node: Doc2 | DocNode2,

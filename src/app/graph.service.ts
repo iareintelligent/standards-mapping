@@ -334,6 +334,13 @@ export class GraphService {
           else
             this.graphTabs.push(newTab); // else append
             
+          if (id != "ISO") 
+          {
+              // compare with iso.
+              var stats = this.compareDocs(newTab.column, this.graphTabs[1]);
+              newTab.coverage = "ISO Coverage: " + stats.coverage + ", Mapped: " + stats.mapped + ", Unique: " + stats.uniqueconnections;
+          }
+            
           this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
           setTimeout(() => this.activateTab(newTab), 1); // need to let dom regenerate
         });

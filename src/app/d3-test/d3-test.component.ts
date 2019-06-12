@@ -47,9 +47,9 @@ export class D3TestComponent implements OnInit {
         .subscribe(dt => { 
           this.graphCategories = dt; 
 
-          // activate first 3
-          for (var i = 0; i< 3; ++i)
-            this.graphCategories[i].active = true;
+          //// activate first 3
+          //for (var i = 0; i< 3; ++i)
+          //  this.graphCategories[i].active = true;
             
           this.RefreshGraph(); 
         });
@@ -384,7 +384,7 @@ export class D3TestComponent implements OnInit {
         treeModel.filterNodes((node: TreeNode) => this.clearSearch(node));
     }
 
-    public tabTreeChanged(tab: GraphTab) {
+    public tabTreeChanged(tab: GraphTab, event: any) {
         if (tab.column.treeModel) {
 
             // Due to a bug https://github.com/500tech/angular-tree-component/issues/521
@@ -395,15 +395,19 @@ export class D3TestComponent implements OnInit {
                 if (!node.isSelected)
                   delete tab.treeModel.selectedLeafNodeIds[n];
             }
-            
-            if (tab.title != "ISO") 
-            {
-                // compare with iso.
-                var stats = this.graphService.compareDocs(tab.column, this.graphService.graphTabs[1]);
-                tab.coverage = "ISO Coverage: " + stats.coverage + ", Mapped: " + stats.mapped + ", Unique: " + stats.uniqueconnections;
-            }
 
             this.updateGraph();
+            
+            setTimeout(() => {
+              tab.column.treeModel.collapseAll();
+              for (var n in tab.treeModel.selectedLeafNodeIds)
+              {
+                var columnNode = tab.column.treeModel.getNodeById(n);
+                columnNode.expand();
+                columnNode.expandAll();
+                columnNode.setActiveAndVisible();
+              }
+            }, 1000);
         }
     }
 
@@ -440,7 +444,7 @@ export class D3TestComponent implements OnInit {
 
     public onResize(event) {
         //event.target.innerWidth;
-        this.updateGraph();
+        this.updateGraphView();
     }
 
     private buildLinkSet(fromTab: GraphTab, toTab: GraphTab, rtl: boolean): void {
