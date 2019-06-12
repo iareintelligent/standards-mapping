@@ -79,7 +79,7 @@ table, th, td {
 }
 
 .graph-columns {
-    overflow-x: auto;
+    height: 680px;
 }
 
 .graph-column {
@@ -106,7 +106,7 @@ table, th, td {
 }
 
 .tree-container {
-    height: 500px;
+    height: 522px;
 }
 
 .add-button {

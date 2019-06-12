@@ -400,15 +400,30 @@ export class D3TestComponent implements OnInit {
             {
                 // compare with iso.
                 var stats = this.graphService.compareDocs(tab.column, this.graphService.graphTabs[1]);
-                tab.coverage = "ISO Coverage: " + stats.coverage + ", Mapped: " + stats.mapped;
+                tab.coverage = "ISO Coverage: " + stats.coverage + ", Mapped: " + stats.mapped + ", Unique: " + stats.uniqueconnections;
             }
 
             this.updateGraph();
         }
     }
 
-    public columnTabTreeChanged(tab: GraphTab) {
+    public columnTabTreeChanged(tab: GraphTab, event: any) {
         if (tab.column.treeModel) {
+            if (event)
+            {
+              // on expand
+              if (event.isExpanded && event.node.isActive)
+              {
+                var allNodes = this.graphService.getNodesWithLinks(event.node.data.children, []);
+
+                // select children with links
+                for (var c of allNodes)
+                {
+                  tab.column.state.activeNodeIds[c.id] = true; // select child
+                }
+              }
+            }
+
             this.updateGraph();
         }
     }
@@ -418,7 +433,8 @@ export class D3TestComponent implements OnInit {
             var newSelection = {};
             newSelection[tab.column.state.focusedNodeId] = true; // single select
             tab.column.state.activeNodeIds = newSelection; 
-            this.columnTabTreeChanged(tab);
+
+            this.updateGraph();
         }
     }
 
@@ -470,12 +486,7 @@ export class D3TestComponent implements OnInit {
 
             return [k, collapsed];
         });
-        
-        var startingGapLeft = 0;
-        var startingGapRight = 10;
-        var arrowLength = 10;
 
-        var svgBounds = this.svgbgElement.getBoundingClientRect();
         var flatten = rollup2.reduce((a, b) => {
             var fromTree = fromTab.treeModel;
             var toTree = toTab.treeModel;
@@ -488,18 +499,14 @@ export class D3TestComponent implements OnInit {
                   
               if (!(fromNode.id in fromTree.hiddenNodeIds || toNode.id in toTree.hiddenNodeIds))
               {
-                var fromBounds = fromNode.elementRef2.getBoundingClientRect();
-                var toBounds = toNode.elementRef2.getBoundingClientRect();
-              
                 a.push({
-                    from: b[0], 
+                    from: b[0],
+                    fromNode: fromNode,
                     to: destinationKey,
+                    toNode: toNode,
                     fromTree: fromTree,
                     toTree: toTree,
-                    x1: (rtl ? (fromBounds.left - startingGapRight) : (fromBounds.right + startingGapLeft)) - svgBounds.left,
-                    x2: (rtl ? (toBounds.right + arrowLength) : (toBounds.left - arrowLength)) - svgBounds.left,
-                    y1: fromBounds.top - svgBounds.top + fromBounds.height * 0.5,
-                    y2: toBounds.top - svgBounds.top + toBounds.height * 0.5,
+                    rtl: rtl,
                     scale: rtl ? -1 : 1,
                     count: destinationData.length,
                     weight: (fromNode.isActive || toNode.isActive) ? 2 : 1
@@ -532,12 +539,36 @@ export class D3TestComponent implements OnInit {
                 if (tab != isoTab)
                   this.buildLinkSet(tab.column, isoTab.column, t > isoIndex);
             }
+
+            this.updateGraphView();
         }, 100);
+    }
+
+    public updateGraphView() {
+        var tabs = this.graphService.graphTabs;        
+        var startingGapLeft = 0;
+        var startingGapRight = 10;
+        var arrowLength = 10;
+        var svgBounds = this.svgbgElement.getBoundingClientRect();
+
+        for (var tab of tabs)
+        {
+          for (var l of tab.column.displayLinks)
+          {
+            var fromBounds = l.fromNode.elementRef2.getBoundingClientRect();
+            var toBounds = l.toNode.elementRef2.getBoundingClientRect();
+
+            l.x1 = (l.rtl ? (fromBounds.left - startingGapRight) : (fromBounds.right + startingGapLeft)) - svgBounds.left;
+            l.x2 = (l.rtl ? (toBounds.right + arrowLength) : (toBounds.left - arrowLength)) - svgBounds.left;
+            l.y1 = fromBounds.top - svgBounds.top + fromBounds.height * 0.5;
+            l.y2 = toBounds.top - svgBounds.top + toBounds.height * 0.5;
+          }
+        }
     }
 
     public setup(data, treeElement) {
         data.treeModel = treeElement.treeModel;
-        treeElement.viewportComponent.elementRef.nativeElement.addEventListener('scroll', t => this.updateGraph()); 
+        treeElement.viewportComponent.elementRef.nativeElement.addEventListener('scroll', t => this.updateGraphView()); 
     }
 
     public clickedLink(link: any) {

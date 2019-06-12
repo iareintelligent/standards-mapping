@@ -353,6 +353,18 @@ export class GraphService {
       this.selectedTab = this.graphTabs.indexOf(tab);
   }
 
+  public getNodesWithLinks(children: FullDocNode[], result: FullDocNode[])
+  {
+      for (var c of children)
+      {
+          if (c.node.links && c.node.links.length > 0)
+            result.push(c);
+          this.getNodesWithLinks(c.children, result);
+      }
+
+      return result;
+  }
+
   public flattenSections(children: FullDocNode[], result: string[])
   {
       for (var c of children)
@@ -361,15 +373,24 @@ export class GraphService {
             result.push(c.id);
           this.flattenSections(c.children, result);
       }
+
+      return result;
   }
 
-  public flattenLinks(children: FullDocNode[], result: Link[])
+  public flattenLinks(children: FullDocNode[], result: Link[], linkData: any)
   {
       for (var c of children)
       {
-          if (c.node.body && c.node.links)
+          if (c.node.body)
+          {
+            linkData.total++;
+            if (c.node.links)
+            {
+              linkData.linked++;
               result = result.concat(c.node.links);
-          result = this.flattenLinks(c.children, result);
+            }
+          }
+          result = this.flattenLinks(c.children, result, linkData);
       }
 
       return result;
@@ -378,9 +399,10 @@ export class GraphService {
   public compareDocs(aTab: GraphTab, bTab: GraphTab): any {
     var bSections = [];
     this.flattenSections(bTab.nodes, bSections);
-    var aLinks = this.flattenLinks(aTab.nodes, []);
-
     var bCopy = bSections.slice();
+    
+    var linkData = { total: 0, linked: 0 };
+    var aLinks = this.flattenLinks(aTab.nodes, [], linkData);
 
     var found = 0;
     var checked = 0;
@@ -396,8 +418,12 @@ export class GraphService {
     }
 
     return {
-        "coverage": (found / bSections.length * 100).toFixed(1) + "% (" + found + "/" + bSections.length + ")",
-        "mapped": (found / checked * 100).toFixed(1) + "% (" + found + "/" + checked + ")"
+        "coverage": found + "/" + bSections.length,
+        "mapped": linkData.linked + "/" + linkData.total,
+        "uniqueconnections": found + "/" + checked
+        //"coverage": (found / bSections.length * 100).toFixed(1) + "% (" + found + "/" + bSections.length + ")",
+        //"mapped": (linkData.linked / linkData.total * 100).toFixed(1) + "% (" + linkData.linked + "/" + linkData.total + ")",
+        //"uniqueconnections": (found / checked * 100).toFixed(1) + "% (" + found + "/" + checked + ")"
     };
   }
 

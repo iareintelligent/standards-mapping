@@ -59,7 +59,7 @@
               
               <div><mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">Expand All</mat-checkbox></div>
               
-              <tree-root #tree [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="setup(t.column, tree); tabTreeChanged(t)" (activate)="activateNode(t, $event)" (deactivate)="columnTabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t)">
+              <tree-root #tree [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="setup(t.column, tree); tabTreeChanged(t)" (activate)="activateNode(t, $event)" (deactivate)="columnTabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t, $event)">
                 <ng-template #treeNodeWrapperTemplate let-node let-index="index">
                   <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
                     <tree-node-expander [node]="node"></tree-node-expander>
