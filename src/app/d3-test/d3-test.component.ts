@@ -398,17 +398,34 @@ export class D3TestComponent implements OnInit {
 
             this.updateGraph();
             
+            // Must be delayed or you'll get an infinite loop of change events.
             setTimeout(() => {
-              tab.column.treeModel.collapseAll();
+              // by default, collapse everything
+              this.forAllTreeNodes(tab.column.treeModel, n => n.collapse());
+
+              // ensure selected nodes are visible
               for (var n in tab.treeModel.selectedLeafNodeIds)
               {
                 var columnNode = tab.column.treeModel.getNodeById(n);
-                columnNode.expand();
-                columnNode.expandAll();
-                columnNode.setActiveAndVisible();
+                columnNode.ensureVisible();
               }
-            }, 1000);
+            }, 1);
         }
+    }
+
+    // Due to a bug in the tree control (forall is async but does not return the promise)
+    //   create our own synchronous forall
+    private forAllTreeNodes(treeModel: TreeModel, cb: (tn: TreeNode) => void)
+    {
+      for (var n of treeModel.roots)
+        this.forAllTreeNodesRecursive(n, cb);
+    }
+
+    private forAllTreeNodesRecursive(node: Treenode, cb: (tn: TreeNode) => void)
+    {
+      cb(node);
+      for (var n of node.children)
+        this.forAllTreeNodesRecursive(n, cb);
     }
 
     public columnTabTreeChanged(tab: GraphTab, event: any) {
