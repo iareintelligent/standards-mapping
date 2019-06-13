@@ -65,7 +65,7 @@ export class VisibleLink {
 export class GraphTab {
     constructor(
       public title: string,
-      public parent: GraphTab) {
+      public parent: GraphTab = null) {
         this.isIso = title == "ISO";
 
         if (!parent)
@@ -306,14 +306,19 @@ export class GraphService {
   }
 
   private ensureISOIsInMiddle() {
+      var isoTab = this.graphTabs.find(t => t.title == "ISO");
+
       if (this.graphTabs.length > 1)
       {
-          var isoTab = this.graphTabs.find(t => t.title == "ISO");
           this.graphTabs = this.graphTabs.filter(t => t != isoTab);
           this.graphTabs.splice(1, 0, isoTab);
 
           // assure iso filters from the left: "auto filter"
           isoTab.column.autoFilterSrc = this.graphTabs[0].column;
+      }
+      else
+      {
+          isoTab.column.autoFilterSrc = null;
       }
   }
 

@@ -396,6 +396,14 @@ export class D3TestComponent implements OnInit {
                   delete tab.treeModel.selectedLeafNodeIds[n];
             }
 
+            var tabs = this.graphService.graphTabs;
+
+            for (var t of tabs)
+            {
+                // filter child tree
+                t.column.runFilter();
+            }
+
             this.updateGraph();
             
             // Must be delayed or you'll get an infinite loop of change events.
@@ -545,12 +553,6 @@ export class D3TestComponent implements OnInit {
 
     public updateGraph() {
         var tabs = this.graphService.graphTabs;
-
-        for (var tab of tabs)
-        {
-            // filter child tree
-            tab.column.runFilter();
-        }
 
         // delay the rendering so dom can settle.
         setTimeout(a => {
