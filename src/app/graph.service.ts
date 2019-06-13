@@ -234,58 +234,6 @@ export class GraphService {
       return value;
   }
 
-  getGraphData2(filter: FilterCriteria): Observable<DAG> {
-      //var nodes = mapDb2.document_nodes;
-      //var mappedNodes = nodes.map(v => { return { nodeId: this.getGuid(v.id, v.type, v.rev), name: v.section, data: v, connections: 0}; });
-      //
-      //var nodeMap = mappedNodes.reduce((m, o) => {
-      //    m[o.nodeId] = o;
-      //    return m;
-      //}, {});
-      //
-      //var limitedNodes = mappedNodes.filter(v => filter.categoryIds == null || filter.categoryIds.includes(v.data.type));
-      //
-      //var allLinks = flatten(limitedNodes.map(n => { return n.data.external_doc_node_references ? n.data.external_doc_node_references.map(l => { return [n, l]; }) : []; }));
-      //var mappedLinks = allLinks.map(nl => { 
-      //  var n = nl[0]; 
-      //  var t = nl[1];
-      //  var targetId = this.getGuid(t.id, t.type, t.rev, false);
-      //  if (!targetId)
-      //    return null;
-      //
-      //  var targetNode = nodeMap[targetId];
-      //  targetNode.connections++;
-      //  n.connections++;
-      //  
-      //  var sourceNode = n;
-      //
-      // if (filter && filter.categoryOrder && filter.categoryOrder.indexOf(targetNode.data.type) < filter.categoryOrder.indexOf(n.data.type))
-      // {
-      //     sourceNode = targetNode;
-      //     targetNode = n; 
-      // }
-      //
-      //  var result = { 
-      //      source: sourceNode.nodeId, 
-      //      target: targetNode.nodeId,
-      //      sourceNode: sourceNode, 
-      //      targetNode: targetNode,
-      //      value: n.data.compliance_level
-      //   };
-      //
-      //   return result;
-      // });
-      //
-      //var filteredLinks = mappedLinks.filter(v => v);
-      //var filteredNodes = mappedNodes.filter(v => v.connections > 0 || (filter.categoryIds && filter.categoryIds.includes(v.data.type)));
-
-      var filteredLinks = [];
-      var filteredNodes = [];
-
-      var result = { nodes: filteredNodes, links: filteredLinks };
-      return of(result);
-  }
-
   getDocTypes() : Observable<CategoryList> {
       var result = mapDb.map(v => { return { id: v.type, title: v.type }; });
       return of(result);
@@ -329,10 +277,8 @@ export class GraphService {
           newTab.nodes = doc.children;
           newTab.column.nodes = doc.children;
 
-          if (this.graphTabs.length == 1) 
-            this.graphTabs.splice(0, 0, newTab); // empty except iso, insert before iso only the first time.
-          else
-            this.graphTabs.push(newTab); // else append
+          this.graphTabs.push(newTab);
+          this.ensureISOIsInMiddle();
             
           if (id != "ISO") 
           {
@@ -346,8 +292,18 @@ export class GraphService {
         });
   }
 
+  private ensureISOIsInMiddle() {
+      if (this.graphTabs.length > 1)
+      {
+          var isoTab = this.graphTabs.find(t => t.title == "ISO");
+          this.graphTabs = this.graphTabs.filter(t => t != isoTab);
+          this.graphTabs.splice(1, 0, isoTab);
+      }
+  }
+
   public removeTab(tab) {
       this.graphTabs = this.graphTabs.filter(t => t!=tab);
+      this.ensureISOIsInMiddle();
       this.activateTab(this.graphTabs[0]);
   }
 
