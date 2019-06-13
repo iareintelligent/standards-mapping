@@ -65,14 +65,13 @@ export class VisibleLink {
 export class GraphTab {
     constructor(
       public title: string,
-      public isParent: boolean = false) {
+      public parent: GraphTab) {
         this.isIso = title == "ISO";
 
-        if (isParent)
+        if (!parent)
         {
-          this.column = new GraphTab(title);
+          this.column = new GraphTab(title, this);
           this.column.options.useCheckbox = false;
-          this.column.filter = (vs, n) => GraphTab.filterBySelectedLeafs(vs, this.treeModel, n);
         }
     }
 
@@ -86,10 +85,10 @@ export class GraphTab {
     public visibleNodes: TreeNode[] = [];
     public visibleLinks: VisibleLink[] = [];
     public displayLinks: any[] = [];
-    public filter: (vs: TreeNode[], n: TreeNode)=>boolean; 
     public isIso: boolean = false;
     public searchValue: string = null;
     public coverage: string = " - ";
+    public autoFilterSrc: GraphTab;
 
     public get anyExpanded():boolean {
       return this.treeModel && this.treeModel.expandedNodes.length > 0; 
@@ -139,7 +138,21 @@ export class GraphTab {
         if (this.treeModel)
         {
           this.treeModel.clearFilter();
-          this.treeModel.filterNodes((node: TreeNode) => this.filter(this.visibleNodes, node), false);
+
+          this.treeModel.filterNodes((node: TreeNode) => {
+            if (this.autoFilterSrc)
+                return GraphTab.filterByVisibleLinks(this.visibleNodes, this.autoFilterSrc.visibleLinks, node);
+            else
+                return GraphTab.filterBySelectedLeafs(this.visibleNodes, this.parent.treeModel, node);
+          }, false);
+
+          if (this.autoFilterSrc)
+          {
+              if (this.autoFilterSrc.parent.anySelected)
+                this.treeModel.expandAll();
+              else
+                this.treeModel.collapseAll();
+          }
 
           this.visibleLinks = GraphService.flatten(this.visibleNodes.map(v => {
               var links = v.data.node.links;
@@ -272,7 +285,7 @@ export class GraphService {
   public addTab(id: string) {
       this.getFullDocByType(id)
         .subscribe(doc => {
-          var newTab = new GraphTab(id, true);
+          var newTab = new GraphTab(id);
 
           newTab.nodes = doc.children;
           newTab.column.nodes = doc.children;
@@ -298,6 +311,9 @@ export class GraphService {
           var isoTab = this.graphTabs.find(t => t.title == "ISO");
           this.graphTabs = this.graphTabs.filter(t => t != isoTab);
           this.graphTabs.splice(1, 0, isoTab);
+
+          // assure iso filters from the left: "auto filter"
+          isoTab.column.autoFilterSrc = this.graphTabs[0].column;
       }
   }
 

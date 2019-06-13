@@ -51,7 +51,7 @@ export class D3TestComponent implements OnInit {
           //for (var i = 0; i< 3; ++i)
           //  this.graphCategories[i].active = true;
             
-          this.RefreshGraph(); 
+          //this.RefreshGraph(); 
         });
     }
 
@@ -63,42 +63,42 @@ export class D3TestComponent implements OnInit {
         return result;
     }
 
-    public RefreshGraph() {
-
-      var limitedDocs = this.graphCategories.filter(v => v.active).map(v => v.id);
-      if (limitedDocs.length > 0)
-        this.graphCriteria.categoryIds = limitedDocs;
-
-      this.graphCriteria.categoryOrder = limitedDocs;
-
-      if (this.graphType == 1)
-      {
-          // move ISO to second slot so it draws in the middle
-          var i0 = this.graphCriteria.categoryOrder[0];
-          var i1 = this.graphCriteria.categoryOrder[1];
-          this.graphCriteria.categoryOrder[0] = i1;
-          this.graphCriteria.categoryOrder[1] = i0;
-      }
-
-      this.graphService.getGraphData2(this.graphCriteria)
-        .subscribe(gd => { 
-          console.log(JSON.stringify(gd)); 
-          this.graphData = gd;
-
-          switch (this.graphType)
-          {
-              case 0:
-                this.DrawTable(this.graphData);
-                break;
-              case 1:
-                this.DrawChart(this.graphData);
-                break;
-              case 2:
-                this.DrawGraph(this.graphData);
-                break;
-        }
-        });
-    }
+    //public RefreshGraph() {
+    //
+    //  var limitedDocs = this.graphCategories.filter(v => v.active).map(v => v.id);
+    //  if (limitedDocs.length > 0)
+    //    this.graphCriteria.categoryIds = limitedDocs;
+    //
+    //  this.graphCriteria.categoryOrder = limitedDocs;
+    //
+    //  if (this.graphType == 1)
+    //  {
+    //      // move ISO to second slot so it draws in the middle
+    //      var i0 = this.graphCriteria.categoryOrder[0];
+    //      var i1 = this.graphCriteria.categoryOrder[1];
+    //      this.graphCriteria.categoryOrder[0] = i1;
+    //      this.graphCriteria.categoryOrder[1] = i0;
+    //  }
+    //
+    //  this.graphService.getGraphData2(this.graphCriteria)
+    //    .subscribe(gd => { 
+    //      console.log(JSON.stringify(gd)); 
+    //      this.graphData = gd;
+    //
+    //      switch (this.graphType)
+    //      {
+    //          case 0:
+    //            this.DrawTable(this.graphData);
+    //            break;
+    //          case 1:
+    //            this.DrawChart(this.graphData);
+    //            break;
+    //          case 2:
+    //            this.DrawGraph(this.graphData);
+    //            break;
+    //    }
+    //    });
+    //}
 
     private DrawTable(data: DAG) {
         var rowType = this.graphCriteria.categoryOrder ? this.graphCriteria.categoryOrder[0] : (data.nodes[0] as SNode).data.type;
@@ -421,11 +421,14 @@ export class D3TestComponent implements OnInit {
         this.forAllTreeNodesRecursive(n, cb);
     }
 
-    private forAllTreeNodesRecursive(node: Treenode, cb: (tn: TreeNode) => void)
+    private forAllTreeNodesRecursive(node: TreeNode, cb: (tn: TreeNode) => void)
     {
       cb(node);
-      for (var n of node.children)
-        this.forAllTreeNodesRecursive(n, cb);
+      if (node.children)
+      {
+        for (var n of node.children)
+          this.forAllTreeNodesRecursive(n, cb);
+      }
     }
 
     public columnTabTreeChanged(tab: GraphTab, event: any) {
