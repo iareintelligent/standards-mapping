@@ -398,7 +398,7 @@ export class D3TestComponent implements OnInit {
 
             this.runFilters(tab);
 
-            //this.updateGraph();
+            this.updateGraph();
             
             // Must be delayed or you'll get an infinite loop of change events.
             setTimeout(() => {
