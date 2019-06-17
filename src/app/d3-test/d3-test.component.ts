@@ -1,4 +1,4 @@
-﻿import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+﻿import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
 import * as d3Sankey from 'd3-sankey';
 import { DAG, SNode, GraphService, CategoryList, FilterCriteria, GraphTab } from '../graph.service';
@@ -27,7 +27,7 @@ class TableData
   styleUrls: [ './d3-test.component.css' ],
   encapsulation: ViewEncapsulation.None // Allow D3 to read styles through shadow DOM
 })
-export class D3TestComponent implements OnInit {    
+export class D3TestComponent implements OnInit, OnDestroy {    
     public graphType: number = 0;
     public graphData: DAG;
     public graphCategories: CategoryList = [];
@@ -39,6 +39,7 @@ export class D3TestComponent implements OnInit {
     private updateSubject = new Rx.BehaviorSubject(0);
     private updateViewSubject = new Rx.BehaviorSubject(0);
     private searchSubject = new Rx.BehaviorSubject(null);
+    private tabsChangedSubscription;
 
     constructor(
       public graphService: GraphService,
@@ -71,6 +72,14 @@ export class D3TestComponent implements OnInit {
             
           //this.RefreshGraph(); 
         });
+      
+      this.tabsChangedSubscription = this.graphService.tabsChangedSubject.subscribe(a => {
+          this.updateSubject.next(0);
+      })
+    }
+
+    ngOnDestroy(): void {
+        this.tabsChangedSubscription.unsubscribe();
     }
 
     public getMenuOptions(): any[] {
@@ -414,7 +423,7 @@ export class D3TestComponent implements OnInit {
             for (var n of Object.keys(tab.treeModel.selectedLeafNodeIds))
             {
                 var node = tab.treeModel.getNodeById(n);
-                if (!node.isSelected)
+                if (node && !node.isSelected)
                   delete tab.treeModel.selectedLeafNodeIds[n];
             }
 
@@ -431,7 +440,8 @@ export class D3TestComponent implements OnInit {
               for (var n in tab.treeModel.selectedLeafNodeIds)
               {
                 var columnNode = tab.column.treeModel.getNodeById(n);
-                columnNode.ensureVisible();
+                if (columnNode)
+                  columnNode.ensureVisible();
               }
             }, 1);
         }

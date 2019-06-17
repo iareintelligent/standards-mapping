@@ -2,6 +2,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of, forkJoin } from 'rxjs';
+import * as Rx from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2, Link } from './standard-map';
@@ -89,8 +90,8 @@ export class GraphTab {
     public searchValue: string = null;
     public coverage: string = " - ";
     public autoFilterSrc: GraphTab;
-    public autoFilterSelf: boolean
-    public autoFilterParent: GraphTab
+    public autoFilterSelf: boolean;
+    public autoFilterParent: GraphTab;
 
     public get anyExpanded():boolean {
       return this.treeModel && this.treeModel.expandedNodes.length > 0; 
@@ -236,6 +237,7 @@ export class GraphTab {
 export class GraphService {
   private docGuids = {};
   private nextDocGuid = 0;
+  public tabsChangedSubject = new Rx.BehaviorSubject(0);
 
   constructor(
     private messageService: MessageService) {
@@ -330,19 +332,11 @@ export class GraphService {
               var stats = this.compareDocs(newTab.column, this.graphTabs[1]);
               newTab.coverage = "ISO Coverage: " + stats.coverage + ", Mapped: " + stats.mapped + ", Unique: " + stats.uniqueconnections;
           }
-
-          if (this.graphTabs.indexOf(newTab) > 0)
-          {
-              var isoTab = this.graphTabs.find(t => t.title == "ISO");
-
-              // auto filter with this tabs connections to iso
-              newTab.column.autoFilterSrc = isoTab.column;
-              newTab.column.autoFilterParent = this.graphTabs[0].column.parent; // the left tab always drives the selection
-              newTab.column.autoFilterSelf = true;
-          }
             
           this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
           setTimeout(() => this.activateTab(newTab), 1); // need to let dom regenerate
+
+          this.tabsChangedSubject.next(0);
         });
   }
 
@@ -353,14 +347,39 @@ export class GraphService {
       {
           this.graphTabs = this.graphTabs.filter(t => t != isoTab);
           this.graphTabs.splice(1, 0, isoTab);
-
-          // assure iso filters from the left: "auto filter"
-          isoTab.column.autoFilterSrc = this.graphTabs[0].column;
-          isoTab.column.autoFilterParent = this.graphTabs[0].column.parent;
       }
-      else
-      {
-          isoTab.column.autoFilterSrc = null;
+
+      // setup filters
+      for (var t of this.graphTabs)
+      {          
+          if (t == isoTab)
+          {
+              if (this.graphTabs.length > 1)
+              {
+                  // assure iso filters from the left: "auto filter"
+                  isoTab.column.autoFilterSrc = this.graphTabs[0].column;
+                  isoTab.column.autoFilterParent = this.graphTabs[0].column.parent;
+              }
+              else
+              {
+                  // clear auto filter when only iso is left
+                  isoTab.column.autoFilterSrc = null;
+              }
+          }
+          else if (this.graphTabs.indexOf(t) > 0)
+          {
+              // auto filter with this tabs connections to iso
+              t.column.autoFilterSrc = isoTab.column;
+              t.column.autoFilterParent = this.graphTabs[0].column.parent; // the left tab always drives the selection
+              t.column.autoFilterSelf = true;
+          }
+          else
+          {
+              // clear auto filter of left tab
+              t.column.autoFilterSrc = null;
+              t.column.autoFilterParent = null;
+              t.column.autoFilterSelf = false;
+          }
       }
   }
 
@@ -368,6 +387,7 @@ export class GraphService {
       this.graphTabs = this.graphTabs.filter(t => t!=tab);
       this.ensureISOIsInMiddle();
       this.activateTab(this.graphTabs[0]);
+      this.tabsChangedSubject.next(0);
   }
 
   public activateTab(tab: GraphTab) {
