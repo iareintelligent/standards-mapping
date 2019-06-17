@@ -79,6 +79,7 @@ export class GraphTab {
     public options = {
       useCheckbox: true,
       scrollOnActivate: false,
+      scrollContainer: <HTMLElement>document.body // Fix for bug: https://github.com/500tech/angular-tree-component/issues/704
     };
 
     public state: ITreeState = { };
