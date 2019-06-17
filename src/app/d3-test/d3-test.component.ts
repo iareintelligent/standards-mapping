@@ -4,6 +4,8 @@ import * as d3Sankey from 'd3-sankey';
 import { DAG, SNode, GraphService, CategoryList, FilterCriteria, GraphTab } from '../graph.service';
 import { FullDocNode } from '../standard-map';
 import { DomSanitizer } from '@angular/platform-browser';
+import { debounce } from 'rxjs/operators';
+import * as Rx from 'rxjs';
 
 import { TreeModel, TreeNode, ITreeState } from 'angular-tree-component';
 import Fuse from 'fuse.js';
@@ -34,12 +36,28 @@ export class D3TestComponent implements OnInit {
     
     public complianceColors = ["white", "green", "yellow", "red", "black"];
     public svgbgElement: any;
+    private updateSubject = new Rx.BehaviorSubject(0);
+    private updateViewSubject = new Rx.BehaviorSubject(0);
+    private searchSubject = new Rx.BehaviorSubject(null);
 
     constructor(
       public graphService: GraphService,
       private sanitizer: DomSanitizer) {
         //this.graphTabs[1].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[0].column.visibleLinks, n);
         ////this.graphTabs[2].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[1].column.visibleLinks, n);
+
+        this.updateSubject.pipe(debounce(() => Rx.timer(10))).subscribe({
+          next: (v) => this.updateGraph()
+        });
+        this.updateViewSubject.pipe(debounce(() => Rx.timer(10))).subscribe({
+          next: (v) => this.updateGraphView()
+        });
+        this.searchSubject.pipe(debounce(() => Rx.timer(400))).subscribe({
+          next: (v) => {
+            if (v)
+              this.filterFn(v[0], v[1]);
+          }
+        });
     };
 
     ngOnInit(): void {     
@@ -377,6 +395,10 @@ export class D3TestComponent implements OnInit {
       }
     }
 
+    public filter(value: string, treeModel: TreeModel) {
+        this.searchSubject.next([value, treeModel]);
+    }
+
     public filterFn(value: string, treeModel: TreeModel) {
       if (value != "")
         treeModel.filterNodes((node: TreeNode) => this.fuzzysearch(value, node));
@@ -396,9 +418,9 @@ export class D3TestComponent implements OnInit {
                   delete tab.treeModel.selectedLeafNodeIds[n];
             }
 
-            this.runFilters(tab);
+            this.runFilters(tab, true);
 
-            this.updateGraph();
+            this.updateSubject.next(0);
             
             // Must be delayed or you'll get an infinite loop of change events.
             setTimeout(() => {
@@ -415,17 +437,17 @@ export class D3TestComponent implements OnInit {
         }
     }
 
-    private runFilters(changedTab: GraphTab) 
+    private runFilters(changedTab: GraphTab, parentChanged: boolean) 
     {
-            var tabs = this.graphService.graphTabs;
-            for (var t of tabs)
+        var tabs = this.graphService.graphTabs;
+        for (var t of tabs)
+        {
+            if (t.column.autoFilterSrc == changedTab.column || (parentChanged && t == changedTab))
             {
-                if (t.column.autoFilterSrc == changedTab.column || t == changedTab)
-                {
-                    // filter child tree
-                    t.column.runFilter();
-                }
+                // filter child tree
+                t.column.runFilter();
             }
+        }
     }
 
     // Due to a bug in the tree control (forall is async but does not return the promise)
@@ -463,9 +485,9 @@ export class D3TestComponent implements OnInit {
               }
             }
 
-            this.runFilters(tab);
-
-            this.updateGraph();
+            this.runFilters(tab, false);
+            
+            this.updateSubject.next(0);
         }
     }
 
@@ -474,14 +496,14 @@ export class D3TestComponent implements OnInit {
             var newSelection = {};
             newSelection[tab.column.state.focusedNodeId] = true; // single select
             tab.column.state.activeNodeIds = newSelection; 
-
-            this.updateGraph();
+            
+            this.updateSubject.next(0);
         }
     }
 
     public onResize(event) {
         //event.target.innerWidth;
-        this.updateGraphView();
+        this.updateViewSubject.next(0);
     }
 
     private buildLinkSet(fromTab: GraphTab, toTab: GraphTab, rtl: boolean): void {
@@ -574,8 +596,8 @@ export class D3TestComponent implements OnInit {
                 if (tab != isoTab)
                   this.buildLinkSet(tab.column, isoTab.column, t > isoIndex);
             }
-
-            this.updateGraphView();
+            
+            this.updateViewSubject.next(0);
         }, 100);
     }
 
