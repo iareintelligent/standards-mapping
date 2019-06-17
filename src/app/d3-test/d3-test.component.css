@@ -115,6 +115,10 @@ table, th, td {
     padding: unset !important;
 }
 
+.button-disabled {
+    opacity: 0.15;
+}
+
 .svg-background {
     position: absolute;
     width: 100%;

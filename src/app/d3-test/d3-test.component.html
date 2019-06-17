@@ -13,7 +13,7 @@
         <div class="title-container">
           <mat-card-title class="filter-title">Filter</mat-card-title>
             <span class="example-spacer"></span>
-            <button mat-button [matMenuTriggerFor]="menu" class="add-button"><mat-icon>add_box</mat-icon></button>
+            <button mat-button [matMenuTriggerFor]="menu" class="add-button" [class.button-disabled]="!graphService.canAdd"><mat-icon>add_box</mat-icon></button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item *ngFor="let d of getMenuOptions()" (click)="graphService.addTab(d.id)">{{d.id}}</button>
             </mat-menu>

@@ -316,7 +316,14 @@ export class GraphService {
   public graphTabs: GraphTab[] = [ ];
   public selectedTab: number = 0;
 
+  public get canAdd(): boolean {
+      return this.graphTabs.length < 3;
+  }
+
   public addTab(id: string) {
+      if (!this.canAdd)
+          return;
+
       this.getFullDocByType(id)
         .subscribe(doc => {
           var newTab = new GraphTab(id);

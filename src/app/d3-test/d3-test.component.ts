@@ -84,9 +84,14 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
     public getMenuOptions(): any[] {
         var result = [];
-        for (var t of this.graphCategories)
-            if (!this.graphService.graphTabs.find(g => g.title == t.id))
-                result.push(t);
+
+        if (this.graphService.canAdd)
+        {
+            for (var t of this.graphCategories)
+                if (!this.graphService.graphTabs.find(g => g.title == t.id))
+                    result.push(t);
+        }
+
         return result;
     }
 
