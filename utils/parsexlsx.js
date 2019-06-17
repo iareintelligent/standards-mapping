@@ -2,7 +2,7 @@
 var Excel = require('exceljs');
 
 
-var inputFile = "./src/app/data/notcheckedin/MSFT ISO 27552 Country Mapping.xlsx";
+var inputFile = "./src/app/data/notcheckedin/MSFT ISO 27552 Country Mapping - Merged.xlsx";
 var inputFileGdpr = "./src/app/data/notcheckedin/27552 to GDPR.xlsx";
 var outputFile = "./src/app/data/sampledb.json";
 
@@ -37,20 +37,7 @@ var reduceDoc = function(doc) {
             lastCell.body += ' \n' + newCell.body;
         }
 
-        // merge links
-        if (newCell.links)
-        {
-          if (!lastCell.links)
-            lastCell.links = [];
-
-          for (var l of newCell.links)
-          {
-              if (!lastCell.links.find(n => n.id == l.id && n.type == l.type))
-              {
-                  lastCell.links.push(l);
-              }
-          }
-        }
+        mergeLinks(newCell, lastCell);
       }
       else
       {
@@ -63,6 +50,23 @@ var reduceDoc = function(doc) {
     var objs = keys.map(v => result[v]);
     return objs;
 }
+
+var mergeLinks = function (src, dst) {
+    if (src.links)
+    {
+      if (!dst.links)
+        dst.links = [];
+
+      for (var l of src.links)
+      {
+          if (!dst.links.find(n => n.id == l.id && n.type == l.type))
+          {
+              dst.links.push(l);
+          }
+      }
+        }
+}
+
 
 var breakPath = function (path) {
     if (!path)
@@ -98,7 +102,8 @@ var findOrCreateSection = function (root, id) {
             "id": assembled,
             "frag": f, // sortable fragment
             "section": assembled,
-            "children": []
+            "children": [],
+            "links": []
           };
 
           root.children.push(node);
@@ -124,14 +129,36 @@ var recursiveSort = function (doc) {
 var nestDoc = function (doc) {
     var result = { "children" : [] };
 
-    for (var d of doc)
-    {
-        var node = findOrCreateSection(result, d.id);
-        Object.assign(node, d);
-    }
-    recursiveSort(result);
+    mergeDoc(doc, result);
 
     return result;
+}
+
+
+
+var mergeDocRecursive = function (src, dst) {
+    for (var d of src)
+    {
+        var node = findOrCreateSection(dst, d.id);
+
+        // copy properties
+        node.id = d.id;
+        node.section = d.section;
+        node.body = d.body;
+        if (d.links)
+          mergeLinks(d, node);
+
+        if (d.children)
+          mergeDocRecursive(d.children, dst);
+    }
+}
+
+var mergeDoc = function (src, dst) {
+    mergeDocRecursive(src, dst);
+
+    recursiveSort(dst);
+
+    return dst;
 }
 
 var makeDoc = function (doc, type) {
@@ -218,12 +245,8 @@ var mainMapping = function() {
           allDocs.push(newDoc);
         });
         //console.log(JSON.stringify(worksheet.rowCount));
-
-        console.log(JSON.stringify(allDocs, null, 4));
-
-        const fs = require('fs');
-        let data = JSON.stringify(allDocs, null, 4);  
-        fs.writeFileSync(outputFile, data);  
+        
+        return allDocs;
     });
 }
 
@@ -288,14 +311,28 @@ var gdprMapping = function() {
         gdprDoc = makeDoc(nestDoc(reduceDoc(gdprDoc)), "GDPR");
         allDocs.push(isoDoc);
         allDocs.push(gdprDoc);
-        console.log(JSON.stringify(allDocs, null, 4));
 
-        const fs = require('fs');
-        let data = JSON.stringify(allDocs, null, 4);  
-        fs.writeFileSync(outputFile, data);  
+        return allDocs;
     });
 }
 
-//mainMapping()
-gdprMapping()
-  .then(a => {  });
+mainMapping()
+  .then(allDocs => {
+    
+        gdprMapping()
+          .then(isoGdpr => {
+            var isoDocMain = allDocs[0];
+            var isoDocGdpr = isoGdpr[0];
+            var gdprDoc = isoGdpr[1];
+
+            allDocs.push(gdprDoc);
+
+            mergeDoc(isoDocGdpr.children, isoDocMain);
+    
+            console.log(JSON.stringify(allDocs, null, 4));
+
+            const fs = require('fs');
+            let data = JSON.stringify(allDocs, null, 4);  
+            fs.writeFileSync(outputFile, data); 
+        });
+  });

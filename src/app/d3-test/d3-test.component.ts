@@ -396,15 +396,9 @@ export class D3TestComponent implements OnInit {
                   delete tab.treeModel.selectedLeafNodeIds[n];
             }
 
-            var tabs = this.graphService.graphTabs;
+            this.runFilters(tab);
 
-            for (var t of tabs)
-            {
-                // filter child tree
-                t.column.runFilter();
-            }
-
-            this.updateGraph();
+            //this.updateGraph();
             
             // Must be delayed or you'll get an infinite loop of change events.
             setTimeout(() => {
@@ -419,6 +413,19 @@ export class D3TestComponent implements OnInit {
               }
             }, 1);
         }
+    }
+
+    private runFilters(changedTab: GraphTab) 
+    {
+            var tabs = this.graphService.graphTabs;
+            for (var t of tabs)
+            {
+                if (t.column.autoFilterSrc == changedTab.column || t == changedTab)
+                {
+                    // filter child tree
+                    t.column.runFilter();
+                }
+            }
     }
 
     // Due to a bug in the tree control (forall is async but does not return the promise)
@@ -455,6 +462,8 @@ export class D3TestComponent implements OnInit {
                 }
               }
             }
+
+            this.runFilters(tab);
 
             this.updateGraph();
         }

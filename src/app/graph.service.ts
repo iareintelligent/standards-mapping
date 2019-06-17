@@ -89,6 +89,8 @@ export class GraphTab {
     public searchValue: string = null;
     public coverage: string = " - ";
     public autoFilterSrc: GraphTab;
+    public autoFilterSelf: boolean
+    public autoFilterParent: GraphTab
 
     public get anyExpanded():boolean {
       return this.treeModel && this.treeModel.expandedNodes.length > 0; 
@@ -129,6 +131,28 @@ export class GraphTab {
             visibleNodes.push(node);
         return show;
     }
+
+    public static filterByMyLinks(visibleNodes: TreeNode[], parentTree: GraphTab, node: TreeNode): boolean
+    {
+        var show = false;
+
+        var links = node.data.node.links;
+        if (links)
+        {
+            for (var l of links)
+            {
+                if (!(l.id in parentTree.state.hiddenNodeIds) || !parentTree.state.hiddenNodeIds[l.id])
+                {
+                    show = true;
+                    break;
+                }
+            }
+        }
+
+        if (show)
+            visibleNodes.push(node);
+        return show;
+    }
     
     public runFilter()
     {
@@ -141,14 +165,21 @@ export class GraphTab {
 
           this.treeModel.filterNodes((node: TreeNode) => {
             if (this.autoFilterSrc)
-                return GraphTab.filterByVisibleLinks(this.visibleNodes, this.autoFilterSrc.visibleLinks, node);
+            {
+                if (this.autoFilterSelf)
+                {
+                    return GraphTab.filterByMyLinks(this.visibleNodes, this.autoFilterSrc, node);
+                }
+                else
+                    return GraphTab.filterByVisibleLinks(this.visibleNodes, this.autoFilterSrc.visibleLinks, node);
+            }
             else
                 return GraphTab.filterBySelectedLeafs(this.visibleNodes, this.parent.treeModel, node);
           }, false);
 
-          if (this.autoFilterSrc)
+          if (this.autoFilterParent)
           {
-              if (this.autoFilterSrc.parent.anySelected)
+              if (this.autoFilterParent.anySelected)
                 this.treeModel.expandAll();
               else
                 this.treeModel.collapseAll();
@@ -299,6 +330,16 @@ export class GraphService {
               var stats = this.compareDocs(newTab.column, this.graphTabs[1]);
               newTab.coverage = "ISO Coverage: " + stats.coverage + ", Mapped: " + stats.mapped + ", Unique: " + stats.uniqueconnections;
           }
+
+          if (this.graphTabs.indexOf(newTab) > 0)
+          {
+              var isoTab = this.graphTabs.find(t => t.title == "ISO");
+
+              // auto filter with this tabs connections to iso
+              newTab.column.autoFilterSrc = isoTab.column;
+              newTab.column.autoFilterParent = this.graphTabs[0].column.parent; // the left tab always drives the selection
+              newTab.column.autoFilterSelf = true;
+          }
             
           this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
           setTimeout(() => this.activateTab(newTab), 1); // need to let dom regenerate
@@ -315,6 +356,7 @@ export class GraphService {
 
           // assure iso filters from the left: "auto filter"
           isoTab.column.autoFilterSrc = this.graphTabs[0].column;
+          isoTab.column.autoFilterParent = this.graphTabs[0].column.parent;
       }
       else
       {
