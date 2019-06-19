@@ -747,10 +747,20 @@ export class D3TestComponent implements OnInit, OnDestroy {
                 body = this.highlightText(body, data.highlight);
         }
 
+        if (data.node.hyperlink)
+        {
+            section = '<a style="pointer-events: bounding-box; cursor: pointer;" target="_blank" href="' + data.node.hyperlink + '">' + section + '</a>';
+        }
+
         var result = section;
         if (body)
             result += " - " + body;
 
         return this.sanitizer.bypassSecurityTrustHtml(result);
+    }
+
+    public treeEvent(event: any)
+    {
+    
     }
 }

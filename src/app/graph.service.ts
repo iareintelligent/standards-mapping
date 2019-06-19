@@ -8,7 +8,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2, Link } from './standard-map';
 import { MessageService } from './message.service';
 import * as d3Sankey from 'd3-sankey';
-import { TreeModel, TreeNode, ITreeState } from 'angular-tree-component';
+import { TreeModel, TreeNode, ITreeState, TREE_ACTIONS, IActionMapping } from 'angular-tree-component';
 
 import { mapDb } from './mock-standard-maps';
 
@@ -78,8 +78,18 @@ export class GraphTab {
 
     public options = {
       useCheckbox: true,
+      allowDrag: false,
+      allowDrop: false,
       scrollOnActivate: false,
-      scrollContainer: <HTMLElement>document.body // Fix for bug: https://github.com/500tech/angular-tree-component/issues/704
+      scrollContainer: <HTMLElement>document.body, // Fix for bug: https://github.com/500tech/angular-tree-component/issues/704
+      //actionMapping: {
+      //  mouse: {
+      //    click: (tree, node, $event) => { 
+      //      //$event.preventDefault();
+      //      TREE_ACTIONS.TOGGLE_SELECTED_MULTI(tree, node, $event); 
+      //    },
+      //  }
+      //}
     };
 
     public state: ITreeState = { };
@@ -399,12 +409,10 @@ export class GraphService {
   }
 
   public activateTab(tab: GraphTab) {
-      //for (var t of this.graphTabs)
-      //{
-      //    t.active = t == tab;
-      //}
-      
-      this.selectedTab = this.graphTabs.indexOf(tab);
+      // Since only the left filter matters, only default to left tab.
+      this.selectedTab = 0;
+
+      //this.selectedTab = this.graphTabs.indexOf(tab);
   }
 
   public getNodesWithLinks(children: FullDocNode[], result: FullDocNode[])

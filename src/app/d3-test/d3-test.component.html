@@ -40,10 +40,25 @@
               <div><mat-checkbox (change)="t.expandAll()" [checked]="t.anyExpanded">Expand All</mat-checkbox><mat-checkbox (change)="t.selectAll()" [checked]="t.anySelected">Select All</mat-checkbox></div>
               
               <div class="tree-container">
-                <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="tabTreeChanged(t)">
-                  <ng-template #treeNodeTemplate let-node let-index="index">
-                    <span [innerHTML]="injectHighlight(node.data)"></span>
-                  </ng-template>
+                <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="tabTreeChanged(t)" (event)="treeEvent($event)">
+                  <ng-template #treeNodeWrapperTemplate let-node let-index="index">
+                  <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
+                    <tree-node-expander [node]="node"></tree-node-expander>
+                    <div class="node-content-wrapper"
+                      [class.node-content-wrapper-active]="node.isActive"
+                      [class.node-content-wrapper-focused]="node.isFocused"
+                      (click)="node.mouseAction('click', $event)"
+                      (dblclick)="node.mouseAction('dblClick', $event)"
+                      (contextmenu)="node.mouseAction('contextMenu', $event)"
+                      (treeDrop)="node.onDrop($event)"
+                      [treeAllowDrop]="node.allowDrop"
+                      [treeDrag]="node"
+                      [treeDragEnabled]="node.allowDrag()">
+
+                      <span [innerHTML]="injectHighlight(node.data)"></span>
+                    </div>
+                  </div>
+                </ng-template>
                 </tree-root>
               </div>
             </mat-tab>

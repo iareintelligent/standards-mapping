@@ -30,6 +30,7 @@ export class DocNode2 {
   id?: string;
   section?: string;
   body?: string;
+  hyperlink?: string;
   compliance_level?: number;
   children: DocNode2[];
   links: Link[];

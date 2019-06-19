@@ -2,7 +2,7 @@
 var Excel = require('exceljs');
 
 
-var inputFile = "./src/app/data/notcheckedin/MSFT ISO 27552 Country Mapping - Merged.xlsx";
+var inputFile = "./src/app/data/notcheckedin/MSFT ISO 27552 Country Mapping - Merged- Macro.xlsm";
 var inputFileGdpr = "./src/app/data/notcheckedin/27552 to GDPR.xlsx";
 var outputFile = "./src/app/data/sampledb.json";
 
@@ -13,6 +13,10 @@ var keepNWords = function (input, n) {
       result += "...";
     return result;
     //return input.replace(new RegExp("(([^\s]+\s\s*){" + n + "})(.*)"),"$1…");
+}
+
+var removeSpecialCharacters = function (input) {
+    return input.replace(/[^\w\s]/gi, '');
 }
 
 var reduceDoc = function(doc) {
@@ -145,6 +149,7 @@ var mergeDocRecursive = function (src, dst) {
         node.id = d.id;
         node.section = d.section;
         node.body = d.body;
+        node.hyperlink = d.hyperlink;
         if (d.links)
           mergeLinks(d, node);
 
@@ -225,12 +230,26 @@ var mainMapping = function() {
             var section = cell.text.match(/.*\((.*)\).*/);
             if (section)
             {
+              var body = cell.text;
+
+              // Look for hyperlink in brackets at end of line
+              var hyperlink = body.match(/\[http(.*)\]/);
+              if (hyperlink)
+              {
+                // format hyperlink
+                hyperlink = 'http' + hyperlink[1];
+
+                // trim hyperlink from the end
+                body = body.slice(0, hyperlink.length + 2); // + 2 for brackets
+              }
+
               var normalized = normalizePath(section[1]);
               var isoSection = sectionsByRow[rowNumber];
               newDoc.push({
                   id: normalized,
                   section: normalized,
-                  body: cell.text,
+                  body: body,
+                  hyperlink: hyperlink,
                   links: [ {
                       "id": isoSection,
                       "type": "ISO"
@@ -240,7 +259,7 @@ var mainMapping = function() {
             }
           });
 
-          newDoc = makeDoc(nestDoc(reduceDoc(newDoc)), cell.text);
+          newDoc = makeDoc(nestDoc(reduceDoc(newDoc)), removeSpecialCharacters(cell.text));
           //console.log(JSON.stringify(newDoc, null, 4));
           allDocs.push(newDoc);
         });
