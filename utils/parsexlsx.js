@@ -184,13 +184,28 @@ var mainMapping = function() {
         // build iso doc
         var sectionColumn = worksheet.getColumn(1);
         var sectionsByRow = { };
+        var unmappedRows = {};
 
         sectionColumn.eachCell({ includeEmpty: true }, function(cell, rowNumber) {
-          var section = cell.text.match(/(\d.*)/); // must start with a number
-          if (section)
-          {
-            sectionsByRow[rowNumber] = normalizePath(section[1])
-          }
+            // see if this is one of our unmapped/red rows
+            var row = worksheet.getRow(rowNumber);
+            row.eachCell({ includeEmpty: true }, function(cell, col) {
+                if (cell.fill && cell.fill.fgColor && cell.fill.fgColor.argb == 'FFF04C3E')
+                {
+                  //console.log(JSON.stringify(cell.fill) + cell.text);
+                  unmappedRows[rowNumber] = col;
+                }
+            });
+
+            if (!(rowNumber in unmappedRows))
+            {
+              var section = cell.text.match(/(\d.*)/); // must start with a number
+              if (section)
+              {
+                sectionsByRow[rowNumber] = normalizePath(section[1])
+              }
+            }
+
         });
 
         var allDocs = [];
@@ -227,7 +242,18 @@ var mainMapping = function() {
         
           var sectionColumn = worksheet.getColumn(colNumber);
           sectionColumn.eachCell({ includeEmpty: true }, function(cell, rowNumber) {
-            var section = cell.text.match(/.*\((.*)\).*/);
+            var bodyOverride = null;
+
+            if (rowNumber in unmappedRows && unmappedRows[rowNumber] == colNumber)
+            {
+                // if it's unmapped/red, there is special handling of the text source
+                var row = worksheet.getRow(rowNumber);
+                cell = row.getCell(1); // section column
+                bodyOverride = row.getCell(2).text; // description column
+            }
+
+            
+            var section = cell.text.match(/.*\((.*[0-9].*)\).*/);
             if (section)
             {
               var body = cell.text;
@@ -240,21 +266,31 @@ var mainMapping = function() {
                 hyperlink = 'http' + hyperlink[1];
 
                 // trim hyperlink from the end
-                body = body.slice(0, hyperlink.length + 2); // + 2 for brackets
+                body = body.slice(0, -(hyperlink.length + 2)); // + 2 for brackets
               }
 
               var normalized = normalizePath(section[1]);
+              var sectionText = normalized;
+              if (bodyOverride)
+              {
+                  body += " - " + bodyOverride;
+              }
+
               var isoSection = sectionsByRow[rowNumber];
-              newDoc.push({
-                  id: normalized,
-                  section: normalized,
-                  body: body,
-                  hyperlink: hyperlink,
-                  links: [ {
+              links = isoSection
+                ? [ {
                       "id": isoSection,
                       "type": "ISO"
                     }
                   ]
+                : [];
+
+              newDoc.push({
+                  id: normalized,
+                  section: sectionText,
+                  body: body,
+                  hyperlink: hyperlink,
+                  links: links
               });
             }
           });
@@ -348,7 +384,7 @@ mainMapping()
 
             mergeDoc(isoDocGdpr.children, isoDocMain);
     
-            console.log(JSON.stringify(allDocs, null, 4));
+            //console.log(JSON.stringify(allDocs, null, 4));
 
             const fs = require('fs');
             let data = JSON.stringify(allDocs, null, 4);  

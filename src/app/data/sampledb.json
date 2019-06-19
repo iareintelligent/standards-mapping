@@ -1114,182 +1114,6 @@
                     }
                 ],
                 "links": []
-            },
-            {
-                "id": "9",
-                "frag": "9",
-                "section": "9",
-                "children": [
-                    {
-                        "id": "9.https",
-                        "frag": "https",
-                        "section": "9.https",
-                        "children": [
-                            {
-                                "id": "9.https.www",
-                                "frag": "www",
-                                "section": "9.https.www",
-                                "children": [
-                                    {
-                                        "id": "9.https.www.legislation",
-                                        "frag": "legislation",
-                                        "section": "9.https.www.legislation",
-                                        "children": [
-                                            {
-                                                "id": "9.https.www.legislation.gov",
-                                                "frag": "gov",
-                                                "section": "9.https.www.legislation.gov",
-                                                "children": [
-                                                    {
-                                                        "id": "9.https.www.legislation.gov.au",
-                                                        "frag": "au",
-                                                        "section": "9.https.www.legislation.gov.au",
-                                                        "children": [
-                                                            {
-                                                                "id": "9.https.www.legislation.gov.au.Details",
-                                                                "frag": "Details",
-                                                                "section": "9.https.www.legislation.gov.au.Details",
-                                                                "children": [
-                                                                    {
-                                                                        "id": "9.https.www.legislation.gov.au.Details.C2018C00034",
-                                                                        "frag": "C2018C00034",
-                                                                        "section": "9.https.www.legislation.gov.au.Details.C2018C00034",
-                                                                        "children": [
-                                                                            {
-                                                                                "id": "9.https.www.legislation.gov.au.Details.C2018C00034.Html",
-                                                                                "frag": "Html",
-                                                                                "section": "9.https.www.legislation.gov.au.Details.C2018C00034.Html",
-                                                                                "children": [
-                                                                                    {
-                                                                                        "id": "9.https.www.legislation.gov.au.Details.C2018C00034.Html.Text",
-                                                                                        "frag": "Text",
-                                                                                        "section": "9.https.www.legislation.gov.au.Details.C2018C00034.Html.Text",
-                                                                                        "children": [
-                                                                                            {
-                                                                                                "id": "9.https.www.legislation.gov.au.Details.C2018C00034.Html.Text._Toc506801621",
-                                                                                                "frag": "_Toc506801621",
-                                                                                                "section": "9.https.www.legislation.gov.au.Details.C2018C00034.Html.Text._Toc506801621",
-                                                                                                "children": [],
-                                                                                                "links": [],
-                                                                                                "body": "Adoption, use or disclosure of government related identifiers: A private entity must not adopt or use a government related identifier of an individual as its..."
-                                                                                            }
-                                                                                        ],
-                                                                                        "links": []
-                                                                                    }
-                                                                                ],
-                                                                                "links": []
-                                                                            }
-                                                                        ],
-                                                                        "links": []
-                                                                    }
-                                                                ],
-                                                                "links": []
-                                                            }
-                                                        ],
-                                                        "links": []
-                                                    }
-                                                ],
-                                                "links": []
-                                            }
-                                        ],
-                                        "links": []
-                                    }
-                                ],
-                                "links": []
-                            }
-                        ],
-                        "links": []
-                    }
-                ],
-                "links": []
-            },
-            {
-                "id": "10",
-                "frag": "10",
-                "section": "10",
-                "children": [],
-                "links": [],
-                "body": "Must, on request, give access to personal information in an alternative format (if reasonable) to individuals with a sensory disability where they have a right..."
-            },
-            {
-                "id": "13",
-                "frag": "13",
-                "section": "13",
-                "children": [],
-                "links": [],
-                "body": "When carrying out public health sutides and research using personal data such must be processed exclusively within that entity, kept in a secure environment, anonymised..."
-            },
-            {
-                "id": "16",
-                "frag": "16",
-                "section": "16",
-                "children": [],
-                "links": [],
-                "body": "Must be registered with the Registry of Data Controllers before processing data. The Registry is a publicly accessible register under the supervision of Data Protection..."
-            },
-            {
-                "id": "21",
-                "frag": "21",
-                "section": "21",
-                "children": [],
-                "links": [],
-                "body": "Data concerning the exercise of a data subject's rights must not be used in a manner detrimental to that data subject"
-            },
-            {
-                "id": "24",
-                "frag": "24",
-                "section": "24",
-                "children": [
-                    {
-                        "id": "24.2",
-                        "frag": "2",
-                        "section": "24.2",
-                        "children": [],
-                        "links": [],
-                        "body": "Must not process the resident registration number of a data subject"
-                    }
-                ],
-                "links": []
-            },
-            {
-                "id": "25",
-                "frag": "25",
-                "section": "25",
-                "children": [],
-                "links": [],
-                "body": "With only limited law enforcement/safety exceptions, no one must install and operate visual data processing devices so as to 'look into' usually private places (e.g...."
-            },
-            {
-                "id": "30",
-                "frag": "30",
-                "section": "30",
-                "children": [],
-                "links": [],
-                "body": "Any procedure whereby personal data collected for one or more purposes for 10 or more data subjects is compared with personal data collected for any..."
-            },
-            {
-                "id": "1798",
-                "frag": "1798",
-                "section": "1798",
-                "children": [
-                    {
-                        "id": "1798.115",
-                        "frag": "115",
-                        "section": "1798.115",
-                        "children": [],
-                        "links": [],
-                        "body": "Third parties must not sell personal information sold to them without giving explicit notice to consumer and an opportunity to opt out"
-                    },
-                    {
-                        "id": "1798.125",
-                        "frag": "125",
-                        "section": "1798.125",
-                        "children": [],
-                        "links": [],
-                        "body": "Businesses must not discriminate against consumers who exercise any of their privacy rights"
-                    }
-                ],
-                "links": []
             }
         ],
         "type": "ISO",
@@ -1366,21 +1190,64 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must take reasonable steps to implement practices, procedures and systems to \nMust take reasonable steps to implement practices, procedures and systems to ensure compliance with the APPs (APP 1.2)[https://www.legislation.gov.au/De",
+                                "body": "Must take reasonable steps to implement practices, procedures and systems to ensure compliance with the APPs (APP 1.2)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801611"
                             },
                             {
                                 "id": "APP.1.4",
                                 "frag": "4",
                                 "section": "APP.1.4",
-                                "children": [],
+                                "children": [
+                                    {
+                                        "id": "APP.1.4.c",
+                                        "frag": "c",
+                                        "section": "APP.1.4.c",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "7.2.1",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Privacy policy must include purposes for which the entity collects, holds and uses personal information (APP 1.4(c))",
+                                        "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801611"
+                                    },
+                                    {
+                                        "id": "APP.1.4.d",
+                                        "frag": "d",
+                                        "section": "APP.1.4.d",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "7.3.9",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "The privacy policy must set out how an individual may access their personal information and seek the correction of such\r\n (APP 1.4(d))",
+                                        "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801611"
+                                    },
+                                    {
+                                        "id": "APP.1.4.e",
+                                        "frag": "e",
+                                        "section": "APP.1.4.e",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "7.3.5",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "The privacy policy must include how an individual may complain about a breach of the APPs\r\n(APP 1.4(e))",
+                                        "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801611"
+                                    }
+                                ],
                                 "links": [
                                     {
                                         "id": "6.3",
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "A privacy policy must contain the kinds of personal information collected an",
+                                "body": "A privacy policy must contain the kinds of personal information collected and held, how and for what purposes it is collected, held, used and disclosed...",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801611"
                             }
                         ],
@@ -1397,7 +1264,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Where practicable individuals must have the option of not identifying themse",
+                        "body": "Where practicable individuals must have the option of not identifying themselves or using a pseudonym (APP 2)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801612"
                     },
                     {
@@ -1424,7 +1291,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must not collect personal information unless the information is reasonably n \nMust not collect personal information unless it is reasonably necessary for ",
+                                "body": "Must not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless it is reasonably necessary for the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities    ...",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801614"
                             },
                             {
@@ -1450,7 +1317,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must not collect sensitive information unless consent is given and unless it \nMust not collect sensitive information unless consent is given\r\n (APP 3.3)[h",
+                                "body": "Must not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities... \nMust not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP... \nMust not collect sensitive information unless consent is given\r\n (APP 3.3)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801614"
                             }
                         ],
@@ -1471,14 +1338,63 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must determine if the  unsolicited personal information could have been soli",
+                        "body": "Must determine if the  unsolicited personal information could have been solicited and, if not, delete or de-identify it\r\n(APP 4) \nMust determine if the  unsolicited personal information could have been solicited and, if not, delete or de-identify it\r\n (APP 4)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801615"
                     },
                     {
                         "id": "APP.5",
                         "frag": "5",
                         "section": "APP.5",
-                        "children": [],
+                        "children": [
+                            {
+                                "id": "APP.5.2",
+                                "frag": "2",
+                                "section": "APP.5.2",
+                                "children": [
+                                    {
+                                        "id": "APP.5.2.f",
+                                        "frag": "f",
+                                        "section": "APP.5.2.f",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "7.3.3",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.5.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "8.5.6",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information (APP... \nMust notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information\r\n(APP 5.2(f))\r\n\r\nThis...",
+                                        "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801616"
+                                    },
+                                    {
+                                        "id": "APP.5.2.j",
+                                        "frag": "j",
+                                        "section": "APP.5.2.j",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "7.5.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "8.5.2",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Must take reasonable steps to notify if personal information is to be disclosed to overseas recipients and the countries in which such recipients are likely...",
+                                        "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801616"
+                                    }
+                                ],
+                                "links": []
+                            }
+                        ],
                         "links": [
                             {
                                 "id": "7.2.1",
@@ -1493,7 +1409,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must notify certain matters on the collection of personal information\r\n(APP  \nMust notify certain matters on the collection of personal information       ",
+                        "body": "Must notify certain matters on the collection of personal information\r\n(APP 5) \nMust notify certain matters on the collection of personal information       (APP 5) \r\n\r\nThis notification must be provided to the...",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801616"
                     },
                     {
@@ -1540,7 +1456,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Personal information collected for a particular purpose must not be used or  \nPersonal information  collected for a particular purpose must not be used or",
+                                "body": "Personal information collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1)\r\n\r\nIf testing is not... \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1) \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained\r\n(APP 6.1)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801618"
                             },
                             {
@@ -1554,7 +1470,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "If personal information is used or disclosed in accordance with APP 6.2(e) a",
+                                "body": "If personal information is used or disclosed in accordance with APP 6.2(e) a written record of the use or disclosure must be kept (APP 6.5)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801618"
                             }
                         ],
@@ -1564,7 +1480,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must only use or disclose personal information as permitted under the APPs (",
+                        "body": "Must only use or disclose personal information as permitted under the APPs (e.g. as notified to individual at time of collection)    ...",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801618"
                     },
                     {
@@ -1578,7 +1494,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Unless an exception (e.g. consent) applies, must not use or disclose persona",
+                        "body": "Unless an exception (e.g. consent) applies, must not use or disclose personal information for direct marketing (APP 7)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801619"
                     },
                     {
@@ -1601,11 +1517,20 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Before disclosing personal information to an overseas recipient, must take r",
+                                "body": "Before disclosing personal information to an overseas recipient, must take reasonable steps to ensure the overseas recipient does not breach the APPs (APP 8.1)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801620"
                             }
                         ],
                         "links": []
+                    },
+                    {
+                        "id": "APP.9",
+                        "frag": "9",
+                        "section": "APP.9",
+                        "children": [],
+                        "links": [],
+                        "body": "Adoption, use or disclosure of government related identifiers (APP 9) - Adoption, use or disclosure of government related identifiers: A private entity must not adopt...",
+                        "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801621"
                     },
                     {
                         "id": "APP.10",
@@ -1623,7 +1548,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must take reasonable steps to ensure personal information used or disclosed ",
+                                "body": "Must take reasonable steps to ensure personal information used or disclosed is up-to-date, complete and relevant (APP 10.2)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801623"
                             }
                         ],
@@ -1637,7 +1562,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take steps to ensure personal information held is accurate, up-to-date  \nMust take steps to ensure personal information held is accurate, up-to-date and accurate (APP 10)[https://www.legislation.gov.au/Details/C2018C00034/Htm",
+                        "body": "Must take steps to ensure personal information held is accurate, up-to-date and complete (APP 10) \nMust take steps to ensure personal information held is accurate, up-to-date and accurate (APP 10)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801623"
                     },
                     {
@@ -1748,7 +1673,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must take reasonable steps to protect personal information held from misuse, \nMust take reasonable steps to protect personal information held from misuse, interference and loss, unauthorised access, modification or disclosure (APP \nMust take reasonable steps to protect personal information held from misuse, interference and loss, unauthorised access, modification or disclosure (APP 11.1)[https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc5068",
+                                "body": "Must take reasonable steps to protect personal information held from misuse, interference and loss, unauthorised access, modification or disclosure (APP 11.1)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624"
                             },
                             {
@@ -1786,7 +1711,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must take reasonable steps to destroy or de-identify personal information on \nMust take reasonable steps to destroy or ensure personal information is de-i",
+                                "body": "Must take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or... \nMust take reasonable steps to destroy or ensure personal information is de-identified if the information is no longer needed for any purpose for which the...",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624"
                             }
                         ],
@@ -1812,7 +1737,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "On request, an individual must be given access to their personal information",
+                                "body": "On request, an individual must be given access to their personal information\r\n (APP 12.1) \nOn request, an individual must be given access to their personal information\r\n(APP 12.1)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801626"
                             }
                         ],
@@ -1822,7 +1747,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must, on request, give access to the individual's personal information\r\n(APP",
+                        "body": "Must, on request, give access to the individual's personal information\r\n(APP 12)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801626"
                     },
                     {
@@ -1841,7 +1766,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must take reasonable steps to correct personal information of an individual ",
+                                "body": "Must take reasonable steps to correct personal information of an individual if it is out-of-date, incomplete, irrelevant or misleading or if the individual requests it...",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801627"
                             },
                             {
@@ -1855,7 +1780,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Where personal information is disclosed and that information is subsequently",
+                                "body": "Where personal information is disclosed and that information is subsequently corrected, if requested, reasonable steps must be taken to notify the recipient of the correction\r\n(APP...",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801627"
                             }
                         ],
@@ -1865,7 +1790,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take steps to correct personal information and, if requested, notify th",
+                        "body": "Must take steps to correct personal information and, if requested, notify third parties of the correction  (APP 13)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801627"
                     }
                 ],
@@ -1899,7 +1824,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must not do an act, or engage in a practice, that breaches an APP (S.15)[htt \nMust not do an act, or engage in a practice, that breaches an APP (S.15)    ",
+                        "body": "Must not do an act, or engage in a practice, that breaches an APP (S.15) \nMust not do an act, or engage in a practice, that breaches an APP (S.15)     \r\n\r\nNo processing of personal information contrary...",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801298"
                     },
                     {
@@ -1913,7 +1838,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must carry out expeditious assessment of suspected eligible data breach (S.2",
+                        "body": "Must carry out expeditious assessment of suspected eligible data breach (S.26WH)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624"
                     },
                     {
@@ -1927,7 +1852,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must prepare a statement about the eligible data breach and notify Privacy C",
+                        "body": "Must prepare a statement about the eligible data breach and notify Privacy Commissioner (S.26WK)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801442"
                     },
                     {
@@ -1941,124 +1866,8 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must notify eligible data breach to all affected individuals (S.26WL)[https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801442][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801443][https:",
+                        "body": "Must notify eligible data breach to all affected individuals (S.26WL)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801442][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801443][https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624"
-                    }
-                ],
-                "links": []
-            },
-            {
-                "id": "c",
-                "frag": "c",
-                "section": "c",
-                "children": [],
-                "links": [
-                    {
-                        "id": "7.2.1",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "Privacy policy must include purposes for which the entity collects, holds an",
-                "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801611"
-            },
-            {
-                "id": "d",
-                "frag": "d",
-                "section": "d",
-                "children": [],
-                "links": [
-                    {
-                        "id": "7.3.9",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "The privacy policy must set out how an individual may access their personal ",
-                "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801611"
-            },
-            {
-                "id": "e",
-                "frag": "e",
-                "section": "e",
-                "children": [],
-                "links": [
-                    {
-                        "id": "7.3.5",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "The privacy policy must include how an individual may complain about a breac",
-                "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801611"
-            },
-            {
-                "id": "f",
-                "frag": "f",
-                "section": "f",
-                "children": [],
-                "links": [
-                    {
-                        "id": "7.3.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.5.1",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "Must notify of any other person (or types of persons) to which the personal ",
-                "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801616"
-            },
-            {
-                "id": "j",
-                "frag": "j",
-                "section": "j",
-                "children": [],
-                "links": [
-                    {
-                        "id": "7.5.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.5.2",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "Must take reasonable steps to notify if personal information is to be disclo",
-                "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801616"
-            },
-            {
-                "id": "or",
-                "frag": "or",
-                "section": "or",
-                "children": [
-                    {
-                        "id": "or.types",
-                        "frag": "types",
-                        "section": "or.types",
-                        "children": [
-                            {
-                                "id": "or.types.of",
-                                "frag": "of",
-                                "section": "or.types.of",
-                                "children": [
-                                    {
-                                        "id": "or.types.of.persons",
-                                        "frag": "persons",
-                                        "section": "or.types.of.persons",
-                                        "children": [],
-                                        "links": [
-                                            {
-                                                "id": "8.5.6",
-                                                "type": "ISO"
-                                            }
-                                        ],
-                                        "body": "Must notify of any other person (or types of persons) to which the personal ",
-                                        "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801616"
-                                    }
-                                ],
-                                "links": []
-                            }
-                        ],
-                        "links": []
                     }
                 ],
                 "links": []
@@ -2088,7 +1897,7 @@
                         "type": "ISO"
                     }
                 ],
-                "body": "Every organisation must comply with the obligations (i.e. princip",
+                "body": "Every organisation must comply with the obligations (i.e. principles) in Schedule 1 (S.5(1))",
                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
             },
             {
@@ -2124,7 +1933,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Responsible for personal information that has been transferred to",
+                                "body": "Responsible for personal information that has been transferred to third parties for processing (4.1.3)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2146,7 +1955,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must implement policies and practices to give effect to the princ \nMust implement policies and practices to give effect to the principles (4.1.4)[http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-",
+                                "body": "Must implement policies and practices to give effect to the principles (4.1.4)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             }
                         ],
@@ -2184,7 +1993,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Responsible for personal information under its control and must d \nResponsible for personal information under its control and must designate an individual(s) who are accountable for compliance (4.1",
+                        "body": "Responsible for personal information under its control and must designate an individual(s) who are accountable for compliance (4.1)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2203,7 +2012,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Only personal information necessary for the identified purposes i",
+                                "body": "Only personal information necessary for the identified purposes is to be collected (4.2.2)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2221,7 +2030,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Unless required by law, any use of personal information for a new",
+                                "body": "Unless required by law, any use of personal information for a new purpose (i.e. not previously identified) must be consented to by the individual (4.2.4)\r\n\r\nIf...",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             }
                         ],
@@ -2231,7 +2040,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The purposes for which personal information is collected must be ",
+                        "body": "The purposes for which personal information is collected must be identified at or before the time of collection (4.2)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2250,7 +2059,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must make reasonable efforts to ensure individuals are notified o",
+                                "body": "Must make reasonable efforts to ensure individuals are notified of purposes for which their personal information will be used (4.3.2)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2264,7 +2073,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "The form of consent sought may vary depending on the type of info",
+                                "body": "The form of consent sought may vary depending on the type of information and circumstances (4.3.6)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2282,7 +2091,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Individuals can give consent in a manner of ways (4.3.7)[http://l",
+                                "body": "Individuals can give consent in a manner of ways (4.3.7)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2296,7 +2105,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Individuals may withdraw consent at any time (4.3.8)[http://laws-",
+                                "body": "Individuals may withdraw consent at any time (4.3.8)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             }
                         ],
@@ -2321,7 +2130,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Collection of personal information is limited to that which is ne",
+                        "body": "Collection of personal information is limited to that which is necessary for the identified purposes (4.4)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2344,7 +2153,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must develop guidelines and implement procedures with respect to ",
+                                "body": "Must develop guidelines and implement procedures with respect to retention of personal information (4.5.2)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2378,7 +2187,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Personal information no longer required for the identified purpos \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nThe n",
+                                "body": "Personal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3) \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nThe nature of safeguards will vary depending on the... \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nSubject to any legal requirement to keep the information...",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             }
                         ],
@@ -2396,7 +2205,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Personal information must not be used or disclosed for other than",
+                        "body": "Personal information must not be used or disclosed for other than the purposes for which it was collected, except with the consent of the individual...",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2414,7 +2223,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Personal information must be accurate, complete and up-to-date (4",
+                        "body": "Personal information must be accurate, complete and up-to-date (4.6)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2441,7 +2250,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "The nature of safeguards will vary depending on the sensitivity o",
+                                "body": "The nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2) \nThe nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2)\r\n\r\nSubject to...",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2459,7 +2268,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must make employees aware of the importance of confidentiality of",
+                                "body": "Must make employees aware of the importance of confidentiality of personal information (4.7.4)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2473,7 +2282,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Care must be used in the disposal or destruction of personal info",
+                                "body": "Care must be used in the disposal or destruction of personal information (4.7.8)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             }
                         ],
@@ -2555,7 +2364,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Personal information must be protected by appropriate security sa",
+                        "body": "Personal information must be protected by appropriate security safeguards (4.7)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2581,7 +2390,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must make readily available information about its policies and pr \nPersonal information must be protected by appropriate security sa",
+                        "body": "Must make readily available information about its policies and practices relating to management of personal information (4.8) \nPersonal information must be protected by appropriate security safeguards (4.8)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2612,7 +2421,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must amend the personal information held once individual demonstr",
+                                "body": "Must amend the personal information held once individual demonstrates it is inaccurate or incomplete and, where appropriate, notify third parties of the amendment (4.9.5)",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             }
                         ],
@@ -2626,7 +2435,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "On request, must inform the individual of the existence, use and  \nPersonal information must be protected by appropriate security sa",
+                        "body": "On request, must inform the individual of the existence, use and disclosure of his/her personal information and give access to it (4.9) \nPersonal information must be protected by appropriate security safeguards (4.9)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2644,7 +2453,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "An individual must be able to challenge compliance with principle",
+                        "body": "An individual must be able to challenge compliance with principles (4.10)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     }
                 ],
@@ -2679,11 +2488,13 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must report to the Commissioner (S.10.1) ⑨[http://laws-lois.justi",
+                                "body": "Must report to the Commissioner (S.10.1) ⑨",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             }
                         ],
-                        "links": []
+                        "links": [],
+                        "body": "Sensory disability (S.10) - Must, on request, give access to personal information in an alternative format (if reasonable) to individuals with a sensory disability where...",
+                        "hyperlink": null
                     }
                 ],
                 "links": []
@@ -2710,7 +2521,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The data user must adopt contractual or other means to ensure data pro",
+                        "body": "The data user must adopt contractual or other means to ensure data processors take appropriate security measures (DDP 4)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     }
                 ],
@@ -2776,7 +2587,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take all practical steps to inform a number of matters including  \nPersonal data must only be collected for a lawful purpose directly rel",
+                        "body": "Must take all practical steps to inform a number of matters including the purpose of collection, the classes of persons who will have access to... \nPersonal data must only be collected for a lawful purpose directly related to a function or activity of the data user, if adequate, not excessive...",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     },
                     {
@@ -2826,7 +2637,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The data user must adopt contractual or other means to prevent data fr \nMust take all practical steps to ensure personal data is not kept long \nMust take all practical steps to ensure personal data is accurate havi \nData user must adopt contractual provisions to prevent personal data b",
+                        "body": "The data user must adopt contractual or other means to prevent data from being kept by data processors longer than necessary (DPP 2) \nMust take all practical steps to ensure personal data is not kept longer than necessary to fulfil the purpose for which it was collected (DPP... \nMust take all practical steps to ensure personal data is accurate having regard to the purposes for which it is or is to be used... \nData user must adopt contractual provisions to prevent personal data being kept longer by data processor than necessary to fulfil the processing (DPP 2)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     },
                     {
@@ -2852,7 +2663,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Personal data must not be used for a new purpose (i.e. not previously ",
+                        "body": "Personal data must not be used for a new purpose (i.e. not previously identified) unless the  consent of the data subject is obtained (DPP...",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     },
                     {
@@ -2982,7 +2793,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take all practical steps to ensure personal data is protected aga",
+                        "body": "Must take all practical steps to ensure personal data is protected against unauthorised or accidental access, processing, erasure, loss or use (DPP 4)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     },
                     {
@@ -3000,7 +2811,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take all practical steps to ensure that person can ascertain a da",
+                        "body": "Must take all practical steps to ensure that person can ascertain a data user's policies and practices in relation to personal data (DPP 5)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     },
                     {
@@ -3022,7 +2833,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "A data subject is entitled to ascertain whether personal data is held ",
+                        "body": "A data subject is entitled to ascertain whether personal data is held about them, request access to and correction of it (DPP 6)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     }
                 ],
@@ -3044,7 +2855,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "An individual may make a request to be informed whether personal data ",
+                        "body": "An individual may make a request to be informed whether personal data is held in relation to the individual and to be supplied with a...",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403261458_002#"
                     },
                     {
@@ -3058,7 +2869,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "On request by the individual, must correct personal data (S.22)[https:",
+                        "body": "On request by the individual, must correct personal data (S.22)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403261630_003#"
                     },
                     {
@@ -3076,7 +2887,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take all practicable steps to supply the third party with a copy ",
+                        "body": "Must take all practicable steps to supply the third party with a copy of the corrected data (disclosed within prior 12 months) and a notice...",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403261646_002#"
                     },
                     {
@@ -3090,7 +2901,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take all practicable steps to erase data held where the data is n",
+                        "body": "Must take all practicable steps to erase data held where the data is no longer required for the purpose for which the data was used...",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403261692_003#"
                     },
                     {
@@ -3104,7 +2915,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Matching procedures cannot be undertaken without the consent of all re",
+                        "body": "Matching procedures cannot be undertaken without the consent of all relevant data subjects or the Commissioner (S.30) \nMatching procedure not to be carried out except with consent of data subject (S.30) - Any procedure whereby personal data collected for one or more...",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403261770_003#"
                     },
                     {
@@ -3118,7 +2929,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must not use personal data for marketing without data subject's consen",
+                        "body": "Must not use personal data for marketing without data subject's consent (S.35E)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403262145_002#"
                     },
                     {
@@ -3132,7 +2943,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must cease using personal data for direct marketing when the data subj",
+                        "body": "Must cease using personal data for direct marketing when the data subject requests (S.35G)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403262160_003#"
                     },
                     {
@@ -3170,7 +2981,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "A data user must not act or engage in practice that contravenes the da",
+                        "body": "A data user must not act or engage in practice that contravenes the data protection principles (S.4)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403261193_002#"
                     }
                 ],
@@ -3209,7 +3020,7 @@
                         "type": "ISO"
                     }
                 ],
-                "body": "Except for Ss.24-25, no obligations apply  \nThe personal data protection obligations d",
+                "body": "Except for Ss.24-25, no obligations apply to a 'data intermediary' in respect of its processing of personal data on behalf of and for the purposes... \nThe personal data protection obligations do not apply to a data intermediary in respect of its processing of personal data on behalf of and for...",
                 "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr4-"
             },
             {
@@ -3271,7 +3082,7 @@
                         "type": "ISO"
                     }
                 ],
-                "body": "Organisations have the same obligations in",
+                "body": "Organisations have the same obligations in respect of personal data processed for them by a 'data intermediary' as if it was processed by them (S.4(3))",
                 "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr4-"
             },
             {
@@ -3306,7 +3117,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Organisations are  responsible for the prot",
+                        "body": "Organisations are  responsible for the protection of personal data in their possession or under their control (S.11)",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr11-"
                     },
                     {
@@ -3368,7 +3179,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must develop and implement policies, practi",
+                        "body": "Must develop and implement policies, practices and processes to meet data protection obligations and receive and respond to complaints (S.12)",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr11-"
                     },
                     {
@@ -3382,7 +3193,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Unless permitted by law, collection, use an",
+                        "body": "Unless permitted by law, collection, use and/or disclosure of personal data requires the individual's consent to that collection, use and disclosure (S.13)",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr11-"
                     },
                     {
@@ -3396,7 +3207,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "On reasonable notice an individual may with",
+                        "body": "On reasonable notice an individual may withdraw any consent given or deemed to be given (S.16)",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr16-"
                     },
                     {
@@ -3458,7 +3269,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Collection, use and/or disclosure of person",
+                        "body": "Collection, use and/or disclosure of personal data must be reasonable in the circumstances and the individual must be informed of the purposes for collection, use...",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr18-"
                     },
                     {
@@ -3496,7 +3307,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must inform the individual of the purposes ",
+                        "body": "Must inform the individual of the purposes for collection, use and/or disclosure of personal data (S.20) \nMust inform the individual of the purposes for collection, use and/or disclosure of personal data (S.20)\r\n\r\nNotification must be done on or before collection.",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr20-"
                     },
                     {
@@ -3518,7 +3329,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "On request must, as soon as reasonably poss",
+                        "body": "On request must, as soon as reasonably possible provide the personal data about that individual in the organisation's possession or under its control (S.21)",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr21-"
                     },
                     {
@@ -3540,7 +3351,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "On request must, as soon as practical, corr",
+                        "body": "On request must, as soon as practical, correct an error or omission in the personal data (in possession or under your control) unless satisfied on...",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr21-"
                     },
                     {
@@ -3558,7 +3369,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "If personal data is likely to be used to ma",
+                        "body": "If personal data is likely to be used to make decisions affecting the individual, must make reasonable efforts to ensure that the personal data is...",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr23-"
                     },
                     {
@@ -3656,7 +3467,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must make reasonable security arrangements ",
+                        "body": "Must make reasonable security arrangements to prevent unauthorised access, collection, use, disclosure, copying, modification, disposal or similar risks for personal data held or under their...",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr24-"
                     },
                     {
@@ -3690,7 +3501,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must delete or de-identify documents contai",
+                        "body": "Must delete or de-identify documents containing personal data as soon as it is reasonable to assume that the purpose for which the personal data was...",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr25-"
                     },
                     {
@@ -3716,7 +3527,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "May only transfer personal data outside Sin",
+                        "body": "May only transfer personal data outside Singapore in accordance with the requirements of the Act (S.26)",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr26-"
                     }
                 ],
@@ -3780,7 +3591,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must comply with the Personal Information Protection Principles (A.3)[http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=",
+                        "body": "Must comply with the Personal Information Protection Principles (A.3)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J3:0"
                     },
                     {
@@ -3806,7 +3617,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Data subjects have specified rights in relation to the process of his/her personal data (A.4)[http://law.go.kr/engLsSc.do?m",
+                        "body": "Data subjects have specified rights in relation to the process of his/her personal data (A.4)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J4:0"
                     },
                     {
@@ -3840,7 +3651,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must inform the individual of specified matters including the purposes for the collection and use of the personal informatio",
+                        "body": "Must inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15) \nMust inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15)\r\n\r\nNotification must be done on or...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J15:0"
                     },
                     {
@@ -3866,7 +3677,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must collect only the minimum personal information necessary for the purposes. Where more personal information than this is ",
+                        "body": "Must collect only the minimum personal information necessary for the purposes. Where more personal information than this is collected you must expressly inform the individual...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J16:0"
                     },
                     {
@@ -3880,7 +3691,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "May only disclose personal information where the individual has consented to disclosure for the relevant purposes (A.17)[htt",
+                        "body": "May only disclose personal information where the individual has consented to disclosure for the relevant purposes (A.17)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J17:0"
                     },
                     {
@@ -3894,7 +3705,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must not use personal information or disclose it to another entity for purposes other than those consented to/otherwise",
+                        "body": "Must not use personal information or disclose it to another entity for purposes other than those consented to/otherwise permitted with  additional consent provided by...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#"
                     },
                     {
@@ -3920,7 +3731,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "A recipient of personal information cannot use it or disclose it for any other purpose, except as permitted for by law or wh \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or additi \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or where ",
+                        "body": "A recipient of personal information cannot use it or disclose it for any other purpose, except as permitted for by law or where additional consent... \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or additional consent is provided... \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or where additional consent is...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J19:0"
                     },
                     {
@@ -3958,7 +3769,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Once the retention period has expired or the purpose has been fulfilled, must destroy the personal information without delay",
+                        "body": "Once the retention period has expired or the purpose has been fulfilled, must destroy the personal information without delay (unless retention is required by law)...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J21:0"
                     },
                     {
@@ -3976,7 +3787,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "When obtaining consent, must present the request in a clear manner, including setting out each matter requiring consent sepa",
+                        "body": "When obtaining consent, must present the request in a clear manner, including setting out each matter requiring consent separately and getting consent for each of...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J22:0"
                     },
                     {
@@ -3998,8 +3809,34 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must not process sensitive information except where individual consents to processing or where the law permits it (A.23)[htt",
+                        "body": "Must not process sensitive information except where individual consents to processing or where the law permits it (A.23)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J23:0"
+                    },
+                    {
+                        "id": "A.24",
+                        "frag": "24",
+                        "section": "A.24",
+                        "children": [
+                            {
+                                "id": "A.24.2",
+                                "frag": "2",
+                                "section": "A.24.2",
+                                "children": [],
+                                "links": [],
+                                "body": "Limitations to Processing Resdent Registration Numbers                   ...",
+                                "hyperlink": null
+                            }
+                        ],
+                        "links": []
+                    },
+                    {
+                        "id": "A.25",
+                        "frag": "25",
+                        "section": "A.25",
+                        "children": [],
+                        "links": [],
+                        "body": "Limitation to Installation and Operation of Visual Data Processing Devices (A.25) - With only limited law enforcement/safety exceptions, no one must install and operate visual...",
+                        "hyperlink": null
                     },
                     {
                         "id": "A.26",
@@ -4060,7 +3897,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "On outsourcing the processing of personal information to a third party, must satisfy certain formalities in writing and prev",
+                        "body": "On outsourcing the processing of personal information to a third party, must satisfy certain formalities in writing and prevent processing for purposes other than the...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J26:0"
                     },
                     {
@@ -4078,7 +3915,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must educate and supervise those employees who carry out the processing of personal information (A.28)[http://law.go.kr/engL",
+                        "body": "Must educate and supervise those employees who carry out the processing of personal information (A.28)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J28:0"
                     },
                     {
@@ -4176,7 +4013,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take such technical, managerial, and physical measures (e.g. management plans and access logs) to ensure the protection",
+                        "body": "Must take such technical, managerial, and physical measures (e.g. management plans and access logs) to ensure the protection of personal information (A.29)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J29:0"
                     },
                     {
@@ -4218,7 +4055,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must have a privacy policy that sets out specified matters including the purposes for which personal information is processe",
+                        "body": "Must have a privacy policy that sets out specified matters including the purposes for which personal information is processed, any disclosures of personal information, rights...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J30:0"
                     },
                     {
@@ -4232,7 +4069,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Where a potential breach of personal information is highly probably should make efforts to carry out a privacy impact assess",
+                        "body": "Where a potential breach of personal information is highly probably should make efforts to carry out a privacy impact assessment (A.33)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J33:0"
                     },
                     {
@@ -4254,7 +4091,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must notify individuals affected by a data breach of the personal information divulged, when and how it was divulged, how to",
+                        "body": "Must notify individuals affected by a data breach of the personal information divulged, when and how it was divulged, how to minimise the risk of...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J34:0"
                     },
                     {
@@ -4268,7 +4105,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The data subject may demand access to his/her own personal information, which is processed by the personal information proce",
+                        "body": "The data subject may demand access to his/her own personal information, which is processed by the personal information processor (A.35)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J35:0"
                     },
                     {
@@ -4294,7 +4131,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must publish directions for how to exercise rights (A.38)[http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%",
+                        "body": "Must publish directions for how to exercise rights (A.38)",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J38:0"
                     }
                 ],
@@ -4601,7 +4438,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must notify certain matters on the collection of personal information (A.10) \nMust inform data subjects of a number of matters including purposes of proce \nMust notify certain matters on the collection of personal information (A.10)\r\n\r\nThis notification must be provided at or prior to the time of collecting the personal...",
+                        "body": "Must notify certain matters on the collection of personal information (A.10) \nMust inform data subjects of a number of matters including purposes of processing (A.10) \nMust notify certain matters on the collection of personal information (A.10)\r\n\r\nThis notification must be provided at or prior to the time of collecting the personal...",
                         "hyperlink": null
                     },
                     {
@@ -4870,6 +4707,15 @@
                         ],
                         "body": "The data subject may lodge his/her demands under and object regarding implementation of the law with the controller who must act on them in the... \nThe data subject may lodge his/her demands under and objects regarding implementation of the law with the controller who must act on them in the...",
                         "hyperlink": null
+                    },
+                    {
+                        "id": "A.16",
+                        "frag": "16",
+                        "section": "A.16",
+                        "children": [],
+                        "links": [],
+                        "body": "Registry of Controllers (A.16) - Must be registered with the Registry of Data Controllers before processing data. The Registry is a publicly accessible register under...",
+                        "hyperlink": null
                     }
                 ],
                 "links": []
@@ -4881,381 +4727,640 @@
     {
         "children": [
             {
-                "id": "California",
-                "frag": "California",
-                "section": "California",
-                "children": [],
-                "links": [
+                "id": "S",
+                "frag": "S",
+                "section": "S",
+                "children": [
                     {
-                        "type": "ISO"
+                        "id": "S.1798",
+                        "frag": "1798",
+                        "section": "S.1798",
+                        "children": [
+                            {
+                                "id": "S.1798.100",
+                                "frag": "100",
+                                "section": "S.1798.100",
+                                "children": [
+                                    {
+                                        "id": "S.1798.100.a",
+                                        "frag": "a",
+                                        "section": "S.1798.100.a",
+                                        "children": [
+                                            {
+                                                "id": "S.1798.100.a.and",
+                                                "frag": "and",
+                                                "section": "S.1798.100.a.and",
+                                                "children": [
+                                                    {
+                                                        "id": "S.1798.100.a.and.b",
+                                                        "frag": "b",
+                                                        "section": "S.1798.100.a.and.b",
+                                                        "children": [],
+                                                        "links": [
+                                                            {
+                                                                "id": "7.2.1",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "7.3.2",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "7.3.3",
+                                                                "type": "ISO"
+                                                            }
+                                                        ],
+                                                        "body": "Must inform at or prior to collection as to the categories of personal information collected and purposes for which such will be used (S.1798.100(a) and...",
+                                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                                    }
+                                                ],
+                                                "links": []
+                                            }
+                                        ],
+                                        "links": []
+                                    },
+                                    {
+                                        "id": "S.1798.100.b",
+                                        "frag": "b",
+                                        "section": "S.1798.100.b",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "6.5.2.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.9.1.4",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.2.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.2",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Must not use personal information for additional purposes beyond those notified (S.1798.100(b)) \nMust not use personal information for additional purposes beyond those notified (S.1798.100(b))\r\n\r\nIf testing is not a notified purpose, consent must be obtained \nMust not collect additional categories of personal information beyond those notified (S.1798.100(b))",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    },
+                                    {
+                                        "id": "S.1798.100.d",
+                                        "frag": "d",
+                                        "section": "S.1798.100.d",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "7.3.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.6",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.8",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Must, on request, give access to the consumer’s personal information (S.1798.100(d))",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "id": "S.1798.105",
+                                "frag": "105",
+                                "section": "S.1798.105",
+                                "children": [
+                                    {
+                                        "id": "S.1798.105.c",
+                                        "frag": "c",
+                                        "section": "S.1798.105.c",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "7.3.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.7",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.6",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.5",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Must delete personal information on request of consumer and direct service providers (to whom such was provided) to delete such personal information (S.1798.105(c))",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "id": "S.1798.110",
+                                "frag": "110",
+                                "section": "S.1798.110",
+                                "children": [
+                                    {
+                                        "id": "S.1798.110.b",
+                                        "frag": "b",
+                                        "section": "S.1798.110.b",
+                                        "children": [
+                                            {
+                                                "id": "S.1798.110.b.and",
+                                                "frag": "and",
+                                                "section": "S.1798.110.b.and",
+                                                "children": [
+                                                    {
+                                                        "id": "S.1798.110.b.and.c",
+                                                        "frag": "c",
+                                                        "section": "S.1798.110.b.and.c",
+                                                        "children": [],
+                                                        "links": [
+                                                            {
+                                                                "id": "7.5.1",
+                                                                "type": "ISO"
+                                                            }
+                                                        ],
+                                                        "body": "Must disclose details of the categories of third parties with whom the personal information is shared (S.1798.110(b) and (c))",
+                                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                                    }
+                                                ],
+                                                "links": []
+                                            }
+                                        ],
+                                        "links": []
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "id": "S.1798.115",
+                                "frag": "115",
+                                "section": "S.1798.115",
+                                "children": [
+                                    {
+                                        "id": "S.1798.115.a",
+                                        "frag": "a",
+                                        "section": "S.1798.115.a",
+                                        "children": [
+                                            {
+                                                "id": "S.1798.115.a.and",
+                                                "frag": "and",
+                                                "section": "S.1798.115.a.and",
+                                                "children": [
+                                                    {
+                                                        "id": "S.1798.115.a.and.b",
+                                                        "frag": "b",
+                                                        "section": "S.1798.115.a.and.b",
+                                                        "children": [],
+                                                        "links": [
+                                                            {
+                                                                "id": "7.2.1",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "7.5.1",
+                                                                "type": "ISO"
+                                                            }
+                                                        ],
+                                                        "body": "Must disclose categories of personal information the business sells and the categories of third parties to whom sold (S.1798.115(a) and (b)) \nMust disclose details of the categories of third parties to whom the personal information is sold (S.1798.115(a) and (b))",
+                                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                                    }
+                                                ],
+                                                "links": []
+                                            }
+                                        ],
+                                        "links": []
+                                    }
+                                ],
+                                "links": [],
+                                "body": "Third party sale of personal information (S.1798.115) - Third parties must not sell personal information sold to them without giving explicit notice to consumer and...",
+                                "hyperlink": null
+                            },
+                            {
+                                "id": "S.1798.120",
+                                "frag": "120",
+                                "section": "S.1798.120",
+                                "children": [
+                                    {
+                                        "id": "S.1798.120.c",
+                                        "frag": "c",
+                                        "section": "S.1798.120.c",
+                                        "children": [
+                                            {
+                                                "id": "S.1798.120.c.and",
+                                                "frag": "and",
+                                                "section": "S.1798.120.c.and",
+                                                "children": [
+                                                    {
+                                                        "id": "S.1798.120.c.and.d",
+                                                        "frag": "d",
+                                                        "section": "S.1798.120.c.and.d",
+                                                        "children": [],
+                                                        "links": [
+                                                            {
+                                                                "id": "7.2.3",
+                                                                "type": "ISO"
+                                                            }
+                                                        ],
+                                                        "body": "Must not sell the personal information of consumers less than 16 years of age unless appropriate consent/authorisation is obtained (S.1798.120(c) and (d))",
+                                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                                    }
+                                                ],
+                                                "links": []
+                                            }
+                                        ],
+                                        "links": [
+                                            {
+                                                "id": "7.2.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.1",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Must not sell (a) a consumer’s personal information after a request not to sell and (b) a minor’s personal information unless an appropriate consent is...",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "id": "S.1798.125",
+                                "frag": "125",
+                                "section": "S.1798.125",
+                                "children": [],
+                                "links": [],
+                                "body": "Non-discrimination (S.1798.125) - Businesses must not discriminate against consumers who exercise any of their privacy rights",
+                                "hyperlink": null
+                            },
+                            {
+                                "id": "S.1798.130",
+                                "frag": "130",
+                                "section": "S.1798.130",
+                                "children": [
+                                    {
+                                        "id": "S.1798.130.a",
+                                        "frag": "a",
+                                        "section": "S.1798.130.a",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "6.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.3",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.4",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.5",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.9",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Must document the consumer’s rights and how to exercise them/make a request (S.1798.130(a))",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "id": "S.1798.135",
+                                "frag": "135",
+                                "section": "S.1798.135",
+                                "children": [
+                                    {
+                                        "id": "S.1798.135.a",
+                                        "frag": "a",
+                                        "section": "S.1798.135.a",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "6.4",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.10.2.4",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.3.1",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Ensure all those responsible for handling consumer privacy inquiries and compliance are informed of all requirements under Ss.1798.120 and 1798.135 (S.1798.135(a)) \nMust provide a clear and conspicuous link on the business’ Internet homepage titled “Do Not Sell My Personal Information” to allow consumers to opt-out of...",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "id": "S.1798.140",
+                                "frag": "140",
+                                "section": "S.1798.140",
+                                "children": [
+                                    {
+                                        "id": "S.1798.140.d",
+                                        "frag": "d",
+                                        "section": "S.1798.140.d",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "7.2.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.4",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.7",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.3",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Use of personal information must be reasonably necessary and proportionate to achieve the purpose for which it was collected (S.1798.140(d))",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    },
+                                    {
+                                        "id": "S.1798.140.v",
+                                        "frag": "v",
+                                        "section": "S.1798.140.v",
+                                        "children": [
+                                            {
+                                                "id": "S.1798.140.v.and",
+                                                "frag": "and",
+                                                "section": "S.1798.140.v.and",
+                                                "children": [
+                                                    {
+                                                        "id": "S.1798.140.v.and.w",
+                                                        "frag": "w",
+                                                        "section": "S.1798.140.v.and.w",
+                                                        "children": [],
+                                                        "links": [
+                                                            {
+                                                                "id": "6.12",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "7.2.6",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "8.2.1",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "8.2.2",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "8.2.3",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "8.4.2",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "8.5.1",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "8.5.5",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "8.5.6",
+                                                                "type": "ISO"
+                                                            },
+                                                            {
+                                                                "id": "8.5.7",
+                                                                "type": "ISO"
+                                                            }
+                                                        ],
+                                                        "body": "Must only disclose personal information to a service provider pursuant to a written contract that prohibits processing of the personal information for any purpose other...",
+                                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                                    }
+                                                ],
+                                                "links": []
+                                            }
+                                        ],
+                                        "links": []
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "id": "S.1798.145",
+                                "frag": "145",
+                                "section": "S.1798.145",
+                                "children": [
+                                    {
+                                        "id": "S.1798.145.h",
+                                        "frag": "h",
+                                        "section": "S.1798.145.h",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "5.2.1.a",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.2.6",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "8.2.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "8.4.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "8.5.5",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "A business is not liable for the personal information disclosed to a service provider who uses it in violation of the CCPA, provided the business... \nBusinesses disclosing personal information to service providers, with knowledge or a reason to believe the service provider intends to violate the restrictions imposed by the...",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    }
+                                ],
+                                "links": []
+                            },
+                            {
+                                "id": "S.1798.150",
+                                "frag": "150",
+                                "section": "S.1798.150",
+                                "children": [
+                                    {
+                                        "id": "S.1798.150.a",
+                                        "frag": "a",
+                                        "section": "S.1798.150.a",
+                                        "children": [],
+                                        "links": [
+                                            {
+                                                "id": "5.2.3.a",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "5.2.4",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "5.4.1.3",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.5.3.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.5.3.3",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.6.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.6.2.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.6.2.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.6.2.3",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.6.4.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.7",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.8.2.7",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.8.2.9",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.9.3.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.9.4.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.9.4.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.10.2.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.11.1.2",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.11.2.5",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.13.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.15.2.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "6.15.2.3",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.6",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.8",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.4.9",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "7.2.7",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "8.4.1",
+                                                "type": "ISO"
+                                            },
+                                            {
+                                                "id": "8.4.3",
+                                                "type": "ISO"
+                                            }
+                                        ],
+                                        "body": "Implied by S.1798.150 – civil action possible in respect of unauthorised access to personal information as a result of violation of the duty to implement...",
+                                        "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                                    }
+                                ],
+                                "links": []
+                            }
+                        ],
+                        "links": []
                     }
                 ],
-                "body": "USA\r\n(California) ⑬",
-                "hyperlink": null
-            },
-            {
-                "id": "a",
-                "frag": "a",
-                "section": "a",
-                "children": [],
-                "links": [
-                    {
-                        "id": "5.2.3.a",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "5.2.4",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "5.4.1.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.4",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.5.3.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.5.3.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.6.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.6.2.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.6.2.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.6.2.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.6.4.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.7",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.8.2.7",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.8.2.9",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.9.3.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.9.4.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.9.4.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.10.2.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.10.2.4",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.11.1.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.11.2.5",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.13.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.15.2.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.15.2.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.4",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.5",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.9",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.6",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.8",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.9",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.2.7",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.4.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.4.3",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "Implied by S.1798.150 – civil action possible in respect of unauthorised access to pers \nMust document the consumer’s rights and how to exercise them/make a request (S.1798.130 \nEnsure all those responsible for handling consumer privacy inquiries and compliance are \nMust provide a clear and conspicuous link on the business’ Internet homepage titled “Do",
-                "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
-            },
-            {
-                "id": "b",
-                "frag": "b",
-                "section": "b",
-                "children": [],
-                "links": [
-                    {
-                        "id": "6.5.2.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "6.9.1.4",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.2.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.2.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.5.1",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "Must not use personal information for additional purposes beyond those notified (S.1798 \nMust inform at or prior to collection as to the categories of personal information coll \nMust disclose categories of personal information the business sells and the categories  \nMust not collect additional categories of personal information beyond those notified (S \nMust disclose details of the categories of third parties to whom the personal informati",
-                "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
-            },
-            {
-                "id": "c",
-                "frag": "c",
-                "section": "c",
-                "children": [],
-                "links": [
-                    {
-                        "id": "7.2.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.7",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.6",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.5",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.5.1",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "Must not sell (a) a consumer’s personal information after a request not to sell and (b) \nMust delete personal information on request of consumer and direct service providers (t \nMust disclose details of the categories of third parties with whom the personal informa",
-                "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
-            },
-            {
-                "id": "d",
-                "frag": "d",
-                "section": "d",
-                "children": [],
-                "links": [
-                    {
-                        "id": "7.2.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.2.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.6",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.3.8",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.4",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.7",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.4.3",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "Use of personal information must be reasonably necessary and proportionate to achieve t \nMust not sell the personal information of consumers less than 16 years of age unless ap \nMust, on request, give access to the consumer’s personal information (S.1798.100(d))[ht",
-                "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
-            },
-            {
-                "id": "h",
-                "frag": "h",
-                "section": "h",
-                "children": [],
-                "links": [
-                    {
-                        "id": "5.2.1.a",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.2.6",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.2.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.4.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.5.5",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "A business is not liable for the personal information disclosed to a service provider w \nBusinesses disclosing personal information to service providers, with knowledge or a re",
-                "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
-            },
-            {
-                "id": "w",
-                "frag": "w",
-                "section": "w",
-                "children": [],
-                "links": [
-                    {
-                        "id": "6.12",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "7.2.6",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.2.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.2.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.2.3",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.4.2",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.5.1",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.5.5",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.5.6",
-                        "type": "ISO"
-                    },
-                    {
-                        "id": "8.5.7",
-                        "type": "ISO"
-                    }
-                ],
-                "body": "Must only disclose personal information to a service provider pursuant to a written con",
-                "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
+                "links": []
             }
         ],
         "type": "USA\r\nCalifornia ",
@@ -5441,6 +5546,15 @@
                         "hyperlink": null
                     },
                     {
+                        "id": "Art.13",
+                        "frag": "13",
+                        "section": "Art.13",
+                        "children": [],
+                        "links": [],
+                        "body": "Public health studies and research (Art 13) - When carrying out public health sutides and research using personal data such must be processed exclusively within...",
+                        "hyperlink": null
+                    },
+                    {
                         "id": "Art.14",
                         "frag": "14",
                         "section": "Art.14",
@@ -5540,6 +5654,15 @@
                             }
                         ],
                         "body": "Data subject has the right to request review of decisions taken solely by automated processing of personal data (Art 20)",
+                        "hyperlink": null
+                    },
+                    {
+                        "id": "Art.21",
+                        "frag": "21",
+                        "section": "Art.21",
+                        "children": [],
+                        "links": [],
+                        "body": "Exercise of rights must not be detrimental to subject (Art 21) - Data concerning the exercise of a data subject's rights must not be used...",
                         "hyperlink": null
                     },
                     {
