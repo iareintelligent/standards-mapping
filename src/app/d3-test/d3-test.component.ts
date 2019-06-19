@@ -439,7 +439,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
             // Must be delayed or you'll get an infinite loop of change events.
             setTimeout(() => {
               // by default, collapse everything
-              this.forAllTreeNodes(tab.column.treeModel, n => n.collapse());
+              tab.column.forAllTreeNodes(n => n.collapse());
 
               // ensure selected nodes are visible
               for (var n in tab.treeModel.selectedLeafNodeIds)
@@ -463,24 +463,6 @@ export class D3TestComponent implements OnInit, OnDestroy {
                 t.column.runFilter();
             }
         }
-    }
-
-    // Due to a bug in the tree control (forall is async but does not return the promise)
-    //   create our own synchronous forall
-    private forAllTreeNodes(treeModel: TreeModel, cb: (tn: TreeNode) => void)
-    {
-      for (var n of treeModel.roots)
-        this.forAllTreeNodesRecursive(n, cb);
-    }
-
-    private forAllTreeNodesRecursive(node: TreeNode, cb: (tn: TreeNode) => void)
-    {
-      cb(node);
-      if (node.children)
-      {
-        for (var n of node.children)
-          this.forAllTreeNodesRecursive(n, cb);
-      }
     }
 
     public columnTabTreeChanged(tab: GraphTab, event: any) {
@@ -762,5 +744,25 @@ export class D3TestComponent implements OnInit, OnDestroy {
     public treeEvent(event: any)
     {
     
+    }
+
+    public getNodeColor(tab: GraphTab, node: TreeNode)
+    {
+        // Iso never has outward mappings
+        if (tab.isIso)
+            return 'unset';
+
+        if (node.data.isUnmapped)
+        {
+            return 'red';
+        }
+        else if (node.data.isAnyChildUnmapped)
+        {
+            return 'pink';
+        }
+        else
+        {
+            return 'unset';
+        }
     }
 }

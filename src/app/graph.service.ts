@@ -146,17 +146,22 @@ export class GraphTab {
 
     public static filterByMyLinks(visibleNodes: TreeNode[], parentTree: GraphTab, node: TreeNode): boolean
     {
-        var show = false;
+        // keep unmapped stuff by default
+        var show = node.data.isUnmapped;
 
-        var links = node.data.node.links;
-        if (links)
+        if (!show)
         {
-            for (var l of links)
+            // include linked stuff
+            var links = node.data.node.links;
+            if (links)
             {
-                if (!(l.id in parentTree.state.hiddenNodeIds) || !parentTree.state.hiddenNodeIds[l.id])
+                for (var l of links)
                 {
-                    show = true;
-                    break;
+                    if (!(l.id in parentTree.state.hiddenNodeIds) || !parentTree.state.hiddenNodeIds[l.id])
+                    {
+                        show = true;
+                        break;
+                    }
                 }
             }
         }
@@ -204,6 +209,43 @@ export class GraphTab {
         }
     }
 
+    public filterMapped()
+    {
+        // collapse all
+        this.forAllTreeNodes(n => n.collapse());
+
+        var selectedNodes = { };
+        this.treeModel.selectedLeafNodeIds = selectedNodes;
+
+        var scrolledOnce = false;
+
+        var processNode = n => {
+            if (n.level > 0)
+            {
+                n.setIsSelected(n.data.isUnmapped);
+                if (n.data.isUnmapped)
+                {
+                    n.ensureVisible();
+                    if (!scrolledOnce)
+                    {
+                        scrolledOnce = true;
+                        n.scrollIntoView();
+                    }
+                }
+            }
+
+            for (var c of n.children)
+                processNode(c);
+        };
+
+        processNode(this.treeModel.virtualRoot);
+    }
+
+    public filterIsoCoverage()
+    {
+    
+    }
+
     public expandAll() {
         if (this.anyExpanded)
         {
@@ -241,6 +283,24 @@ export class GraphTab {
 
     public mergedOptions(opts) { 
         return Object.assign(this.options, opts);
+    }
+
+    // Due to a bug in the tree control (forall is async but does not return the promise)
+    //   create our own synchronous forall
+    private forAllTreeNodes(cb: (tn: TreeNode) => void)
+    {
+      for (var n of this.treeModel.roots)
+        this.forAllTreeNodesRecursive(n, cb);
+    }
+
+    private forAllTreeNodesRecursive(node: TreeNode, cb: (tn: TreeNode) => void)
+    {
+      cb(node);
+      if (node.children)
+      {
+        for (var n of node.children)
+          this.forAllTreeNodesRecursive(n, cb);
+      }
     }
 }
 
@@ -347,8 +407,7 @@ export class GraphService {
           if (id != "ISO") 
           {
               // compare with iso.
-              var stats = this.compareDocs(newTab.column, this.graphTabs[1]);
-              newTab.coverage = "ISO Coverage: " + stats.coverage + ", Mapped: " + stats.mapped + ", Unique: " + stats.uniqueconnections;
+              newTab.coverage = this.compareDocs(newTab.column, this.graphTabs[1]);
           }
             
           this.selectedTab = -1; // set it to non-value so change is detected if the index is the same
@@ -446,7 +505,7 @@ export class GraphService {
           if (c.node.body)
           {
             linkData.total++;
-            if (c.node.links)
+            if (c.node.links && c.node.links.length)
             {
               linkData.linked++;
               result = result.concat(c.node.links);

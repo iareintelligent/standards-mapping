@@ -47,6 +47,8 @@ export class FullDocNode {
   public highlightName: boolean;
   public bodyFuse: any;
   public sectionFuse: any;
+  public isUnmappedCached: boolean;
+  public isAnyChildUnmappedCached: boolean;
 
   public constructor(
     public node: Doc2 | DocNode2,
@@ -62,5 +64,34 @@ export class FullDocNode {
 
   get id(): string {
     return this.node.id;
+  }
+
+  get isAnyChildUnmapped(): boolean {
+    if (this.isAnyChildUnmappedCached === undefined)
+    {
+        this.isAnyChildUnmappedCached = false;
+        for (var c of this.children)
+        {
+            if (c.isUnmapped || c.isAnyChildUnmapped)
+            {
+                this.isAnyChildUnmappedCached = true;
+                break;
+            }
+        }
+    }
+
+    return this.isAnyChildUnmappedCached;
+  }
+
+  get isUnmapped(): boolean {
+    if (this.isUnmappedCached === undefined)
+    {
+        // to be qualified as unmapped        
+        this.isUnmappedCached = this.node.body  //  needs a body
+            && (!this.node.children || this.node.children.length == 0) // no children
+            && (!this.node.links || this.node.links.length == 0); // no links
+    }
+
+    return this.isUnmappedCached;
   }
 }

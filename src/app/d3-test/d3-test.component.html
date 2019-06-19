@@ -30,19 +30,41 @@
               </ng-template>
               <div>
                 <mat-form-field class="filter-field">
-                  <input matInput type="text" placeholder="fuzzy search..." [(ngModel)]="t.searchValue"  #filter3 (keyup)="filter(filter3.value, tree.treeModel)">
+                  <input matInput type="text" placeholder="Search..." [(ngModel)]="t.searchValue"  #filter3 (keyup)="filter(filter3.value, tree.treeModel)">
                   <button mat-button *ngIf="t.searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="filter('', tree.treeModel); t.searchValue=''">
                     <mat-icon>close</mat-icon>
                   </button>
                 </mat-form-field>
               </div>
               
-              <div><mat-checkbox (change)="t.expandAll()" [checked]="t.anyExpanded">Expand All</mat-checkbox><mat-checkbox (change)="t.selectAll()" [checked]="t.anySelected">Select All</mat-checkbox></div>
+              <div>
+                <mat-checkbox *ngIf="t.anyExpanded" (change)="t.expandAll()" [checked]="true">Collapse All</mat-checkbox>
+                <mat-checkbox *ngIf="!t.anyExpanded" (change)="t.expandAll()" [checked]="false">Expand All</mat-checkbox>
+                <mat-checkbox *ngIf="t.anySelected" (change)="t.selectAll()" [checked]="true">Deselect All</mat-checkbox>
+                <mat-checkbox *ngIf="!t.anySelected" (change)="t.selectAll()" [checked]="false">Select All</mat-checkbox>
+              </div>
               
               <div class="tree-container">
                 <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="tabTreeChanged(t)" (event)="treeEvent($event)">
-                  <ng-template #treeNodeTemplate let-node let-index="index">
-                    <span [innerHTML]="injectHighlight(node.data)"></span>
+                  <ng-template #treeNodeWrapperTemplate let-node let-index="index">
+                    <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
+                      <tree-node-expander [node]="node"></tree-node-expander>
+                      <tree-node-checkbox [node]="node"></tree-node-checkbox>
+                      <div class="node-content-wrapper"
+                        [class.dummystyle]="bindTogether(node, wrapper, svgbg)"
+                        [class.node-content-wrapper-active]="node.isActive"
+                        [class.node-content-wrapper-focused]="node.isFocused"
+                        (click)="node.mouseAction('click', $event)"
+                        (dblclick)="node.mouseAction('dblClick', $event)"
+                        (contextmenu)="node.mouseAction('contextMenu', $event)"
+                        (treeDrop)="node.onDrop($event)"
+                        [treeAllowDrop]="node.allowDrop"
+                        [treeDrag]="node"
+                        [treeDragEnabled]="node.allowDrag()"
+                        [style.background-color]="getNodeColor(t, node)">
+                          <span [innerHTML]="injectHighlight(node.data)"></span>
+                      </div>
+                    </div>
                   </ng-template>
                 </tree-root>
               </div>
@@ -55,9 +77,12 @@
       <mat-card class="graph-columns" >
 <!--        <div fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="flex-start">-->
           <div class="graph-column" *ngFor="let t of graphService.graphTabs" >
-            <div><a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a> {{t.coverage}}</div>
-              
-              <div><mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">Expand All</mat-checkbox></div>
+            <div><a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a> 
+              <div *ngIf="!t.isIso"><a class="fake-link" (click)="t.filterIsoCoverage()">ISO Coverage:</a> {{t.coverage.coverage}}, <a class="fake-link" (click)="t.filterMapped()">Mapped:</a> {{t.coverage.mapped}}, <span>Unique:</span> {{t.coverage.uniqueconnections}}</div></div>
+              <div *ngIf="t.isIso">-</div>
+              <div>
+                <mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">{{t.column.anyExpanded ? 'Collapse' : 'Expand'}} All</mat-checkbox>
+              </div>
               
               <tree-root #tree [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="setup(t.column, tree); tabTreeChanged(t)" (activate)="activateNode(t, $event)" (deactivate)="columnTabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t, $event)">
                 <ng-template #treeNodeWrapperTemplate let-node let-index="index">
@@ -73,9 +98,10 @@
                       (treeDrop)="node.onDrop($event)"
                       [treeAllowDrop]="node.allowDrop"
                       [treeDrag]="node"
-                      [treeDragEnabled]="node.allowDrag()">
+                      [treeDragEnabled]="node.allowDrag()"
+                      [style.background-color]="getNodeColor(t, node)">
 
-                      <tree-node-content [node]="node" [index]="index"></tree-node-content>
+                      <span [innerHTML]="injectHighlight(node.data)"></span>
                     </div>
                   </div>
                 </ng-template>
