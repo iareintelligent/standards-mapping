@@ -130,7 +130,10 @@ export class GraphTab {
 
     public static filterBySelectedLeafs(visibleNodes: TreeNode[], parentTree: TreeModel, node: TreeNode): boolean
     {
-        var show = (node.data.id in parentTree.selectedLeafNodeIds) || Object.keys(parentTree.selectedLeafNodeIds).length == 0;
+        var inSelection = node.data.id in parentTree.selectedLeafNodeIds;
+        node.data.filterColor = inSelection ? "yellow" : undefined;
+
+        var show = inSelection || Object.keys(parentTree.selectedLeafNodeIds).length == 0;
         if (show)
             visibleNodes.push(node);
         return show;
@@ -193,17 +196,20 @@ export class GraphTab {
           this.treeModel.clearFilter();
 
           this.treeModel.filterNodes((node: TreeNode) => {
+            var show = false;
             if (this.autoFilterSrc)
             {
                 if (this.autoFilterSelf)
                 {
-                    return GraphTab.filterByMyLinks(this.visibleNodes, this.autoFilterSrc, node);
+                    show = GraphTab.filterByMyLinks(this.visibleNodes, this.autoFilterSrc, node);
                 }
                 else
-                    return GraphTab.filterByVisibleLinks(this.visibleNodes, this.autoFilterSrc.visibleLinks, node);
+                    show = GraphTab.filterByVisibleLinks(this.visibleNodes, this.autoFilterSrc.visibleLinks, node);
             }
             else
-                return GraphTab.filterBySelectedLeafs(this.visibleNodes, this.parent.treeModel, node);
+                show = GraphTab.filterBySelectedLeafs(this.visibleNodes, this.parent.treeModel, node);
+                
+            return show;
           }, false);
 
           if (this.autoFilterParent)

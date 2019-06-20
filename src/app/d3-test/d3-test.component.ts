@@ -685,6 +685,18 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
     public getNodeColor(tab: GraphTab, node: TreeNode)
     {
+        if (node.data.filterColor)
+        {
+            if (node.data.isUnmapped)
+            {
+                return 'red';
+            }
+            else
+            {
+                return node.data.filterColor;
+            }
+        }
+
         // Iso never has outward mappings
         if (tab.isIso)
             return 'unset';

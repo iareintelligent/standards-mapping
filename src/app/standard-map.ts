@@ -49,6 +49,7 @@ export class FullDocNode {
   public sectionFuse: any;
   public isUnmappedCached: boolean;
   public isAnyChildUnmappedCached: boolean;
+  public filterColor: string;
 
   public constructor(
     public node: Doc2 | DocNode2,
