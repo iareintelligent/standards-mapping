@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of, forkJoin } from 'rxjs';
 import * as Rx from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, tap, debounce } from 'rxjs/operators';
 
 import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2, Link } from './standard-map';
 import { MessageService } from './message.service';
@@ -64,19 +64,6 @@ export class VisibleLink {
 }
 
 export class GraphTab {
-    constructor(
-      public title: string,
-      public graphService: GraphService,
-      public parent: GraphTab = null) {
-        this.isIso = title == "ISO";
-
-        if (!parent)
-        {
-          this.column = new GraphTab(title, this.graphService, this);
-          this.column.options.useCheckbox = false;
-        }
-    }
-
     public options = {
       useCheckbox: true,
       allowDrag: false,
@@ -104,6 +91,30 @@ export class GraphTab {
     public autoFilterSrc: GraphTab;
     public autoFilterSelf: boolean;
     public autoFilterParent: GraphTab;
+    private updateSubjectParent = new Rx.BehaviorSubject(null);
+    private updateSubjectColumn = new Rx.BehaviorSubject(null);
+
+    constructor(
+      public title: string,
+      public graphService: GraphService,
+      public parent: GraphTab = null) {
+        this.isIso = title == "ISO";
+
+        if (!parent)
+        {
+          this.column = new GraphTab(title, this.graphService, this);
+          this.column.options.useCheckbox = false;
+        
+          this.updateSubjectParent.pipe(debounce(() => Rx.timer(10))).subscribe({
+            next: (v) => this.parentTabTreeChangedImp(v)
+          });
+        
+          this.updateSubjectColumn.pipe(debounce(() => Rx.timer(10))).subscribe({
+            next: (v) => this.columnTabTreeChangedImp(v)
+          });
+        }
+    }
+
 
     public get anyExpanded():boolean {
       return this.treeModel && this.treeModel.expandedNodes.length > 0; 
@@ -311,6 +322,15 @@ export class GraphTab {
     }
 
     public parentTabTreeChanged(updateSubject: any) {
+        this.updateSubjectParent.next([updateSubject]);
+    }
+
+    public parentTabTreeChangedImp(data: any) {
+        if (!data)
+            return;
+
+        var updateSubject = data[0];
+
         if (this.column.treeModel) {
 
             // Due to a bug https://github.com/500tech/angular-tree-component/issues/521
@@ -321,8 +341,8 @@ export class GraphTab {
                 if (node && !node.isSelected)
                   delete this.treeModel.selectedLeafNodeIds[n];
             }
-
-            this.graphService.runFilters(this, true);
+            
+            this.graphService.runFilters(this, true, updateSubject);
             
             updateSubject.next(0);
             
@@ -343,6 +363,15 @@ export class GraphTab {
     }
 
     public columnTabTreeChanged(event: any, updateSubject: any) {
+        this.updateSubjectColumn.next([event, updateSubject]);
+    }
+
+    public columnTabTreeChangedImp(data: any) {
+        if (!data)
+            return;
+
+        var event = data[0];
+        var updateSubject = data[1];
         if (this.column.treeModel) {
             if (event)
             {
@@ -359,7 +388,7 @@ export class GraphTab {
               }
             }
             
-            this.graphService.runFilters(this, false);
+            this.graphService.runFilters(this, false, updateSubject);
             
             updateSubject.next(0);
         }
@@ -400,7 +429,7 @@ export class GraphService {
       return array.reduce((a,b)=>a.concat(b), []);
   }
 
-  public runFilters(changedTab: GraphTab, parentChanged: boolean) 
+  public runFilters(changedTab: GraphTab, parentChanged: boolean, updateSubject: any) 
   {
       var tabs = this.graphTabs;
       for (var t of tabs)
@@ -409,6 +438,7 @@ export class GraphService {
           {
               // filter child tree
               t.column.runFilter();
+              t.columnTabTreeChanged(null, updateSubject);
           }
       }
   }
@@ -630,7 +660,7 @@ export class GraphService {
         coverage: found + "/" + bSections.length,
         mapped: linkData.linked + "/" + linkData.total,
         uniqueconnections: found + "/" + checked,
-        uncoveredIds: bSections
+        uncoveredIds: bCopy
 
         //"coverage": (found / bSections.length * 100).toFixed(1) + "% (" + found + "/" + bSections.length + ")",
         //"mapped": (linkData.linked / linkData.total * 100).toFixed(1) + "% (" + linkData.linked + "/" + linkData.total + ")",

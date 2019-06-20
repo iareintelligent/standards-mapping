@@ -47,10 +47,10 @@ export class D3TestComponent implements OnInit, OnDestroy {
         //this.graphTabs[1].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[0].column.visibleLinks, n);
         ////this.graphTabs[2].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[1].column.visibleLinks, n);
 
-        this.updateSubject.pipe(debounce(() => Rx.timer(10))).subscribe({
+        this.updateSubject.pipe(debounce(() => Rx.timer(250))).subscribe({
           next: (v) => this.updateGraph()
         });
-        this.updateViewSubject.pipe(debounce(() => Rx.timer(10))).subscribe({
+        this.updateViewSubject.pipe(debounce(() => Rx.timer(250))).subscribe({
           next: (v) => this.updateGraphView()
         });
         this.searchSubject.pipe(debounce(() => Rx.timer(400))).subscribe({
@@ -422,7 +422,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
     public tabChanged() {
         this.graphService.configureFilterStack();
-        this.graphService.runFilters(this.graphService.graphTabs[this.graphService.selectedTab], true);
+        this.graphService.runFilters(this.graphService.graphTabs[this.graphService.selectedTab], true, this.updateSubject);
     }
 
     public activateNode(tab: GraphTab, event: any) {
@@ -532,7 +532,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
             }
             
             this.updateViewSubject.next(0);
-        }, 100);
+        }, 1);
     }
 
     public updateGraphView() {
