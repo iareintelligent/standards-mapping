@@ -214,12 +214,10 @@ export class GraphTab {
         // collapse all
         this.forAllTreeNodes(n => n.collapse());
 
-        var selectedNodes = { };
-        this.treeModel.selectedLeafNodeIds = selectedNodes;
+        this.treeModel.selectedLeafNodeIds = { };
 
         var scrolledOnce = false;
-
-        var processNode = n => {
+        this.forAllTreeNodes(n => {
             if (n.level > 0)
             {
                 n.setIsSelected(n.data.isUnmapped);
@@ -233,12 +231,7 @@ export class GraphTab {
                     }
                 }
             }
-
-            for (var c of n.children)
-                processNode(c);
-        };
-
-        processNode(this.treeModel.virtualRoot);
+        });
     }
 
     public filterIsoCoverage()
@@ -260,24 +253,15 @@ export class GraphTab {
     public selectAll() {
         if (this.anySelected)
         {
-            var selectedNodes = { };
-            this.treeModel.selectedLeafNodeIds = selectedNodes;
+            this.treeModel.selectedLeafNodeIds = { };
         }
         else
         {
-            var selectedNodes = { };
-            this.treeModel.selectedLeafNodeIds = selectedNodes;
-
-            var processNode = n => {
+            this.treeModel.selectedLeafNodeIds = { };
+            this.forAllTreeNodes(n => {
                 if (n.level > 0)
                     n.setIsSelected(true);
-                    //selectedNodes[n.id] = true;
-
-                for (var c of n.children)
-                    processNode(c);
-            };
-
-            processNode(this.treeModel.virtualRoot);
+            });
         }
     }
 
@@ -287,7 +271,7 @@ export class GraphTab {
 
     // Due to a bug in the tree control (forall is async but does not return the promise)
     //   create our own synchronous forall
-    private forAllTreeNodes(cb: (tn: TreeNode) => void)
+    public forAllTreeNodes(cb: (tn: TreeNode) => void)
     {
       for (var n of this.treeModel.roots)
         this.forAllTreeNodesRecursive(n, cb);
