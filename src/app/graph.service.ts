@@ -87,7 +87,7 @@ export class GraphTab {
     public displayLinks: any[] = [];
     public isIso: boolean = false;
     public searchValue: string = null;
-    public coverage: string = " - ";
+    public coverage: any = null;
     public autoFilterSrc: GraphTab;
     public autoFilterSelf: boolean;
     public autoFilterParent: GraphTab;
