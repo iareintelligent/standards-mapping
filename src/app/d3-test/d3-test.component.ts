@@ -422,77 +422,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
     public tabChanged() {
         this.graphService.configureFilterStack();
-        this.runFilters(this.graphService.graphTabs[this.graphService.selectedTab], true);
-    }
-
-    public tabTreeChanged(tab: GraphTab, event: any) {
-        if (tab.column.treeModel) {
-
-            // Due to a bug https://github.com/500tech/angular-tree-component/issues/521
-            //  must manually clear nodes that are no longer selected
-            for (var n of Object.keys(tab.treeModel.selectedLeafNodeIds))
-            {
-                var node = tab.treeModel.getNodeById(n);
-                if (node && !node.isSelected)
-                  delete tab.treeModel.selectedLeafNodeIds[n];
-            }
-
-            this.runFilters(tab, true);
-
-            this.updateSubject.next(0);
-            
-            // Must be delayed or you'll get an infinite loop of change events.
-            setTimeout(() => {
-              // by default, collapse everything
-              tab.column.forAllTreeNodes(n => n.collapse());
-
-              // ensure selected nodes are visible
-              for (var n in tab.treeModel.selectedLeafNodeIds)
-              {
-                var columnNode = tab.column.treeModel.getNodeById(n);
-                if (columnNode)
-                  columnNode.ensureVisible();
-              }
-            }, 1);
-        }
-    }
-
-    private runFilters(changedTab: GraphTab, parentChanged: boolean) 
-    {
-        var tabs = this.graphService.graphTabs;
-        for (var t of tabs)
-        {
-            if (t.column.autoFilterSrc == changedTab.column || (parentChanged && t == changedTab))
-            {
-                // filter child tree
-                t.column.runFilter();
-            }
-        }
-    }
-
-    public columnTabTreeChanged(tab: GraphTab, event: any) {
-        if (tab.column.treeModel) {
-            if (event)
-            {
-              // on expand
-              if (event.isExpanded && event.node.isActive)
-              {
-                var allNodes = this.graphService.getNodesWithLinks(event.node.data.children, []);
-
-                // select children with links
-                for (var c of allNodes)
-                {
-                  tab.column.state.activeNodeIds[c.id] = true; // select child
-                }
-              }
-            }
-            
-            this.runFilters(tab, false);
-            
-            this.updateSubject.next(0);
-            //setTimeout(()=>{
-            //}, 3000);
-        }
+        this.graphService.runFilters(this.graphService.graphTabs[this.graphService.selectedTab], true);
     }
 
     public activateNode(tab: GraphTab, event: any) {

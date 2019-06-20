@@ -66,12 +66,13 @@ export class VisibleLink {
 export class GraphTab {
     constructor(
       public title: string,
+      public graphService: GraphService,
       public parent: GraphTab = null) {
         this.isIso = title == "ISO";
 
         if (!parent)
         {
-          this.column = new GraphTab(title, this);
+          this.column = new GraphTab(title, this.graphService, this);
           this.column.options.useCheckbox = false;
         }
     }
@@ -308,6 +309,61 @@ export class GraphTab {
           this.forAllTreeNodesRecursive(n, cb);
       }
     }
+
+    public parentTabTreeChanged(updateSubject: any) {
+        if (this.column.treeModel) {
+
+            // Due to a bug https://github.com/500tech/angular-tree-component/issues/521
+            //  must manually clear nodes that are no longer selected
+            for (var n of Object.keys(this.treeModel.selectedLeafNodeIds))
+            {
+                var node = this.treeModel.getNodeById(n);
+                if (node && !node.isSelected)
+                  delete this.treeModel.selectedLeafNodeIds[n];
+            }
+
+            this.graphService.runFilters(this, true);
+            
+            updateSubject.next(0);
+            
+            // Must be delayed or you'll get an infinite loop of change events.
+            setTimeout(() => {
+              // by default, collapse everything
+              this.column.forAllTreeNodes(n => n.collapse());
+
+              // ensure selected nodes are visible
+              for (var n in this.treeModel.selectedLeafNodeIds)
+              {
+                var columnNode = this.column.treeModel.getNodeById(n);
+                if (columnNode)
+                  columnNode.ensureVisible();
+              }
+            }, 1);
+        }
+    }
+
+    public columnTabTreeChanged(event: any, updateSubject: any) {
+        if (this.column.treeModel) {
+            if (event)
+            {
+              // on expand
+              if (event.isExpanded && event.node.isActive)
+              {
+                var allNodes = this.graphService.getNodesWithLinks(event.node.data.children, []);
+
+                // select children with links
+                for (var c of allNodes)
+                {
+                  this.column.state.activeNodeIds[c.id] = true; // select child
+                }
+              }
+            }
+            
+            this.graphService.runFilters(this, false);
+            
+            updateSubject.next(0);
+        }
+    }
 }
 
 @Injectable({ providedIn: 'root' })
@@ -342,6 +398,19 @@ export class GraphService {
 
   public static flatten(array) {
       return array.reduce((a,b)=>a.concat(b), []);
+  }
+
+  public runFilters(changedTab: GraphTab, parentChanged: boolean) 
+  {
+      var tabs = this.graphTabs;
+      for (var t of tabs)
+      {
+          if (t.column.autoFilterSrc == changedTab.column || (parentChanged && t == changedTab))
+          {
+              // filter child tree
+              t.column.runFilter();
+          }
+      }
   }
 
   getGuid(id: string, type: string, rev: string, createMissing: boolean = true): number {
@@ -402,7 +471,7 @@ export class GraphService {
 
       this.getFullDocByType(id)
         .subscribe(doc => {
-          var newTab = new GraphTab(id);
+          var newTab = new GraphTab(id, this);
 
           newTab.nodes = doc.children;
           newTab.column.nodes = doc.children;

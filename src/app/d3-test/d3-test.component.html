@@ -45,7 +45,7 @@
               </div>
               
               <div class="tree-container">
-                <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="tabTreeChanged(t)" (event)="treeEvent($event)">
+                <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="t.parentTabTreeChanged(updateSubject)" (event)="treeEvent($event)">
                   <ng-template #treeNodeWrapperTemplate let-node let-index="index">
                     <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
                       <tree-node-expander [node]="node"></tree-node-expander>
@@ -84,7 +84,7 @@
                 <mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">{{t.column.anyExpanded ? 'Collapse' : 'Expand'}} All</mat-checkbox>
               </div>
               
-              <tree-root #tree [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="setup(t.column, tree); tabTreeChanged(t)" (activate)="activateNode(t, $event)" (deactivate)="columnTabTreeChanged(t)" (toggleExpanded)="columnTabTreeChanged(t, $event)">
+              <tree-root #tree [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="setup(t.column, tree); t.parentTabTreeChanged(updateSubject)" (activate)="activateNode(t, $event)" (deactivate)="t.columnTabTreeChanged(null, updateSubject)" (toggleExpanded)="t.columnTabTreeChanged($event, updateSubject)">
                 <ng-template #treeNodeWrapperTemplate let-node let-index="index">
                   <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
                     <tree-node-expander [node]="node"></tree-node-expander>
