@@ -422,7 +422,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
     public tabChanged() {
         this.graphService.configureFilterStack();
-        this.graphService.runFilters(this.graphService.graphTabs[this.graphService.selectedTab], true, this.updateSubject);
+        this.graphService.graphTabs[this.graphService.selectedTab].parentTabTreeChanged(this.updateSubject);
     }
 
     public activateNode(tab: GraphTab, event: any) {
