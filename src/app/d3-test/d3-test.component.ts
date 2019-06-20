@@ -781,7 +781,8 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
     public filterIsoCoverage(tab: GraphTab)
     {
-        tab.filterIsoCoverage();
-        this.graphService.activateTab(tab);
+        var isoTab = this.graphService.graphTabs[1];
+        isoTab.filterToIds(tab.coverage.uncoveredIds);
+        this.graphService.activateTab(isoTab);
     }
 }

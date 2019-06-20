@@ -234,9 +234,31 @@ export class GraphTab {
         });
     }
 
-    public filterIsoCoverage()
+    public filterToIds(ids: string[])
     {
-    
+        // collapse all
+        this.forAllTreeNodes(n => n.collapse());
+
+        this.treeModel.selectedLeafNodeIds = { };
+
+        var scrolledOnce = false;
+        this.forAllTreeNodes(n => {
+            if (n.level > 0)
+            {
+                var select = ids.includes(n.id);
+
+                n.setIsSelected(select);
+                if (select)
+                {
+                    n.ensureVisible();
+                    if (!scrolledOnce)
+                    {
+                        scrolledOnce = true;
+                        n.scrollIntoView();
+                    }
+                }
+            }
+        });
     }
 
     public expandAll() {
@@ -536,9 +558,11 @@ export class GraphService {
     }
 
     return {
-        "coverage": found + "/" + bSections.length,
-        "mapped": linkData.linked + "/" + linkData.total,
-        "uniqueconnections": found + "/" + checked
+        coverage: found + "/" + bSections.length,
+        mapped: linkData.linked + "/" + linkData.total,
+        uniqueconnections: found + "/" + checked,
+        uncoveredIds: bSections
+
         //"coverage": (found / bSections.length * 100).toFixed(1) + "% (" + found + "/" + bSections.length + ")",
         //"mapped": (linkData.linked / linkData.total * 100).toFixed(1) + "% (" + linkData.linked + "/" + linkData.total + ")",
         //"uniqueconnections": (found / checked * 100).toFixed(1) + "% (" + found + "/" + checked + ")"
