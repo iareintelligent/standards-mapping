@@ -410,37 +410,53 @@ export class GraphService {
           this.graphTabs.splice(1, 0, isoTab);
       }
 
+      this.configureFilterStack();
+  }
+
+  public configureFilterStack() {
+      var filterOrder = [];
+      switch (this.selectedTab)
+      {
+        case 0: filterOrder = [0, 1, 2]; break;
+        case 1: filterOrder = [1, 0, 2]; break;
+        case 2: filterOrder = [2, 1, 0]; break;
+      }
+
       // setup filters
-      for (var t of this.graphTabs)
-      {          
-          if (t == isoTab)
+      var isoTab = this.graphTabs.find(t => t.title == "ISO");
+      var primary = this.graphTabs[filterOrder[0]];
+      
+      // clear auto filter of left tab
+      primary.column.autoFilterSrc = null;
+      primary.column.autoFilterParent = null;
+      primary.column.autoFilterSelf = false;
+
+      var secondary = this.graphTabs[filterOrder[1]];
+      if (secondary)
+      {
+          if (secondary == isoTab)
           {
-              if (this.graphTabs.length > 1)
-              {
-                  // assure iso filters from the left: "auto filter"
-                  isoTab.column.autoFilterSrc = this.graphTabs[0].column;
-                  isoTab.column.autoFilterParent = this.graphTabs[0].column.parent;
-              }
-              else
-              {
-                  // clear auto filter when only iso is left
-                  isoTab.column.autoFilterSrc = null;
-              }
-          }
-          else if (this.graphTabs.indexOf(t) > 0)
-          {
-              // auto filter with this tabs connections to iso
-              t.column.autoFilterSrc = isoTab.column;
-              t.column.autoFilterParent = this.graphTabs[0].column.parent; // the left tab always drives the selection
-              t.column.autoFilterSelf = true;
+              // assure iso filters from the primary: "auto filter"
+              isoTab.column.autoFilterSrc = primary.column;
+              isoTab.column.autoFilterParent = primary.column.parent;
+              isoTab.column.autoFilterSelf = false;
           }
           else
           {
-              // clear auto filter of left tab
-              t.column.autoFilterSrc = null;
-              t.column.autoFilterParent = null;
-              t.column.autoFilterSelf = false;
+              // auto filter with this tabs connections to iso
+              secondary.column.autoFilterSrc = isoTab.column;
+              secondary.column.autoFilterParent = primary.column.parent; // the primary tab always drives the selection
+              secondary.column.autoFilterSelf = true;
           }
+      }
+
+      var third = this.graphTabs[filterOrder[2]];
+      if (third)
+      {
+          // auto filter with this tabs connections to iso
+          third.column.autoFilterSrc = isoTab.column;
+          third.column.autoFilterParent = primary.column.parent; // the primary tab always drives the selection
+          third.column.autoFilterSelf = true;
       }
   }
 
@@ -452,10 +468,7 @@ export class GraphService {
   }
 
   public activateTab(tab: GraphTab) {
-      // Since only the left filter matters, only default to left tab.
-      this.selectedTab = 0;
-
-      //this.selectedTab = this.graphTabs.indexOf(tab);
+      this.selectedTab = this.graphTabs.indexOf(tab);
   }
 
   public getNodesWithLinks(children: FullDocNode[], result: FullDocNode[])

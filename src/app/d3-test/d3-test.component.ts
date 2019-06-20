@@ -420,6 +420,11 @@ export class D3TestComponent implements OnInit, OnDestroy {
         treeModel.filterNodes((node: TreeNode) => this.clearSearch(node));
     }
 
+    public tabChanged() {
+        this.graphService.configureFilterStack();
+        this.runFilters(this.graphService.graphTabs[this.graphService.selectedTab], true);
+    }
+
     public tabTreeChanged(tab: GraphTab, event: any) {
         if (tab.column.treeModel) {
 
@@ -481,10 +486,12 @@ export class D3TestComponent implements OnInit, OnDestroy {
                 }
               }
             }
-
+            
             this.runFilters(tab, false);
             
             this.updateSubject.next(0);
+            //setTimeout(()=>{
+            //}, 3000);
         }
     }
 
@@ -764,5 +771,17 @@ export class D3TestComponent implements OnInit, OnDestroy {
         {
             return 'unset';
         }
+    }
+
+    public filterMapped(tab: GraphTab)
+    {
+        tab.filterMapped();
+        this.graphService.activateTab(tab);
+    }
+
+    public filterIsoCoverage(tab: GraphTab)
+    {
+        tab.filterIsoCoverage();
+        this.graphService.activateTab(tab);
     }
 }

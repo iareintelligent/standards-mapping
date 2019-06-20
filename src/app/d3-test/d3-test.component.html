@@ -20,7 +20,7 @@
         </div>
 
         <div class="graph-tabs">
-          <mat-tab-group [(selectedIndex)]="graphService.selectedTab">
+          <mat-tab-group [(selectedIndex)]="graphService.selectedTab"  (selectedTabChange)="tabChanged()">
             <mat-tab *ngFor="let t of graphService.graphTabs">
               <ng-template mat-tab-label>
                   {{t.title}}
@@ -78,7 +78,7 @@
 <!--        <div fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="flex-start">-->
           <div class="graph-column" *ngFor="let t of graphService.graphTabs" >
             <div><a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a> 
-              <div *ngIf="!t.isIso"><a class="fake-link" (click)="t.filterIsoCoverage()">ISO Coverage:</a> {{t.coverage.coverage}}, <a class="fake-link" (click)="t.filterMapped()">Mapped:</a> {{t.coverage.mapped}}, <span>Unique:</span> {{t.coverage.uniqueconnections}}</div></div>
+              <div *ngIf="!t.isIso"><a class="fake-link" (click)="filterIsoCoverage(t)">ISO Coverage:</a> {{t.coverage.coverage}}, <a class="fake-link" (click)="filterMapped(t)">Mapped:</a> {{t.coverage.mapped}}, <span>Unique:</span> {{t.coverage.uniqueconnections}}</div></div>
               <div *ngIf="t.isIso">-</div>
               <div>
                 <mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">{{t.column.anyExpanded ? 'Collapse' : 'Expand'}} All</mat-checkbox>
