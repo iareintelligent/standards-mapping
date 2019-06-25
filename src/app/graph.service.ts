@@ -536,8 +536,6 @@ export class GraphService {
           this.graphTabs = this.graphTabs.filter(t => t != isoTab);
           this.graphTabs.splice(1, 0, isoTab);
       }
-
-      this.configureFilterStack();
   }
 
   public configureFilterStack() {
@@ -552,6 +550,9 @@ export class GraphService {
       // setup filters
       var isoTab = this.graphTabs.find(t => t.title == "ISO");
       var primary = this.graphTabs[filterOrder[0]];
+
+      if (!primary)
+        return;
       
       // clear auto filter of left tab
       primary.column.autoFilterSrc = null;
@@ -591,11 +592,25 @@ export class GraphService {
       this.graphTabs = this.graphTabs.filter(t => t!=tab);
       this.ensureISOIsInMiddle();
       this.activateTab(this.graphTabs[0]);
-      this.tabsChangedSubject.next(0);
   }
 
   public activateTab(tab: GraphTab) {
-      this.selectedTab = this.graphTabs.indexOf(tab);
+      var newIndex = this.graphTabs.indexOf(tab);
+      if (newIndex != this.selectedTab)
+      {
+        this.selectedTab = newIndex;
+        this.configureFilterStack();
+        this.tabsChangedSubject.next(0);
+      }
+      else
+      {
+        this.selectedTab = -1;
+        setTimeout(() => {
+          this.selectedTab = newIndex;
+          this.configureFilterStack();
+          this.tabsChangedSubject.next(0);
+        }, 10);
+      }
   }
 
   public getNodesWithLinks(children: FullDocNode[], result: FullDocNode[])

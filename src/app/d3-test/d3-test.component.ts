@@ -74,7 +74,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
         });
       
       this.tabsChangedSubscription = this.graphService.tabsChangedSubject.subscribe(a => {
-          this.updateSubject.next(0);
+          //this.tabChanged();
       })
     }
 
@@ -687,7 +687,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
     {
         if (node.data.filterColor)
         {
-            if (node.data.isUnmapped)
+            if (!tab.isIso && node.data.isUnmapped)
             {
                 return 'red';
             }
