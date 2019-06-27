@@ -28,6 +28,8 @@
                     <mat-icon>close</mat-icon>
                   </button>
               </ng-template>
+              <div class="coverage-box" *ngIf="!t.isIso"><a class="fake-link" (click)="filterIsoCoverage(t)">ISO:</a> {{t.coverage.coverage}}, <a class="fake-link" (click)="filterMapped(t)">Mapped:</a> {{t.coverage.mapped}}, <span>Unique:</span> {{t.coverage.uniqueconnections}}</div>
+              <!--<div class="coverage-box" *ngIf="t.isIso">-</div>-->
               <div>
                 <mat-form-field class="filter-field">
                   <input matInput type="text" placeholder="Search..." [(ngModel)]="t.searchValue"  #filter3 (keyup)="filter(filter3.value, tree.treeModel)">
@@ -77,17 +79,16 @@
       <mat-card class="graph-columns" >
 <!--        <div fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="flex-start">-->
           <div class="graph-column" *ngFor="let t of graphService.graphTabs" >
-            <div><a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a> 
-              <div *ngIf="!t.isIso"><a class="fake-link" (click)="filterIsoCoverage(t)">ISO Coverage:</a> {{t.coverage.coverage}}, <a class="fake-link" (click)="filterMapped(t)">Mapped:</a> {{t.coverage.mapped}}, <span>Unique:</span> {{t.coverage.uniqueconnections}}</div></div>
-              <div *ngIf="t.isIso">-</div>
+            <h3>{{t.title}}</h3>
+<!--            <div><a routerLink="/doctypes/{{t.title}}"><h3>{{t.title}}</h3></a> 
               <div>
                 <mat-checkbox (change)="t.column.expandAll()" [checked]="t.column.anyExpanded">{{t.column.anyExpanded ? 'Collapse' : 'Expand'}} All</mat-checkbox>
-              </div>
+              </div></div>-->
               
               <tree-root #tree [(state)]="t.column.state" [options]="t.column.options" [nodes]="t.column.nodes" (initialized)="setup(t.column, tree); t.parentTabTreeChanged(updateSubject)" (activate)="activateNode(t, $event)" (deactivate)="t.columnTabTreeChanged(null, updateSubject)" (toggleExpanded)="t.columnTabTreeChanged($event, updateSubject)">
                 <ng-template #treeNodeWrapperTemplate let-node let-index="index">
                   <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
-                    <tree-node-expander [node]="node"></tree-node-expander>
+                    <!--<tree-node-expander [node]="node"></tree-node-expander>-->
                     <div class="node-content-wrapper"
                       [class.dummystyle]="bindTogether(node, wrapper, svgbg)"
                       [class.node-content-wrapper-active]="node.isActive"
