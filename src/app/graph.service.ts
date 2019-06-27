@@ -641,10 +641,10 @@ export class GraphService {
   {
       for (var c of children)
       {
-          if (c.node.body)
+          if (c.shouldBeMapped)
           {
             linkData.total++;
-            if (c.node.links && c.node.links.length)
+            if (!c.isUnmapped)
             {
               linkData.linked++;
               result = result.concat(c.node.links);

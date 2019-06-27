@@ -49,6 +49,7 @@ export class FullDocNode {
   public sectionFuse: any;
   public isUnmappedCached: boolean;
   public isAnyChildUnmappedCached: boolean;
+  public shouldBeMappedCached: boolean;
   public filterColor: string;
 
   public constructor(
@@ -88,11 +89,21 @@ export class FullDocNode {
     if (this.isUnmappedCached === undefined)
     {
         // to be qualified as unmapped        
-        this.isUnmappedCached = this.node.body  //  needs a body
-            && (!this.node.children || this.node.children.length == 0) // no children
+        this.isUnmappedCached = this.shouldBeMapped
             && (!this.node.links || this.node.links.length == 0); // no links
     }
 
     return this.isUnmappedCached;
+  }
+
+  get shouldBeMapped(): boolean {
+    if (this.shouldBeMappedCached === undefined)
+    {
+        // to be qualified as unmapped        
+        this.shouldBeMappedCached = this.node.body  //  needs a body
+            && (!this.node.children || this.node.children.length == 0); // no children
+    }
+
+    return this.shouldBeMappedCached;
   }
 }
