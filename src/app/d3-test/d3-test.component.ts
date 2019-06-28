@@ -657,29 +657,38 @@ export class D3TestComponent implements OnInit, OnDestroy {
         return text.substring(0, highlight[0]) + "<mark>" + text.substring(highlight[0], highlight[1]) + "</mark>" + text.substring(highlight[1], text.length);
     }
 
-    public injectHighlight(data: FullDocNode) 
+    public injectHighlightSection(data: FullDocNode) 
     {
         var section = data.node.section;
+
+        if (data.highlight && data.highlightName)
+            section = this.highlightText(section, data.highlight);
+
+        return this.sanitizer.bypassSecurityTrustHtml(section);
+    }
+
+    public injectHighlightBody(data: FullDocNode) 
+    {
         var body = data.node.body;
-
-        if (data.highlight)
-        {
-            if (data.highlightName)
-                section = this.highlightText(section, data.highlight);
-            else
-                body = this.highlightText(body, data.highlight);
-        }
-
-        if (data.node.hyperlink)
-        {
-            section = '<a style="pointer-events: bounding-box; cursor: pointer;" target="_blank" href="' + data.node.hyperlink + '">' + section + '</a>';
-        }
-
-        var result = section;
         if (body)
-            result += " - " + body;
+        {
+            if (data.highlight && !data.highlightName)
+            {
+                body = this.highlightText(body, data.highlight);
+            }
+        
+            body = " - " + body;
+        }   
+        else
+            body = "";
 
-        return this.sanitizer.bypassSecurityTrustHtml(result);
+
+        return this.sanitizer.bypassSecurityTrustHtml(body);
+    }
+
+    public openTab(url: string)
+    {
+        window.open(url, "_blank").focus();
     }
 
     public treeEvent(event: any)

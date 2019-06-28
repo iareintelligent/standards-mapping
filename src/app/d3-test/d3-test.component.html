@@ -57,14 +57,12 @@
                         [class.node-content-wrapper-active]="node.isActive"
                         [class.node-content-wrapper-focused]="node.isFocused"
                         (click)="node.mouseAction('click', $event)"
-                        (dblclick)="node.mouseAction('dblClick', $event)"
-                        (contextmenu)="node.mouseAction('contextMenu', $event)"
-                        (treeDrop)="node.onDrop($event)"
-                        [treeAllowDrop]="node.allowDrop"
-                        [treeDrag]="node"
-                        [treeDragEnabled]="node.allowDrag()"
                         [style.background-color]="getNodeColor(t, node)">
-                          <span [innerHTML]="injectHighlight(node.data)"></span>
+                          <span>
+                            <span *ngIf="!node.data.node.hyperlink" [innerHTML]="injectHighlightSection(node.data)"></span>
+                            <a *ngIf="node.data.node.hyperlink" (mousedown)="openTab(node.data.node.hyperlink)" class="fake-link" target="_blank" href="{{node.data.node.hyperlink}}" [innerHTML]="injectHighlightSection(node.data)"></a>
+                            <span [innerHTML]="injectHighlightBody(node.data)"></span>
+                          </span>
                       </div>
                     </div>
                   </ng-template>
@@ -94,15 +92,13 @@
                       [class.node-content-wrapper-active]="node.isActive"
                       [class.node-content-wrapper-focused]="node.isFocused"
                       (click)="node.mouseAction('click', $event)"
-                      (dblclick)="node.mouseAction('dblClick', $event)"
-                      (contextmenu)="node.mouseAction('contextMenu', $event)"
-                      (treeDrop)="node.onDrop($event)"
-                      [treeAllowDrop]="node.allowDrop"
-                      [treeDrag]="node"
-                      [treeDragEnabled]="node.allowDrag()"
                       [style.background-color]="getNodeColor(t, node)">
 
-                      <span [innerHTML]="injectHighlight(node.data)"></span>
+                      <span>
+                        <span *ngIf="!node.data.node.hyperlink" [innerHTML]="injectHighlightSection(node.data)"></span>
+                        <a *ngIf="node.data.node.hyperlink" (mousedown)="openTab(node.data.node.hyperlink)" class="fake-link" target="_blank" href="{{node.data.node.hyperlink}}" [innerHTML]="injectHighlightSection(node.data)"></a>
+                        <span [innerHTML]="injectHighlightBody(node.data)"></span>
+                      </span>
                     </div>
                   </div>
                 </ng-template>
