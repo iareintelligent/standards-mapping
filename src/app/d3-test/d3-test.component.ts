@@ -47,13 +47,13 @@ export class D3TestComponent implements OnInit, OnDestroy {
         //this.graphTabs[1].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[0].column.visibleLinks, n);
         ////this.graphTabs[2].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[1].column.visibleLinks, n);
 
-        this.updateSubject.pipe(debounce(() => Rx.timer(250))).subscribe({
+        this.updateSubject.pipe(debounce(() => Rx.timer(1))).subscribe({
           next: (v) => this.updateGraph()
         });
-        this.updateViewSubject.pipe(debounce(() => Rx.timer(250))).subscribe({
+        this.updateViewSubject.pipe(debounce(() => Rx.timer(1))).subscribe({
           next: (v) => this.updateGraphView()
         });
-        this.searchSubject.pipe(debounce(() => Rx.timer(400))).subscribe({
+        this.searchSubject.pipe(debounce(() => Rx.timer(100))).subscribe({
           next: (v) => {
             if (v)
               this.filterFn(v[0], v[1]);
@@ -544,7 +544,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
         var tabs = this.graphService.graphTabs;
 
         // delay the rendering so dom can settle.
-        setTimeout(a => {
+        //setTimeout(a => {
             var isoTab = tabs.find(t => t.isIso);
             var isoIndex = tabs.indexOf(isoTab);
 
@@ -556,7 +556,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
             }
             
             this.updateViewSubject.next(0);
-        }, 1);
+        //}, 1);
     }
 
     public updateGraphView() {

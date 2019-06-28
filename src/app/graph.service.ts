@@ -105,11 +105,11 @@ export class GraphTab {
           this.column = new GraphTab(title, this.graphService, this);
           this.column.options.useCheckbox = false;
         
-          this.updateSubjectParent.pipe(debounce(() => Rx.timer(10))).subscribe({
+          this.updateSubjectParent.pipe(debounce(() => Rx.timer(1))).subscribe({
             next: (v) => this.parentTabTreeChangedImp(v)
           });
         
-          this.updateSubjectColumn.pipe(debounce(() => Rx.timer(10))).subscribe({
+          this.updateSubjectColumn.pipe(debounce(() => Rx.timer(1))).subscribe({
             next: (v) => this.columnTabTreeChangedImp(v)
           });
         }
@@ -353,7 +353,7 @@ export class GraphTab {
             updateSubject.next(0);
             
             // Must be delayed or you'll get an infinite loop of change events.
-            setTimeout(() => {
+            //setTimeout(() => {
               // by default, collapse everything
               this.column.forAllTreeNodes(n => n.collapse());
 
@@ -364,7 +364,7 @@ export class GraphTab {
                 if (columnNode)
                   columnNode.ensureVisible();
               }
-            }, 1);
+            //}, 1);
         }
     }
 
