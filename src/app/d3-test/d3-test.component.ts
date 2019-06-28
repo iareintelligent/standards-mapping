@@ -442,7 +442,11 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
     private buildLinkSet(fromTab: GraphTab, toTab: GraphTab, rtl: boolean): void {
         
+        // For all the links that are not filtered already
         var links = fromTab.visibleLinks;
+
+        // make a hash table from source _root_ node id, to list of links. 
+        //  The source _root_ node is the first node in the ascenstery that is visible (parent is not collpased)
         var rollup = links.reduce((a, b) => {
             var owner = b.fromNode;
 
@@ -455,12 +459,17 @@ export class D3TestComponent implements OnInit, OnDestroy {
                 owner = iterator;
             }
 
+            // Create the list if it doesnt exist
             if (!(owner.id in a))
                 a[owner.id] = [];
+
+            // add the link
             a[owner.id].push(b);
             return a;
         }, { });
 
+        // for each source root node, aggregate links to destination root nodes
+        //  destination _root_ nodes are the first node in the ascenstery that is visible (parent is not collpased)
         var rollup2 = Object.keys(rollup).map(k => {
             var collapsed = rollup[k].reduce((a, b) => {
                 var link = b.link;
@@ -474,9 +483,12 @@ export class D3TestComponent implements OnInit, OnDestroy {
                   if (iterator.isCollapsed)
                     owner = iterator;
                 }
-
+                
+                // Create the list if it doesnt exist
                 if (!(owner.id in a))
                     a[owner.id] = [];
+
+                // add the link
                 a[owner.id].push(link);
                 return a;
             }, { });
@@ -484,18 +496,25 @@ export class D3TestComponent implements OnInit, OnDestroy {
             return [k, collapsed];
         });
 
+        // Create one aggregated list of links with all the necessary parameters for the view
+        // start with the links map from source root node, to destination root nodes 
         var flatten = rollup2.reduce((a, b) => {
             var fromTree = fromTab.treeModel;
             var toTree = toTab.treeModel;
             var destinationMap = b[1];
+            var fromNode = fromTree.getNodeById(b[0]);
+
+            // If the source node is hidden, continue.
+            if (fromNode.id in fromTree.hiddenNodeIds)
+              return a;
+
+            // one source node may map to many destination.
             for (var destinationKey in destinationMap)
             {
-              var destinationData = destinationMap[destinationKey];
-              var fromNode = fromTree.getNodeById(b[0]);
-              var toNode = toTree.getNodeById(destinationKey);
-                  
-              if (!(fromNode.id in fromTree.hiddenNodeIds || toNode.id in toTree.hiddenNodeIds))
+              var toNode = toTree.getNodeById(destinationKey);                  
+              if (!(toNode.id in toTree.hiddenNodeIds))
               {
+                var destinationData = destinationMap[destinationKey];
                 a.push({
                     from: b[0],
                     fromNode: fromNode,
@@ -505,10 +524,11 @@ export class D3TestComponent implements OnInit, OnDestroy {
                     toTree: toTree,
                     rtl: rtl,
                     scale: rtl ? -1 : 1,
-                    count: destinationData.length,
                     weight: (fromNode.isActive || toNode.isActive) ? 2 : 1,
                     x1: 0,
                     x2: 0,
+                    x3: 0,
+                    x4: 0,
                     y1: 0,
                     y2: 0,
                 });
@@ -557,6 +577,10 @@ export class D3TestComponent implements OnInit, OnDestroy {
             l.x2 = (l.rtl ? (toBounds.right + arrowLength) : (toBounds.left - arrowLength)) - svgBounds.left;
             l.y1 = fromBounds.top - svgBounds.top + fromBounds.height * 0.5;
             l.y2 = toBounds.top - svgBounds.top + toBounds.height * 0.5;
+            
+            // Locations for the arrow head
+            l.x3 = l.x2 - 2 * l.scale;
+            l.x4 = l.x2 + 0.1 * l.scale;
           }
         }
     }
