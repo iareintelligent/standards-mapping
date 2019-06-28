@@ -524,7 +524,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
                     toTree: toTree,
                     rtl: rtl,
                     scale: rtl ? -1 : 1,
-                    weight: (fromNode.isActive || toNode.isActive) ? 2 : 1,
+                    //weight: (fromNode.isActive || toNode.isActive) ? 2 : 1,
                     x1: 0,
                     x2: 0,
                     x3: 0,

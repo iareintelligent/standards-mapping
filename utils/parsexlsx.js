@@ -5,6 +5,7 @@ var Excel = require('exceljs');
 var inputFile = "./src/app/data/notcheckedin/MSFT ISO 27552 Country Mapping - Merged- Macro.xlsm";
 var inputFileGdpr = "./src/app/data/notcheckedin/27552 to GDPR.xlsx";
 var outputFile = "./src/app/data/sampledb.json";
+var outputXlsxFile = "./src/app/data/notcheckedin/Database.xlsx";
 
 var keepNWords = function (input, n) {
     var frags = input.split(" ");
@@ -68,7 +69,7 @@ var mergeLinks = function (src, dst) {
               dst.links.push(l);
           }
       }
-        }
+    }
 }
 
 
@@ -170,6 +171,17 @@ var makeDoc = function (doc, type) {
     doc.type = type;
     doc.rev = 1;
     return doc;
+}
+
+var flatten = function (nodes, result) {
+    for (var n of nodes)
+    {
+      result.push(n);
+      if (n.children)
+        flatten(n.children, result);
+    }
+
+    return result;
 }
 
 var mainMapping = function() {
@@ -371,6 +383,37 @@ var gdprMapping = function() {
     });
 }
 
+
+var exportXlsx = function (allDocs) {
+
+    var workbook = new Excel.Workbook();
+
+    for (var doc of allDocs)
+    {
+        var sections = flatten(doc.children, []);
+        var worksheet = workbook.addWorksheet(doc.type);
+
+        worksheet.columns = [
+          { key: 'id' },
+          { key: 'section' },
+          { key: 'body' },
+          { key: 'hyperlink' },
+          { key: 'isolinks' },
+        ];
+    
+        worksheet.getColumn('id').values = ["id"].concat(sections.map(v => v.id));
+        worksheet.getColumn('section').values = ["section"].concat(sections.map(v => v.section));
+        worksheet.getColumn('body').values = ["body"].concat(sections.map(v => v.body));
+        worksheet.getColumn('hyperlink').values = ["hyperlink"].concat(sections.map(v => v.hyperlink));
+        worksheet.getColumn('isolinks').values = ["isolinks"].concat(sections.map(v => v.links.map(l => l.id).join(";")));
+    }
+
+    workbook.xlsx.writeFile(outputXlsxFile)
+      .then(function() {
+        // done
+      });
+}
+
 mainMapping()
   .then(allDocs => {
     
@@ -389,5 +432,7 @@ mainMapping()
             const fs = require('fs');
             let data = JSON.stringify(allDocs, null, 4);  
             fs.writeFileSync(outputFile, data); 
+
+            exportXlsx(allDocs);
         });
   });

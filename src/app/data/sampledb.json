@@ -4,7 +4,7 @@
             {
                 "id": "5",
                 "frag": "5",
-                "section": "5",
+                "section": "5 - Title",
                 "children": [
                     {
                         "id": "5.2",
@@ -97,7 +97,8 @@
                         "links": []
                     }
                 ],
-                "links": []
+                "links": [],
+                "body": "Description"
             },
             {
                 "id": "6",
@@ -11499,6 +11500,15 @@
                     }
                 ],
                 "links": []
+            }
+        ],
+        "id": "",
+        "section": "",
+        "body": "",
+        "links": [
+            {
+                "id": "5",
+                "type": "ISO"
             }
         ],
         "type": "GDPR",

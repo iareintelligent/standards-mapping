@@ -356,7 +356,7 @@ export class GraphTab {
             //setTimeout(() => {
               // by default, collapse everything
               this.column.forAllTreeNodes(n => n.collapse());
-
+            
               // ensure selected nodes are visible
               for (var n in this.treeModel.selectedLeafNodeIds)
               {
