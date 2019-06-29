@@ -136,21 +136,24 @@ export class GraphTab {
         return show;
     }
 
-    public static filterByVisibleLeafs(visibleNodes: TreeNode[], parentTree: TreeNode[], node: TreeNode): boolean
+    public static containsNode(parentTree: VisibleLink[], node: TreeNode): boolean 
     {
-        var show = parentTree.find(n => {
-            return n.id == node.data.id;
-        }) != null;
-        if (show)
-            visibleNodes.push(node);
-        return show;
+        return parentTree.find(n => {
+            return n.link.id == node.data.id;
+        }) != null
     }
-
     public static filterByVisibleLinks(visibleNodes: TreeNode[], parentTree: VisibleLink[], node: TreeNode): boolean
     {
-        var show = parentTree.find(n => {
-            return n.link.id == node.data.id;
-        }) != null;
+        var show = GraphTab.containsNode(parentTree, node);
+
+        var parent = node.parent;
+        while (!show && parent)
+        {
+            // didnt find us but see if any parent is linked
+            show = GraphTab.containsNode(parentTree, parent);
+            parent = parent.parent;
+        }
+
         if (show)
             visibleNodes.push(node);
         return show;
@@ -207,7 +210,7 @@ export class GraphTab {
             }
             else
             {
-                show = noSelection ||GraphTab.filterBySelectedLeafs(this.visibleNodes, this.parent.treeModel, node);
+                show = noSelection || GraphTab.filterBySelectedLeafs(this.visibleNodes, this.parent.treeModel, node);
             }
                 
             return show;

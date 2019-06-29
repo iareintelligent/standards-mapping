@@ -56,9 +56,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
     constructor(
       public graphService: GraphService,
       private sanitizer: DomSanitizer) {
-        //this.graphTabs[1].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[0].column.visibleLinks, n);
-        ////this.graphTabs[2].column.filter = (vs, n) => GraphTab.filterByVisibleLinks(vs, this.graphTabs[1].column.visibleLinks, n);
-
+        
         this.updateSubject.pipe(debounce(() => Rx.timer(1))).subscribe({
           next: (v) => this.updateGraph()
         });
