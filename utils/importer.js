@@ -3,6 +3,7 @@ var Excel = require('exceljs');
 
 var xlsxFile = "./src/app/data/Database.xlsx";
 var outputFile = "./src/assets/db.json";
+var outputFile2 = "./docs/assets/db.json"; // write one straight to the bin file so the user doesnt have to run the build pipeline.
 
 function flatten(nodes, result) {
     for (var n of nodes)
@@ -50,6 +51,7 @@ function writeDocs(allDocs) {
     let data = JSON.stringify(allDocs, null, 4);  
     console.log(data);
     fs.writeFileSync(outputFile, data); 
+    fs.writeFileSync(outputFile2, data); 
 }
 
 var mergeLinks = function (src, dst) {
