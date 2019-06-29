@@ -10,7 +10,8 @@
     "build": "ng build --aot=true --prod=true --baseHref=/standards-mapping/ --deployUrl=/standards-mapping/ --outputPath=docs",
     "e2e": "ng e2e",
     "ng": "ng",
-    "import": "node utils/parsexlsx.js"
+    "import": "node utils/importer.js",
+    "convert": "node utils/converter.js"
   },
   "keywords": [],
   "author": "",

@@ -1,10 +1,12 @@
 [
     {
+        "type": "ISO",
+        "rev": 1,
         "children": [
             {
                 "id": "5",
                 "frag": "5",
-                "section": "5 - Title",
+                "section": "5",
                 "children": [
                     {
                         "id": "5.2",
@@ -97,8 +99,7 @@
                         "links": []
                     }
                 ],
-                "links": [],
-                "body": "Description"
+                "links": []
             },
             {
                 "id": "6",
@@ -1116,11 +1117,11 @@
                 ],
                 "links": []
             }
-        ],
-        "type": "ISO",
-        "rev": 1
+        ]
     },
     {
+        "type": "Australia ",
+        "rev": 1,
         "children": [
             {
                 "id": "APP",
@@ -1873,11 +1874,11 @@
                 ],
                 "links": []
             }
-        ],
-        "type": "Australia ",
-        "rev": 1
+        ]
     },
     {
+        "type": "Canada ",
+        "rev": 1,
         "children": [
             {
                 "id": "1",
@@ -2494,17 +2495,16 @@
                             }
                         ],
                         "links": [],
-                        "body": "Sensory disability (S.10) - Must, on request, give access to personal information in an alternative format (if reasonable) to individuals with a sensory disability where...",
-                        "hyperlink": null
+                        "body": "Sensory disability (S.10) - Must, on request, give access to personal information in an alternative format (if reasonable) to individuals with a sensory disability where..."
                     }
                 ],
                 "links": []
             }
-        ],
-        "type": "Canada ",
-        "rev": 1
+        ]
     },
     {
+        "type": "Hong Kong ",
+        "rev": 1,
         "children": [
             {
                 "id": "DDP",
@@ -2988,11 +2988,11 @@
                 ],
                 "links": []
             }
-        ],
-        "type": "Hong Kong ",
-        "rev": 1
+        ]
     },
     {
+        "type": "Singapore ",
+        "rev": 1,
         "children": [
             {
                 "id": "2",
@@ -3534,11 +3534,11 @@
                 ],
                 "links": []
             }
-        ],
-        "type": "Singapore ",
-        "rev": 1
+        ]
     },
     {
+        "type": "South Korea ",
+        "rev": 1,
         "children": [
             {
                 "id": "A",
@@ -3824,8 +3824,7 @@
                                 "section": "A.24.2",
                                 "children": [],
                                 "links": [],
-                                "body": "Limitations to Processing Resdent Registration Numbers                   ...",
-                                "hyperlink": null
+                                "body": "Limitations to Processing Resdent Registration Numbers                   ..."
                             }
                         ],
                         "links": []
@@ -3836,8 +3835,7 @@
                         "section": "A.25",
                         "children": [],
                         "links": [],
-                        "body": "Limitation to Installation and Operation of Visual Data Processing Devices (A.25) - With only limited law enforcement/safety exceptions, no one must install and operate visual...",
-                        "hyperlink": null
+                        "body": "Limitation to Installation and Operation of Visual Data Processing Devices (A.25) - With only limited law enforcement/safety exceptions, no one must install and operate visual..."
                     },
                     {
                         "id": "A.26",
@@ -4138,11 +4136,11 @@
                 ],
                 "links": []
             }
-        ],
-        "type": "South Korea ",
-        "rev": 1
+        ]
     },
     {
+        "type": "Turkey ",
+        "rev": 1,
         "children": [
             {
                 "id": "A",
@@ -4176,8 +4174,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The obligations, principles and procedures under the law are binding on all who process personal data (A.1)",
-                        "hyperlink": null
+                        "body": "The obligations, principles and procedures under the law are binding on all who process personal data (A.1)"
                     },
                     {
                         "id": "A.4",
@@ -4212,8 +4209,7 @@
                                                 "type": "ISO"
                                             }
                                         ],
-                                        "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \nPersonal data may only be processed for specific, explicit and legitimate purposes (A.4.2.c) ",
-                                        "hyperlink": null
+                                        "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \nPersonal data may only be processed for specific, explicit and legitimate purposes (A.4.2.c) "
                                     }
                                 ],
                                 "links": [
@@ -4234,8 +4230,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \nData processing must be relevant, limited and proportionate to the purposes for which data is to be processed (A.4.2) \nPersonal data processed must be accurate and if necessary, up to date (A.4.2)",
-                                "hyperlink": null
+                                "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \nData processing must be relevant, limited and proportionate to the purposes for which data is to be processed (A.4.2) \nPersonal data processed must be accurate and if necessary, up to date (A.4.2)"
                             }
                         ],
                         "links": []
@@ -4264,8 +4259,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Personal data cannot be processed without the explicit consent of the data subject unless the one of legitimate purposes exists (A.5.2) ",
-                                "hyperlink": null
+                                "body": "Personal data cannot be processed without the explicit consent of the data subject unless the one of legitimate purposes exists (A.5.2) "
                             }
                         ],
                         "links": []
@@ -4290,8 +4284,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Unless specifically permitted by law, it is prohibited to process the personal data of \"special nature\" without explicit consent (A.6.2) ",
-                                "hyperlink": null
+                                "body": "Unless specifically permitted by law, it is prohibited to process the personal data of \"special nature\" without explicit consent (A.6.2) "
                             }
                         ],
                         "links": []
@@ -4327,8 +4320,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Personal data must be deleted, destroyed or anonymised on request by the data subject or when  the reasons necessitating its processing cease to exist... \nPersonal data must be deleted, destroyed or anonymised upon request by the data subject or when  the reasons necessitating its processing cease to exist...",
-                        "hyperlink": null
+                        "body": "Personal data must be deleted, destroyed or anonymised on request by the data subject or when  the reasons necessitating its processing cease to exist... \nPersonal data must be deleted, destroyed or anonymised upon request by the data subject or when  the reasons necessitating its processing cease to exist..."
                     },
                     {
                         "id": "A.8",
@@ -4345,8 +4337,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Unless approved conditions apply, personal data cannot be transferred without explicit consent of the data subject (A.8)",
-                        "hyperlink": null
+                        "body": "Unless approved conditions apply, personal data cannot be transferred without explicit consent of the data subject (A.8)"
                     },
                     {
                         "id": "A.9",
@@ -4376,8 +4367,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Personal data may only be transferred abroad without explicit consent if (i) sufficient protection is provided in the foreign country where the data is to...",
-                                "hyperlink": null
+                                "body": "Personal data may only be transferred abroad without explicit consent if (i) sufficient protection is provided in the foreign country where the data is to..."
                             }
                         ],
                         "links": []
@@ -4403,8 +4393,7 @@
                                                 "type": "ISO"
                                             }
                                         ],
-                                        "body": "Must take reasonable steps to notify to whom processed personal data might be transferred and the purposes for the same (A.10.1.c)",
-                                        "hyperlink": null
+                                        "body": "Must take reasonable steps to notify to whom processed personal data might be transferred and the purposes for the same (A.10.1.c)"
                                     }
                                 ],
                                 "links": [
@@ -4413,8 +4402,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must take reasonable steps to notify to whom personal data might be transferred and the purposes for same (A.10.1)",
-                                "hyperlink": null
+                                "body": "Must take reasonable steps to notify to whom personal data might be transferred and the purposes for same (A.10.1)"
                             }
                         ],
                         "links": [
@@ -4439,8 +4427,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must notify certain matters on the collection of personal information (A.10) \nMust inform data subjects of a number of matters including purposes of processing (A.10) \nMust notify certain matters on the collection of personal information (A.10)\r\n\r\nThis notification must be provided at or prior to the time of collecting the personal...",
-                        "hyperlink": null
+                        "body": "Must notify certain matters on the collection of personal information (A.10) \nMust inform data subjects of a number of matters including purposes of processing (A.10) \nMust notify certain matters on the collection of personal information (A.10)\r\n\r\nThis notification must be provided at or prior to the time of collecting the personal..."
                     },
                     {
                         "id": "A.11",
@@ -4463,8 +4450,7 @@
                                                 "type": "ISO"
                                             }
                                         ],
-                                        "body": "Data subject may object to processing of personal data exclusively through automated systems (A.11.1.g)",
-                                        "hyperlink": null
+                                        "body": "Data subject may object to processing of personal data exclusively through automated systems (A.11.1.g)"
                                     }
                                 ],
                                 "links": []
@@ -4492,8 +4478,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Upon request must notify third parties of (i) rectification in cases of  incomplete or inaccurate data and/or (ii) deletion or destruction of personal data... \nMust take actions, if requested regarding (i) rectification in case personal data are processed incompletely or inaccurately; (ii) deletion or destruction of personal data (iii)...",
-                        "hyperlink": null
+                        "body": "Upon request must notify third parties of (i) rectification in cases of  incomplete or inaccurate data and/or (ii) deletion or destruction of personal data... \nMust take actions, if requested regarding (i) rectification in case personal data are processed incompletely or inaccurately; (ii) deletion or destruction of personal data (iii)..."
                     },
                     {
                         "id": "A.12",
@@ -4607,8 +4592,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful processing of personal data,...",
-                                "hyperlink": null
+                                "body": "Must take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful processing of personal data,..."
                             },
                             {
                                 "id": "A.12.2",
@@ -4629,8 +4613,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Jointly responsible with processor to take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful...",
-                                "hyperlink": null
+                                "body": "Jointly responsible with processor to take all necessary technical and administrative measures to provide a sufficient level of security in order to (i) prevent unlawful..."
                             },
                             {
                                 "id": "A.12.3",
@@ -4667,8 +4650,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must conduct necessary inspections in order to ensure compliance (A.12.3)",
-                                "hyperlink": null
+                                "body": "Must conduct necessary inspections in order to ensure compliance (A.12.3)"
                             },
                             {
                                 "id": "A.12.5",
@@ -4681,8 +4663,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must notify the data subject and the  Personal Data Protection Board of data breaches within the shortest time (A.12.5)",
-                                "hyperlink": null
+                                "body": "Must notify the data subject and the  Personal Data Protection Board of data breaches within the shortest time (A.12.5)"
                             }
                         ],
                         "links": []
@@ -4706,8 +4687,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The data subject may lodge his/her demands under and object regarding implementation of the law with the controller who must act on them in the... \nThe data subject may lodge his/her demands under and objects regarding implementation of the law with the controller who must act on them in the...",
-                        "hyperlink": null
+                        "body": "The data subject may lodge his/her demands under and object regarding implementation of the law with the controller who must act on them in the... \nThe data subject may lodge his/her demands under and objects regarding implementation of the law with the controller who must act on them in the..."
                     },
                     {
                         "id": "A.16",
@@ -4715,17 +4695,16 @@
                         "section": "A.16",
                         "children": [],
                         "links": [],
-                        "body": "Registry of Controllers (A.16) - Must be registered with the Registry of Data Controllers before processing data. The Registry is a publicly accessible register under...",
-                        "hyperlink": null
+                        "body": "Registry of Controllers (A.16) - Must be registered with the Registry of Data Controllers before processing data. The Registry is a publicly accessible register under..."
                     }
                 ],
                 "links": []
             }
-        ],
-        "type": "Turkey ",
-        "rev": 1
+        ]
     },
     {
+        "type": "USA\r\nCalifornia ",
+        "rev": 1,
         "children": [
             {
                 "id": "S",
@@ -4948,8 +4927,7 @@
                                     }
                                 ],
                                 "links": [],
-                                "body": "Third party sale of personal information (S.1798.115) - Third parties must not sell personal information sold to them without giving explicit notice to consumer and...",
-                                "hyperlink": null
+                                "body": "Third party sale of personal information (S.1798.115) - Third parties must not sell personal information sold to them without giving explicit notice to consumer and..."
                             },
                             {
                                 "id": "S.1798.120",
@@ -5006,8 +4984,7 @@
                                 "section": "S.1798.125",
                                 "children": [],
                                 "links": [],
-                                "body": "Non-discrimination (S.1798.125) - Businesses must not discriminate against consumers who exercise any of their privacy rights",
-                                "hyperlink": null
+                                "body": "Non-discrimination (S.1798.125) - Businesses must not discriminate against consumers who exercise any of their privacy rights"
                             },
                             {
                                 "id": "S.1798.130",
@@ -5363,11 +5340,11 @@
                 ],
                 "links": []
             }
-        ],
-        "type": "USA\r\nCalifornia ",
-        "rev": 1
+        ]
     },
     {
+        "type": "Brazil ",
+        "rev": 1,
         "children": [
             {
                 "id": "Art",
@@ -5421,8 +5398,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Processing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6) \nProcessing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6)\r\n\r\nIf testing is not...",
-                        "hyperlink": null
+                        "body": "Processing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6) \nProcessing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6)\r\n\r\nIf testing is not..."
                     },
                     {
                         "id": "Art.7",
@@ -5447,8 +5423,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Processing of personal data must only be carried out, among others, with the consent of the data subject, for compliance with a legal obligation, when...",
-                        "hyperlink": null
+                        "body": "Processing of personal data must only be carried out, among others, with the consent of the data subject, for compliance with a legal obligation, when..."
                     },
                     {
                         "id": "Art.8",
@@ -5465,8 +5440,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The consent required in Art 7 must be given in writing or other means that shows the consent of the data subject (Art 8) \nConsent may be revoked at any time by express request via a free of charge procedure (Art 8)",
-                        "hyperlink": null
+                        "body": "The consent required in Art 7 must be given in writing or other means that shows the consent of the data subject (Art 8) \nConsent may be revoked at any time by express request via a free of charge procedure (Art 8)"
                     },
                     {
                         "id": "Art.9",
@@ -5511,8 +5485,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Specified information concerning the processing of the data subject's personal data must be made available in a clear transparent manner to the data subject (Art...",
-                        "hyperlink": null
+                        "body": "Specified information concerning the processing of the data subject's personal data must be made available in a clear transparent manner to the data subject (Art..."
                     },
                     {
                         "id": "Art.10",
@@ -5525,8 +5498,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The controller's legitimate interest can, among other things, only justify processing of personal data strictly necessary for the intended and transparent purpose of the controller...",
-                        "hyperlink": null
+                        "body": "The controller's legitimate interest can, among other things, only justify processing of personal data strictly necessary for the intended and transparent purpose of the controller..."
                     },
                     {
                         "id": "Art.11",
@@ -5543,8 +5515,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Processing of sensitive personal data must only occur with consent or if indispensable for, among others, compliance with a legal obligation or protecting life or...",
-                        "hyperlink": null
+                        "body": "Processing of sensitive personal data must only occur with consent or if indispensable for, among others, compliance with a legal obligation or protecting life or..."
                     },
                     {
                         "id": "Art.13",
@@ -5552,8 +5523,7 @@
                         "section": "Art.13",
                         "children": [],
                         "links": [],
-                        "body": "Public health studies and research (Art 13) - When carrying out public health sutides and research using personal data such must be processed exclusively within...",
-                        "hyperlink": null
+                        "body": "Public health studies and research (Art 13) - When carrying out public health sutides and research using personal data such must be processed exclusively within..."
                     },
                     {
                         "id": "Art.14",
@@ -5566,8 +5536,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Processing of childrens' personal data must be with consent of at least one parent or the legal representative (Art 14)",
-                        "hyperlink": null
+                        "body": "Processing of childrens' personal data must be with consent of at least one parent or the legal representative (Art 14)"
                     },
                     {
                         "id": "Art.16",
@@ -5600,8 +5569,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Personal data must be deleted once processing complete or terminated, except in compliance with legal obligations or in anonymised form for exclusive use of controller...",
-                        "hyperlink": null
+                        "body": "Personal data must be deleted once processing complete or terminated, except in compliance with legal obligations or in anonymised form for exclusive use of controller..."
                     },
                     {
                         "id": "Art.18",
@@ -5614,8 +5582,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Data subjects have rights to obtain, among others, confirmation of the processing, access to data, correction of data, anonymisation, portability of data, deletion, withdrawal revocation...",
-                        "hyperlink": null
+                        "body": "Data subjects have rights to obtain, among others, confirmation of the processing, access to data, correction of data, anonymisation, portability of data, deletion, withdrawal revocation..."
                     },
                     {
                         "id": "Art.19",
@@ -5640,8 +5607,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Confirmation of existence of and access to personal data must be provided in a simple format immediately and by means of a clear and complete...",
-                        "hyperlink": null
+                        "body": "Confirmation of existence of and access to personal data must be provided in a simple format immediately and by means of a clear and complete..."
                     },
                     {
                         "id": "Art.20",
@@ -5654,8 +5620,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Data subject has the right to request review of decisions taken solely by automated processing of personal data (Art 20)",
-                        "hyperlink": null
+                        "body": "Data subject has the right to request review of decisions taken solely by automated processing of personal data (Art 20)"
                     },
                     {
                         "id": "Art.21",
@@ -5663,8 +5628,7 @@
                         "section": "Art.21",
                         "children": [],
                         "links": [],
-                        "body": "Exercise of rights must not be detrimental to subject (Art 21) - Data concerning the exercise of a data subject's rights must not be used...",
-                        "hyperlink": null
+                        "body": "Exercise of rights must not be detrimental to subject (Art 21) - Data concerning the exercise of a data subject's rights must not be used..."
                     },
                     {
                         "id": "Art.33",
@@ -5677,8 +5641,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "International transfer of personal data is only allowed, among others, to countries with a similar level of protection, when the controller offers (and proves) guarantees...",
-                        "hyperlink": null
+                        "body": "International transfer of personal data is only allowed, among others, to countries with a similar level of protection, when the controller offers (and proves) guarantees..."
                     },
                     {
                         "id": "Art.37",
@@ -5711,8 +5674,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Controllers and processors must keep records of personal data processing operations (Art 37)",
-                        "hyperlink": null
+                        "body": "Controllers and processors must keep records of personal data processing operations (Art 37)"
                     },
                     {
                         "id": "Art.38",
@@ -5725,8 +5687,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The regulator may require a controller to prepare an impact report on their processing of personal data (Art 38)",
-                        "hyperlink": null
+                        "body": "The regulator may require a controller to prepare an impact report on their processing of personal data (Art 38)"
                     },
                     {
                         "id": "Art.39",
@@ -5755,8 +5716,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The processor must carry out processing according to the controller's instructions (Art 39)",
-                        "hyperlink": null
+                        "body": "The processor must carry out processing according to the controller's instructions (Art 39)"
                     },
                     {
                         "id": "Art.41",
@@ -5769,8 +5729,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must appoint a DPO to be in charge of processing personal data and a point of contact and must publicly disclose DPO's identity and contact...",
-                        "hyperlink": null
+                        "body": "Must appoint a DPO to be in charge of processing personal data and a point of contact and must publicly disclose DPO's identity and contact..."
                     },
                     {
                         "id": "Art.46",
@@ -5911,8 +5870,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must adopt security, technical and administrative measures to protect personal data from unauthorised access and accidental or unlawful destruction, loss, alteration, communication or processing (Art...",
-                        "hyperlink": null
+                        "body": "Must adopt security, technical and administrative measures to protect personal data from unauthorised access and accidental or unlawful destruction, loss, alteration, communication or processing (Art..."
                     },
                     {
                         "id": "Art.48",
@@ -5929,8 +5887,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must communicate to regulator and data subjects the occurrence of a security incident and include certain minimum information (Art 48)",
-                        "hyperlink": null
+                        "body": "Must communicate to regulator and data subjects the occurrence of a security incident and include certain minimum information (Art 48)"
                     },
                     {
                         "id": "Art.49",
@@ -5991,17 +5948,16 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The systems used for processing personal data must be structured to meet security requirements, standards of good practice and governance and general principles under the...",
-                        "hyperlink": null
+                        "body": "The systems used for processing personal data must be structured to meet security requirements, standards of good practice and governance and general principles under the..."
                     }
                 ],
                 "links": []
             }
-        ],
-        "type": "Brazil ",
-        "rev": 1
+        ]
     },
     {
+        "type": "GDPR",
+        "rev": 1,
         "children": [
             {
                 "id": "5",
@@ -10126,9 +10082,9 @@
                                 "body": "Article(40)(2)(a): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
                             },
                             {
-                                "id": "40.2.k",
-                                "frag": "k",
-                                "section": "40.2.k",
+                                "id": "40.2.f",
+                                "frag": "f",
+                                "section": "40.2.f",
                                 "children": [],
                                 "links": [
                                     {
@@ -10136,7 +10092,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(40)(2)(k): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
+                                "body": "Article(40)(2)(f): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
                             },
                             {
                                 "id": "40.2.c",
@@ -10178,9 +10134,9 @@
                                 "body": "Article(40)(2)(e): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
                             },
                             {
-                                "id": "40.2.b",
-                                "frag": "b",
-                                "section": "40.2.b",
+                                "id": "40.2.k",
+                                "frag": "k",
+                                "section": "40.2.k",
                                 "children": [],
                                 "links": [
                                     {
@@ -10188,7 +10144,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(40)(2)(b): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
+                                "body": "Article(40)(2)(k): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
                             },
                             {
                                 "id": "40.2.g",
@@ -10243,9 +10199,9 @@
                                 "body": "Article(40)(2)(j): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
                             },
                             {
-                                "id": "40.2.f",
-                                "frag": "f",
-                                "section": "40.2.f",
+                                "id": "40.2.b",
+                                "frag": "b",
+                                "section": "40.2.b",
                                 "children": [],
                                 "links": [
                                     {
@@ -10253,7 +10209,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(40)(2)(f): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
+                                "body": "Article(40)(2)(b): Associations and other bodies representing categories of controllers or processors may prepare codes of conduct, or amend or extend such codes, for the purpose..."
                             }
                         ],
                         "links": []
@@ -11073,9 +11029,9 @@
                                 "body": "Article(47)(2)(a): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(a) the structure and contact details of the group of undertakings, or..."
                             },
                             {
-                                "id": "47.2.n",
-                                "frag": "n",
-                                "section": "47.2.n",
+                                "id": "47.2.h",
+                                "frag": "h",
+                                "section": "47.2.h",
                                 "children": [],
                                 "links": [
                                     {
@@ -11083,7 +11039,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(47)(2)(n): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(n) the appropriate data protection training to personnel having permanent or regular..."
+                                "body": "Article(47)(2)(h): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(h) the tasks of any data protection officer designated in accordance with..."
                             },
                             {
                                 "id": "47.2.c",
@@ -11151,9 +11107,9 @@
                                 "body": "Article(47)(2)(g): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(g) how the information on the binding corporate rules, in particular on..."
                             },
                             {
-                                "id": "47.2.b",
-                                "frag": "b",
-                                "section": "47.2.b",
+                                "id": "47.2.n",
+                                "frag": "n",
+                                "section": "47.2.n",
                                 "children": [],
                                 "links": [
                                     {
@@ -11161,7 +11117,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(47)(2)(b): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(b) the data transfers or set of transfers, including the categories of..."
+                                "body": "Article(47)(2)(n): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(n) the appropriate data protection training to personnel having permanent or regular..."
                             },
                             {
                                 "id": "47.2.i",
@@ -11229,9 +11185,9 @@
                                 "body": "Article(47)(2)(m): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(m) the mechanisms for reporting to the competent supervisory authority any legal..."
                             },
                             {
-                                "id": "47.2.h",
-                                "frag": "h",
-                                "section": "47.2.h",
+                                "id": "47.2.b",
+                                "frag": "b",
+                                "section": "47.2.b",
                                 "children": [],
                                 "links": [
                                     {
@@ -11239,7 +11195,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(47)(2)(h): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(h) the tasks of any data protection officer designated in accordance with..."
+                                "body": "Article(47)(2)(b): The binding corporate rules referred to in paragraph 1 shall specify at least:\r\n(b) the data transfers or set of transfers, including the categories of..."
                             }
                         ],
                         "links": []
@@ -11501,17 +11457,6 @@
                 ],
                 "links": []
             }
-        ],
-        "id": "",
-        "section": "",
-        "body": "",
-        "links": [
-            {
-                "id": "5",
-                "type": "ISO"
-            }
-        ],
-        "type": "GDPR",
-        "rev": 1
+        ]
     }
 ]

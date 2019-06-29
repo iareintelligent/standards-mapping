@@ -4,8 +4,8 @@ var Excel = require('exceljs');
 
 var inputFile = "./src/app/data/notcheckedin/MSFT ISO 27552 Country Mapping - Merged- Macro.xlsm";
 var inputFileGdpr = "./src/app/data/notcheckedin/27552 to GDPR.xlsx";
-var outputFile = "./src/app/data/sampledb.json";
-var outputXlsxFile = "./src/app/data/notcheckedin/Database.xlsx";
+
+var importer = require("./importer");
 
 var keepNWords = function (input, n) {
     var frags = input.split(" ");
@@ -19,6 +19,16 @@ var keepNWords = function (input, n) {
 var removeSpecialCharacters = function (input) {
     return input.replace(/[^\w\s]/gi, '');
 }
+
+var nestDoc = function (doc) {
+    var result = { "children" : [] };
+
+    importer.mergeDoc(doc, result);
+
+    return result;
+}
+
+
 
 var reduceDoc = function(doc) {
     var result = { };
@@ -42,7 +52,7 @@ var reduceDoc = function(doc) {
             lastCell.body += ' \n' + newCell.body;
         }
 
-        mergeLinks(newCell, lastCell);
+        importer.mergeLinks(newCell, lastCell);
       }
       else
       {
@@ -56,132 +66,10 @@ var reduceDoc = function(doc) {
     return objs;
 }
 
-var mergeLinks = function (src, dst) {
-    if (src.links)
-    {
-      if (!dst.links)
-        dst.links = [];
-
-      for (var l of src.links)
-      {
-          if (!dst.links.find(n => n.id == l.id && n.type == l.type))
-          {
-              dst.links.push(l);
-          }
-      }
-    }
-}
-
-
-var breakPath = function (path) {
-    if (!path)
-      return [];
-
-    var frags = path.split(/\W+/);
-    frags = frags.filter(f => f);
-    return frags;
-}
-
-var normalizePath = function (path) {
-    var frags = breakPath(path);
-    var assembled = frags.join(".");
-    return assembled;
-}
-
-var findOrCreateSection = function (root, id) {
-  var frags = breakPath(id);
-  var assembled = "";
-
-  for (var f of frags)
-  {
-      if (assembled.length)
-        assembled += '.';
-      assembled += f;
-
-      var child = root.children ? root.children.find(c => c.id == assembled) : null;
-      if (child)
-        root = child;
-      else
-      {
-          var node = { 
-            "id": assembled,
-            "frag": f, // sortable fragment
-            "section": assembled,
-            "children": [],
-            "links": []
-          };
-
-          root.children.push(node);
-          root = node;
-      }
-  }
-
-  return root;
-}
-
-var recursiveSort = function (doc) {
-    doc.children.sort((a,b) => {
-      if (!isNaN(a.frag) && !isNaN(b.frag))
-        return parseInt(a.frag) - parseInt(b.frag);
-
-      return a.frag - b.frag;
-    });
-
-    for (var c of doc.children)
-      recursiveSort(c);
-}
-
-var nestDoc = function (doc) {
-    var result = { "children" : [] };
-
-    mergeDoc(doc, result);
-
-    return result;
-}
-
-
-
-var mergeDocRecursive = function (src, dst) {
-    for (var d of src)
-    {
-        var node = findOrCreateSection(dst, d.id);
-
-        // copy properties
-        node.id = d.id;
-        node.section = d.section;
-        node.body = d.body;
-        node.hyperlink = d.hyperlink;
-        if (d.links)
-          mergeLinks(d, node);
-
-        if (d.children)
-          mergeDocRecursive(d.children, dst);
-    }
-}
-
-var mergeDoc = function (src, dst) {
-    mergeDocRecursive(src, dst);
-
-    recursiveSort(dst);
-
-    return dst;
-}
-
 var makeDoc = function (doc, type) {
     doc.type = type;
     doc.rev = 1;
     return doc;
-}
-
-var flatten = function (nodes, result) {
-    for (var n of nodes)
-    {
-      result.push(n);
-      if (n.children)
-        flatten(n.children, result);
-    }
-
-    return result;
 }
 
 var mainMapping = function() {
@@ -214,7 +102,7 @@ var mainMapping = function() {
               var section = cell.text.match(/(\d.*)/); // must start with a number
               if (section)
               {
-                sectionsByRow[rowNumber] = normalizePath(section[1])
+                sectionsByRow[rowNumber] = importer.normalizePath(section[1])
               }
             }
 
@@ -281,7 +169,7 @@ var mainMapping = function() {
                 body = body.slice(0, -(hyperlink.length + 2)); // + 2 for brackets
               }
 
-              var normalized = normalizePath(section[1]);
+              var normalized = importer.normalizePath(section[1]);
               var sectionText = normalized;
               if (bodyOverride)
               {
@@ -344,7 +232,7 @@ var gdprMapping = function() {
           var section = cell.text.match(/(\d.*)/); // must start with a number
           if (section)
           {
-            var sectionId = normalizePath(section[1]);
+            var sectionId = importer.normalizePath(section[1]);
             sectionsByRow[rowNumber] = sectionId;
 
             var row = worksheet.getRow(rowNumber);
@@ -383,37 +271,6 @@ var gdprMapping = function() {
     });
 }
 
-
-var exportXlsx = function (allDocs) {
-
-    var workbook = new Excel.Workbook();
-
-    for (var doc of allDocs)
-    {
-        var sections = flatten(doc.children, []);
-        var worksheet = workbook.addWorksheet(doc.type);
-
-        worksheet.columns = [
-          { key: 'id' },
-          { key: 'section' },
-          { key: 'body' },
-          { key: 'hyperlink' },
-          { key: 'isolinks' },
-        ];
-    
-        worksheet.getColumn('id').values = ["id"].concat(sections.map(v => v.id));
-        worksheet.getColumn('section').values = ["section"].concat(sections.map(v => v.section));
-        worksheet.getColumn('body').values = ["body"].concat(sections.map(v => v.body));
-        worksheet.getColumn('hyperlink').values = ["hyperlink"].concat(sections.map(v => v.hyperlink));
-        worksheet.getColumn('isolinks').values = ["isolinks"].concat(sections.map(v => v.links.map(l => l.id).join(";")));
-    }
-
-    workbook.xlsx.writeFile(outputXlsxFile)
-      .then(function() {
-        // done
-      });
-}
-
 mainMapping()
   .then(allDocs => {
     
@@ -425,14 +282,12 @@ mainMapping()
 
             allDocs.push(gdprDoc);
 
-            mergeDoc(isoDocGdpr.children, isoDocMain);
+            importer.mergeDoc(isoDocGdpr.children, isoDocMain);
     
             //console.log(JSON.stringify(allDocs, null, 4));
 
-            const fs = require('fs');
-            let data = JSON.stringify(allDocs, null, 4);  
-            fs.writeFileSync(outputFile, data); 
+            importer.writeDocs(allDocs);
 
-            exportXlsx(allDocs);
+            importer.exportXlsx(allDocs);
         });
   });
