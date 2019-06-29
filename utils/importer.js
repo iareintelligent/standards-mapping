@@ -2,7 +2,7 @@
 var Excel = require('exceljs');
 
 var xlsxFile = "./src/app/data/Database.xlsx";
-var outputFile = "./src/app/data/sampledb.json";
+var outputFile = "./src/assets/db.json";
 
 function flatten(nodes, result) {
     for (var n of nodes)

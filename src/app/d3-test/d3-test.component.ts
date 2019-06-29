@@ -422,7 +422,11 @@ export class D3TestComponent implements OnInit, OnDestroy {
 
     public tabChanged() {
         this.graphService.configureFilterStack();
-        this.graphService.graphTabs[this.graphService.selectedTab].parentTabTreeChanged(this.updateSubject);
+
+        if (this.graphService.selectedTab >= 0 && this.graphService.selectedTab < this.graphService.graphTabs.length)
+        {
+            this.graphService.graphTabs[this.graphService.selectedTab].parentTabTreeChanged(this.updateSubject);
+        }
     }
 
     public activateNode(tab: GraphTab, event: any) {
@@ -560,6 +564,9 @@ export class D3TestComponent implements OnInit, OnDestroy {
     }
 
     public updateGraphView() {
+        if (!this.svgbgElement)
+            return;
+
         var tabs = this.graphService.graphTabs;        
         var startingGapLeft = 0;
         var startingGapRight = 10;

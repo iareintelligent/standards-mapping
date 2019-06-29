@@ -1,5 +1,4 @@
 ﻿import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { StandardMap } from './standard-map';
 import { Injectable } from '@angular/core';
 import { mapDb } from './mock-standard-maps'
 

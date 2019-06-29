@@ -6,7 +6,6 @@ import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
 
-import { StandardMap } from '../standard-map';
 
 @Component({
   selector: 'app-standard-map-search',
@@ -14,7 +13,7 @@ import { StandardMap } from '../standard-map';
   styleUrls: [ './standard-map-search.component.css' ]
 })
 export class StandardMapSearchComponent implements OnInit {
-  standardMap$: Observable<StandardMap[]>;
+  standardMap$: Observable<any[]>;
   private searchTerms = new Subject<string>();
 
   constructor() {}

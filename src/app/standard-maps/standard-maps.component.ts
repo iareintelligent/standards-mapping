@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 
-import { StandardMap } from '../standard-map';
+//import { StandardMap } from '../standard-map';
 
 @Component({
   selector: 'app-standard-maps',
@@ -8,27 +8,27 @@ import { StandardMap } from '../standard-map';
   styleUrls: ['./standard-maps.component.css']
 })
 export class StandardMapsComponent implements OnInit {
-  standardMaps: StandardMap[];
+  //standardMaps: StandardMap[];
 
   constructor() { }
 
   ngOnInit() {
-    this.getStandardMaps();
+    //this.getStandardMaps();
   }
 
-  getStandardMaps(): void {
-  }
-
-  add(name: string): void {
-    //name = name.trim();
-    //if (!name) { return; }
-    //this.standardMapService.addStandardMap({ name } as StandardMap)
-    //  .subscribe(standardMap => {
-    //    this.standardMaps.push(standardMap);
-    //  });
-  }
-
-  delete(standardMap: StandardMap): void {
-  }
+  //getStandardMaps(): void {
+  //}
+  //
+  //add(name: string): void {
+  //  //name = name.trim();
+  //  //if (!name) { return; }
+  //  //this.standardMapService.addStandardMap({ name } as StandardMap)
+  //  //  .subscribe(standardMap => {
+  //  //    this.standardMaps.push(standardMap);
+  //  //  });
+  //}
+  //
+  //delete(standardMap: StandardMap): void {
+  //}
 
 }

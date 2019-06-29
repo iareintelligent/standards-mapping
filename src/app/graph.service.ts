@@ -5,12 +5,10 @@ import { Observable, of, forkJoin } from 'rxjs';
 import * as Rx from 'rxjs';
 import { catchError, map, tap, debounce } from 'rxjs/operators';
 
-import { StandardMap, FullDocNode, DocNode, DocNode2, Doc2, Link } from './standard-map';
+import { FullDocNode, DocNode2, Doc2, Link } from './standard-map';
 import { MessageService } from './message.service';
 import * as d3Sankey from 'd3-sankey';
 import { TreeModel, TreeNode, ITreeState, TREE_ACTIONS, IActionMapping } from 'angular-tree-component';
-
-import { mapDb } from './mock-standard-maps';
 
 
 export interface ICategory {
@@ -404,32 +402,15 @@ export class GraphTab {
 @Injectable({ providedIn: 'root' })
 export class GraphService {
   private docGuids = {};
+  private docDb = null;
   private nextDocGuid = 0;
   public tabsChangedSubject = new Rx.BehaviorSubject(0);
 
   constructor(
-    private messageService: MessageService) {
+    private messageService: MessageService,
+    private http: HttpClient) {
       this.addTab("ISO");
     }
-
-  //getGraphData(docA: number, docB: number, docC: number): Observable<DAG> {
-  //  var a = this.standardMapService.getStandardMap(docA);
-  //  var b = this.standardMapService.getStandardMap(docB);
-  //  var c = this.standardMapService.getStandardMap(docC);
-  //
-  //  return forkJoin(a, b, c)
-  //      .pipe(
-  //        map(ab => {
-  //                var sections = ab[0].sections.concat(ab[1].sections).concat(ab[2].sections);
-  //                var nodes = sections.map((v,i,x)=>{ return {nodeId:v.id, name:v.title}; });
-  //                
-  //                var allLinks = flatten(sections.map(s=>{ return s.links ? s.links.map(l=>{return [s,l];}) : []; }));
-  //                var links = allLinks.map(sl=>{ return {source:sl[0].id, target:sl[1].section, value:1}; });
-  //                return { nodes: nodes, links: links };
-  //          }),
-  //        catchError(this.handleError<DAG>('getGraphData', null))
-  //      );
-  //}
 
   public static flatten(array) {
       return array.reduce((a,b)=>a.concat(b), []);
@@ -462,9 +443,27 @@ export class GraphService {
       return value;
   }
 
+  getDb() : Observable<Doc2[]> {
+      if (this.docDb)
+          return of(this.docDb);
+
+      return this.http.get<Doc2[]>('assets/db.json', {responseType: 'json'})
+        .pipe(
+          tap(
+            data => this.docDb = data,
+            error => this.handleError("getDb", [])
+          )
+        );
+  }
+
   getDocTypes() : Observable<CategoryList> {
-      var result = mapDb.map(v => { return { id: v.type, title: v.type }; });
-      return of(result);
+      return this.getDb().pipe(
+        map(
+          data => {
+              return data.map(v => { return { id: v.type, title: v.type }; });
+          }
+        )
+      );
   }
 
   private addToDoc(parent: FullDocNode, input: DocNode2) {
@@ -485,10 +484,14 @@ export class GraphService {
   }
 
   getFullDocByType(docType: string) : Observable<FullDocNode> {
-      //var dump = JSON.stringify(mapDb2, null, 4);
-      var doc = mapDb.find(n => n.type == docType);
-      var result = this.addToDoc(null, doc);
-      return of(result);
+      return this.getDb().pipe(
+        map(
+          data => {
+              var doc = data.find(n => n.type == docType);
+              return this.addToDoc(null, doc);
+          }
+        )
+      );
   }
 
 

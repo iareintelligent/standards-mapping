@@ -1,4 +1,4 @@
-﻿import { StandardMap, DocNode2, Doc2 } from './standard-map';
+﻿import { DocNode2, Doc2 } from './standard-map';
 //import * as mockMapDb from './data/msftgdprsample.json'
 import * as mockMapDb from './data/sampledb.json'
 
@@ -80,5 +80,3 @@ export var mapDb: Doc2[] = (mockMapDb as any as SampleModule).default;
 //    GenerateStandardMap('PIPEDA', "1", 8, 3),
 //    GenerateStandardMap('APP', "1", 8, 3)
 //];
-
-//export var STANDARDMAPS: StandardMap[] = []
