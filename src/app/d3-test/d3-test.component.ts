@@ -9,6 +9,8 @@ import * as Rx from 'rxjs';
 
 import { TreeModel, TreeNode, ITreeState } from 'angular-tree-component';
 import Fuse from 'fuse.js';
+  
+ import convert from 'color-convert';
 
 import selection_attrs from 'd3-selection-multi/src/selection/attrs';
 d3.selection.prototype.attrs = selection_attrs;
@@ -20,6 +22,16 @@ class TableData
       public rows: SNode[][]) {
     }
 }
+
+function saturateColor(input, saturationZeroToOne){
+    if (input == "unset")
+        return input;
+
+    var out = '#' + convert.keyword.hex(input) + saturationZeroToOne ;
+    return out;
+}
+ 
+
 
 @Component({
   selector: 'app-d3-test',
@@ -528,7 +540,7 @@ export class D3TestComponent implements OnInit, OnDestroy {
                     toTree: toTree,
                     rtl: rtl,
                     scale: rtl ? -1 : 1,
-                    //weight: (fromNode.isActive || toNode.isActive) ? 2 : 1,
+                    weight: (fromNode.isActive || toNode.isActive) ? 2 : 1,
                     x1: 0,
                     x2: 0,
                     x3: 0,
@@ -722,41 +734,44 @@ export class D3TestComponent implements OnInit, OnDestroy {
         window.open(url, "_blank").focus();
     }
 
-    public treeEvent(event: any)
-    {
-    
-    }
-
     public getNodeColor(tab: GraphTab, node: TreeNode)
     {
-        if (node.data.filterColor)
+        // if we're a tree in the right side view, highlight active nodes
+        var selected = (tab.parent && node.isActive);
+        var color = selected ? 'lightblue' : 'unset';
+
+        if (tab.parent && node.data.filterColor)
         {
             if (!tab.isIso && node.data.isUnmapped)
             {
-                return 'red';
+                color = 'red';
             }
-            else
+            else if (!selected)
             {
-                return node.data.filterColor;
+                color = node.data.filterColor;
+            }
+        }
+        else if (!tab.isIso)
+        {
+            // Iso never has outward mappings
+            if (node.data.isUnmapped)
+            {
+                color = 'red';
+            }
+            else if (node.data.isAnyChildUnmapped)
+            {
+                color = 'pink';
             }
         }
 
-        // Iso never has outward mappings
-        if (tab.isIso)
-            return 'unset';
-
-        if (node.data.isUnmapped)
+        // if we're a tree in the right side view
+        if (tab.parent && !node.isActive)
         {
-            return 'red';
+            // desaturate background color unless active node
+            color = saturateColor(color, 'A0');
         }
-        else if (node.data.isAnyChildUnmapped)
-        {
-            return 'pink';
-        }
-        else
-        {
-            return 'unset';
-        }
+        
+        return color;
     }
 
     public filterMapped(tab: GraphTab)

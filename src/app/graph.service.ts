@@ -68,14 +68,13 @@ export class GraphTab {
       allowDrop: false,
       scrollOnActivate: false,
       scrollContainer: <HTMLElement>document.body, // Fix for bug: https://github.com/500tech/angular-tree-component/issues/704
-      //actionMapping: {
-      //  mouse: {
-      //    click: (tree, node, $event) => { 
-      //      //$event.preventDefault();
-      //      TREE_ACTIONS.TOGGLE_SELECTED_MULTI(tree, node, $event); 
-      //    },
-      //  }
-      //}
+      actionMapping: {
+        mouse: {
+          click: (tree, node, $event) => { 
+            TREE_ACTIONS.TOGGLE_ACTIVE_MULTI(tree, node, $event); 
+          },
+        }
+      }
     };
 
     public state: ITreeState = { };
@@ -131,7 +130,7 @@ export class GraphTab {
         var inSelection = node.data.id in parentTree.selectedLeafNodeIds;
         node.data.filterColor = inSelection ? "yellow" : undefined;
 
-        var show = inSelection || Object.keys(parentTree.selectedLeafNodeIds).length == 0;
+        var show = inSelection;
         if (show)
             visibleNodes.push(node);
         return show;
@@ -192,6 +191,8 @@ export class GraphTab {
         if (this.treeModel)
         {
           this.treeModel.clearFilter();
+          
+          var noSelection = Object.keys(this.parent.treeModel.selectedLeafNodeIds).length == 0;
 
           this.treeModel.filterNodes((node: TreeNode) => {
             var show = false;
@@ -205,7 +206,9 @@ export class GraphTab {
                     show = GraphTab.filterByVisibleLinks(this.visibleNodes, this.autoFilterSrc.visibleLinks, node);
             }
             else
-                show = GraphTab.filterBySelectedLeafs(this.visibleNodes, this.parent.treeModel, node);
+            {
+                show = noSelection ||GraphTab.filterBySelectedLeafs(this.visibleNodes, this.parent.treeModel, node);
+            }
                 
             return show;
           }, false);

@@ -47,7 +47,7 @@
               </div>
               
               <div class="tree-container">
-                <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="t.parentTabTreeChanged(updateSubject)" (event)="treeEvent($event)">
+                <tree-root #tree [(state)]="t.state" [options]="t.options" [nodes]="t.nodes" (initialized)="t.treeModel = tree.treeModel" (stateChange)="t.parentTabTreeChanged(updateSubject)">
                   <ng-template #treeNodeWrapperTemplate let-node let-index="index">
                     <div #wrapper class="node-wrapper" [style.padding-left]="node.getNodePadding()">
                       <tree-node-expander [node]="node"></tree-node-expander>
@@ -92,7 +92,7 @@
                       [class.node-content-wrapper-active]="node.isActive"
                       [class.node-content-wrapper-focused]="node.isFocused"
                       (click)="node.mouseAction('click', $event)"
-                      [style.background-color]="getNodeColor(t, node)">
+                      [style.background-color]="getNodeColor(t.column, node)">
 
                       <span>
                         <span *ngIf="!node.data.node.hyperlink">{{node.data.node.section}}</span>
@@ -115,8 +115,8 @@
             <g *ngFor="let l of t.column.displayLinks">
 <!--              <line class="svg-line-click" (click)="clickedLink(l)" [attr.x1]="l.x3" [attr.x2]="l.x4" [attr.y1]="l.y2" [attr.y2]="l.y2" marker-end="url(#arrow)"></line>
               <line class="svg-line-click" (click)="clickedLink(l)" [attr.x1]="l.x1" [attr.x2]="l.x3" [attr.y1]="l.y1" [attr.y2]="l.y2"></line>-->
-              <line class="svg-line-visible" [attr.x1]="l.x3" [attr.x2]="l.x4" [attr.y1]="l.y2" [attr.y2]="l.y2" marker-end="url(#arrow)"></line>
-              <line class="svg-line-visible" [attr.x1]="l.x1" [attr.x2]="l.x3" [attr.y1]="l.y1" [attr.y2]="l.y2"></line>
+              <line class="svg-line-visible" [class.svg-line-active]="l.weight > 1" [attr.x1]="l.x3" [attr.x2]="l.x4" [attr.y1]="l.y2" [attr.y2]="l.y2" marker-end="url(#arrow)"></line>
+              <line class="svg-line-visible" [class.svg-line-active]="l.weight > 1" [attr.x1]="l.x1" [attr.x2]="l.x3" [attr.y1]="l.y1" [attr.y2]="l.y2"></line>
             </g>
           </g>
         </svg>

@@ -33,6 +33,7 @@
     "@types/d3-sankey": "^0.11.0",
     "angular-in-memory-web-api": "github:brandonroberts/in-memory-web-api-bazel#50a34d8",
     "angular-tree-component": "^8.3.0",
+    "color-convert": "^2.0.0",
     "core-js": "^2.5.4",
     "d3": "^5.9.2",
     "d3-ng2-service": "^2.2.0",
