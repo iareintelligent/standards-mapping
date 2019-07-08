@@ -6,12 +6,12 @@
             {
                 "id": "5",
                 "frag": "5",
-                "section": "5",
+                "section": "5 - Section 5",
                 "children": [
                     {
                         "id": "5.2",
                         "frag": "2",
-                        "section": "5.2",
+                        "section": "5.2 - Section 5.2",
                         "children": [
                             {
                                 "id": "5.2.1",
@@ -1293,7 +1293,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless it is reasonably necessary for the entity's functions or activities\r\n(APP 3.2) \nMust not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities    ...",
+                                "body": "Must not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP 3.2) \r\nMust not collect personal information unless it is reasonably necessary for the entity's functions or activities\r\n(APP 3.2) \r\nMust not collect personal information unless the information is reasonably necessary for, or directly related to, the entity's functions or activities    ...",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801614"
                             },
                             {
@@ -1319,7 +1319,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities... \nMust not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP... \nMust not collect sensitive information unless consent is given\r\n (APP 3.3)",
+                                "body": "Must not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities... \r\nMust not collect sensitive information unless consent is given and unless it is reasonably necessary for, or directly related to, the entity's functions or activities\r\n(APP... \r\nMust not collect sensitive information unless consent is given\r\n (APP 3.3)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801614"
                             }
                         ],
@@ -1340,7 +1340,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must determine if the  unsolicited personal information could have been solicited and, if not, delete or de-identify it\r\n(APP 4) \nMust determine if the  unsolicited personal information could have been solicited and, if not, delete or de-identify it\r\n (APP 4)",
+                        "body": "Must determine if the  unsolicited personal information could have been solicited and, if not, delete or de-identify it\r\n(APP 4) \r\nMust determine if the  unsolicited personal information could have been solicited and, if not, delete or de-identify it\r\n (APP 4)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801615"
                     },
                     {
@@ -1372,7 +1372,7 @@
                                                 "type": "ISO"
                                             }
                                         ],
-                                        "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information (APP... \nMust notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information\r\n(APP 5.2(f))\r\n\r\nThis...",
+                                        "body": "Must notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information (APP... \r\nMust notify of any other person (or types of persons) to which the personal information is usually disclosed on collection of the personal information\r\n(APP 5.2(f))\r\n\r\nThis...",
                                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801616"
                                     },
                                     {
@@ -1411,7 +1411,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must notify certain matters on the collection of personal information\r\n(APP 5) \nMust notify certain matters on the collection of personal information       (APP 5) \r\n\r\nThis notification must be provided to the...",
+                        "body": "Must notify certain matters on the collection of personal information\r\n(APP 5) \r\nMust notify certain matters on the collection of personal information       (APP 5) \r\n\r\nThis notification must be provided to the...",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801616"
                     },
                     {
@@ -1458,7 +1458,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Personal information collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1)\r\n\r\nIf testing is not... \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1) \nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained\r\n(APP 6.1)",
+                                "body": "Personal information collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1)\r\n\r\nIf testing is not... \r\nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained (APP 6.1) \r\nPersonal information  collected for a particular purpose must not be used or disclosed for another purpose unless consent is obtained\r\n(APP 6.1)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801618"
                             },
                             {
@@ -1564,7 +1564,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take steps to ensure personal information held is accurate, up-to-date and complete (APP 10) \nMust take steps to ensure personal information held is accurate, up-to-date and accurate (APP 10)",
+                        "body": "Must take steps to ensure personal information held is accurate, up-to-date and complete (APP 10) \r\nMust take steps to ensure personal information held is accurate, up-to-date and accurate (APP 10)",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801623"
                     },
                     {
@@ -1713,7 +1713,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Must take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or... \nMust take reasonable steps to destroy or ensure personal information is de-identified if the information is no longer needed for any purpose for which the...",
+                                "body": "Must take reasonable steps to destroy or de-identify personal information once no longer needed for any purpose for which the information may be used or... \r\nMust take reasonable steps to destroy or ensure personal information is de-identified if the information is no longer needed for any purpose for which the...",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801624"
                             }
                         ],
@@ -1739,7 +1739,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "On request, an individual must be given access to their personal information\r\n (APP 12.1) \nOn request, an individual must be given access to their personal information\r\n(APP 12.1)",
+                                "body": "On request, an individual must be given access to their personal information\r\n (APP 12.1) \r\nOn request, an individual must be given access to their personal information\r\n(APP 12.1)",
                                 "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801626"
                             }
                         ],
@@ -1826,7 +1826,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must not do an act, or engage in a practice, that breaches an APP (S.15) \nMust not do an act, or engage in a practice, that breaches an APP (S.15)     \r\n\r\nNo processing of personal information contrary...",
+                        "body": "Must not do an act, or engage in a practice, that breaches an APP (S.15) \r\nMust not do an act, or engage in a practice, that breaches an APP (S.15)     \r\n\r\nNo processing of personal information contrary...",
                         "hyperlink": "https://www.legislation.gov.au/Details/C2018C00034/Html/Text#_Toc506801298"
                     },
                     {
@@ -2189,7 +2189,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Personal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3) \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nThe nature of safeguards will vary depending on the... \nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nSubject to any legal requirement to keep the information...",
+                                "body": "Personal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3) \r\nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nThe nature of safeguards will vary depending on the... \r\nPersonal information no longer required for the identified purposes should be destroyed, erased or made anonymous (4.5.3)\r\n\r\nSubject to any legal requirement to keep the information...",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             }
                         ],
@@ -2252,7 +2252,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "The nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2) \nThe nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2)\r\n\r\nSubject to...",
+                                "body": "The nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2) \r\nThe nature of safeguards will vary depending on the sensitivity of the information and the format and method of storage of the information (4.7.2)\r\n\r\nSubject to...",
                                 "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                             },
                             {
@@ -2392,7 +2392,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must make readily available information about its policies and practices relating to management of personal information (4.8) \nPersonal information must be protected by appropriate security safeguards (4.8)",
+                        "body": "Must make readily available information about its policies and practices relating to management of personal information (4.8) \r\nPersonal information must be protected by appropriate security safeguards (4.8)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2437,7 +2437,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "On request, must inform the individual of the existence, use and disclosure of his/her personal information and give access to it (4.9) \nPersonal information must be protected by appropriate security safeguards (4.9)",
+                        "body": "On request, must inform the individual of the existence, use and disclosure of his/her personal information and give access to it (4.9) \r\nPersonal information must be protected by appropriate security safeguards (4.9)",
                         "hyperlink": "http://laws-lois.justice.gc.ca/eng/acts/P-8.6/page-11.html#h-26"
                     },
                     {
@@ -2588,7 +2588,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must take all practical steps to inform a number of matters including the purpose of collection, the classes of persons who will have access to... \nPersonal data must only be collected for a lawful purpose directly related to a function or activity of the data user, if adequate, not excessive...",
+                        "body": "Must take all practical steps to inform a number of matters including the purpose of collection, the classes of persons who will have access to... \r\nPersonal data must only be collected for a lawful purpose directly related to a function or activity of the data user, if adequate, not excessive...",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     },
                     {
@@ -2638,7 +2638,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The data user must adopt contractual or other means to prevent data from being kept by data processors longer than necessary (DPP 2) \nMust take all practical steps to ensure personal data is not kept longer than necessary to fulfil the purpose for which it was collected (DPP... \nMust take all practical steps to ensure personal data is accurate having regard to the purposes for which it is or is to be used... \nData user must adopt contractual provisions to prevent personal data being kept longer by data processor than necessary to fulfil the processing (DPP 2)",
+                        "body": "The data user must adopt contractual or other means to prevent data from being kept by data processors longer than necessary (DPP 2) \r\nMust take all practical steps to ensure personal data is not kept longer than necessary to fulfil the purpose for which it was collected (DPP... \r\nMust take all practical steps to ensure personal data is accurate having regard to the purposes for which it is or is to be used... \r\nData user must adopt contractual provisions to prevent personal data being kept longer by data processor than necessary to fulfil the processing (DPP 2)",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403263424_003#"
                     },
                     {
@@ -2916,7 +2916,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Matching procedures cannot be undertaken without the consent of all relevant data subjects or the Commissioner (S.30) \nMatching procedure not to be carried out except with consent of data subject (S.30) - Any procedure whereby personal data collected for one or more...",
+                        "body": "Matching procedures cannot be undertaken without the consent of all relevant data subjects or the Commissioner (S.30) \r\nMatching procedure not to be carried out except with consent of data subject (S.30) - Any procedure whereby personal data collected for one or more...",
                         "hyperlink": "https://www.elegislation.gov.hk/hk/cap486?xpid=ID_1438403261770_003#"
                     },
                     {
@@ -3021,7 +3021,7 @@
                         "type": "ISO"
                     }
                 ],
-                "body": "Except for Ss.24-25, no obligations apply to a 'data intermediary' in respect of its processing of personal data on behalf of and for the purposes... \nThe personal data protection obligations do not apply to a data intermediary in respect of its processing of personal data on behalf of and for...",
+                "body": "Except for Ss.24-25, no obligations apply to a 'data intermediary' in respect of its processing of personal data on behalf of and for the purposes... \r\nThe personal data protection obligations do not apply to a data intermediary in respect of its processing of personal data on behalf of and for...",
                 "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr4-"
             },
             {
@@ -3308,7 +3308,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must inform the individual of the purposes for collection, use and/or disclosure of personal data (S.20) \nMust inform the individual of the purposes for collection, use and/or disclosure of personal data (S.20)\r\n\r\nNotification must be done on or before collection.",
+                        "body": "Must inform the individual of the purposes for collection, use and/or disclosure of personal data (S.20) \r\nMust inform the individual of the purposes for collection, use and/or disclosure of personal data (S.20)\r\n\r\nNotification must be done on or before collection.",
                         "hyperlink": "https://sso.agc.gov.sg/Act/PDPA2012#pr20-"
                     },
                     {
@@ -3652,7 +3652,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15) \nMust inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15)\r\n\r\nNotification must be done on or...",
+                        "body": "Must inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15) \r\nMust inform the individual of specified matters including the purposes for the collection and use of the personal information (A.15)\r\n\r\nNotification must be done on or...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J15:0"
                     },
                     {
@@ -3732,7 +3732,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "A recipient of personal information cannot use it or disclose it for any other purpose, except as permitted for by law or where additional consent... \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or additional consent is provided... \nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or where additional consent is...",
+                        "body": "A recipient of personal information cannot use it or disclose it for any other purpose, except as permitted for by law or where additional consent... \r\nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or additional consent is provided... \r\nA recipient of personal information cannot use it or disclose it for any other purpose, except as permitted by law or where additional consent is...",
                         "hyperlink": "http://law.go.kr/engLsSc.do?menuId=0&subMenu=5&query=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95#J19:0"
                     },
                     {
@@ -4209,7 +4209,7 @@
                                                 "type": "ISO"
                                             }
                                         ],
-                                        "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \nPersonal data may only be processed for specific, explicit and legitimate purposes (A.4.2.c) "
+                                        "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \r\nPersonal data may only be processed for specific, explicit and legitimate purposes (A.4.2.c) "
                                     }
                                 ],
                                 "links": [
@@ -4230,7 +4230,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \nData processing must be relevant, limited and proportionate to the purposes for which data is to be processed (A.4.2) \nPersonal data processed must be accurate and if necessary, up to date (A.4.2)"
+                                "body": "Personal data may only be processed; (i) for specific, explicit and legitimate purposes, (ii) being relevant with, limited to and proportionate to the purposes for... \r\nData processing must be relevant, limited and proportionate to the purposes for which data is to be processed (A.4.2) \r\nPersonal data processed must be accurate and if necessary, up to date (A.4.2)"
                             }
                         ],
                         "links": []
@@ -4320,7 +4320,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Personal data must be deleted, destroyed or anonymised on request by the data subject or when  the reasons necessitating its processing cease to exist... \nPersonal data must be deleted, destroyed or anonymised upon request by the data subject or when  the reasons necessitating its processing cease to exist..."
+                        "body": "Personal data must be deleted, destroyed or anonymised on request by the data subject or when  the reasons necessitating its processing cease to exist... \r\nPersonal data must be deleted, destroyed or anonymised upon request by the data subject or when  the reasons necessitating its processing cease to exist..."
                     },
                     {
                         "id": "A.8",
@@ -4427,7 +4427,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Must notify certain matters on the collection of personal information (A.10) \nMust inform data subjects of a number of matters including purposes of processing (A.10) \nMust notify certain matters on the collection of personal information (A.10)\r\n\r\nThis notification must be provided at or prior to the time of collecting the personal..."
+                        "body": "Must notify certain matters on the collection of personal information (A.10) \r\nMust inform data subjects of a number of matters including purposes of processing (A.10) \r\nMust notify certain matters on the collection of personal information (A.10)\r\n\r\nThis notification must be provided at or prior to the time of collecting the personal..."
                     },
                     {
                         "id": "A.11",
@@ -4478,7 +4478,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Upon request must notify third parties of (i) rectification in cases of  incomplete or inaccurate data and/or (ii) deletion or destruction of personal data... \nMust take actions, if requested regarding (i) rectification in case personal data are processed incompletely or inaccurately; (ii) deletion or destruction of personal data (iii)..."
+                        "body": "Upon request must notify third parties of (i) rectification in cases of  incomplete or inaccurate data and/or (ii) deletion or destruction of personal data... \r\nMust take actions, if requested regarding (i) rectification in case personal data are processed incompletely or inaccurately; (ii) deletion or destruction of personal data (iii)..."
                     },
                     {
                         "id": "A.12",
@@ -4687,7 +4687,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The data subject may lodge his/her demands under and object regarding implementation of the law with the controller who must act on them in the... \nThe data subject may lodge his/her demands under and objects regarding implementation of the law with the controller who must act on them in the..."
+                        "body": "The data subject may lodge his/her demands under and object regarding implementation of the law with the controller who must act on them in the... \r\nThe data subject may lodge his/her demands under and objects regarding implementation of the law with the controller who must act on them in the..."
                     },
                     {
                         "id": "A.16",
@@ -4703,7 +4703,7 @@
         ]
     },
     {
-        "type": "USA\r\nCalifornia ",
+        "type": "USA California ",
         "rev": 1,
         "children": [
             {
@@ -4786,7 +4786,7 @@
                                                 "type": "ISO"
                                             }
                                         ],
-                                        "body": "Must not use personal information for additional purposes beyond those notified (S.1798.100(b)) \nMust not use personal information for additional purposes beyond those notified (S.1798.100(b))\r\n\r\nIf testing is not a notified purpose, consent must be obtained \nMust not collect additional categories of personal information beyond those notified (S.1798.100(b))",
+                                        "body": "Must not use personal information for additional purposes beyond those notified (S.1798.100(b)) \r\nMust not use personal information for additional purposes beyond those notified (S.1798.100(b))\r\n\r\nIf testing is not a notified purpose, consent must be obtained \r\nMust not collect additional categories of personal information beyond those notified (S.1798.100(b))",
                                         "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
                                     },
                                     {
@@ -4916,7 +4916,7 @@
                                                                 "type": "ISO"
                                                             }
                                                         ],
-                                                        "body": "Must disclose categories of personal information the business sells and the categories of third parties to whom sold (S.1798.115(a) and (b)) \nMust disclose details of the categories of third parties to whom the personal information is sold (S.1798.115(a) and (b))",
+                                                        "body": "Must disclose categories of personal information the business sells and the categories of third parties to whom sold (S.1798.115(a) and (b)) \r\nMust disclose details of the categories of third parties to whom the personal information is sold (S.1798.115(a) and (b))",
                                                         "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
                                                     }
                                                 ],
@@ -5052,7 +5052,7 @@
                                                 "type": "ISO"
                                             }
                                         ],
-                                        "body": "Ensure all those responsible for handling consumer privacy inquiries and compliance are informed of all requirements under Ss.1798.120 and 1798.135 (S.1798.135(a)) \nMust provide a clear and conspicuous link on the business’ Internet homepage titled “Do Not Sell My Personal Information” to allow consumers to opt-out of...",
+                                        "body": "Ensure all those responsible for handling consumer privacy inquiries and compliance are informed of all requirements under Ss.1798.120 and 1798.135 (S.1798.135(a)) \r\nMust provide a clear and conspicuous link on the business’ Internet homepage titled “Do Not Sell My Personal Information” to allow consumers to opt-out of...",
                                         "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
                                     }
                                 ],
@@ -5198,7 +5198,7 @@
                                                 "type": "ISO"
                                             }
                                         ],
-                                        "body": "A business is not liable for the personal information disclosed to a service provider who uses it in violation of the CCPA, provided the business... \nBusinesses disclosing personal information to service providers, with knowledge or a reason to believe the service provider intends to violate the restrictions imposed by the...",
+                                        "body": "A business is not liable for the personal information disclosed to a service provider who uses it in violation of the CCPA, provided the business... \r\nBusinesses disclosing personal information to service providers, with knowledge or a reason to believe the service provider intends to violate the restrictions imposed by the...",
                                         "hyperlink": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375#"
                                     }
                                 ],
@@ -5398,7 +5398,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Processing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6) \nProcessing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6)\r\n\r\nIf testing is not..."
+                        "body": "Processing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6) \r\nProcessing of personal data activities must be in good faith and, among others, be for notified purpose(s), necessary and transparent (Art 6)\r\n\r\nIf testing is not..."
                     },
                     {
                         "id": "Art.7",
@@ -5440,7 +5440,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "The consent required in Art 7 must be given in writing or other means that shows the consent of the data subject (Art 8) \nConsent may be revoked at any time by express request via a free of charge procedure (Art 8)"
+                        "body": "The consent required in Art 7 must be given in writing or other means that shows the consent of the data subject (Art 8) \r\nConsent may be revoked at any time by express request via a free of charge procedure (Art 8)"
                     },
                     {
                         "id": "Art.9",
@@ -6173,7 +6173,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(5)(1)(f): Personal data shall be:\r\n(f) processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and... \nArticle(32)(1)(b): Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as..."
+                                "body": "Article(5)(1)(f): Personal data shall be:\r\n(f) processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and... \r\nArticle(32)(1)(b): Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as..."
                             }
                         ],
                         "links": []
@@ -6378,7 +6378,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "\r\nArticle(6)(4)(e): Where the processing for a purpose other than that for which the personal data have been collected is not based on the data subject's..."
+                                "body": "Article(6)(4)(e): Where the processing for a purpose other than that for which the personal data have been collected is not based on the data subject's..."
                             }
                         ],
                         "links": []
@@ -8428,7 +8428,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(32)(1)(b): Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as... \nArticle(5)(1)(f): Personal data shall be:\r\n(f) processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and... \nArticle(28)(3)(a): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
+                                "body": "Article(32)(1)(b): Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as... \r\nArticle(5)(1)(f): Personal data shall be:\r\n(f) processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and... \r\nArticle(28)(3)(a): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
                             },
                             {
                                 "id": "28.3.b",
@@ -8449,7 +8449,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(28)(3)(b): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on... \nArticle(28)(3)(c): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
+                                "body": "Article(28)(3)(b): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on... \r\nArticle(28)(3)(c): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
                             },
                             {
                                 "id": "28.3.c",
@@ -8487,7 +8487,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(28)(3)(e): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on... \nArticle(28)(3)(d): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
+                                "body": "Article(28)(3)(e): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on... \r\nArticle(28)(3)(d): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
                             },
                             {
                                 "id": "28.3.e",
@@ -8516,7 +8516,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(28)(3)(f): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on... \nArticle(28)(3)(e): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
+                                "body": "Article(28)(3)(f): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on... \r\nArticle(28)(3)(e): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
                             },
                             {
                                 "id": "28.3.f",
@@ -8537,7 +8537,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(28)(3)(g): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on... \nArticle(28)(3)(f): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
+                                "body": "Article(28)(3)(g): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on... \r\nArticle(28)(3)(f): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
                             },
                             {
                                 "id": "28.3.g",
@@ -8558,7 +8558,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "With regard to point (h) of the first subparagraph, the processor shall immediately inform the controller if, in its opinion, an instruction infringes this Regulation... \nArticle(28)(3)(g): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
+                                "body": "With regard to point (h) of the first subparagraph, the processor shall immediately inform the controller if, in its opinion, an instruction infringes this Regulation... \r\nArticle(28)(3)(g): Processing by a processor shall be governed by a contract or other legal act under Union or Member State law, that is binding on..."
                             },
                             {
                                 "id": "28.3.h",
@@ -8762,7 +8762,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(49)(6): The controller or processor shall document the assessment as well as the suitable safeguards referred to in the second subparagraph of paragraph 1 of... \nArticle(30)(1)(e): Each controller and, where applicable, the controller's representative, shall maintain a record of processing activities under its responsibility. That record shall contain all of..."
+                                "body": "Article(49)(6): The controller or processor shall document the assessment as well as the suitable safeguards referred to in the second subparagraph of paragraph 1 of... \r\nArticle(30)(1)(e): Each controller and, where applicable, the controller's representative, shall maintain a record of processing activities under its responsibility. That record shall contain all of..."
                             },
                             {
                                 "id": "30.1.f",
@@ -8990,7 +8990,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(32)(1)(b): Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as... \nArticle(30)(2)(d): Each processor and, where applicable, the processor's representative shall maintain a record of all categories of processing activities carried out on behalf of a..."
+                                "body": "Article(32)(1)(b): Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as... \r\nArticle(30)(2)(d): Each processor and, where applicable, the processor's representative shall maintain a record of all categories of processing activities carried out on behalf of a..."
                             },
                             {
                                 "id": "32.1.c",
@@ -11235,7 +11235,7 @@
                         "type": "ISO"
                     }
                 ],
-                "body": "Article(30)(1)(e): Each controller and, where applicable, the controller's representative, shall maintain a record of processing activities under its responsibility. That record shall contain all of... \nArticle(48): Any judgment of a court or tribunal and any decision of an administrative authority of a third country requiring a controller or processor to..."
+                "body": "Article(30)(1)(e): Each controller and, where applicable, the controller's representative, shall maintain a record of processing activities under its responsibility. That record shall contain all of... \r\nArticle(48): Any judgment of a court or tribunal and any decision of an administrative authority of a third country requiring a controller or processor to..."
             },
             {
                 "id": "49",
@@ -11262,7 +11262,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(49)(1)(a): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \nArticle(49)(1)(b): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
+                                "body": "Article(49)(1)(a): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \r\nArticle(49)(1)(b): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
                             },
                             {
                                 "id": "49.1.b",
@@ -11279,7 +11279,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(49)(1)(b): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \nArticle(49)(1)(c): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
+                                "body": "Article(49)(1)(b): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \r\nArticle(49)(1)(c): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
                             },
                             {
                                 "id": "49.1.c",
@@ -11296,7 +11296,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(49)(1)(c): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \nArticle(49)(1)(d): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
+                                "body": "Article(49)(1)(c): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \r\nArticle(49)(1)(d): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
                             },
                             {
                                 "id": "49.1.d",
@@ -11313,7 +11313,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(49)(1)(d): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \nArticle(49)(1)(e): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
+                                "body": "Article(49)(1)(d): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \r\nArticle(49)(1)(e): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
                             },
                             {
                                 "id": "49.1.e",
@@ -11330,7 +11330,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(49)(1)(e): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \nArticle(49)(1)(f): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
+                                "body": "Article(49)(1)(e): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \r\nArticle(49)(1)(f): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
                             },
                             {
                                 "id": "49.1.f",
@@ -11347,7 +11347,7 @@
                                         "type": "ISO"
                                     }
                                 ],
-                                "body": "Article(49)(1)(f): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \nWhere a transfer could not be based on a provision in Articles 45 or 46, including the provisions on binding corporate rules, and none of..."
+                                "body": "Article(49)(1)(f): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a... \r\nWhere a transfer could not be based on a provision in Articles 45 or 46, including the provisions on binding corporate rules, and none of..."
                             },
                             {
                                 "id": "49.1.g",
@@ -11384,7 +11384,7 @@
                                 "type": "ISO"
                             }
                         ],
-                        "body": "Where a transfer could not be based on a provision in Articles 45 or 46, including the provisions on binding corporate rules, and none of... \nArticle(49)(1)(a): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
+                        "body": "Where a transfer could not be based on a provision in Articles 45 or 46, including the provisions on binding corporate rules, and none of... \r\nArticle(49)(1)(a): In the absence of an adequacy decision pursuant to Article 45(3), or of appropriate safeguards pursuant to Article 46, including binding corporate rules, a..."
                     },
                     {
                         "id": "49.3",
