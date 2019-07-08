@@ -6,12 +6,12 @@
             {
                 "id": "5",
                 "frag": "5",
-                "section": "5 - Section 5",
+                "section": "5",
                 "children": [
                     {
                         "id": "5.2",
                         "frag": "2",
-                        "section": "5.2 - Section 5.2",
+                        "section": "5.2",
                         "children": [
                             {
                                 "id": "5.2.1",
